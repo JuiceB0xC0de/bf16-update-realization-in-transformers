@@ -73,7 +73,105 @@
       },
       "verdict": "supports",
       "min_round_of_x_agreement_plan_metric": 0.9958291615015415,
-      "round_of_x_note": "The plan's original metric, n = round(x) agreement, also clears 99% on all twelve captured steps (minimum 0.99583 at order 1 step 1). Exact write agreement is reported as the primary metric because it reproduces the reviewed Mamba figure of 99.89% on the reference bundle, where round-of-x gives 0.99848."
+      "round_of_x_note": "The plan's original metric, n = round(x) agreement, also clears 99% on all twelve captured steps (minimum 0.99583 at order 1 step 1). Exact write agreement is reported as the primary metric because it reproduces the reviewed Mamba figure of 99.89% on the reference bundle, where round-of-x gives 0.99848.",
+      "per_step": [
+        {
+          "order": "order0",
+          "step": 1,
+          "stored_rho": 1.1835,
+          "predicted_rho": 1.1831,
+          "exact_write_agreement": 0.99754,
+          "round_of_x_agreement": 0.99589
+        },
+        {
+          "order": "order0",
+          "step": 10,
+          "stored_rho": 1.3369,
+          "predicted_rho": 1.3364,
+          "exact_write_agreement": 0.99837,
+          "round_of_x_agreement": 0.9978
+        },
+        {
+          "order": "order0",
+          "step": 50,
+          "stored_rho": 1.3344,
+          "predicted_rho": 1.3341,
+          "exact_write_agreement": 0.99899,
+          "round_of_x_agreement": 0.99861
+        },
+        {
+          "order": "order0",
+          "step": 100,
+          "stored_rho": 1.3138,
+          "predicted_rho": 1.3134,
+          "exact_write_agreement": 0.99913,
+          "round_of_x_agreement": 0.99885
+        },
+        {
+          "order": "order0",
+          "step": 200,
+          "stored_rho": 1.3113,
+          "predicted_rho": 1.3112,
+          "exact_write_agreement": 0.9993,
+          "round_of_x_agreement": 0.99904
+        },
+        {
+          "order": "order0",
+          "step": 300,
+          "stored_rho": 1.2918,
+          "predicted_rho": 1.2913,
+          "exact_write_agreement": 0.9994,
+          "round_of_x_agreement": 0.99919
+        },
+        {
+          "order": "order1",
+          "step": 1,
+          "stored_rho": 1.1834,
+          "predicted_rho": 1.183,
+          "exact_write_agreement": 0.99757,
+          "round_of_x_agreement": 0.99583
+        },
+        {
+          "order": "order1",
+          "step": 10,
+          "stored_rho": 1.3356,
+          "predicted_rho": 1.3352,
+          "exact_write_agreement": 0.99842,
+          "round_of_x_agreement": 0.99789
+        },
+        {
+          "order": "order1",
+          "step": 50,
+          "stored_rho": 1.3307,
+          "predicted_rho": 1.3302,
+          "exact_write_agreement": 0.99895,
+          "round_of_x_agreement": 0.99859
+        },
+        {
+          "order": "order1",
+          "step": 100,
+          "stored_rho": 1.3096,
+          "predicted_rho": 1.3094,
+          "exact_write_agreement": 0.99923,
+          "round_of_x_agreement": 0.99895
+        },
+        {
+          "order": "order1",
+          "step": 200,
+          "stored_rho": 1.3062,
+          "predicted_rho": 1.3057,
+          "exact_write_agreement": 0.99925,
+          "round_of_x_agreement": 0.99898
+        },
+        {
+          "order": "order1",
+          "step": 300,
+          "stored_rho": 1.3112,
+          "predicted_rho": 1.3104,
+          "exact_write_agreement": 0.99927,
+          "round_of_x_agreement": 0.999
+        }
+      ]
     },
     "q3_shadow_curve": {
       "factors": [
