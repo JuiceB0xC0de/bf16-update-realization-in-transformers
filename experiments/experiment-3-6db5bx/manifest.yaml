@@ -1,0 +1,9 @@
+experiment: 3
+eid: "exp_01m1tvjx4ee3xshh9djt6db5bx"
+title: "A keno write distributor: does the bfloat16 advantage come from how much is delivered or which weights get it?"
+date: "2026-09-06"
+status: in-progress
+data: {}
+outputs: {}
+results: {}
+slurm_jobs: []
