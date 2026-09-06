@@ -142,7 +142,8 @@ def fig_nll_absolute(verdicts, runs_csv_rows, colors, root):
                                  text=[p["lr"] for p in s["points"]]))
         pts = [p for p in data["seed_points"] if p["condition"] == s["condition"]]
         fig.add_trace(go.Scatter(x=[p["log10_lr"] for p in pts], y=[p["nll"] for p in pts], mode="markers",
-                                 marker=dict(size=5, color=s["color"], opacity=0.35), showlegend=False,
+                                 marker=dict(size=5, color=[s["color"]] * len(pts), opacity=0.35), showlegend=False,
+                                 name=s["label"], legendgroup=s["label"],
                                  hovertemplate=s["label"] + " seed %{text}: %{y:.4f}<extra></extra>",
                                  text=[str(p["seed"]) for p in pts]))
     add_reference_line(fig, y=data["untrained"], label=f"untrained model {data['untrained']:.3f}")
@@ -159,7 +160,8 @@ def fig_nll_absolute(verdicts, runs_csv_rows, colors, root):
                                  marker=dict(size=8, color=s["color"])))
         pts = [p for p in D["seed_points"] if p["condition"] == s["condition"]]
         fig.add_trace(go.Scatter(x=[p["log10_lr"] for p in pts], y=[p["nll"] for p in pts], mode="markers",
-                                 marker=dict(size=5, color=s["color"], opacity=0.35), showlegend=False))
+                                 marker=dict(size=5, color=[s["color"]] * len(pts), opacity=0.35), showlegend=False,
+                                 name=s["label"], legendgroup=s["label"]))
     add_reference_line(fig, y=D["untrained"], label=f"untrained model {D['untrained']:.3f}")
     ticks = sorted({p["log10_lr"] for s in D["series"] for p in s["points"]})
     fig.update_xaxes(title="Learning rate", tickvals=ticks, ticktext=[f"{10 ** t:g}" for t in ticks])
