@@ -2294,8 +2294,131 @@
     "1e-4": -0.04477,
     "5e-5": -0.2036
    }
+  },
+  {
+   "id": "cfg_steps",
+   "claim": "3000 optimizer steps per run",
+   "source": "report_summary.json",
+   "key": "methods.data",
+   "value": 3000
+  },
+  {
+   "id": "cfg_batch",
+   "claim": "batch size 1",
+   "source": "report_summary.json",
+   "key": "methods.data",
+   "value": 1
+  },
+  {
+   "id": "cfg_seeds",
+   "claim": "5 seeds (0 to 4)",
+   "source": "report_summary.json",
+   "key": "methods.seeds",
+   "value": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "id": "cfg_lrs",
+   "claim": "learning rates 2e-4, 1e-4, 5e-5",
+   "source": "report_summary.json",
+   "key": "methods.learning_rates",
+   "value": [
+    0.0002,
+    0.0001,
+    5e-05
+   ]
+  },
+  {
+   "id": "cfg_conditions",
+   "claim": "6 conditions",
+   "source": "report_summary.json",
+   "key": "methods.conditions",
+   "value": 6
+  },
+  {
+   "id": "cfg_heldout_n",
+   "claim": "256 held-out test questions",
+   "source": "report_summary.json",
+   "key": "methods.held_out",
+   "value": 256
+  },
+  {
+   "id": "cfg_max_len",
+   "claim": "max sequence length 512",
+   "source": "report_summary.json",
+   "key": "methods.data",
+   "value": 512
+  },
+  {
+   "id": "cfg_clip",
+   "claim": "gradient clip bound 32",
+   "source": "report_summary.json",
+   "key": "methods.optimizer",
+   "value": 32
+  },
+  {
+   "id": "cfg_q2_band",
+   "claim": "Q2 equivalence band +/-0.01 nats",
+   "source": "report_summary.json",
+   "key": "decision_rules.q2",
+   "value": 0.01
+  },
+  {
+   "id": "cfg_q1_len",
+   "claim": "Q1 length ratio threshold 0.98 and |rho-1| <= 0.02",
+   "source": "report_summary.json",
+   "key": "decision_rules.q1",
+   "value": [
+    0.98,
+    0.02
+   ]
+  },
+  {
+   "id": "cfg_ci",
+   "claim": "90% Student-t intervals over seeds",
+   "source": "report_summary.json",
+   "key": "methods.statistics",
+   "value": 0.9
+  },
+  {
+   "id": "cfg_equiv_threshold",
+   "claim": "equivalence threshold 0.997 exact write agreement",
+   "source": "report_summary.json",
+   "key": "methods.equivalence_check",
+   "value": 0.997
+  },
+  {
+   "id": "cfg_equiv_steps",
+   "claim": "equivalence check 20 steps",
+   "source": "report_summary.json",
+   "key": "methods.equivalence_check",
+   "value": 20
+  },
+  {
+   "id": "cfg_betas",
+   "claim": "betas 0.9, 0.999; eps 1e-8; weight decay 0.01",
+   "source": "report_summary.json",
+   "key": "methods.optimizer",
+   "value": [
+    0.9,
+    0.999,
+    1e-08,
+    0.01
+   ]
+  },
+  {
+   "id": "cfg_model_params",
+   "claim": "SmolLM2-135M parameter count observed per run n = 134,515,008 coordinates",
+   "source": "report_summary.json",
+   "key": "runs (n field)",
+   "value": 134515008
   }
  ],
- "n_claims": 288,
+ "n_claims": 303,
  "note": "keys are dotted paths into the named JSON source; runs_table keys are aggregate expressions"
 }

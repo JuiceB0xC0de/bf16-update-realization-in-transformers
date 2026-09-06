@@ -2,8 +2,38 @@ experiment: 2
 eid: "exp_01m1tgnb6xf98sqwfhm4effknt"
 title: "Build a compensated bfloat16 AdamW writer and test whether delivering the intended update helps"
 date: "2026-09-06"
-status: in-progress
-data: {}
-outputs: {}
-results: {}
-slurm_jobs: []
+status: complete
+data:
+  model: "HuggingFaceTB/SmolLM2-135M@93efa2f097d58c2a74874c7e644dbc9b0cee75a2"
+  dataset: "openai/gsm8k main@740312add88f781978c0658806c59bc2815b9866"
+  heldout: "256 fixed test questions, 49277 tokens"
+outputs:
+  raw_runs: "artifact://juiceb0xc0de-15787e/experiments/exp_01m1tgnb6xf98sqwfhm4effknt/runs/"
+  analysis: "artifact://juiceb0xc0de-15787e/experiments/exp_01m1tgnb6xf98sqwfhm4effknt/analysis/"
+  analysis_copy: "results/analysis/"
+  report_summary: "report_summary.json"
+  claims_manifest: "claims_manifest.json"
+  figures: "figures/"
+  optimizer: "src/compensated_adamw.py"
+  wandb_project: "https://wandb.ai/ricks-holmberg-juiceb0xc0de/default-exp-exp_01m1tgnb6xf98sqwfhm4effknt"
+results:
+  n_runs: 90
+  q1_delivery: supports
+  q2_kahan_vs_master: "not decided at this power"
+  q3_lr_reversal: supports
+  kahan_length_ratio_2e-4: 1.0001
+  rne_length_ratio_2e-4: 0.2637
+  kahan_minus_master_nll_2e-4: -0.0090
+  kahan_minus_master_nll_1e-4: 0.0005
+  kahan_minus_master_nll_5e-5: 0.0002
+  rne_minus_master_nll_2e-4: -0.1062
+  rne_minus_master_nll_1e-4: 0.0175
+  rne_minus_master_nll_5e-5: 0.1233
+  null_floor_max_abs_mean: 0.00041
+slurm_jobs:
+  - {id: "499236637229", role: "seed0 sweep", fabric: on-demand}
+  - {id: "556304203465", role: "seed1 sweep", fabric: on-demand}
+  - {id: "815801795925", role: "seed2 sweep", fabric: on-demand}
+  - {id: "698704695981", role: "seed3 sweep", fabric: on-demand}
+  - {id: "121981673707", role: "seed4 sweep", fabric: on-demand}
+  - {id: "567683953154", role: "analysis", fabric: on-demand}

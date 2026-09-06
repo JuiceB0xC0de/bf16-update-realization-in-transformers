@@ -140,8 +140,9 @@ q2 = V["q2_kahan_vs_master"]["per_lr"]
 q3 = V["q3_lr_reversal"]["per_lr"]
 q1 = V["q1_delivery"]["per_lr"]
 summary = {
-    "title": "A Kahan-compensated bfloat16 AdamW writer delivers the intended update and reproduces fp32 master "
-             "weights on SmolLM2-135M; delivering the update helps at low learning rates and hurts at 2e-4",
+    "title": "A Kahan-compensated bfloat16 AdamW writer delivers the intended update on SmolLM2-135M and matches "
+             "fp32 master weights in held-out loss at lr 1e-4 and 5e-5 (undecided at 2e-4); delivering the update "
+             "helps at low learning rates and hurts at 2e-4",
     "headline": (
         f"Kahan compensation realizes between {min(q1[lr]['kahan_length_ratio'] for lr in LRS):.4f} and "
         f"{max(q1[lr]['kahan_length_ratio'] for lr in LRS):.4f} of the intended cumulative update length at every "
@@ -183,7 +184,8 @@ summary = {
             "fp32_master": "fp32 master += i; p = bf16(master)",
         },
         "delivery_metrics": "cumulative over the run: length ratio ||sum realized|| / ||sum intended||, overshoot "
-                            "rho = <realized, intended> / ||intended||^2, cosine, never-moved fraction of "
+                            "rho = ||sum realized||^2 / <sum realized, sum intended> (cumulative rho, realization.py), cosine, "
+                            "never-moved fraction of "
                             "coordinates; per family attention / MLP / embedding / norm",
         "statistics": "paired per-seed differences, Student-t 90% intervals over 5 seeds",
         "equivalence_check": "20-step run of rne against torch.optim.AdamW per seed on the real model: identical "
@@ -219,11 +221,17 @@ summary = {
         "(269 MB vs 538 MB on this 135M model).",
         "Q2 not decided at this power: at 1e-4 and 5e-5 the Kahan minus master interval is inside ±0.01; at 2e-4 "
         "the interval [-0.024, +0.006] is too wide because seed-to-seed NLL variance at that rate is 3 to 10 times "
-        "larger than at the lower rates. No interval excludes the band.",
+        "larger than at the lower rates. No interval excludes the band. At 2e-4 the compensated writers were partly "
+        "clipped runs (kahan 1 to 18 and fp32_master 2 to 34 clipped steps per seed, 0.03 to 1.1 % of steps, vs 0 to 2 "
+        "for rne), and the per-seed Kahan minus master NLL difference covaries with the per-seed clipped-step "
+        "difference (r = 0.72 over 5 seeds); this coincides with the one LR where Q2 is undecided.",
         "Q3 supports: delivering the intended update (Kahan or master) is worse than plain bf16 at 2e-4 and better "
-        "at 1e-4 and 5e-5, reproducing the sign flip seen on Mamba-3 187M. The bf16 round-to-nearest write acts as "
-        "a step-size damper: it discards 74 to 87 % of the intended cumulative length, which helps when the "
-        "learning rate is too high and hurts when it is too low.",
+        "at 1e-4 and 5e-5, reproducing the sign flip seen on Mamba-3 187M. One hypothesis consistent with this is that "
+        "the bf16 round-to-nearest write acts partly as a step-size damper (it discards 74 to 87 % of the intended "
+        "cumulative length), but the sign flip is the only thing tested here: rne also changes the update direction "
+        "(cumulative cosine with the intent 0.26 to 0.52) and its sparsity (61 to 89 % of coordinates never move), "
+        "and rne at 2e-4 (NLL 1.169) does not sit on the master learning-rate curve (1.181 at 1e-4, 1.150 at 5e-5), "
+        "so a pure step-size account is not established.",
         "Selective compensation (reset the residual when the coordinate moves) overshoots by 1.7 to 1.9x and is the "
         "worst writer at every LR. Stochastic rounding realizes 1.16 to 1.28x with cosine 0.78 to 0.86 and lands "
         "within 0.02 of master at every LR but with the largest seed variance at 2e-4.",
@@ -238,7 +246,9 @@ summary = {
         "Moments are bfloat16 in every condition, so nothing here speaks to moment precision; the compensation "
         "buffer is bf16 so Kahan is an approximation to fp32 master weights, not an identity.",
         "The plan expected gradient clipping at 32 never to fire; it fired on 353 of 270,000 steps, concentrated in "
-        "the compensated writers (kahan 4.2, master 5.9, selective 10.6 steps per run) and almost never for rne (0.2).",
+        "the compensated writers (kahan 4.2, master 5.9, selective 10.6 steps per run) and almost never for rne (0.2). "
+        "At 2e-4 this clipping coincides with the one LR where Q2 is undecided (see interpretation); Q3 is unaffected, "
+        "since every seed's rne minus master difference at 2e-4 lies in [-0.126, -0.097].",
     ],
     "design_changes_tried": [
         "Second-moment update reordered to torch's foreach op order (mul_ then addcmul_, one bf16 rounding each) so "
@@ -265,6 +275,28 @@ summary = {
         "wandb_project": "https://wandb.ai/ricks-holmberg-juiceb0xc0de/default-exp-exp_01m1tgnb6xf98sqwfhm4effknt",
     },
 }
+
+
+# design constants (accepted plan, fixed inputs)
+for cid, text, key, val in [
+    ("cfg_steps", "3000 optimizer steps per run", "methods.data", 3000),
+    ("cfg_batch", "batch size 1", "methods.data", 1),
+    ("cfg_seeds", "5 seeds (0 to 4)", "methods.seeds", [0, 1, 2, 3, 4]),
+    ("cfg_lrs", "learning rates 2e-4, 1e-4, 5e-5", "methods.learning_rates", [2e-4, 1e-4, 5e-5]),
+    ("cfg_conditions", "6 conditions", "methods.conditions", 6),
+    ("cfg_heldout_n", "256 held-out test questions", "methods.held_out", 256),
+    ("cfg_max_len", "max sequence length 512", "methods.data", 512),
+    ("cfg_clip", "gradient clip bound 32", "methods.optimizer", 32),
+    ("cfg_q2_band", "Q2 equivalence band +/-0.01 nats", "decision_rules.q2", 0.01),
+    ("cfg_q1_len", "Q1 length ratio threshold 0.98 and |rho-1| <= 0.02", "decision_rules.q1", [0.98, 0.02]),
+    ("cfg_ci", "90% Student-t intervals over seeds", "methods.statistics", 0.9),
+    ("cfg_equiv_threshold", "equivalence threshold 0.997 exact write agreement", "methods.equivalence_check", 0.997),
+    ("cfg_equiv_steps", "equivalence check 20 steps", "methods.equivalence_check", 20),
+    ("cfg_betas", "betas 0.9, 0.999; eps 1e-8; weight decay 0.01", "methods.optimizer", [0.9, 0.999, 1e-8, 0.01]),
+    ("cfg_model_params", "SmolLM2-135M parameter count observed per run n = 134,515,008 coordinates",
+     "runs (n field)", 134515008),
+]:
+    claim(cid, text, key, val, source="report_summary.json")
 
 json.dump(summary, open("report_summary.json", "w"), indent=1)
 json.dump({"claims": claims, "n_claims": len(claims),
