@@ -15,6 +15,7 @@ ANALYSIS = Path("results/analysis")
 V = json.loads((ANALYSIS / "verdicts.json").read_text())
 P = json.loads((ANALYSIS / "paired_differences.json").read_text())
 D = json.loads((ANALYSIS / "delivery_vs_loss.json").read_text())
+N = json.loads(Path("results/reference/null_control_prev.json").read_text())
 
 claims: list[dict] = []
 
@@ -39,6 +40,11 @@ def r(x: float, nd: int = 4) -> str:
 VJ = "results/analysis/verdicts.json"
 PJ = "results/analysis/paired_differences.json"
 DJ = "results/analysis/delivery_vs_loss.json"
+NJ = "results/reference/null_control_prev.json"
+
+claim("null_floor_mean", "previous run null control (rne − torch AdamW) max |mean| is 0.0004", NJ, "null_control_rne_minus_torch/max_abs_mean", N)
+claim("null_floor_ci", "previous run null control max |90% CI bound| is 0.0045", NJ, "null_control_rne_minus_torch/max_abs_ci_bound", N)
+NOISE = "null-control noise floor from exp_01m1tgnb6xf98sqwfhm4effknt: max |mean| 0.0004, max CI bound 0.0045"
 
 # ---------------------------------------------------------------- harness
 claim("harness_all_passed", "all five plain-rounding reruns matched the previous experiment within 0.001", VJ,
@@ -182,10 +188,10 @@ summary = {
         f"'undecided at two seeds' band, and it is confounded with write precision (drawn coordinates get exact writes). keno_drop_25 delivers "
         f"more than rne (length ratio 0.309 vs 0.264) and the two writers are not matched; a two-point extrapolation below the measured range "
         f"is post-hoc and not a supported bound. At lr 1e-4 keno_drop_25 and keno_drop_50 reach 1.1517 and 1.1512, 0.047 below plain rounding "
-        f"and 0.029 below fp32 master at the same lr, tying fp32 master at its best lr (1.1512 on the same seeds) but not crossing the 1.150 bar. "
+        f"and 0.029 below fp32 master at the same lr, tying fp32 master at its best lr (1.1512 on the same seeds; difference 0.0000, below the {NOISE}) but not crossing the 1.150 bar. "
         f"Banking undelivered requests (tab) delivers 0.96 to 1.00 of the intended length and is far from drop (+0.031 to +0.084 at 2e-4), so "
         f"banked requests land; the pre-registered 'behaves as delivery' rule (tab − master within ±0.01) passes only for 50%, range and 75% at "
-        f"lr 1e-4, while at 2e-4 tab is better than fp32 master by 0.017 to 0.033 at every fraction."
+        f"lr 1e-4 (−0.006, −0.010, −0.006; {NOISE}), while at 2e-4 tab is better than fp32 master by 0.017 to 0.033 at every fraction, same sign on both seeds."
     ),
     "assessment": "partial_signal",
     "research_question": (
@@ -213,13 +219,13 @@ summary = {
         "q2_reading": (
             "Tab delivers 0.96 to 1.00 of the intended length and is far from drop at 2e-4 (+0.031 to +0.084) and above drop at 1e-4 "
             "(+0.005 to +0.023), so banked requests land; they are not equivalent to discarded ones (only 75% at 1e-4, +0.005, is inside the "
-            "±0.01 band on that side). The 'behaves as delivery' rule (tab − master within ±0.01) fails at 2e-4 for every fraction "
+            "±0.01 band on that side, a difference near the " + NOISE + "). The 'behaves as delivery' rule (tab − master within ±0.01) fails at 2e-4 for every fraction "
             "(−0.033, −0.020, −0.017, −0.018 for 25/50/75/range) and for 25% at 1e-4 (−0.012); it passes for 50%, range and marginally 75% "
-            "at 1e-4 (−0.006, −0.010, −0.006). At 2e-4 tab is better than fp32 master by more than the band on the seed mean; for 75% and "
-            "range one seed of each is inside 0.01 (per seed −0.0059/−0.0287 and −0.0272/−0.0088), so the 2e-4 excess is not uniform across seeds."
+            "at 1e-4 (−0.006, −0.010, −0.006; these sub-0.01 values sit above the " + NOISE + " but inside the pre-registered band). At 2e-4 tab is better than fp32 master by more than the band on the seed mean; for 75% and "
+            "range one seed of each is inside 0.01 (per seed −0.0059/−0.0287 and −0.0272/−0.0088; " + NOISE + "), so the 2e-4 excess is not uniform across seeds."
         ),
         "q3": V["q3_beats_tuned_exact_delivery"]["rule"],
-        "q3_verdict": "no writer flagged; keno_drop_50 at lr 1e-4 is 1.1512 (seed 0 1.1489, seed 1 1.1535), a tie with fp32 master at 5e-5 on the same seeds (1.1512)",
+        "q3_verdict": "no writer flagged; keno_drop_50 at lr 1e-4 is 1.1512 (seed 0 1.1489, seed 1 1.1535), a tie with fp32 master at 5e-5 on the same seeds (1.1512; difference 0.0000, below the " + NOISE + ")",
         "harness": "rne rerun at every (seed, lr) must match the previous experiment within 0.001 NLL; all five matched exactly (0.0)",
     },
     "methods": {
@@ -252,7 +258,7 @@ summary = {
         "timing": V["timing"],
     },
     "limitations": [
-        "Two seeds per cell; no interval is claimed. Paired differences smaller than about 0.01 are read as ties; both seeds agree in sign on every reported difference.",
+        "Two seeds per cell; no interval is claimed. Paired differences smaller than about 0.01 are read as ties; both seeds agree in sign on every reported difference. The previous run's null control (rne − torch AdamW, 5 seeds, exp_01m1tgnb6xf98sqwfhm4effknt) had max |mean| 0.0004 and max 90% CI bound 0.0045, so sub-0.01 differences here are above the harness noise floor but inside the pre-registered tie band.",
         "Write precision is confounded with selection: drawn coordinates get exact Kahan writes while plain rounding quantises every write, so keno_drop − rne mixes selection, precision and amount. A keno-drop variant with plain-rounding writes on drawn coordinates would separate them (proposed follow-up).",
         "Delivery is not matched between keno_drop_25 and rne (0.309 vs 0.264 length ratio). The matched-delivery numbers are a two-point linear extrapolation below the measured range (0.31 to 0.79); the curve must rise toward the untrained 1.937 at zero delivery and is flat at lr 1e-4 between 0.30 and 0.54, so the extrapolation is unsupported and the −0.016 residual is not a lower bound on a selection effect.",
         "The final norm of the tab compensation buffer was not recorded, so the residual tab − master gap cannot be split between still-banked and rounding-lost mass.",

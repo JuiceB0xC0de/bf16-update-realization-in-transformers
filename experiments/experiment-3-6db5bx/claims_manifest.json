@@ -1,6 +1,20 @@
 {
  "claims": [
   {
+   "id": "null_floor_mean",
+   "claim": "previous run null control (rne \u2212 torch AdamW) max |mean| is 0.0004",
+   "source": "results/reference/null_control_prev.json",
+   "key": "null_control_rne_minus_torch/max_abs_mean",
+   "value": 0.00041399058490174665
+  },
+  {
+   "id": "null_floor_ci",
+   "claim": "previous run null control max |90% CI bound| is 0.0045",
+   "source": "results/reference/null_control_prev.json",
+   "key": "null_control_rne_minus_torch/max_abs_ci_bound",
+   "value": 0.004533988764161315
+  },
+  {
    "id": "harness_all_passed",
    "claim": "all five plain-rounding reruns matched the previous experiment within 0.001",
    "source": "results/analysis/verdicts.json",
