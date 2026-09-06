@@ -1,6 +1,6 @@
 {
- "title": "A Kahan-compensated bfloat16 AdamW writer delivers the intended update on SmolLM2-135M and matches fp32 master weights in held-out loss at lr 1e-4 and 5e-5 (undecided at 2e-4); delivering the update helps at low learning rates and hurts at 2e-4",
- "headline": "Kahan compensation realizes between 0.9998 and 1.0001 of the intended cumulative update length at every learning rate (plain bf16 round-to-nearest: 0.130 to 0.264) and tracks fp32 master weights in held-out NLL to within 0.001 at lr 1e-4 and 5e-5. Delivering the intended update is worse than the plain bf16 baseline by 0.097 nats at lr 2e-4 and better by 0.017 (1e-4) and 0.123 (5e-5), so the learning-rate sign flip seen on Mamba-3 reproduces here.",
+ "title": "A Kahan-compensated bfloat16 AdamW writer delivers the intended update on SmolLM2-135M; its held-out loss is within \u00b10.01 of fp32 master weights at lr 1e-4 and 5e-5 and not decided at 2e-4; delivering the update helps at low learning rates and hurts at 2e-4",
+ "headline": "Kahan compensation realizes between 0.9998 and 1.0001 of the intended cumulative update length at every learning rate (plain bf16 round-to-nearest: 0.130 to 0.264) and reproduces fp32 master held-out NLL within \u00b10.01 at lr 1e-4 and 5e-5 (paired mean within 0.001); at 2e-4 the comparison is not decided (90% CI -0.024 to +0.006). Delivering the intended update is worse than the plain bf16 baseline by 0.097 nats at lr 2e-4 and better by 0.017 (1e-4) and 0.123 (5e-5), so the learning-rate sign flip seen on Mamba-3 reproduces here.",
  "assessment": "signal",
  "research_question": "Build a compensated bfloat16 AdamW writer (bf16 parameters and moments, one fp32 intent path, compensation by Kahan residual, selective residual, stochastic rounding, or fp32 master copy) and test: Q1 does Kahan deliver the intended update; Q2 does Kahan reproduce fp32 master weights in held-out loss; Q3 does delivering the intended update help or hurt depending on learning rate.",
  "decision_rules": {
@@ -45,7 +45,7 @@
    "sr": "stochastic rounding of p + i via int32 bit trick, seeded torch.Generator",
    "fp32_master": "fp32 master += i; p = bf16(master)"
   },
-  "delivery_metrics": "cumulative over the run: length ratio ||sum realized|| / ||sum intended||, overshoot rho = ||sum realized||^2 / <sum realized, sum intended> (cumulative rho, realization.py), cosine, never-moved fraction of coordinates; per family attention / MLP / embedding / norm",
+  "delivery_metrics": "cumulative over the run: length ratio ||sum realized|| / ||sum intended||, overshoot rho = ||r||^2 / <i, r> with i the intended and r the realized update, accumulated over all coordinates and steps (realization.py), cosine, never-moved fraction of coordinates; per family attention / MLP / embedding / norm",
   "statistics": "paired per-seed differences, Student-t 90% intervals over 5 seeds",
   "equivalence_check": "20-step run of rne against torch.optim.AdamW per seed on the real model: identical losses, bit-exact moments, min exact write agreement 0.99793 (threshold 0.997)",
   "compute": "5 on-demand 1xH100 jobs (one per seed, 18 runs each), 1.5 to 2.3 h per job; mean 0.123 s/step"
@@ -599,6 +599,43 @@
    "sr": 0
   },
   "clip_fired_total_all_runs": 353,
+  "clip_fired_steps_by_condition_lr": {
+   "fp32_master": {
+    "2e-4": 83,
+    "1e-4": 6,
+    "5e-5": 0
+   },
+   "kahan": {
+    "2e-4": 57,
+    "1e-4": 6,
+    "5e-5": 0
+   },
+   "rne": {
+    "2e-4": 3,
+    "1e-4": 0,
+    "5e-5": 0
+   },
+   "selective": {
+    "2e-4": 148,
+    "1e-4": 10,
+    "5e-5": 1
+   },
+   "sr": {
+    "2e-4": 28,
+    "1e-4": 8,
+    "5e-5": 0
+   },
+   "torch_adamw": {
+    "2e-4": 3,
+    "1e-4": 0,
+    "5e-5": 0
+   }
+  },
+  "sr_2e-4_nll_spread": {
+   "sd": 0.03609613877649246,
+   "min": 1.2635896034552505,
+   "max": 1.3492685465305916
+  },
   "untrained_nll": 1.9371732942909525,
   "reference_experiment_C_master_minus_bf16": {
    "2e-4": 0.1326,
@@ -609,15 +646,15 @@
  "interpretation": [
   "Q1 supports: the bf16 Kahan residual delivers the intended update as well as an fp32 master copy (length ratio within 0.0023 of the master's own bf16 copy at every LR) at half the extra memory (269 MB vs 538 MB on this 135M model).",
   "Q2 not decided at this power: at 1e-4 and 5e-5 the Kahan minus master interval is inside \u00b10.01; at 2e-4 the interval [-0.024, +0.006] is too wide because seed-to-seed NLL variance at that rate is 3 to 10 times larger than at the lower rates. No interval excludes the band. At 2e-4 the compensated writers were partly clipped runs (kahan 1 to 18 and fp32_master 2 to 34 clipped steps per seed, 0.03 to 1.1 % of steps, vs 0 to 2 for rne), and the per-seed Kahan minus master NLL difference covaries with the per-seed clipped-step difference (r = 0.72 over 5 seeds); this coincides with the one LR where Q2 is undecided.",
-  "Q3 supports: delivering the intended update (Kahan or master) is worse than plain bf16 at 2e-4 and better at 1e-4 and 5e-5, reproducing the sign flip seen on Mamba-3 187M. One hypothesis consistent with this is that the bf16 round-to-nearest write acts partly as a step-size damper (it discards 74 to 87 % of the intended cumulative length), but the sign flip is the only thing tested here: rne also changes the update direction (cumulative cosine with the intent 0.26 to 0.52) and its sparsity (61 to 89 % of coordinates never move), and rne at 2e-4 (NLL 1.169) does not sit on the master learning-rate curve (1.181 at 1e-4, 1.150 at 5e-5), so a pure step-size account is not established.",
-  "Selective compensation (reset the residual when the coordinate moves) overshoots by 1.7 to 1.9x and is the worst writer at every LR. Stochastic rounding realizes 1.16 to 1.28x with cosine 0.78 to 0.86 and lands within 0.02 of master at every LR but with the largest seed variance at 2e-4.",
+  "Q3 supports: delivering the intended update (Kahan or master) is worse than plain bf16 at 2e-4 and better at 1e-4 and 5e-5, reproducing the sign flip seen on Mamba-3 187M. One hypothesis consistent with this is that the bf16 round-to-nearest write acts partly as a step-size damper (it discards 74 to 87 % of the intended cumulative length), but the sign flip is the only thing tested here: rne also changes the update direction (cumulative cosine with the intent 0.26 to 0.52) and its sparsity (61 to 89 % of coordinates never move), and rne at 2e-4 (NLL 1.169) does not sit on the master learning-rate curve (1.181 at 1e-4, 1.150 at 5e-5), so a pure step-size account is not established. The test that would establish it is a matched-delivery comparison: run the fp32 master (or Kahan) writer with its learning rate scaled to the rne cumulative length ratio (0.26 at 2e-4, 0.18 at 1e-4, 0.13 at 5e-5) and check whether it reproduces the rne loss.",
+  "Selective compensation (reset the residual when the coordinate moves) overshoots by 1.7 to 1.9x and is the worst writer at every LR. Stochastic rounding realizes 1.16 to 1.28x with cosine 0.78 to 0.86 and lands within 0.02 of master at every LR but with the largest seed variance at 2e-4 (held-out NLL sd 0.036, range 1.264 to 1.349 across seeds; 90% interval vs master [-0.016, +0.053]).",
   "Null control: rne minus torch AdamW has |mean| <= 0.00041 at every LR (C: 0.000396); the equivalence check passed in every seed."
  ],
  "limitations": [
   "One model (SmolLM2-135M), one dataset (GSM8K), 3000 steps at batch 1, three learning rates; the intervals resample seeds (n = 5), not steps or datasets.",
   "Q2 is undecided only at lr 2e-4, where per-seed NLL differences range from -0.031 to +0.013; more seeds or a lower-variance probe would be needed to close the \u00b10.01 band there.",
   "Moments are bfloat16 in every condition, so nothing here speaks to moment precision; the compensation buffer is bf16 so Kahan is an approximation to fp32 master weights, not an identity.",
-  "The plan expected gradient clipping at 32 never to fire; it fired on 353 of 270,000 steps, concentrated in the compensated writers (kahan 4.2, master 5.9, selective 10.6 steps per run) and almost never for rne (0.2). At 2e-4 this clipping coincides with the one LR where Q2 is undecided (see interpretation); Q3 is unaffected, since every seed's rne minus master difference at 2e-4 lies in [-0.126, -0.097]."
+  "The plan expected gradient clipping at 32 never to fire; it fired on 353 of 270,000 steps, concentrated in the compensated writers (kahan 4.2, master 5.9, selective 10.6 steps per run) and almost never for rne (0.2). Fired steps summed over 5 seeds by condition and lr (2e-4 / 1e-4 / 5e-5): torch_adamw 3/0/0, rne 3/0/0, kahan 57/6/0, fp32_master 83/6/0, selective 148/10/1, sr 28/8/0; 316 of the 353 fired steps are compensated writers at 2e-4. At 2e-4 this clipping coincides with the one LR where Q2 is undecided (see interpretation); Q3 is unaffected, since every seed's rne minus master difference at 2e-4 lies in [-0.126, -0.097]."
  ],
  "design_changes_tried": [
   "Second-moment update reordered to torch's foreach op order (mul_ then addcmul_, one bf16 rounding each) so moments match torch bit for bit; before that, agreement was lower.",

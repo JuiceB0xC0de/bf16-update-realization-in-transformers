@@ -117,6 +117,18 @@ for c, v in agg.items():
     claim(f"cost_clip_{c}", f"{c} mean clipped steps per run {cost[c]['clip_fired_steps_mean']:.2f}",
           f"mean(clip_fired_steps | condition={c})", cost[c]["clip_fired_steps_mean"], source=RUNS)
 
+_sr = sorted(float(r["eval_nll"]) for r in rows if r["condition"] == "sr" and float(r["lr"]) == 2e-4)
+claim("sr_2e-4_nll_sd", f"stochastic rounding held-out NLL sd across 5 seeds at lr 2e-4 is {st.stdev(_sr):.3f}",
+      "stdev(eval_nll | condition=sr, lr=2e-4)", r4(st.stdev(_sr)), source=RUNS)
+claim("sr_2e-4_nll_min", f"stochastic rounding held-out NLL at lr 2e-4 ranges from {_sr[0]:.3f}",
+      "min(eval_nll | condition=sr, lr=2e-4)", r4(_sr[0]), source=RUNS)
+claim("sr_2e-4_nll_max", f"stochastic rounding held-out NLL at lr 2e-4 ranges up to {_sr[-1]:.3f}",
+      "max(eval_nll | condition=sr, lr=2e-4)", r4(_sr[-1]), source=RUNS)
+claim("clip_2e-4_compensated_share", "316 of 353 clipped steps are compensated writers (kahan, fp32_master, selective, sr) at lr 2e-4",
+      "sum(clip_fired_steps | condition in {kahan,fp32_master,selective,sr}, lr=2e-4)",
+      sum(int(r["clip_fired_steps"]) for r in rows if r["condition"] in ("kahan", "fp32_master", "selective", "sr") and float(r["lr"]) == 2e-4),
+      source=RUNS)
+
 claim("untrained_nll", "Untrained model held-out NLL is 1.9372", "untrained_nll_per_seed.0",
       V["untrained_nll_per_seed"]["0"])
 claim("n_runs", "90 runs analysed", "n_runs", V["n_runs"])
@@ -140,15 +152,16 @@ q2 = V["q2_kahan_vs_master"]["per_lr"]
 q3 = V["q3_lr_reversal"]["per_lr"]
 q1 = V["q1_delivery"]["per_lr"]
 summary = {
-    "title": "A Kahan-compensated bfloat16 AdamW writer delivers the intended update on SmolLM2-135M and matches "
-             "fp32 master weights in held-out loss at lr 1e-4 and 5e-5 (undecided at 2e-4); delivering the update "
-             "helps at low learning rates and hurts at 2e-4",
+    "title": "A Kahan-compensated bfloat16 AdamW writer delivers the intended update on SmolLM2-135M; its held-out "
+             "loss is within ±0.01 of fp32 master weights at lr 1e-4 and 5e-5 and not decided at 2e-4; delivering the "
+             "update helps at low learning rates and hurts at 2e-4",
     "headline": (
         f"Kahan compensation realizes between {min(q1[lr]['kahan_length_ratio'] for lr in LRS):.4f} and "
         f"{max(q1[lr]['kahan_length_ratio'] for lr in LRS):.4f} of the intended cumulative update length at every "
         f"learning rate "
         f"(plain bf16 round-to-nearest: {q1['5e-05']['rne_length_ratio']:.3f} to {q1['0.0002']['rne_length_ratio']:.3f}) "
-        f"and tracks fp32 master weights in held-out NLL to within 0.001 at lr 1e-4 and 5e-5. Delivering the intended "
+        f"and reproduces fp32 master held-out NLL within ±0.01 at lr 1e-4 and 5e-5 (paired mean within 0.001); at 2e-4 "
+        f"the comparison is not decided (90% CI -0.024 to +0.006). Delivering the intended "
         f"update is worse than the plain bf16 baseline by {V['vs_rne']['0.0002']['kahan']['mean']:.3f} nats at lr 2e-4 "
         f"and better by {-V['vs_rne']['0.0001']['kahan']['mean']:.3f} (1e-4) and {-V['vs_rne']['5e-05']['kahan']['mean']:.3f} "
         f"(5e-5), so the learning-rate sign flip seen on Mamba-3 reproduces here."
@@ -184,7 +197,8 @@ summary = {
             "fp32_master": "fp32 master += i; p = bf16(master)",
         },
         "delivery_metrics": "cumulative over the run: length ratio ||sum realized|| / ||sum intended||, overshoot "
-                            "rho = ||sum realized||^2 / <sum realized, sum intended> (cumulative rho, realization.py), cosine, "
+                            "rho = ||r||^2 / <i, r> with i the intended and r the realized update, accumulated over all coordinates and "
+                            "steps (realization.py), cosine, "
                             "never-moved fraction of "
                             "coordinates; per family attention / MLP / embedding / norm",
         "statistics": "paired per-seed differences, Student-t 90% intervals over 5 seeds",
@@ -212,6 +226,14 @@ summary = {
         "cost": cost,
         "extra_state_bytes": {c: D["0.0002"][c]["extra_state_bytes"] for c in D["0.0002"]},
         "clip_fired_total_all_runs": V["timing"]["clip_fired_total"],
+        "clip_fired_steps_by_condition_lr": {
+            c: {LRN[lr]: sum(int(r["clip_fired_steps"]) for r in rows if r["condition"] == c and float(r["lr"]) == float(lr))
+                for lr in LRS}
+            for c in sorted({r["condition"] for r in rows})},
+        "sr_2e-4_nll_spread": {
+            "sd": st.stdev([float(r["eval_nll"]) for r in rows if r["condition"] == "sr" and float(r["lr"]) == 2e-4]),
+            "min": min(float(r["eval_nll"]) for r in rows if r["condition"] == "sr" and float(r["lr"]) == 2e-4),
+            "max": max(float(r["eval_nll"]) for r in rows if r["condition"] == "sr" and float(r["lr"]) == 2e-4)},
         "untrained_nll": V["untrained_nll_per_seed"]["0"],
         "reference_experiment_C_master_minus_bf16": {"2e-4": 0.1326, "1e-4": -0.04477, "5e-5": -0.2036},
     },
@@ -231,10 +253,13 @@ summary = {
         "cumulative length), but the sign flip is the only thing tested here: rne also changes the update direction "
         "(cumulative cosine with the intent 0.26 to 0.52) and its sparsity (61 to 89 % of coordinates never move), "
         "and rne at 2e-4 (NLL 1.169) does not sit on the master learning-rate curve (1.181 at 1e-4, 1.150 at 5e-5), "
-        "so a pure step-size account is not established.",
+        "so a pure step-size account is not established. The test that would establish it is a matched-delivery "
+        "comparison: run the fp32 master (or Kahan) writer with its learning rate scaled to the rne cumulative length "
+        "ratio (0.26 at 2e-4, 0.18 at 1e-4, 0.13 at 5e-5) and check whether it reproduces the rne loss.",
         "Selective compensation (reset the residual when the coordinate moves) overshoots by 1.7 to 1.9x and is the "
         "worst writer at every LR. Stochastic rounding realizes 1.16 to 1.28x with cosine 0.78 to 0.86 and lands "
-        "within 0.02 of master at every LR but with the largest seed variance at 2e-4.",
+        "within 0.02 of master at every LR but with the largest seed variance at 2e-4 (held-out NLL sd 0.036, range "
+        "1.264 to 1.349 across seeds; 90% interval vs master [-0.016, +0.053]).",
         "Null control: rne minus torch AdamW has |mean| <= 0.00041 at every LR (C: 0.000396); the equivalence check "
         "passed in every seed.",
     ],
@@ -247,6 +272,9 @@ summary = {
         "buffer is bf16 so Kahan is an approximation to fp32 master weights, not an identity.",
         "The plan expected gradient clipping at 32 never to fire; it fired on 353 of 270,000 steps, concentrated in "
         "the compensated writers (kahan 4.2, master 5.9, selective 10.6 steps per run) and almost never for rne (0.2). "
+        "Fired steps summed over 5 seeds by condition and lr (2e-4 / 1e-4 / 5e-5): torch_adamw 3/0/0, rne 3/0/0, "
+        "kahan 57/6/0, fp32_master 83/6/0, selective 148/10/1, sr 28/8/0; 316 of the 353 fired steps are compensated "
+        "writers at 2e-4. "
         "At 2e-4 this clipping coincides with the one LR where Q2 is undecided (see interpretation); Q3 is unaffected, "
         "since every seed's rne minus master difference at 2e-4 lies in [-0.126, -0.097].",
     ],

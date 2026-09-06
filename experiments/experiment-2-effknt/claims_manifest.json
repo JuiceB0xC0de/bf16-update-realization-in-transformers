@@ -2229,6 +2229,34 @@
    "value": 2.4
   },
   {
+   "id": "sr_2e-4_nll_sd",
+   "claim": "stochastic rounding held-out NLL sd across 5 seeds at lr 2e-4 is 0.036",
+   "source": "results/analysis/runs_table.csv",
+   "key": "stdev(eval_nll | condition=sr, lr=2e-4)",
+   "value": 0.0361
+  },
+  {
+   "id": "sr_2e-4_nll_min",
+   "claim": "stochastic rounding held-out NLL at lr 2e-4 ranges from 1.264",
+   "source": "results/analysis/runs_table.csv",
+   "key": "min(eval_nll | condition=sr, lr=2e-4)",
+   "value": 1.2636
+  },
+  {
+   "id": "sr_2e-4_nll_max",
+   "claim": "stochastic rounding held-out NLL at lr 2e-4 ranges up to 1.349",
+   "source": "results/analysis/runs_table.csv",
+   "key": "max(eval_nll | condition=sr, lr=2e-4)",
+   "value": 1.3493
+  },
+  {
+   "id": "clip_2e-4_compensated_share",
+   "claim": "316 of 353 clipped steps are compensated writers (kahan, fp32_master, selective, sr) at lr 2e-4",
+   "source": "results/analysis/runs_table.csv",
+   "key": "sum(clip_fired_steps | condition in {kahan,fp32_master,selective,sr}, lr=2e-4)",
+   "value": 316
+  },
+  {
    "id": "untrained_nll",
    "claim": "Untrained model held-out NLL is 1.9372",
    "source": "results/analysis/verdicts.json",
@@ -2419,6 +2447,6 @@
    "value": 134515008
   }
  ],
- "n_claims": 303,
+ "n_claims": 307,
  "note": "keys are dotted paths into the named JSON source; runs_table keys are aggregate expressions"
 }
