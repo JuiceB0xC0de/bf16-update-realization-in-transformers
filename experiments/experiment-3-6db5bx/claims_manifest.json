@@ -113,6 +113,30 @@
    "value": -0.03168271323360328
   },
   {
+   "id": "q1_keno25_minus_master",
+   "claim": "keno_drop_25 \u2212 fp32_master at lr 2e-4, seed mean, is \u22120.1168",
+   "source": "results/analysis/paired_differences.json",
+   "key": "0.0002/keno_drop_25-fp32_master/mean",
+   "value": -0.11675270669928695
+  },
+  {
+   "id": "q1_keno25_minus_master_seeds",
+   "claim": "keno_drop_25 \u2212 fp32_master at lr 2e-4 per seed is \u22120.1107 and \u22120.1228",
+   "source": "results/analysis/paired_differences.json",
+   "key": "0.0002/keno_drop_25-fp32_master/per_seed",
+   "value": [
+    -0.11071582278698844,
+    -0.12278959061158545
+   ]
+  },
+  {
+   "id": "q1_rne_minus_master",
+   "claim": "rne \u2212 fp32_master at lr 2e-4, seed mean, is \u22120.1010 (1.1691 \u2212 1.2701)",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/rne/nll_mean",
+   "value": 1.1690797287068357
+  },
+  {
    "id": "q1_context_1e4",
    "claim": "keno_drop_25 \u2212 rne at lr 1e-4, seed mean, is \u22120.0469",
    "source": "results/analysis/verdicts.json",

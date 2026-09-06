@@ -107,7 +107,7 @@ def keno_groups(colors):
 
 
 def fig_paired(pairs, colors, root):
-    lrs = sorted(pairs.keys(), key=float, reverse=True)
+    lrs = [k for k in sorted(pairs.keys(), key=float, reverse=True) if any(x.startswith("keno_") for x in pairs[k])]
     rows = []
     for k in lrs:
         for c in KENO:
@@ -203,7 +203,7 @@ apply_theme(fig, height=300 * len(lrs) + 60)
 
 
 def fig_q2(pairs, colors, root):
-    lrs = sorted(pairs.keys(), key=float, reverse=True)
+    lrs = [k for k in sorted(pairs.keys(), key=float, reverse=True) if any(x.startswith("keno_") for x in pairs[k])]
     xs = {"25": "25%", "50": "50%", "75": "75%", "range": "30-70%"}
     rows = []
     for k in lrs:
