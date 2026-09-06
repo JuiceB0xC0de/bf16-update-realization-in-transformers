@@ -1,0 +1,22 @@
+[
+ {
+  "seed": 2,
+  "lr": 0.0002,
+  "condition": "thr_drop_50"
+ },
+ {
+  "seed": 2,
+  "lr": 0.0001,
+  "condition": "thr_drop_25"
+ },
+ {
+  "seed": 2,
+  "lr": 0.0002,
+  "condition": "thr_drop_15"
+ },
+ {
+  "seed": 2,
+  "lr": 0.0001,
+  "condition": "thr_drop_15"
+ }
+]

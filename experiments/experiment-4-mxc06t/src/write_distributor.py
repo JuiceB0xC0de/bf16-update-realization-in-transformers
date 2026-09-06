@@ -143,7 +143,8 @@ class WriteDistributor:
 
 
 # ------------------------------------------------------------------ writer name parsing
-# "15" appended last so CONDITIONS.index (the mask seed) of the previous run's writers is unchanged
+# "15" appended last so CONDITIONS.index (the mask seed) of the previous run's keno_drop writers is unchanged
+# (keno_tab writers shift by one; none is run in this experiment)
 KENO_FRACTIONS = {"25": 0.25, "50": 0.50, "75": 0.75, "range": None, "15": 0.15}
 KENO_WRITERS = tuple(f"keno_{m}_{f}" for m in MODES for f in KENO_FRACTIONS)
 
