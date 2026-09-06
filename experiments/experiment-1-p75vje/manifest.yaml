@@ -1,0 +1,9 @@
+experiment: 1
+eid: "exp_01m1tdvatwe1rrek9g34p75vje"
+title: "Does the BF16 update-realization pattern appear in a small pretrained Transformer under AdamW?"
+date: "2026-09-06"
+status: in-progress
+data: {}
+outputs: {}
+results: {}
+slurm_jobs: []
