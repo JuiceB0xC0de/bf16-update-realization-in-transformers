@@ -1,0 +1,650 @@
+{
+ "title": "A Kahan-compensated bfloat16 AdamW writer delivers the intended update and reproduces fp32 master weights on SmolLM2-135M; delivering the update helps at low learning rates and hurts at 2e-4",
+ "headline": "Kahan compensation realizes between 0.9998 and 1.0001 of the intended cumulative update length at every learning rate (plain bf16 round-to-nearest: 0.130 to 0.264) and tracks fp32 master weights in held-out NLL to within 0.001 at lr 1e-4 and 5e-5. Delivering the intended update is worse than the plain bf16 baseline by 0.097 nats at lr 2e-4 and better by 0.017 (1e-4) and 0.123 (5e-5), so the learning-rate sign flip seen on Mamba-3 reproduces here.",
+ "assessment": "signal",
+ "research_question": "Build a compensated bfloat16 AdamW writer (bf16 parameters and moments, one fp32 intent path, compensation by Kahan residual, selective residual, stochastic rounding, or fp32 master copy) and test: Q1 does Kahan deliver the intended update; Q2 does Kahan reproduce fp32 master weights in held-out loss; Q3 does delivering the intended update help or hurt depending on learning rate.",
+ "decision_rules": {
+  "q1": "supports if at every lr kahan seed-mean cumulative length ratio >= 0.98 and |rho-1| <= 0.02 and rne length ratio < 0.9; refutes if at every lr |len(kahan)-len(rne)| < 0.05; else partial",
+  "q1_verdict": "supports",
+  "q2": "reproduces master if 90% CI of kahan - fp32_master inside [-0.01, 0.01] at every lr; differs if any CI entirely outside; else not decided at this power",
+  "q2_verdict": "not decided at this power",
+  "q3": "supports if 90% CI of rne - fp32_master < 0 at 2e-4 and > 0 at 5e-5; refutes if all three CIs exclude 0 with the same sign; else not decided at this power",
+  "q3_verdict": "supports",
+  "null_control": "rne minus torch.optim.AdamW(fused=False) is the noise floor; C reached 0.000396"
+ },
+ "methods": {
+  "model": "HuggingFaceTB/SmolLM2-135M @ 93efa2f097d58c2a74874c7e644dbc9b0cee75a2, bfloat16 parameters",
+  "data": "gsm8k main @ 740312add88f781978c0658806c59bc2815b9866; train rows in a seed-specific fixed order, question + newline + answer + eos, max 512 tokens, batch 1, 3000 steps",
+  "held_out": "256 fixed test questions (rng(1234) permutation of the 1319 test rows), NLL per token over all 49,277 tokens, evaluated once untrained (1.9372) and once at the end of every run",
+  "conditions": [
+   "torch_adamw (null control)",
+   "rne",
+   "kahan",
+   "fp32_master",
+   "selective",
+   "sr"
+  ],
+  "learning_rates": [
+   0.0002,
+   0.0001,
+   5e-05
+  ],
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "n_runs": 90,
+  "optimizer": "AdamW betas (0.9, 0.999), eps 1e-8, weight decay 0.01, no schedule, grad clip 32; moments bf16 in every condition, updated in torch's foreach op order so they match torch bit for bit",
+  "writers": {
+   "rne": "single bf16 round-to-nearest write of p + intent",
+   "kahan": "bf16 residual c: t = p + i + c; p' = bf16(t); c' = bf16(t - p')",
+   "selective": "as kahan but c' = 0 wherever p' != p",
+   "sr": "stochastic rounding of p + i via int32 bit trick, seeded torch.Generator",
+   "fp32_master": "fp32 master += i; p = bf16(master)"
+  },
+  "delivery_metrics": "cumulative over the run: length ratio ||sum realized|| / ||sum intended||, overshoot rho = <realized, intended> / ||intended||^2, cosine, never-moved fraction of coordinates; per family attention / MLP / embedding / norm",
+  "statistics": "paired per-seed differences, Student-t 90% intervals over 5 seeds",
+  "equivalence_check": "20-step run of rne against torch.optim.AdamW per seed on the real model: identical losses, bit-exact moments, min exact write agreement 0.99793 (threshold 0.997)",
+  "compute": "5 on-demand 1xH100 jobs (one per seed, 18 runs each), 1.5 to 2.3 h per job; mean 0.123 s/step"
+ },
+ "results": {
+  "q1_delivery": {
+   "2e-4": {
+    "kahan_length_ratio": 1.0001087121387626,
+    "kahan_overshoot": 1.000407174854295,
+    "kahan_never_moved": 0.036589539510713934,
+    "rne_length_ratio": 0.26367954233887103,
+    "rne_overshoot": 0.5105443213061381,
+    "rne_never_moved": 0.6131727933287563,
+    "fp32_master_bf16_copy_length_ratio": 1.0002890896479382,
+    "fp32_master_bf16_copy_never_moved": 0.03631323874284719,
+    "kahan_minus_master_length_ratio": -0.0001803775091755444,
+    "supports_here": true,
+    "indistinguishable_here": false
+   },
+   "1e-4": {
+    "kahan_length_ratio": 1.0001467179113817,
+    "kahan_overshoot": 1.0009184301690237,
+    "kahan_never_moved": 0.06950135259256722,
+    "rne_length_ratio": 0.18449111113489153,
+    "rne_overshoot": 0.48130360283527673,
+    "rne_never_moved": 0.7854362629930483,
+    "fp32_master_bf16_copy_length_ratio": 1.0007560669568325,
+    "fp32_master_bf16_copy_never_moved": 0.0695761115369372,
+    "kahan_minus_master_length_ratio": -0.0006093490454508466,
+    "supports_here": true,
+    "indistinguishable_here": false
+   },
+   "5e-5": {
+    "kahan_length_ratio": 0.9997540837355583,
+    "kahan_overshoot": 1.00190933783827,
+    "kahan_never_moved": 0.12686026231362973,
+    "rne_length_ratio": 0.13019833445207993,
+    "rne_overshoot": 0.497758319832365,
+    "rne_never_moved": 0.8869234383125487,
+    "fp32_master_bf16_copy_length_ratio": 1.0020083705560132,
+    "fp32_master_bf16_copy_never_moved": 0.12656129790365103,
+    "kahan_minus_master_length_ratio": -0.0022542868204549205,
+    "supports_here": true,
+    "indistinguishable_here": false
+   }
+  },
+  "q2_kahan_minus_master_nll": {
+   "2e-4": {
+    "mean": -0.009045270093983326,
+    "ci_lo": -0.024295875796374697,
+    "ci_hi": 0.0062053356084080455,
+    "per_seed": [
+     -0.004209870478258049,
+     -0.011130528264268635,
+     -0.031011654132589772,
+     -0.012255628754121783,
+     0.013381331159321608
+    ]
+   },
+   "1e-4": {
+    "mean": 0.0004509879592650812,
+    "ci_lo": -0.0019130244514657376,
+    "ci_hi": 0.0028150003699959,
+    "per_seed": [
+     -0.0023430904816272857,
+     0.0029653884831977173,
+     0.002603577914813471,
+     -0.001913178262693771,
+     0.0009422421426352745
+    ]
+   },
+   "5e-5": {
+    "mean": 0.0001572665019205388,
+    "ci_lo": -0.0007885631053336725,
+    "ci_hi": 0.0011030961091747502,
+    "per_seed": [
+     0.0003666099270756007,
+     0.001043425645935958,
+     4.1822064635654854e-05,
+     -0.0014760292026108068,
+     0.0008105040745662873
+    ]
+   }
+  },
+  "q3_rne_minus_master_nll": {
+   "2e-4": {
+    "mean": -0.1061941726768448,
+    "ci_lo": -0.11722187032149478,
+    "ci_hi": -0.09516647503219483,
+    "per_seed": [
+     -0.09704680188144366,
+     -0.10494727113648161,
+     -0.12625609754289546,
+     -0.10075898106193915,
+     -0.10196171176146418
+    ]
+   },
+   "1e-4": {
+    "mean": 0.017476317816349417,
+    "ci_lo": 0.015896152728053368,
+    "ci_hi": 0.019056482904645466,
+    "per_seed": [
+     0.017934736882643243,
+     0.018563006895375267,
+     0.018240433504488562,
+     0.01810312910020162,
+     0.014540282699038398
+    ]
+   },
+   "5e-5": {
+    "mean": 0.12333742334347382,
+    "ci_lo": 0.12230933211156708,
+    "ci_hi": 0.12436551457538056,
+    "per_seed": [
+     0.12454703501307862,
+     0.12218899308303399,
+     0.1234060233465264,
+     0.1242359107289217,
+     0.12230915454580837
+    ]
+   }
+  },
+  "null_rne_minus_torch_nll": {
+   "2e-4": {
+    "mean": 0.00041399058490174665,
+    "ci_lo": -0.003706007594357822,
+    "ci_hi": 0.004533988764161315,
+    "per_seed": [
+     -0.0011771368071284982,
+     0.004194785278939017,
+     -0.001751023223604875,
+     0.005558448115356551,
+     -0.004755120439053462
+    ]
+   },
+   "1e-4": {
+    "mean": 3.0501998447940436e-05,
+    "ci_lo": -0.0004797610778010571,
+    "ci_hi": 0.000540765074696938,
+    "per_seed": [
+     0.00023592940025540798,
+     0.00027194853898460103,
+     7.281201413578131e-06,
+     -0.0008723442255513802,
+     0.0005096950771374953
+    ]
+   },
+   "5e-5": {
+    "mean": 6.54452562230734e-05,
+    "ci_lo": -0.00015528373497759567,
+    "ci_hi": 0.00028617424742374245,
+    "per_seed": [
+     0.0003854016905266988,
+     -3.4023145771389096e-05,
+     -0.0001322390521421024,
+     0.0002312448999817196,
+     -0.0001231581114795599
+    ]
+   }
+  },
+  "vs_master_all": {
+   "2e-4": {
+    "torch_adamw": {
+     "mean": -0.10660816326174656,
+     "ci_lo": -0.11758778957831367,
+     "ci_hi": -0.09562853694517945
+    },
+    "rne": {
+     "mean": -0.1061941726768448,
+     "ci_lo": -0.11722187032149478,
+     "ci_hi": -0.09516647503219483
+    },
+    "kahan": {
+     "mean": -0.009045270093983326,
+     "ci_lo": -0.024295875796374697,
+     "ci_hi": 0.0062053356084080455
+    },
+    "selective": {
+     "mean": 0.10772306611234712,
+     "ci_lo": 0.08629669441524893,
+     "ci_hi": 0.12914943780944532
+    },
+    "sr": {
+     "mean": 0.01839583199851118,
+     "ci_lo": -0.0163414537541192,
+     "ci_hi": 0.05313311775114156
+    }
+   },
+   "1e-4": {
+    "torch_adamw": {
+     "mean": 0.01744581581790148,
+     "ci_lo": 0.015575007952921174,
+     "ci_hi": 0.019316623682881784
+    },
+    "rne": {
+     "mean": 0.017476317816349417,
+     "ci_lo": 0.015896152728053368,
+     "ci_hi": 0.019056482904645466
+    },
+    "kahan": {
+     "mean": 0.0004509879592650812,
+     "ci_lo": -0.0019130244514657376,
+     "ci_hi": 0.0028150003699959
+    },
+    "selective": {
+     "mean": 0.058853578752329216,
+     "ci_lo": 0.05469722454408422,
+     "ci_hi": 0.06300993296057422
+    },
+    "sr": {
+     "mean": 0.006286133259300763,
+     "ci_lo": 0.00035199722918736066,
+     "ci_hi": 0.012220269289414165
+    }
+   },
+   "5e-5": {
+    "torch_adamw": {
+     "mean": 0.12327197808725074,
+     "ci_lo": 0.1224186288020441,
+     "ci_hi": 0.12412532737245738
+    },
+    "rne": {
+     "mean": 0.12333742334347382,
+     "ci_lo": 0.12230933211156708,
+     "ci_hi": 0.12436551457538056
+    },
+    "kahan": {
+     "mean": 0.0001572665019205388,
+     "ci_lo": -0.0007885631053336725,
+     "ci_hi": 0.0011030961091747502
+    },
+    "selective": {
+     "mean": 0.020188445469474604,
+     "ci_lo": 0.017083143313086413,
+     "ci_hi": 0.023293747625862796
+    },
+    "sr": {
+     "mean": 0.0028313974708377375,
+     "ci_lo": 0.002224472513451262,
+     "ci_hi": 0.003438322428224213
+    }
+   }
+  },
+  "vs_rne_all": {
+   "2e-4": {
+    "torch_adamw": {
+     "mean": -0.00041399058490174665,
+     "ci_lo": -0.004533988764161315,
+     "ci_hi": 0.003706007594357822
+    },
+    "kahan": {
+     "mean": 0.09714890258286149,
+     "ci_lo": 0.08715993625504188,
+     "ci_hi": 0.1071378689106811
+    },
+    "fp32_master": {
+     "mean": 0.1061941726768448,
+     "ci_lo": 0.09516647503219483,
+     "ci_hi": 0.11722187032149478
+    },
+    "selective": {
+     "mean": 0.21391723878919194,
+     "ci_lo": 0.19841629540736405,
+     "ci_hi": 0.22941818217101984
+    },
+    "sr": {
+     "mean": 0.124590004675356,
+     "ci_lo": 0.09105017740062486,
+     "ci_hi": 0.15812983195008712
+    }
+   },
+   "1e-4": {
+    "torch_adamw": {
+     "mean": -3.0501998447940436e-05,
+     "ci_lo": -0.000540765074696938,
+     "ci_hi": 0.0004797610778010571
+    },
+    "kahan": {
+     "mean": -0.017025329857084336,
+     "ci_lo": -0.019855039047310574,
+     "ci_hi": -0.014195620666858099
+    },
+    "fp32_master": {
+     "mean": -0.017476317816349417,
+     "ci_lo": -0.019056482904645466,
+     "ci_hi": -0.015896152728053368
+    },
+    "selective": {
+     "mean": 0.0413772609359798,
+     "ci_lo": 0.03636842136769161,
+     "ci_hi": 0.04638610050426799
+    },
+    "sr": {
+     "mean": -0.011190184557048654,
+     "ci_lo": -0.016734481626405093,
+     "ci_hi": -0.005645887487692216
+    }
+   },
+   "5e-5": {
+    "torch_adamw": {
+     "mean": -6.54452562230734e-05,
+     "ci_lo": -0.00028617424742374245,
+     "ci_hi": 0.00015528373497759567
+    },
+    "kahan": {
+     "mean": -0.12318015684155328,
+     "ci_lo": -0.12498980172032619,
+     "ci_hi": -0.12137051196278038
+    },
+    "fp32_master": {
+     "mean": -0.12333742334347382,
+     "ci_lo": -0.12436551457538056,
+     "ci_hi": -0.12230933211156708
+    },
+    "selective": {
+     "mean": -0.10314897787399921,
+     "ci_lo": -0.10698410162066596,
+     "ci_hi": -0.09931385412733246
+    },
+    "sr": {
+     "mean": -0.12050602587263608,
+     "ci_lo": -0.12202160134892681,
+     "ci_hi": -0.11899045039634534
+    }
+   }
+  },
+  "nll_means": {
+   "2e-4": {
+    "torch_adamw": 1.1687893556441027,
+    "rne": 1.1692033462290046,
+    "kahan": 1.2663522488118661,
+    "fp32_master": 1.2753975189058493,
+    "selective": 1.3831205850181965,
+    "sr": 1.2937933509043607
+   },
+   "1e-4": {
+    "torch_adamw": 1.198753949290086,
+    "rne": 1.198784451288534,
+    "kahan": 1.1817591214314498,
+    "fp32_master": 1.1813081334721847,
+    "selective": 1.2401617122245139,
+    "sr": 1.1875942667314854
+   },
+   "5e-5": {
+    "torch_adamw": 1.2737924106545337,
+    "rne": 1.2738578559107567,
+    "kahan": 1.1506776990692034,
+    "fp32_master": 1.1505204325672829,
+    "selective": 1.1707088780367576,
+    "sr": 1.1533518300381205
+   }
+  },
+  "delivery_all": {
+   "2e-4": {
+    "torch_adamw": {
+     "cumulative_length_ratio": 0.2638142821893082,
+     "cumulative_overshoot": 0.5104517579638621,
+     "cumulative_cosine": 0.5168227912460901,
+     "never_moved_fraction": 0.6122034085594374
+    },
+    "rne": {
+     "cumulative_length_ratio": 0.26367954233887103,
+     "cumulative_overshoot": 0.5105443213061381,
+     "cumulative_cosine": 0.5164718190127392,
+     "never_moved_fraction": 0.6131727933287563
+    },
+    "kahan": {
+     "cumulative_length_ratio": 1.0001087121387626,
+     "cumulative_overshoot": 1.000407174854295,
+     "cumulative_cosine": 0.9997016588344018,
+     "never_moved_fraction": 0.036589539510713934
+    },
+    "fp32_master": {
+     "cumulative_length_ratio": 1.0002890896479382,
+     "cumulative_overshoot": 1.0005677211778377,
+     "cumulative_cosine": 0.9997215266938912,
+     "never_moved_fraction": 0.03631323874284719
+    },
+    "selective": {
+     "cumulative_length_ratio": 1.7117142851671623,
+     "cumulative_overshoot": 1.7318417759477118,
+     "cumulative_cosine": 0.9883777404174161,
+     "never_moved_fraction": 0.02076841269637363
+    },
+    "sr": {
+     "cumulative_length_ratio": 1.1522839214710034,
+     "cumulative_overshoot": 1.3325418489816891,
+     "cumulative_cosine": 0.8647314158038129,
+     "never_moved_fraction": 0.02366291053560358
+    }
+   },
+   "1e-4": {
+    "torch_adamw": {
+     "cumulative_length_ratio": 0.18459281828531016,
+     "cumulative_overshoot": 0.4813606223380682,
+     "cumulative_cosine": 0.38348771460792375,
+     "never_moved_fraction": 0.785374663918542
+    },
+    "rne": {
+     "cumulative_length_ratio": 0.18449111113489153,
+     "cumulative_overshoot": 0.48130360283527673,
+     "cumulative_cosine": 0.38332192138615473,
+     "never_moved_fraction": 0.7854362629930483
+    },
+    "kahan": {
+     "cumulative_length_ratio": 1.0001467179113817,
+     "cumulative_overshoot": 1.0009184301690237,
+     "cumulative_cosine": 0.999228995925437,
+     "never_moved_fraction": 0.06950135259256722
+    },
+    "fp32_master": {
+     "cumulative_length_ratio": 1.0007560669568325,
+     "cumulative_overshoot": 1.0014914985999765,
+     "cumulative_cosine": 0.9992656640050017,
+     "never_moved_fraction": 0.0695761115369372
+    },
+    "selective": {
+     "cumulative_length_ratio": 1.807511468364718,
+     "cumulative_overshoot": 1.820515257449341,
+     "cumulative_cosine": 0.9928570712380125,
+     "never_moved_fraction": 0.03860759536958136
+    },
+    "sr": {
+     "cumulative_length_ratio": 1.2080013440242423,
+     "cumulative_overshoot": 1.4630867525603555,
+     "cumulative_cosine": 0.8256587173278322,
+     "never_moved_fraction": 0.03666352530715383
+    }
+   },
+   "5e-5": {
+    "torch_adamw": {
+     "cumulative_length_ratio": 0.1302561820739517,
+     "cumulative_overshoot": 0.49786750139543684,
+     "cumulative_cosine": 0.26163021644166917,
+     "never_moved_fraction": 0.8869156577680908
+    },
+    "rne": {
+     "cumulative_length_ratio": 0.13019833445207993,
+     "cumulative_overshoot": 0.497758319832365,
+     "cumulative_cosine": 0.26157143333188754,
+     "never_moved_fraction": 0.8869234383125487
+    },
+    "kahan": {
+     "cumulative_length_ratio": 0.9997540837355583,
+     "cumulative_overshoot": 1.00190933783827,
+     "cumulative_cosine": 0.9978488558513113,
+     "never_moved_fraction": 0.12686026231362973
+    },
+    "fp32_master": {
+     "cumulative_length_ratio": 1.0020083705560132,
+     "cumulative_overshoot": 1.0040180663814748,
+     "cumulative_cosine": 0.9979983525851047,
+     "never_moved_fraction": 0.12656129790365103
+    },
+    "selective": {
+     "cumulative_length_ratio": 1.8607942197637073,
+     "cumulative_overshoot": 1.8709085621339887,
+     "cumulative_cosine": 0.9945938910226355,
+     "never_moved_fraction": 0.07389999337471698
+    },
+    "sr": {
+     "cumulative_length_ratio": 1.2877233514804267,
+     "cumulative_overshoot": 1.6613700162387186,
+     "cumulative_cosine": 0.77512735011009,
+     "never_moved_fraction": 0.05578863438048489
+    }
+   }
+  },
+  "never_moved_by_family_2e-4": {
+   "torch_adamw": {
+    "attention": 0.6645503592785494,
+    "mlp": 0.7134064223050091,
+    "embedding": 0.27805057808204936,
+    "norm": 0.9700364298724955
+   },
+   "rne": {
+    "attention": 0.6675738073278357,
+    "mlp": 0.7137504043893068,
+    "embedding": 0.2788544478239836,
+    "norm": 0.9700193533697631
+   },
+   "kahan": {
+    "attention": 0.04169768156828704,
+    "mlp": 0.04429660373263889,
+    "embedding": 0.010068208199960214,
+    "norm": 0.08197859744990892
+   },
+   "fp32_master": {
+    "attention": 0.04118674949363425,
+    "mlp": 0.04402485663017618,
+    "embedding": 0.010000525580512154,
+    "norm": 0.08052709471766849
+   },
+   "selective": {
+    "attention": 0.0235130931712963,
+    "mlp": 0.02476489157343107,
+    "embedding": 0.006925851327401621,
+    "norm": 0.044398907103825144
+   },
+   "sr": {
+    "attention": 0.026354370117187498,
+    "mlp": 0.027716694898566104,
+    "embedding": 0.009708376283998843,
+    "norm": 0.04785405282331512
+   }
+  },
+  "cost": {
+   "torch_adamw": {
+    "peak_gpu_mem_gb_mean": 3.8363590314666665,
+    "s_per_step_mean": 0.11230134955512153,
+    "clip_fired_steps_mean": 0.2,
+    "n_runs": 15
+   },
+   "rne": {
+    "peak_gpu_mem_gb_mean": 3.5179912533333333,
+    "s_per_step_mean": 0.11744044804573059,
+    "clip_fired_steps_mean": 0.2,
+    "n_runs": 15
+   },
+   "kahan": {
+    "peak_gpu_mem_gb_mean": 3.7857143808,
+    "s_per_step_mean": 0.12655923438072206,
+    "clip_fired_steps_mean": 4.2,
+    "n_runs": 15
+   },
+   "fp32_master": {
+    "peak_gpu_mem_gb_mean": 4.072798344533333,
+    "s_per_step_mean": 0.11863508294423421,
+    "clip_fired_steps_mean": 5.933333333333334,
+    "n_runs": 15
+   },
+   "selective": {
+    "peak_gpu_mem_gb_mean": 3.7845951146666668,
+    "s_per_step_mean": 0.13127110973993938,
+    "clip_fired_steps_mean": 10.6,
+    "n_runs": 15
+   },
+   "sr": {
+    "peak_gpu_mem_gb_mean": 3.5124415829333335,
+    "s_per_step_mean": 0.12888528188069662,
+    "clip_fired_steps_mean": 2.4,
+    "n_runs": 15
+   }
+  },
+  "extra_state_bytes": {
+   "torch_adamw": 0,
+   "rne": 0,
+   "kahan": 269030016,
+   "fp32_master": 538060032,
+   "selective": 269030016,
+   "sr": 0
+  },
+  "clip_fired_total_all_runs": 353,
+  "untrained_nll": 1.9371732942909525,
+  "reference_experiment_C_master_minus_bf16": {
+   "2e-4": 0.1326,
+   "1e-4": -0.04477,
+   "5e-5": -0.2036
+  }
+ },
+ "interpretation": [
+  "Q1 supports: the bf16 Kahan residual delivers the intended update as well as an fp32 master copy (length ratio within 0.0023 of the master's own bf16 copy at every LR) at half the extra memory (269 MB vs 538 MB on this 135M model).",
+  "Q2 not decided at this power: at 1e-4 and 5e-5 the Kahan minus master interval is inside \u00b10.01; at 2e-4 the interval [-0.024, +0.006] is too wide because seed-to-seed NLL variance at that rate is 3 to 10 times larger than at the lower rates. No interval excludes the band.",
+  "Q3 supports: delivering the intended update (Kahan or master) is worse than plain bf16 at 2e-4 and better at 1e-4 and 5e-5, reproducing the sign flip seen on Mamba-3 187M. The bf16 round-to-nearest write acts as a step-size damper: it discards 74 to 87 % of the intended cumulative length, which helps when the learning rate is too high and hurts when it is too low.",
+  "Selective compensation (reset the residual when the coordinate moves) overshoots by 1.7 to 1.9x and is the worst writer at every LR. Stochastic rounding realizes 1.16 to 1.28x with cosine 0.78 to 0.86 and lands within 0.02 of master at every LR but with the largest seed variance at 2e-4.",
+  "Null control: rne minus torch AdamW has |mean| <= 0.00041 at every LR (C: 0.000396); the equivalence check passed in every seed."
+ ],
+ "limitations": [
+  "One model (SmolLM2-135M), one dataset (GSM8K), 3000 steps at batch 1, three learning rates; the intervals resample seeds (n = 5), not steps or datasets.",
+  "Q2 is undecided only at lr 2e-4, where per-seed NLL differences range from -0.031 to +0.013; more seeds or a lower-variance probe would be needed to close the \u00b10.01 band there.",
+  "Moments are bfloat16 in every condition, so nothing here speaks to moment precision; the compensation buffer is bf16 so Kahan is an approximation to fp32 master weights, not an identity.",
+  "The plan expected gradient clipping at 32 never to fire; it fired on 353 of 270,000 steps, concentrated in the compensated writers (kahan 4.2, master 5.9, selective 10.6 steps per run) and almost never for rne (0.2)."
+ ],
+ "design_changes_tried": [
+  "Second-moment update reordered to torch's foreach op order (mul_ then addcmul_, one bf16 rounding each) so moments match torch bit for bit; before that, agreement was lower.",
+  "rne-vs-torch unit test weight scale set to 0.1 (real-model regime); at scale 0.02 torch's bf16 denominator chain perturbs the intent by about 2^-8 and agreement drops to 98.8 %.",
+  "Weight-decay term of the intent uses the master copy for fp32_master and the bf16 parameter otherwise.",
+  "Analysis glob fixed to skip seedN_stdout.log files after one failed analysis job."
+ ],
+ "artifacts": {
+  "verdicts": "results/analysis/verdicts.json",
+  "paired_differences": "results/analysis/paired_differences.json",
+  "delivery_table": "results/analysis/delivery_table.json",
+  "runs_table": "results/analysis/runs_table.csv",
+  "step_series": "results/analysis/step_series.json",
+  "raw_runs": "artifact://juiceb0xc0de-15787e/experiments/exp_01m1tgnb6xf98sqwfhm4effknt/runs/",
+  "analysis_store": "artifact://juiceb0xc0de-15787e/experiments/exp_01m1tgnb6xf98sqwfhm4effknt/analysis/",
+  "optimizer": "src/compensated_adamw.py",
+  "tests": "tests/test_compensated_adamw.py",
+  "train": "src/train_sweep.py",
+  "analyze": "src/analyze.py",
+  "figures": [
+   "figures/nll_vs_master",
+   "figures/nll_absolute",
+   "figures/delivery_length",
+   "figures/never_moved",
+   "figures/delivery_over_steps",
+   "figures/never_moved_family"
+  ],
+  "wandb_project": "https://wandb.ai/ricks-holmberg-juiceb0xc0de/default-exp-exp_01m1tgnb6xf98sqwfhm4effknt"
+ }
+}
