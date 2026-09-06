@@ -1,0 +1,372 @@
+[
+ {
+  "shard": "seed0_lr1e-4",
+  "seed": 0,
+  "condition": "rne",
+  "lr": 0.0001,
+  "eval_nll": 1.19745,
+  "cum_length_ratio": 0.1841,
+  "never_moved": 0.7849,
+  "s_per_step": 0.1
+ },
+ {
+  "shard": "seed0_lr1e-4",
+  "seed": 0,
+  "condition": "rne",
+  "lr": 5e-05,
+  "eval_nll": 1.27413,
+  "cum_length_ratio": 0.1301,
+  "never_moved": 0.8865,
+  "s_per_step": 0.089
+ },
+ {
+  "shard": "seed0_lr1e-4",
+  "seed": 0,
+  "condition": "keno_drop_25",
+  "lr": 0.0001,
+  "eval_nll": 1.14994,
+  "cum_length_ratio": 0.2976,
+  "never_moved": 0.1365,
+  "s_per_step": 0.103
+ },
+ {
+  "shard": "seed0_lr1e-4",
+  "seed": 0,
+  "condition": "keno_drop_50",
+  "lr": 0.0001,
+  "eval_nll": 1.14889,
+  "cum_length_ratio": 0.542,
+  "never_moved": 0.097,
+  "s_per_step": 0.1
+ },
+ {
+  "shard": "seed0_lr1e-4",
+  "seed": 0,
+  "condition": "keno_drop_75",
+  "lr": 0.0001,
+  "eval_nll": 1.17316,
+  "cum_length_ratio": 0.7758,
+  "never_moved": 0.0797,
+  "s_per_step": 0.093
+ },
+ {
+  "shard": "seed0_lr1e-4",
+  "seed": 0,
+  "condition": "keno_drop_range",
+  "lr": 0.0001,
+  "eval_nll": 1.15262,
+  "cum_length_ratio": 0.5201,
+  "never_moved": 0.0999,
+  "s_per_step": 0.094
+ },
+ {
+  "shard": "seed0_lr1e-4",
+  "seed": 0,
+  "condition": "keno_tab_25",
+  "lr": 0.0001,
+  "eval_nll": 1.16935,
+  "cum_length_ratio": 0.9553,
+  "never_moved": 0.0714,
+  "s_per_step": 0.099
+ },
+ {
+  "shard": "seed0_lr1e-4",
+  "seed": 0,
+  "condition": "keno_tab_50",
+  "lr": 0.0001,
+  "eval_nll": 1.17684,
+  "cum_length_ratio": 0.9925,
+  "never_moved": 0.0691,
+  "s_per_step": 0.095
+ },
+ {
+  "shard": "seed0_lr1e-4",
+  "seed": 0,
+  "condition": "keno_tab_75",
+  "lr": 0.0001,
+  "eval_nll": 1.17258,
+  "cum_length_ratio": 0.9985,
+  "never_moved": 0.07,
+  "s_per_step": 0.098
+ },
+ {
+  "shard": "seed0_lr1e-4",
+  "seed": 0,
+  "condition": "keno_tab_range",
+  "lr": 0.0001,
+  "eval_nll": 1.1692,
+  "cum_length_ratio": 0.9901,
+  "never_moved": 0.0705,
+  "s_per_step": 0.096
+ },
+ {
+  "shard": "seed0_lr2e-4",
+  "seed": 0,
+  "condition": "rne",
+  "lr": 0.0002,
+  "eval_nll": 1.16502,
+  "cum_length_ratio": 0.2643,
+  "never_moved": 0.6185,
+  "s_per_step": 0.14
+ },
+ {
+  "shard": "seed0_lr2e-4",
+  "seed": 0,
+  "condition": "keno_drop_25",
+  "lr": 0.0002,
+  "eval_nll": 1.15135,
+  "cum_length_ratio": 0.308,
+  "never_moved": 0.0738,
+  "s_per_step": 0.142
+ },
+ {
+  "shard": "seed0_lr2e-4",
+  "seed": 0,
+  "condition": "keno_drop_50",
+  "lr": 0.0002,
+  "eval_nll": 1.18068,
+  "cum_length_ratio": 0.5553,
+  "never_moved": 0.053,
+  "s_per_step": 0.142
+ },
+ {
+  "shard": "seed0_lr2e-4",
+  "seed": 0,
+  "condition": "keno_drop_75",
+  "lr": 0.0002,
+  "eval_nll": 1.22138,
+  "cum_length_ratio": 0.7865,
+  "never_moved": 0.0424,
+  "s_per_step": 0.139
+ },
+ {
+  "shard": "seed0_lr2e-4",
+  "seed": 0,
+  "condition": "keno_drop_range",
+  "lr": 0.0002,
+  "eval_nll": 1.18066,
+  "cum_length_ratio": 0.5342,
+  "never_moved": 0.0535,
+  "s_per_step": 0.14
+ },
+ {
+  "shard": "seed0_lr2e-4",
+  "seed": 0,
+  "condition": "keno_tab_25",
+  "lr": 0.0002,
+  "eval_nll": 1.238,
+  "cum_length_ratio": 0.9638,
+  "never_moved": 0.0371,
+  "s_per_step": 0.145
+ },
+ {
+  "shard": "seed0_lr2e-4",
+  "seed": 0,
+  "condition": "keno_tab_50",
+  "lr": 0.0002,
+  "eval_nll": 1.23858,
+  "cum_length_ratio": 0.9935,
+  "never_moved": 0.0375,
+  "s_per_step": 0.142
+ },
+ {
+  "shard": "seed0_lr2e-4",
+  "seed": 0,
+  "condition": "keno_tab_75",
+  "lr": 0.0002,
+  "eval_nll": 1.25617,
+  "cum_length_ratio": 0.9986,
+  "never_moved": 0.0375,
+  "s_per_step": 0.142
+ },
+ {
+  "shard": "seed0_lr2e-4",
+  "seed": 0,
+  "condition": "keno_tab_range",
+  "lr": 0.0002,
+  "eval_nll": 1.23486,
+  "cum_length_ratio": 0.9915,
+  "never_moved": 0.0376,
+  "s_per_step": 0.144
+ },
+ {
+  "shard": "seed1_lr1e-4",
+  "seed": 1,
+  "condition": "rne",
+  "lr": 0.0001,
+  "eval_nll": 1.19979,
+  "cum_length_ratio": 0.185,
+  "never_moved": 0.7855,
+  "s_per_step": 0.141
+ },
+ {
+  "shard": "seed1_lr1e-4",
+  "seed": 1,
+  "condition": "keno_drop_25",
+  "lr": 0.0001,
+  "eval_nll": 1.15348,
+  "cum_length_ratio": 0.2991,
+  "never_moved": 0.1375,
+  "s_per_step": 0.145
+ },
+ {
+  "shard": "seed1_lr1e-4",
+  "seed": 1,
+  "condition": "keno_drop_50",
+  "lr": 0.0001,
+  "eval_nll": 1.15355,
+  "cum_length_ratio": 0.5434,
+  "never_moved": 0.0975,
+  "s_per_step": 0.145
+ },
+ {
+  "shard": "seed1_lr1e-4",
+  "seed": 1,
+  "condition": "keno_drop_75",
+  "lr": 0.0001,
+  "eval_nll": 1.1667,
+  "cum_length_ratio": 0.7768,
+  "never_moved": 0.0798,
+  "s_per_step": 0.152
+ },
+ {
+  "shard": "seed1_lr1e-4",
+  "seed": 1,
+  "condition": "keno_drop_range",
+  "lr": 0.0001,
+  "eval_nll": 1.15626,
+  "cum_length_ratio": 0.5594,
+  "never_moved": 0.0962,
+  "s_per_step": 0.149
+ },
+ {
+  "shard": "seed1_lr1e-4",
+  "seed": 1,
+  "condition": "keno_tab_25",
+  "lr": 0.0001,
+  "eval_nll": 1.16788,
+  "cum_length_ratio": 0.9549,
+  "never_moved": 0.0715,
+  "s_per_step": 0.152
+ },
+ {
+  "shard": "seed1_lr1e-4",
+  "seed": 1,
+  "condition": "keno_tab_50",
+  "lr": 0.0001,
+  "eval_nll": 1.1715,
+  "cum_length_ratio": 0.9922,
+  "never_moved": 0.071,
+  "s_per_step": 0.153
+ },
+ {
+  "shard": "seed1_lr1e-4",
+  "seed": 1,
+  "condition": "keno_tab_75",
+  "lr": 0.0001,
+  "eval_nll": 1.17705,
+  "cum_length_ratio": 0.9983,
+  "never_moved": 0.0704,
+  "s_per_step": 0.153
+ },
+ {
+  "shard": "seed1_lr1e-4",
+  "seed": 1,
+  "condition": "keno_tab_range",
+  "lr": 0.0001,
+  "eval_nll": 1.17195,
+  "cum_length_ratio": 0.9927,
+  "never_moved": 0.0709,
+  "s_per_step": 0.153
+ },
+ {
+  "shard": "seed1_lr2e-4",
+  "seed": 1,
+  "condition": "rne",
+  "lr": 0.0002,
+  "eval_nll": 1.17314,
+  "cum_length_ratio": 0.264,
+  "never_moved": 0.6136,
+  "s_per_step": 0.151
+ },
+ {
+  "shard": "seed1_lr2e-4",
+  "seed": 1,
+  "condition": "keno_drop_25",
+  "lr": 0.0002,
+  "eval_nll": 1.15529,
+  "cum_length_ratio": 0.31,
+  "never_moved": 0.0743,
+  "s_per_step": 0.153
+ },
+ {
+  "shard": "seed1_lr2e-4",
+  "seed": 1,
+  "condition": "keno_drop_50",
+  "lr": 0.0002,
+  "eval_nll": 1.19507,
+  "cum_length_ratio": 0.5584,
+  "never_moved": 0.0514,
+  "s_per_step": 0.151
+ },
+ {
+  "shard": "seed1_lr2e-4",
+  "seed": 1,
+  "condition": "keno_drop_75",
+  "lr": 0.0002,
+  "eval_nll": 1.22148,
+  "cum_length_ratio": 0.787,
+  "never_moved": 0.0426,
+  "s_per_step": 0.146
+ },
+ {
+  "shard": "seed1_lr2e-4",
+  "seed": 1,
+  "condition": "keno_drop_range",
+  "lr": 0.0002,
+  "eval_nll": 1.19604,
+  "cum_length_ratio": 0.5747,
+  "never_moved": 0.0517,
+  "s_per_step": 0.153
+ },
+ {
+  "shard": "seed1_lr2e-4",
+  "seed": 1,
+  "condition": "keno_tab_25",
+  "lr": 0.0002,
+  "eval_nll": 1.23605,
+  "cum_length_ratio": 0.9624,
+  "never_moved": 0.0383,
+  "s_per_step": 0.153
+ },
+ {
+  "shard": "seed1_lr2e-4",
+  "seed": 1,
+  "condition": "keno_tab_50",
+  "lr": 0.0002,
+  "eval_nll": 1.26078,
+  "cum_length_ratio": 0.9937,
+  "never_moved": 0.0366,
+  "s_per_step": 0.149
+ },
+ {
+  "shard": "seed1_lr2e-4",
+  "seed": 1,
+  "condition": "keno_tab_75",
+  "lr": 0.0002,
+  "eval_nll": 1.24934,
+  "cum_length_ratio": 0.9985,
+  "never_moved": 0.0373,
+  "s_per_step": 0.148
+ },
+ {
+  "shard": "seed1_lr2e-4",
+  "seed": 1,
+  "condition": "keno_tab_range",
+  "lr": 0.0002,
+  "eval_nll": 1.26927,
+  "cum_length_ratio": 0.9939,
+  "never_moved": 0.0379,
+  "s_per_step": 0.149
+ }
+]

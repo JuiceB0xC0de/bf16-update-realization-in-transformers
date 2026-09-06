@@ -1,0 +1,123 @@
+{
+ "seed": 1,
+ "untrained_nll": 1.9371732942909525,
+ "runs": [
+  {
+   "condition": "rne",
+   "lr": 0.0001,
+   "eval_nll": 1.1997934917516566,
+   "n": 134515008,
+   "cumulative_length_ratio": 0.18502394205954834,
+   "cumulative_overshoot": 0.48409745906228974,
+   "cumulative_cosine": 0.38220391079503885,
+   "never_moved_fraction": 0.7854815203965939,
+   "intent_norm": 166.5507590874505,
+   "realized_norm": 30.81587799937024,
+   "s_per_step": 0.14104335300127666
+  },
+  {
+   "condition": "keno_drop_25",
+   "lr": 0.0001,
+   "eval_nll": 1.1534840503685717,
+   "n": 134515008,
+   "cumulative_length_ratio": 0.29913026306577223,
+   "cumulative_overshoot": 0.358711818457317,
+   "cumulative_cosine": 0.8339013315820416,
+   "never_moved_fraction": 0.1374746675107063,
+   "intent_norm": 126.49612401682388,
+   "realized_norm": 37.83881885395307,
+   "s_per_step": 0.1446081168651581
+  },
+  {
+   "condition": "keno_drop_50",
+   "lr": 0.0001,
+   "eval_nll": 1.1535462571648702,
+   "n": 134515008,
+   "cumulative_length_ratio": 0.5434051668900686,
+   "cumulative_overshoot": 0.5917177932685463,
+   "cumulative_cosine": 0.918351912130938,
+   "never_moved_fraction": 0.09754912254846686,
+   "intent_norm": 108.1424282862654,
+   "realized_norm": 58.76515429079532,
+   "s_per_step": 0.14496601557731628
+  },
+  {
+   "condition": "keno_drop_75",
+   "lr": 0.0001,
+   "eval_nll": 1.166700365794862,
+   "n": 134515008,
+   "cumulative_length_ratio": 0.77677383101467,
+   "cumulative_overshoot": 0.8056121006987276,
+   "cumulative_cosine": 0.9642032813818892,
+   "never_moved_fraction": 0.07982576189565405,
+   "intent_norm": 96.86638908847443,
+   "realized_norm": 75.24327614881192,
+   "s_per_step": 0.15168733469645182
+  },
+  {
+   "condition": "keno_drop_range",
+   "lr": 0.0001,
+   "eval_nll": 1.1562606997008225,
+   "n": 134515008,
+   "cumulative_length_ratio": 0.5593705441487474,
+   "cumulative_overshoot": 0.606371063741515,
+   "cumulative_cosine": 0.9224888481604674,
+   "never_moved_fraction": 0.09618810712928033,
+   "intent_norm": 107.24810615730956,
+   "realized_norm": 59.991431500136876,
+   "s_per_step": 0.1491823590596517
+  },
+  {
+   "condition": "keno_tab_25",
+   "lr": 0.0001,
+   "eval_nll": 1.1678830181623137,
+   "n": 134515008,
+   "cumulative_length_ratio": 0.9548892728360444,
+   "cumulative_overshoot": 0.9614018555113536,
+   "cumulative_cosine": 0.9932259516268094,
+   "never_moved_fraction": 0.07146261330185551,
+   "intent_norm": 90.96459066712981,
+   "realized_norm": 86.86111183596402,
+   "s_per_step": 0.15245739650726317
+  },
+  {
+   "condition": "keno_tab_50",
+   "lr": 0.0001,
+   "eval_nll": 1.1715040049772192,
+   "n": 134515008,
+   "cumulative_length_ratio": 0.9921701286400982,
+   "cumulative_overshoot": 0.9945144137824731,
+   "cumulative_cosine": 0.9976427841468294,
+   "never_moved_fraction": 0.07101545130190974,
+   "intent_norm": 89.09368124724915,
+   "realized_norm": 88.39608918410309,
+   "s_per_step": 0.15347427995999655
+  },
+  {
+   "condition": "keno_tab_75",
+   "lr": 0.0001,
+   "eval_nll": 1.1770477372020725,
+   "n": 134515008,
+   "cumulative_length_ratio": 0.998288393403018,
+   "cumulative_overshoot": 0.9995552592833274,
+   "cumulative_cosine": 0.9987325704421607,
+   "never_moved_fraction": 0.07041365971594783,
+   "intent_norm": 88.52005726145194,
+   "realized_norm": 88.36854574747801,
+   "s_per_step": 0.1525386566321055
+  },
+  {
+   "condition": "keno_tab_range",
+   "lr": 0.0001,
+   "eval_nll": 1.171949393753785,
+   "n": 134515008,
+   "cumulative_length_ratio": 0.9927045350827814,
+   "cumulative_overshoot": 0.9948996825963728,
+   "cumulative_cosine": 0.9977935991417117,
+   "never_moved_fraction": 0.07087802425733788,
+   "intent_norm": 88.87876148276463,
+   "realized_norm": 88.23034959648129,
+   "s_per_step": 0.15335988728205363
+  }
+ ]
+}

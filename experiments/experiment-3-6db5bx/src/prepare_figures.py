@@ -5,7 +5,7 @@ Writes figures/<name>/{<name>.html, data.json, alt.txt, plot.py}:
   paired_vs_rne        paired held-out NLL difference keno writer - plain rounding (rne), per lr, seed mean + per-seed points
   delivery_vs_loss     held-out NLL against cumulative delivery (length ratio), keno writers and previous-run reference points
   tab_vs_master_drop   Q2: keno_tab - fp32_master and keno_tab - keno_drop per fraction and lr
-  delivery_over_steps  cumulative length ratio against training step at lr 2e-4 (drop and tab panels)
+  delivery_over_steps_{drop,tab}  cumulative length ratio against training step at lr 2e-4, one figure per mode
   never_moved_family   never-moved coordinate fraction per parameter family at lr 2e-4
 Each bundle's plot.py is the exact code used here (the body string is exec'd to build and written to disk).
 """
@@ -224,46 +224,45 @@ def fig_q2(pairs, colors, root):
 
 # --------------------------------------------------------------------------- 4. delivery over steps
 BODY_STEPS = """
-fig = make_subplots(rows=2, cols=1, shared_xaxes=True, vertical_spacing=0.12,
-                    subplot_titles=["Drop writers (same colour; dash pattern and end label give the fraction)",
-                                    "Tab writers (same colour; dash pattern and end label give the fraction)"])
-for r_i, mode in enumerate(["drop", "tab"], start=1):
-    for s in D["series"]:
-        if s["mode"] not in (mode, "ref"):
-            continue
-        fig.add_trace(go.Scatter(x=s["steps"], y=s["y"], mode="lines", name=s["label"], legendgroup=s["name"],
-                                 showlegend=(r_i == 1),
-                                 line=dict(color=s["color"], width=s["width"], dash=s["dash"]),
-                                 hovertemplate=s["label"] + " step %{x}: %{y:.3f}<extra></extra>"), row=r_i, col=1)
-        fig.add_annotation(x=s["steps"][-1], y=s["y"][-1], text=s["short"], showarrow=False, xanchor="left", xshift=4,
-                           font=dict(color=s["color"]), row=r_i, col=1)
-    fig.update_yaxes(title="Cumulative delivery ‖R‖/‖I‖", range=[0, 1.05], row=r_i, col=1)
-fig.update_xaxes(title="Training step", range=[0, D["xmax"]], row=2, col=1)
-apply_theme(fig, height=720)
+fig = go.Figure()
+for s in D["series"]:
+    fig.add_trace(go.Scatter(x=s["steps"], y=s["y"], mode="lines", name=s["label"],
+                             line=dict(color=s["color"], width=s["width"], dash=s["dash"]),
+                             hovertemplate=s["label"] + " step %{x}: %{y:.3f}<extra></extra>"))
+fig.update_yaxes(title="Cumulative delivery ‖R‖/‖I‖", range=[0, 1.05])
+fig.update_xaxes(title="Training step")
+apply_theme(fig, height=420)
 """
 
 
 def fig_steps(series, colors, root, lrk="0.0002"):
+    """One figure per mode (drop, tab). Within a figure the draw fraction is an ordered variable, so 25/50/75% take
+    three steps of the sequential ramp (light to dark) and the unordered 30-70% writer takes the mode colour, dashed;
+    plain rounding keeps its entity colour, dotted."""
+    import plotly.colors as pc
+    from silico_figures import SEQUENTIAL
+    ramp = dict(zip(("25", "50", "75"), pc.sample_colorscale(SEQUENTIAL, [0.45, 0.72, 0.92])))
     S = series[lrk]
-    dash = {"25": "dot", "50": "dash", "75": "longdash", "range": "solid"}
     short = {"25": "25%", "50": "50%", "75": "75%", "range": "30-70%"}
-    out = []
-    for c in KENO:
-        if c not in S:
-            continue
-        mode, fr = c.split("_")[1], c.split("_")[2]
-        out.append({"name": c, "label": LABEL[c], "short": short[fr], "mode": mode, "steps": S[c]["steps"],
-                    "y": S[c]["cumulative_length_ratio"], "color": color_of(c, colors) if c != "keno_drop_25" else colors["keno_drop"],
-                    "width": 2.6 if c == "keno_drop_25" else 1.6, "dash": dash[fr]})
-    if "rne" in S:
-        out.append({"name": "rne", "label": LABEL["rne"], "short": "rne", "mode": "ref", "steps": S["rne"]["steps"],
-                    "y": S["rne"]["cumulative_length_ratio"], "color": colors["rne"], "width": 1.6, "dash": "solid"})
-    xmax = max(s["steps"][-1] for s in out) * 1.12
-    data = {"lr": LR_LABEL[lrk], "series": out, "xmax": xmax,
-            "alt": f"Line chart of cumulative delivery (length ratio) against training step at learning rate {LR_LABEL[lrk]}: "
-                   "drop writers in the top panel, tab writers in the bottom panel, plain rounding in both; lines within a "
-                   "panel share a colour and differ by dash pattern and end label."}
-    return render("delivery_over_steps", BODY_STEPS, data, root)
+    figs = {}
+    for mode in ("drop", "tab"):
+        out = []
+        for c in KENO:
+            if c not in S or c.split("_")[1] != mode:
+                continue
+            fr = c.split("_")[2]
+            out.append({"name": c, "label": LABEL[c], "short": short[fr], "mode": mode, "steps": S[c]["steps"],
+                        "y": S[c]["cumulative_length_ratio"], "color": ramp.get(fr, color_of(c, colors)),
+                        "width": 2.6 if c == "keno_drop_25" else 1.8, "dash": "dash" if fr == "range" else "solid"})
+        if "rne" in S:
+            out.append({"name": "rne", "label": LABEL["rne"], "short": "rne", "mode": "ref", "steps": S["rne"]["steps"],
+                        "y": S["rne"]["cumulative_length_ratio"], "color": colors["rne"], "width": 1.8, "dash": "dot"})
+        data = {"lr": LR_LABEL[lrk], "mode": mode, "series": out,
+                "alt": f"Line chart of cumulative delivery (length ratio) against training step for the keno {mode} writers at "
+                       f"learning rate {LR_LABEL[lrk]}, with plain rounding dotted; the 25, 50 and 75% writers run light to dark "
+                       "on the sequential ramp and the 30-70% writer is dashed."}
+        figs[mode] = render(f"delivery_over_steps_{mode}", BODY_STEPS, data, root)
+    return figs
 
 
 # --------------------------------------------------------------------------- 5. never-moved by family (heatmap)

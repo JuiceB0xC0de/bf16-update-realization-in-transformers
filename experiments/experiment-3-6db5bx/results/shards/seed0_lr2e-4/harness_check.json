@@ -1,0 +1,20 @@
+{
+ "seed": 0,
+ "tol": 0.001,
+ "checks": [
+  {
+   "condition": "rne",
+   "lr": 0.0002,
+   "reference": "/silico-workspace/inputs/experiments/exp_01m1tgnb6xf98sqwfhm4effknt/runs/seed0/runs/rne_lr0.0002.json",
+   "n_losses_compared": 3000,
+   "losses_max_abs_diff": 0.0,
+   "losses_exact_equal_fraction": 1.0,
+   "tol": 0.001,
+   "eval_nll_reference": 1.1650221464872326,
+   "eval_nll_observed": 1.1650221464872326,
+   "eval_nll_abs_diff": 0.0,
+   "passed": true
+  }
+ ],
+ "all_passed": true
+}

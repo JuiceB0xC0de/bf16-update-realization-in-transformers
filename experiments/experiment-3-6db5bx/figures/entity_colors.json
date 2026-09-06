@@ -1,0 +1,8 @@
+{
+ "kahan": "#C4650D",
+ "rne": "#4E728A",
+ "fp32_master": "#2E6E4E",
+ "keno_drop": "#B9605B",
+ "keno_tab": "#31362E",
+ "torch_adamw": "#7495AB"
+}

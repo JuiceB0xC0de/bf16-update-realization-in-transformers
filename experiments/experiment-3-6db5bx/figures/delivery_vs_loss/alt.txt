@@ -1,0 +1,1 @@
+Scatter of held-out NLL against cumulative delivery for the eight keno writers and the previous run's plain rounding, kahan and fp32 master points at learning rates 2e-4 and 1e-4, with the 1.150 line.
