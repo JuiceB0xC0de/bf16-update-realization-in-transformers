@@ -1,0 +1,12 @@
+{"session": "917646921504", "image": "job-core", "torch": "2.11.0+cu130", "transformers": "5.12.1", "gpu": "NVIDIA H100 80GB HBM3",
+ "config": {"seed": 0, "lr": 0.0002, "steps": 100, "eval_n": 32, "eval_tokens": 5659, "stats_every": 25, "sticky_interval": 50},
+ "untrained_nll": 1.94788,
+ "runs": {
+  "rne": {"eval_nll": 1.30772, "cum_length_ratio": 0.4831, "never_moved": 0.7008, "s_per_step": 0.188, "peak_gpu_gb": 3.50,
+          "harness_check": {"reference": "results/reference/rne_lr0.0002_seed0_losses_first100.json", "n_losses_compared": 100, "losses_max_abs_diff": 0.0, "losses_exact_equal_fraction": 1.0, "passed": true}},
+  "keno_drop_25": {"eval_nll": 1.29693, "cum_length_ratio": 0.4441, "never_moved": 0.6431, "s_per_step": 0.104, "peak_gpu_gb": 3.90,
+          "mask": {"n_blocks": 2, "target_mean": 0.25, "realized_mean": 0.25, "realized_min": 0.25, "realized_max": 0.2501, "max_abs_gap": 0.00007}},
+  "keno_tab_range": {"eval_nll": 1.37141, "cum_length_ratio": 0.8263, "never_moved": 0.3036, "s_per_step": 0.105, "peak_gpu_gb": 3.92,
+          "mask": {"n_blocks": 2, "block_fractions": [0.593, 0.554], "target_mean": 0.5733, "realized_mean": 0.5733, "max_abs_gap": 0.00001}}
+ },
+ "note": "rne first-run step time 0.188 s/step includes CUDA warm-up; keno runs 0.104 to 0.105 s/step. Smoke outputs under artifact store smoke/."}
