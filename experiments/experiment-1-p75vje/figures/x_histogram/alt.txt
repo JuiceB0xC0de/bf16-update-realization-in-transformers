@@ -1,0 +1,1 @@
+Histogram in log2 bins of the intended update measured in bfloat16 spacings, one series per SmolLM2-135M parameter family at step 100 and one for the Mamba-3 step-100 reference bundle, with the rounding threshold at x = 0.5 marked.

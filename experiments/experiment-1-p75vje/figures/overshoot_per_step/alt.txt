@@ -1,0 +1,1 @@
+Line chart of the pooled bfloat16 overshoot of SmolLM2-135M at each of 300 AdamW steps for two data orders, with reference lines at 1.0 and at the Mamba-3 median 1.334.

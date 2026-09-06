@@ -1,0 +1,1 @@
+Line chart of the median pooled overshoot against the intent scale factor from 1/16 to 16 on a log axis, for both SmolLM2-135M data orders and the Mamba-3 step-100 reference bundle.
