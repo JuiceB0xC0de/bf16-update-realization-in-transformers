@@ -42,6 +42,8 @@ def load_runs(runs_dir):
         runs.append(r)
     side = {}
     for sd in sorted(glob.glob(os.path.join(runs_dir, "seed*"))):
+        if not os.path.isdir(sd):
+            continue
         seed = int(os.path.basename(sd)[4:])
         side[seed] = {}
         for name in ("untrained_eval", "equivalence", "seed_manifest"):

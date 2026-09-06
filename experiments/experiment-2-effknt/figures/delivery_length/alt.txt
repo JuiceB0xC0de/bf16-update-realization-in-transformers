@@ -1,0 +1,1 @@
+Grouped bar chart of the cumulative length ratio of realized to intended update over 3,000 steps, per writer and learning rate, seed means with sd error bars, and a reference line at 1.

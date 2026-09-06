@@ -1,0 +1,1 @@
+Dot and interval chart of the paired held-out NLL difference from fp32 master weights at three learning rates, one series per writer, with 90% Student-t intervals and a shaded ±0.01 band.

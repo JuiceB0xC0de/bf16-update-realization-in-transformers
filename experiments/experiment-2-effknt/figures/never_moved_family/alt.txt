@@ -1,0 +1,1 @@
+Grouped bar chart of the fraction of coordinates that never moved over 3,000 steps at learning rate 2e-4, by parameter family and writer, seed means with sd error bars.

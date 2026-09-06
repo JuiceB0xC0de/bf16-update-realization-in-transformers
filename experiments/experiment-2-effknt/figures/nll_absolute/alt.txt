@@ -1,0 +1,1 @@
+Line chart of held-out NLL per token against learning rate for six optimizer conditions, seed means with faint per-seed points, and the untrained model's NLL as a reference line.

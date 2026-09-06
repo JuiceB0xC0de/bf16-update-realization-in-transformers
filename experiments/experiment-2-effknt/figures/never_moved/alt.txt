@@ -1,0 +1,1 @@
+Grouped bar chart of the fraction of coordinates whose bf16 value never changed over 3,000 steps, per writer and learning rate, seed means with sd error bars.
