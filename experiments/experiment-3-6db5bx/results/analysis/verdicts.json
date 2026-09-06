@@ -584,36 +584,6 @@
      "banking_indistinguishable_from_drop": false,
      "reading": "delayed delivery behaves as delivery"
     }
-   },
-   "5e-05": {
-    "25": {
-     "tab_minus_master": null,
-     "tab_minus_drop": null,
-     "behaves_as_delivery": false,
-     "banking_indistinguishable_from_drop": false,
-     "reading": "tab differs from both master and drop by more than 0.01"
-    },
-    "50": {
-     "tab_minus_master": null,
-     "tab_minus_drop": null,
-     "behaves_as_delivery": false,
-     "banking_indistinguishable_from_drop": false,
-     "reading": "tab differs from both master and drop by more than 0.01"
-    },
-    "75": {
-     "tab_minus_master": null,
-     "tab_minus_drop": null,
-     "behaves_as_delivery": false,
-     "banking_indistinguishable_from_drop": false,
-     "reading": "tab differs from both master and drop by more than 0.01"
-    },
-    "range": {
-     "tab_minus_master": null,
-     "tab_minus_drop": null,
-     "behaves_as_delivery": false,
-     "banking_indistinguishable_from_drop": false,
-     "reading": "tab differs from both master and drop by more than 0.01"
-    }
    }
   }
  },

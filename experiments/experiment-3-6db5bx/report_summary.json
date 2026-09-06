@@ -1,0 +1,238 @@
+{
+ "title": "Random 25% delivery beats plain bfloat16 rounding on SmolLM2-135M but the pre-registered rule is undecided; banked requests land and behave like full delivery; no writer beats tuned fp32 master",
+ "headline": "A keno writer that delivers a uniformly random 25% of each AdamW update (exact Kahan write on drawn coordinates, request discarded elsewhere) reaches held-out NLL 1.1533 at lr 2e-4 against 1.1691 for plain round-to-nearest, a paired difference of -0.0158 (seeds \u22120.0137, \u22120.0178), which falls in the pre-registered 'undecided at two seeds' band. It does so while delivering more of the intended update than plain rounding (length ratio 0.309 vs 0.264), so the delivered amount does not explain plain rounding's advantage. At lr 1e-4 keno_drop_25 and keno_drop_50 reach 1.1517 and 1.1512, 0.047 below plain rounding and 0.029 below fp32 master at the same lr, tying fp32 master at its best lr (1.1512 on the same seeds) but not crossing the 1.150 bar. Banking undelivered requests (tab) delivers 0.96 to 1.00 of the intended length and lands 0.006 to 0.033 below fp32 master at both lrs, so delayed delivery behaves as delivery.",
+ "assessment": "partial_signal",
+ "research_question": "Does the bfloat16 round-to-nearest advantage at lr 2e-4 come from how much of the update is delivered (about a quarter of the intended length) or from which coordinates the format picks (the large-relative-update ones)? Test with a keno write distributor that delivers a random fraction f of coordinates each step; undelivered requests are either discarded (drop) or banked in the compensation buffer (tab).",
+ "decision_rules": {
+  "q1": "mean over seeds of NLL(keno_drop_25) - NLL(rne) at lr 2e-4: |d|<=0.01 amount is the knob; d>+0.02 the format's pick matters; d<-0.02 random selection wins; else undecided at two seeds",
+  "q1_verdict": "undecided at two seeds",
+  "q1_reading_at_measured_delivery": "keno_drop_25 delivers more than rne (length 0.309 vs 0.264; projection 0.249 vs 0.137) yet has lower NLL; the keno-drop curve at 2e-4 rises with delivery, so rne's smaller delivery lies below the measured range and linear extrapolation gives keno_drop \u2212 rne \u2248 \u22120.022 (length) or \u22120.032 (projection). The direction of the mismatch works against keno, so \u22120.016 is a conservative estimate of the non-amount effect. Confound: drawn coordinates receive exact Kahan writes whereas rne quantises every write, so the difference mixes selection and write precision.",
+  "q2": "per fraction and lr: |mean(tab - fp32_master)|<=0.01 -> delayed delivery behaves as delivery; |mean(tab - drop)|<=0.01 -> banked requests might as well be discarded",
+  "q2_verdict_2e-4": {
+   "25": "tab differs from both master and drop by more than 0.01",
+   "50": "tab differs from both master and drop by more than 0.01",
+   "75": "tab differs from both master and drop by more than 0.01",
+   "range": "tab differs from both master and drop by more than 0.01"
+  },
+  "q2_verdict_1e-4": {
+   "25": "tab differs from both master and drop by more than 0.01",
+   "50": "delayed delivery behaves as delivery",
+   "75": "tab within 0.01 of both master and drop (master and drop themselves within 0.02)",
+   "range": "delayed delivery behaves as delivery"
+  },
+  "q2_reading": "Tab delivers 0.96 to 1.00 of the intended length and its NLL is below fp32 master at every fraction and both lrs (\u22120.017 to \u22120.033 at 2e-4, \u22120.006 to \u22120.012 at 1e-4); tab is far from drop at 2e-4 (+0.031 to +0.084) and above drop at 1e-4 (+0.005 to +0.023). Banked requests land; they are not equivalent to discarded ones. At 1e-4 fractions 50, 75 and range meet the \u00b10.01 'behaves as delivery' rule; at 2e-4 tab is consistently better than master by more than 0.01, which the rule does not name.",
+  "q3": "flag any writer with seed-mean held-out NLL below 1.15 (fp32_master at lr 5e-5, previous grid)",
+  "q3_verdict": "no writer flagged; keno_drop_50 at lr 1e-4 is 1.1512 (seed 0 1.1489, seed 1 1.1535), a tie with fp32 master at 5e-5 on the same seeds (1.1512)",
+  "harness": "rne rerun at every (seed, lr) must match the previous experiment within 0.001 NLL; all five matched exactly (0.0)"
+ },
+ "methods": {
+  "model": "HuggingFaceTB/SmolLM2-135M @ 93efa2f097d58c2a74874c7e644dbc9b0cee75a2, bfloat16 parameters and moments",
+  "data": "gsm8k main @ 740312add88f781978c0658806c59bc2815b9866; seed-specific fixed order, question + newline + answer + eos, max 512 tokens, batch 1, 3000 steps",
+  "held_out": "256 fixed test questions, 49,277 tokens, NLL per token; untrained 1.9372",
+  "optimizer": "AdamW betas (0.9, 0.999), eps 1e-8, weight decay 0.01, no schedule, grad clip 32; moments bf16 updated in torch foreach order",
+  "writers": {
+   "keno_drop_f": "each block of 50 steps draws a random fraction f of coordinates (byte mask, seeded generator); drawn coordinates get t=p+i+c, p\u2190rne(t), c\u2190t\u2212p; undrawn coordinates discard the request, c unchanged",
+   "keno_tab_f": "same draw; undrawn coordinates add the request to the compensation buffer c\u2190c+i, delivered when next drawn",
+   "fractions": "0.25, 0.50, 0.75 and 'range' = U(0.30, 0.70) redrawn per block (60 blocks per run)",
+   "references": "rne, kahan, fp32_master from the previous experiment (same seeds, same data order); rne rerun in every shard as harness check"
+  },
+  "learning_rates": [
+   0.0002,
+   0.0001
+  ],
+  "seeds": [
+   0,
+   1
+  ],
+  "n_runs": 37,
+  "delivery_metrics": "cumulative length ratio ||sum realised|| / ||sum intended||, projection <I,R>/||I||^2, never-moved fraction; family split attention/MLP/embedding/norm",
+  "compute": "4 single-H100 jobs (one per seed x lr), 51 to 69 min each, 0.133 s/step",
+  "extra_memory": "keno = bf16 compensation + byte mask = 3 bytes/coord on top of the 2-byte bf16 parameter (fp32 master: 4; rne: 0)"
+ },
+ "results": {
+  "nll_seed_mean": {
+   "0.0002": {
+    "keno_drop_25": 1.1533240585165112,
+    "keno_drop_50": 1.1878754014398143,
+    "keno_drop_75": 1.2214317492171367,
+    "keno_drop_range": 1.1883464107335233,
+    "keno_tab_25": 1.2370262735002766,
+    "keno_tab_50": 1.2496845234149698,
+    "keno_tab_75": 1.252757263128074,
+    "keno_tab_range": 1.2520676727973692,
+    "rne": 1.1690797287068357,
+    "fp32_master": 1.2700767652157983,
+    "kahan": 1.262406565844535
+   },
+   "0.0001": {
+    "keno_drop_25": 1.1517095808643973,
+    "keno_drop_50": 1.151217277485662,
+    "keno_drop_75": 1.1699325147157635,
+    "keno_drop_range": 1.1544394984036672,
+    "keno_tab_25": 1.1686150588751842,
+    "keno_tab_50": 1.1741706509528895,
+    "keno_tab_75": 1.1748119230862066,
+    "keno_tab_range": 1.1705734973649113,
+    "rne": 1.1986233467313234,
+    "fp32_master": 1.1803744748423142,
+    "kahan": 1.1806856238430994
+   }
+  },
+  "length_ratio": {
+   "0.0002": {
+    "keno_drop_25": 0.30896738479261526,
+    "keno_drop_50": 0.556850442653227,
+    "keno_drop_75": 0.7867598450539491,
+    "keno_drop_range": 0.5544243001853498,
+    "keno_tab_25": 0.9631159953160648,
+    "keno_tab_50": 0.9935750343367694,
+    "keno_tab_75": 0.998537889206645,
+    "keno_tab_range": 0.9926984848739369,
+    "rne": 0.26412213034369175,
+    "fp32_master": 1.0002981071981507,
+    "kahan": 1.0001060797309367
+   },
+   "0.0001": {
+    "keno_drop_25": 0.2983817509371837,
+    "keno_drop_50": 0.5426829660408914,
+    "keno_drop_75": 0.7762992169662528,
+    "keno_drop_range": 0.5397191471423008,
+    "keno_tab_25": 0.9550894469054274,
+    "keno_tab_50": 0.9923185514961819,
+    "keno_tab_75": 0.9983803565598984,
+    "keno_tab_range": 0.9914088668639802,
+    "rne": 0.18457321230961454,
+    "fp32_master": 1.0007654998354854,
+    "kahan": 1.0001392479501403
+   }
+  },
+  "q1_difference": {
+   "n": 2,
+   "seeds": [
+    0,
+    1
+   ],
+   "mean": -0.01575567019032431,
+   "per_seed": [
+    -0.013669020905544782,
+    -0.01784231947510384
+   ],
+   "min": -0.01784231947510384,
+   "max": -0.013669020905544782,
+   "same_sign": true
+  },
+  "q2_per_lr": {
+   "0.0002": {
+    "25": {
+     "tab_minus_master": -0.03305049171552166,
+     "tab_minus_drop": 0.08370221498376529
+    },
+    "50": {
+     "tab_minus_master": -0.020392241800828326,
+     "tab_minus_drop": 0.061809121975155645
+    },
+    "75": {
+     "tab_minus_master": -0.01731950208772448,
+     "tab_minus_drop": 0.031325513910937075
+    },
+    "range": {
+     "tab_minus_master": -0.018009092418429073,
+     "tab_minus_drop": 0.06372126206384598
+    }
+   },
+   "0.0001": {
+    "25": {
+     "tab_minus_master": -0.011759415967130038,
+     "tab_minus_drop": 0.0169054780107869
+    },
+    "50": {
+     "tab_minus_master": -0.006203823889424531,
+     "tab_minus_drop": 0.02295337346722781
+    },
+    "75": {
+     "tab_minus_master": -0.005562551756107648,
+     "tab_minus_drop": 0.004879408370442873
+    },
+    "range": {
+     "tab_minus_master": -0.009800977477402828,
+     "tab_minus_drop": 0.016133998961244234
+    }
+   }
+  },
+  "q3_reference_fp32_master_5e-5": {
+   "seed_mean_all_prev_seeds": 1.1505204325672829,
+   "seed_mean_seeds_0_1": 1.151232318477729,
+   "per_seed": {
+    "0": 1.1495823056170418,
+    "1": 1.1528823313384164,
+    "2": 1.1487985920987835,
+    "3": 1.1495451933257168,
+    "4": 1.151793740456456
+   }
+  },
+  "families_never_moved_2e-4": {
+   "rne": {
+    "attention": 0.6730321436752508,
+    "mlp": 0.7176592289175026,
+    "embedding": 0.27633448000307437,
+    "norm": 0.9736168032786885
+   },
+   "keno_drop_25": {
+    "attention": 0.08356078348042054,
+    "mlp": 0.08741488986545139,
+    "embedding": 0.027490403917100694,
+    "norm": 0.16837431693989072
+   },
+   "keno_tab_25": {
+    "attention": 0.04269678563247492,
+    "mlp": 0.045823173365965794,
+    "embedding": 0.009979654241491248,
+    "norm": 0.0832764116575592
+   },
+   "fp32_master": {
+    "attention": 0.04125741087360146,
+    "mlp": 0.04398066516766332,
+    "embedding": 0.00992125051992911,
+    "norm": 0.08125569216757741
+   }
+  },
+  "mask_realisation": {
+   "max_abs_target_gap_over_all_keno_runs": 0.00013942208662803823,
+   "n_blocks_per_run": [
+    60
+   ]
+  },
+  "timing": {
+   "s_per_step_mean": 0.13343307199564064,
+   "s_per_step_max": 0.15347427995999655,
+   "clip_fired_total": 78,
+   "eval_tokens": [
+    49277
+   ],
+   "untrained_nll_per_shard": {
+    "seed0_lr1e-4": 1.9371732942909525,
+    "seed0_lr2e-4": 1.9371732942909525,
+    "seed1_lr1e-4": 1.9371732942909525,
+    "seed1_lr2e-4": 1.9371732942909525
+   }
+  }
+ },
+ "limitations": [
+  "Two seeds per cell; no interval is claimed. Paired differences smaller than about 0.01 are read as ties; both seeds agree in sign on every reported difference.",
+  "Write precision is confounded with selection: drawn coordinates get exact Kahan writes while plain rounding quantises every write, so keno_drop \u2212 rne mixes selection, precision and amount. A keno-drop variant with plain-rounding writes on drawn coordinates would separate them (proposed follow-up).",
+  "Delivery is not matched between keno_drop_25 and rne (0.309 vs 0.264 length ratio); the matched-delivery reading relies on linear extrapolation below the measured range.",
+  "The final norm of the tab compensation buffer was not recorded, so the residual tab \u2212 master gap cannot be split between still-banked and rounding-lost mass.",
+  "Single model (SmolLM2-135M), single dataset (GSM8K), batch 1, 3000 steps; results transfer to other settings only as a hypothesis."
+ ],
+ "artifacts": {
+  "verdicts": "results/analysis/verdicts.json",
+  "paired_differences": "results/analysis/paired_differences.json",
+  "delivery_vs_loss": "results/analysis/delivery_vs_loss.json",
+  "step_series": "results/analysis/step_series.json",
+  "runs_table": "results/analysis/runs_table.csv",
+  "harness_checks": "results/shards/*/harness_check.json",
+  "raw_runs": "artifact://juiceb0xc0de-15787e/experiments/exp_01m1tvjx4ee3xshh9djt6db5bx/runs/",
+  "figures": "figures/",
+  "wandb": "https://wandb.ai/ricks-holmberg-juiceb0xc0de/default-exp-exp_01m1tvjx4ee3xshh9djt6db5bx"
+ }
+}

@@ -21,4 +21,38 @@
 Seeds: torch seed 42; data orders `numpy.random.default_rng(seed).permutation(7473)[:3000]`; probe rows `default_rng(1234).permutation(1319)[:256]` of the test split; mask draws seeded `100000*seed + 1000*CONDITIONS.index(writer) + 7`.
 
 ## Outputs
-(filled in at completion)
+
+All numbers below are seed means over seeds 0 and 1 (held-out NLL, nats/token, 256 GSM8K test questions, 49,277 tokens).
+
+| writer | lr 2e-4 | lr 1e-4 |
+|---|---|---|
+| plain rounding (rne, previous run) | 1.1691 | 1.1986 |
+| keno_drop_25 | 1.1533 | 1.1517 |
+| keno_drop_50 | 1.1879 | 1.1512 |
+| keno_drop_75 | 1.2214 | 1.1699 |
+| keno_drop_range | 1.1883 | 1.1544 |
+| keno_tab_25 | 1.2370 | 1.1686 |
+| keno_tab_50 | 1.2497 | 1.1742 |
+| keno_tab_75 | 1.2528 | 1.1748 |
+| keno_tab_range | 1.2521 | 1.1706 |
+| kahan (previous run) | 1.2624 | 1.1807 |
+| fp32 master (previous run) | 1.2701 | 1.1804 |
+
+fp32 master at lr 5e-5 (same seeds): 1.1512. Q1 rule: keno_drop_25 − rne at 2e-4 = −0.0158 (−0.0137, −0.0178), "undecided at two seeds". Q3: no writer below 1.150.
+
+Provenance
+- Model: `HuggingFaceTB/SmolLM2-135M` @ `93efa2f097d58c2a74874c7e644dbc9b0cee75a2`, bf16 parameters and moments.
+- Data: `gsm8k` main @ `740312add88f781978c0658806c59bc2815b9866`, seed-specific fixed order, batch 1, 3000 steps.
+- Image: `job-core` (torch 2.11.0+cu130, transformers 5.12.1), one H100 per shard.
+- Jobs: 281598836202 (seed 0, lr 2e-4), 439124401464 (seed 0, lr 1e-4 + rne 5e-5 harness), 639692456089 (seed 1, lr 2e-4), 325308821433 (seed 1, lr 1e-4); 51 to 69 min each. Bundle utility job 572562273379.
+- Date: 2026-09-06.
+- W&B: https://wandb.ai/ricks-holmberg-juiceb0xc0de/default-exp-exp_01m1tvjx4ee3xshh9djt6db5bx (project `default-exp-exp_01m1tvjx4ee3xshh9djt6db5bx`, 37 runs).
+
+Durable files
+- Raw per-run records (losses, grad norms, 25-step delivery series, cumulative delivery whole-model and per family, distributor block log, held-out NLL): `artifact://juiceb0xc0de-15787e/experiments/exp_01m1tvjx4ee3xshh9djt6db5bx/runs/<seed>_<lr>/runs/<writer>_lr<lr>.json`, plus `harness_check.json`, `summary.json`, `seed_manifest.json`, `untrained_eval.json` per shard.
+- Job logs: `artifact://juiceb0xc0de-15787e/experiments/exp_01m1tvjx4ee3xshh9djt6db5bx/logs/`.
+- One-file bundle of everything above: `artifact://juiceb0xc0de-15787e/experiments/exp_01m1tvjx4ee3xshh9djt6db5bx/bundles/runs_all.tar.gz` (4.7 MB).
+- Analysis (this worktree): `results/analysis/{verdicts,paired_differences,delivery_vs_loss,step_series}.json`, `runs_table.csv`, `run_headlines.json`; shard summaries and harness checks under `results/shards/`.
+- Figure bundles: `figures/*/` (data.json, plot.py, html, alt.txt) with `figures/entity_colors.json`.
+- Report contract: `report_summary.json`, `claims_manifest.json` (built by `src/make_report_contract.py`).
+- Reusable distributor: `src/write_distributor.py` (WriteDistributor, KENO_WRITERS, make_distributor) with `tests/test_write_distributor.py`; plugs into `src/compensated_adamw.py` via `distributor=`.

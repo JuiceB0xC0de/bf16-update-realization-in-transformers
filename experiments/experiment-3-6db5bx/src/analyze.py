@@ -273,6 +273,8 @@ def main():
                   "|mean(tab - drop)|<=0.01 -> banked requests might as well be discarded", "per_lr": {}}
     for lr in lrs:
         lrk = lr_key(lr)
+        if not any(k.startswith("keno_tab_") for k in pairs[lrk]):
+            continue  # no keno runs at this lr (harness-only lr)
         q2["per_lr"][lrk] = {}
         for fr in FRACS:
             tm = pd(lr, f"keno_tab_{fr}", "fp32_master")

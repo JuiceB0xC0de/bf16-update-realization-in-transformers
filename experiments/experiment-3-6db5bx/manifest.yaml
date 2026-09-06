@@ -2,8 +2,22 @@ experiment: 3
 eid: "exp_01m1tvjx4ee3xshh9djt6db5bx"
 title: "A keno write distributor: does the bfloat16 advantage come from how much is delivered or which weights get it?"
 date: "2026-09-06"
-status: in-progress
-data: {}
-outputs: {}
-results: {}
-slurm_jobs: []
+status: complete
+data:
+  model: "HuggingFaceTB/SmolLM2-135M@93efa2f097d58c2a74874c7e644dbc9b0cee75a2"
+  dataset: "gsm8k main@740312add88f781978c0658806c59bc2815b9866"
+  held_out: "256 fixed test questions, 49,277 tokens"
+outputs:
+  raw_runs: "artifact://juiceb0xc0de-15787e/experiments/exp_01m1tvjx4ee3xshh9djt6db5bx/runs/"
+  logs: "artifact://juiceb0xc0de-15787e/experiments/exp_01m1tvjx4ee3xshh9djt6db5bx/logs/"
+  bundle: "artifact://juiceb0xc0de-15787e/experiments/exp_01m1tvjx4ee3xshh9djt6db5bx/bundles/runs_all.tar.gz"
+  analysis: "results/analysis/"
+  figures: "figures/"
+  wandb: "https://wandb.ai/ricks-holmberg-juiceb0xc0de/default-exp-exp_01m1tvjx4ee3xshh9djt6db5bx"
+results:
+  q1_keno_drop_25_minus_rne_lr2e-4: -0.01576
+  q1_verdict: "undecided at two seeds"
+  q3_flagged: []
+  best_keno: "keno_drop_50 @ lr 1e-4, 1.1512 (fp32 master @ 5e-5 same seeds 1.1512)"
+  harness: "5/5 rne reruns exact (eval NLL diff 0.0)"
+slurm_jobs: ["281598836202", "439124401464", "639692456089", "325308821433", "572562273379"]
