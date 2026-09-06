@@ -1,0 +1,9 @@
+experiment: 4
+eid: "exp_01m1v355jafe8sqbzmwmmxc06t"
+title: "Random versus magnitude-based selection at matched delivery and write precision, and whether a tuned keno writer beats tuned exact delivery"
+date: "2026-09-06"
+status: in-progress
+data: {}
+outputs: {}
+results: {}
+slurm_jobs: []

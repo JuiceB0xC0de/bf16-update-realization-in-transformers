@@ -1,0 +1,12 @@
+{
+ "note": "300-step seed-0 probes run in interactive session 766508668879 (cumulative length ratio ||R||/||I|| at step 300). Full JSON rows: artifact store probe/seed0/calibration/probe_lr*_steps300.json",
+ "lr2e-4": {"keno_drop_15": 0.2656, "keno_drop_25": 0.3656,
+            "thr_drop": {"0.35": 0.4501, "0.5": 0.3772, "0.7": 0.3143, "1.0": 0.2544, "2.0": 0.1545, "4.0": 0.0772},
+            "thr_selected_fraction": {"0.35": 0.1004, "0.5": 0.0711, "0.7": 0.0512, "1.0": 0.0355, "2.0": 0.0168, "4.0": 0.0069},
+            "thr_s_per_step": 0.170, "keno_s_per_step": 0.141},
+ "lr1e-4": {"keno_drop_15": 0.2658,
+            "thr_drop": {"0.25": 0.3817, "0.4": 0.2996, "0.6": 0.2400}},
+ "previous_run_keno_step300_vs_3000": {"keno_drop_25@2e-4": [0.365, 0.309], "keno_drop_50@2e-4": [0.591, 0.557], "rne@2e-4": [0.438, 0.264], "keno_drop_25@1e-4": [0.367, 0.298], "keno_drop_50@1e-4": [0.592, 0.543], "rne@1e-4": [0.313, 0.185]},
+ "theta0_for_full_horizon_secant": {"2e-4": {"15": 0.7, "25": 0.4, "50": 0.13}, "1e-4": {"15": 0.35, "25": 0.2, "50": 0.06}},
+ "targets_3000_steps_seed0": {"2e-4": {"25": 0.30796, "50": 0.55529, "15": "measured in the calibration job"}, "1e-4": {"25": 0.29763, "50": 0.54196, "15": "measured in the calibration job"}}
+}
