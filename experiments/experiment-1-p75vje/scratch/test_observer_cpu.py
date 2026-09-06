@@ -22,16 +22,17 @@ class Toy(torch.nn.Module):
             h = h + L.self_attn.q_proj(h) * L.input_layernorm.weight
             h = h + L.mlp.up_proj(h)[..., :32]
         return (h * s.model.norm.weight) @ s.model.embed_tokens.weight.T
-m = Toy().to(torch.bfloat16)
-opt = torch.optim.AdamW(m.parameters(), lr=2e-4, fused=False)
-obs = T.Observer(m, opt)
-for step in range(1, 4):
-    ids = torch.randint(0, 64, (1, 16))
-    loss = torch.nn.functional.cross_entropy(m(ids)[0].float(), ids[0])
-    opt.zero_grad(); loss.backward()
-    obs.snapshot(); opt.step()
-    rec, _ = obs.measure(step)
-    w = rec["whole_model_bf16"]
-    print(step, {k: round(v, 5) if isinstance(v, float) else v for k, v in w.items() if k not in ("shadow", "x_hist_log2")})
-    print("   fam rho:", {f: round(rec["families"][f]["overshoot"], 4) for f in T.FAMILIES})
-    print("   shadow:", [round(s["overshoot"], 4) for s in w["shadow"]])
+if __name__ == "__main__":
+  m = Toy().to(torch.bfloat16)
+  opt = torch.optim.AdamW(m.parameters(), lr=2e-4, fused=False)
+  obs = T.Observer(m, opt)
+  for step in range(1, 4):
+      ids = torch.randint(0, 64, (1, 16))
+      loss = torch.nn.functional.cross_entropy(m(ids)[0].float(), ids[0])
+      opt.zero_grad(); loss.backward()
+      obs.snapshot(); opt.step()
+      rec, _ = obs.measure(step)
+      w = rec["whole_model_bf16"]
+      print(step, {k: round(v, 5) if isinstance(v, float) else v for k, v in w.items() if k not in ("shadow", "x_hist_log2")})
+      print("   fam rho:", {f: round(rec["families"][f]["overshoot"], 4) for f in T.FAMILIES})
+      print("   shadow:", [round(s["overshoot"], 4) for s in w["shadow"]])
