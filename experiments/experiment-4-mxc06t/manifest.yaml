@@ -2,8 +2,25 @@ experiment: 4
 eid: "exp_01m1v355jafe8sqbzmwmmxc06t"
 title: "Random versus magnitude-based selection at matched delivery and write precision, and whether a tuned keno writer beats tuned exact delivery"
 date: "2026-09-06"
-status: in-progress
-data: {}
-outputs: {}
-results: {}
-slurm_jobs: []
+status: complete
+data:
+  model: "HuggingFaceTB/SmolLM2-135M@93efa2f097d58c2a74874c7e644dbc9b0cee75a2"
+  dataset: "openai/gsm8k main@740312add88f781978c0658806c59bc2815b9866"
+  reference_runs: ["exp_01m1tgnb6xf98sqwfhm4effknt", "exp_01m1tvjx4ee3xshh9djt6db5bx"]
+outputs:
+  runs: "artifact://juiceb0xc0de-15787e/experiments/exp_01m1v355jafe8sqbzmwmmxc06t/runs/"
+  runs_bundle: "artifact://juiceb0xc0de-15787e/experiments/exp_01m1v355jafe8sqbzmwmmxc06t/bundles/runs_all.tar.gz"
+  analysis: "results/analysis/"
+  figures: "figures/"
+  report_summary: "report_summary.json"
+  claims_manifest: "claims_manifest.json"
+  distributor: "src/write_distributor.py"
+results:
+  q1_primary_25_lr2e-4: {mean: -0.02727, lo: -0.05932, hi: 0.00478, verdict: undecided}
+  q1_primary_50_lr1e-4: {mean: -0.01221, lo: -0.02919, hi: 0.00477, verdict: undecided}
+  q1_secondary_verdicts: {15_lr2e-4: random wins, 50_lr2e-4: random wins, 15_lr1e-4: random wins, 25_lr1e-4: random wins}
+  q2_keno50_lr1e-4_minus_fp32_master_5e-5: {mean: 0.00086, lo: -0.00031, hi: 0.00203, verdict: tie}
+  q3_keno_minus_rne: {lr2e-4: -0.01689, lr1e-4: -0.03474}
+  harness: {passed: true, abs_diff: 0.0}
+  divergent_runs: ["thr_drop_25@0.0002@seed2", "thr_drop_50@0.0001@seed1"]
+slurm_jobs: ["473451514148", "362365063042", "441959342487", "443823741902", "101246367718", "925148905685", "240403904134", "183558143092", "805546448579", "308044629741", "872194154649", "295709102359", "895734294267", "522950432861", "341252512167"]
