@@ -356,6 +356,36 @@ def main():
                 ent["selected_fraction_block50_mean"] = [round(float(x), 6) for x in sf[: nb2 * 50].reshape(nb2, 50).mean(1)]
             series[lrk][c] = ent
 
+    # ------------------------------------------------------------------ per-run diagnostics (every record from this run)
+    per_run = {}
+    for r in runs:
+        L = np.asarray(r["losses"], dtype=np.float64)
+        G = np.asarray(r.get("grad_norms_preclip") or [float("nan")] * len(L), dtype=np.float64)
+        nb = len(L) // 100
+        ent = {"condition": r["condition"], "lr": r["lr"], "seed": r["seed"], "theta": r.get("theta"),
+               "eval_nll": r["eval"]["nll_per_token"], "clip_fired_steps": r["clip_fired_steps"],
+               "loss_block100_mean": [round(float(x), 5) for x in L[: nb * 100].reshape(nb, 100).mean(1)],
+               "loss_block100_max": [round(float(x), 5) for x in L[: nb * 100].reshape(nb, 100).max(1)],
+               "grad_norm_block100_mean": [round(float(x), 4) for x in G[: nb * 100].reshape(nb, 100).mean(1)],
+               "grad_norm_block100_max": [round(float(x), 4) for x in G[: nb * 100].reshape(nb, 100).max(1)],
+               "grad_norm_max": float(np.nanmax(G)) if not np.all(np.isnan(G)) else None, "loss_max": float(L.max()), "loss_last200_mean": r["loss_last200_mean"],
+               "cum_length_ratio": r["final_delivery"]["whole"]["cumulative_length_ratio"],
+               "never_moved": r["final_delivery"]["whole"]["never_moved_fraction"]}
+        ds = r.get("distributor") or {}
+        if ds.get("step_fraction"):
+            sf = np.asarray(ds["step_fraction"], dtype=np.float64)
+            nb2 = len(sf) // 50
+            ent["selected_fraction_block50_mean"] = [round(float(x), 6) for x in sf[: nb2 * 50].reshape(nb2, 50).mean(1)]
+            ent["selected_fraction_max"] = float(sf.max())
+            ent["selected_fraction_mean"] = ds.get("fraction_realized_mean")
+        per_run[f"{r['condition']}@{lr_key(r['lr'])}@seed{r['seed']}"] = ent
+    # flag runs whose NLL sits far from the other seeds of the same cell
+    for key, ent in per_run.items():
+        k = (ent["condition"], lr_key(ent["lr"]))
+        others = [v for s, v in nll[k].items() if s != ent["seed"]]
+        ent["nll_minus_cell_median_of_other_seeds"] = (ent["eval_nll"] - float(np.median(others))) if others else None
+        ent["divergent"] = bool(others) and abs(ent["nll_minus_cell_median_of_other_seeds"]) > 0.02
+
     # ------------------------------------------------------------------ coverage of the planned grid (subset-tolerant)
     planned = [(f"{fam_}_{lv}", lrk) for fam_ in ("keno_drop", "thr_drop") for lv in LEVELS for lrk in ("0.0002", "0.0001")]
     missing_cells = {f"{c}@{l}": [s for s in SEEDS if s not in nll[(c, l)]] for c, l in planned if any(s not in nll[(c, l)] for s in SEEDS)}
@@ -372,9 +402,10 @@ def main():
                            "eval_tokens": sorted({r["eval"]["n_predicted_tokens"] for r in runs})},
                 "coverage": {f"{c}@{l}": {"n_seeds": len(v), "sources": sorted(set(src[(c, l)].values()))}
                              for (c, l), v in sorted(nll.items()) if v}}
-    for name, obj in (("verdicts", verdicts), ("curves", curves), ("step_series", series)):
+    verdicts["divergent_runs"] = sorted(k for k, v in per_run.items() if v["divergent"])
+    for name, obj in (("verdicts", verdicts), ("curves", curves), ("step_series", series), ("per_run_diagnostics", per_run)):
         with open(os.path.join(args.out, name + ".json"), "w") as f:
-            json.dump(obj, f, indent=None if name == "step_series" else 1)
+            json.dump(obj, f, indent=None if name in ("step_series", "per_run_diagnostics") else 1)
     print(json.dumps({"harness_all_passed": harness_summary["all_passed"],
                       "q1_primary": {k: (v["verdict"], round(v["mean"], 4), [round(v["lo"], 4), round(v["hi"], 4)] if v["lo"] is not None else None)
                                      for k, v in q1["primary"].items()},
