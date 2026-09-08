@@ -185,15 +185,20 @@ def train_run(model, condition, lr, seed, examples, eval_examples, device, args,
     run_name = f"{condition}-lr{lr:g}-seed{seed}" + (f"-{tag}" if tag else "")
     wb = None
     if wandb_mod is not None:
-        wb = wandb_mod.init(project=f"default-exp-{os.environ.get('SILICO_EXPERIMENT_ID', 'local')}", name=run_name,
-                            config={"condition": condition, "lr": lr, "seed": seed, "max_steps": args.steps,
-                                    "model": MODEL_ID, "model_revision": MODEL_REV, "dataset": DATA_ID,
-                                    "dataset_revision": DATA_REV, "clip": args.clip,
-                                    "sticky_interval": args.sticky_interval if condition.startswith("keno_") else None,
-                                    "theta": theta, "tag": tag, **hp})
-        register_wandb_url()
-        register_key_metrics(["train/loss", "eval/nll_heldout", "delivery/cumulative_length_ratio",
-                              "delivery/never_moved_fraction"])
+        try:
+            wb = wandb_mod.init(project=f"default-exp-{os.environ.get('SILICO_EXPERIMENT_ID', 'local')}", name=run_name,
+                                config={"condition": condition, "lr": lr, "seed": seed, "max_steps": args.steps,
+                                        "model": MODEL_ID, "model_revision": MODEL_REV, "dataset": DATA_ID,
+                                        "dataset_revision": DATA_REV, "clip": args.clip,
+                                        "sticky_interval": args.sticky_interval if condition.startswith("keno_") else None,
+                                        "theta": theta, "tag": tag, **hp},
+                                settings=wandb_mod.Settings(init_timeout=60))
+            register_wandb_url()
+            register_key_metrics(["train/loss", "eval/nll_heldout", "delivery/cumulative_length_ratio",
+                                  "delivery/never_moved_fraction"])
+        except Exception as e:  # W&B unreachable: the run record is the source of truth, keep training
+            print(f"[wandb] init failed ({type(e).__name__}: {e}); continuing without W&B", flush=True)
+            wb = None
     losses, gnorms, series = [], [], []
     clip_fired = 0
     torch.cuda.synchronize()
