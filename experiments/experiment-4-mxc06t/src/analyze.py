@@ -356,7 +356,15 @@ def main():
                 ent["selected_fraction_block50_mean"] = [round(float(x), 6) for x in sf[: nb2 * 50].reshape(nb2, 50).mean(1)]
             series[lrk][c] = ent
 
+    # ------------------------------------------------------------------ coverage of the planned grid (subset-tolerant)
+    planned = [(f"{fam_}_{lv}", lrk) for fam_ in ("keno_drop", "thr_drop") for lv in LEVELS for lrk in ("0.0002", "0.0001")]
+    missing_cells = {f"{c}@{l}": [s for s in SEEDS if s not in nll[(c, l)]] for c, l in planned if any(s not in nll[(c, l)] for s in SEEDS)}
+    complete_cells = [f"{c}@{l}" for c, l in planned if all(s in nll[(c, l)] for s in SEEDS)]
+    print(f"planned cells complete at five seeds: {len(complete_cells)}/{len(planned)}; missing: {missing_cells or 'none'}")
+
     verdicts = {"n_records_this_run": len(runs), "harness": harness_summary, "calibration": calib,
+                "planned_grid": {"cells_complete": complete_cells, "cells_missing_seeds": missing_cells,
+                                 "n_complete": len(complete_cells), "n_planned": len(planned)},
                 "q1_random_vs_magnitude": q1, "q2_tuned_keno_vs_tuned_exact": q2, "q3_plain_rounding_on_keno_curve": q3,
                 "timing": {"s_per_step_by_family": {c: smean([r["s_per_step"] for r in runs if r["condition"].startswith(c)])
                                                     for c in ("keno_", "thr_", "rne")},
