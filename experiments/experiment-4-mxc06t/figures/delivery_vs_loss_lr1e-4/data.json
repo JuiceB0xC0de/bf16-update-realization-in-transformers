@@ -1,0 +1,105 @@
+{
+  "lrs": [
+    "0.0001"
+  ],
+  "lr_label": {
+    "0.0002": "2e-4",
+    "0.0001": "1e-4",
+    "5e-05": "5e-5"
+  },
+  "points": {
+    "0.0001": [
+      {
+        "series": "keno_drop",
+        "label": "keno drop 15%",
+        "x": 0.19537324815554413,
+        "y": 1.1628289065456918,
+        "n": 5,
+        "sd": 0.0016190646529123962
+      },
+      {
+        "series": "keno_drop",
+        "label": "keno drop 25%",
+        "x": 0.29807365987679546,
+        "y": 1.151347867143975,
+        "n": 5,
+        "sd": 0.0018435672181924068
+      },
+      {
+        "series": "keno_drop",
+        "label": "keno drop 50%",
+        "x": 0.5423915381672579,
+        "y": 1.1513842251189677,
+        "n": 5,
+        "sd": 0.0025132200475392378
+      },
+      {
+        "series": "keno_drop",
+        "label": "keno drop 75% (2 seeds)",
+        "x": 0.7762992169662528,
+        "y": 1.1699325147157635,
+        "n": 2,
+        "sd": 0.004570948839548639
+      },
+      {
+        "series": "thr_drop",
+        "label": "threshold drop matched to 15% (\u03b8=0.35)",
+        "x": 0.20233549504050402,
+        "y": 1.1904907116720225,
+        "n": 5,
+        "sd": 0.0013158500598429755
+      },
+      {
+        "series": "thr_drop",
+        "label": "threshold drop matched to 25% (\u03b8=0.2)",
+        "x": 0.29337557148876525,
+        "y": 1.1712838342225254,
+        "n": 5,
+        "sd": 0.0018016808301954638
+      },
+      {
+        "series": "thr_drop",
+        "label": "threshold drop matched to 50% (\u03b8=0.06)",
+        "x": 0.5458469338358614,
+        "y": 1.163594167777842,
+        "n": 5,
+        "sd": 0.01912318189130081
+      },
+      {
+        "series": "rne",
+        "label": "plain rounding (rne)",
+        "x": 0.18449111113489153,
+        "y": 1.198784451288534,
+        "n": 5,
+        "sd": 0.0009918150722277228
+      },
+      {
+        "series": "kahan",
+        "label": "kahan (exact, all coordinates)",
+        "x": 1.0001467179113817,
+        "y": 1.1817591214314498,
+        "n": 5,
+        "sd": 0.0037592723818711516
+      },
+      {
+        "series": "fp32_master",
+        "label": "fp32 master",
+        "x": 1.0007560669568325,
+        "y": 1.1813081334721847,
+        "n": 5,
+        "sd": 0.002257445848158902
+      }
+    ]
+  },
+  "colors": {
+    "kahan": "#C4650D",
+    "rne": "#4E728A",
+    "fp32_master": "#2E6E4E",
+    "keno_drop": "#B9605B",
+    "keno_tab": "#31362E",
+    "torch_adamw": "#7495AB",
+    "thr_drop": "#988453"
+  },
+  "bar": 1.1505204325672829,
+  "alt": "Held-out NLL against cumulative delivery at lr 1e-4: the random-pick keno-drop curve at 15/25/50/75%, the threshold-drop points calibrated to the same delivery, plus plain rounding, kahan and fp32 master; error bars are seed standard deviations and the horizontal line is fp32 master at lr 5e-5."
+}

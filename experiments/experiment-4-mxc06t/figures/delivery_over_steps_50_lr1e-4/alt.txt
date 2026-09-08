@@ -1,0 +1,1 @@
+Lines of cumulative delivery against training step at lr 1e-4 for the random pick and the calibrated magnitude pick at the 50% level; seed means over this run's records.

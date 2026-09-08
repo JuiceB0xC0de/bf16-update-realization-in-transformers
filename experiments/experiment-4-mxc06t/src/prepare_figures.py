@@ -7,6 +7,7 @@ Writes figures/<name>/{<name>.html, data.json, alt.txt, plot.py}:
   q2_vs_master         every five-seed keno / threshold configuration minus fp32 master at lr 5e-5, 90% intervals
   never_moved_family   never-moved coordinate fraction per parameter family, keno versus threshold at each level (lr 2e-4)
   delivery_over_steps  cumulative delivery against training step for each keno / threshold pair (lr 2e-4)
+  instability_primary_thr  max pre-clip grad norm per 100-step block, five seeds of each primary threshold cell (diverged seed highlighted)
 Each bundle's plot.py is the exact code used here (the body string is exec'd to build and written to disk).
 """
 from __future__ import annotations
@@ -279,6 +280,52 @@ def fig_steps(series, colors, root, lrk, lv):
     return render(f"delivery_over_steps_{lv}_lr{LR_LABEL[lrk]}", BODY_STEPS, data, root)
 
 
+# --------------------------------------------------------------------------- 6. gradient-norm instability in the two primary threshold cells
+BODY_INSTAB = """
+fig = make_subplots(rows=1, cols=2, shared_yaxes=True, horizontal_spacing=0.06,
+                    subplot_titles=[c["title"] for c in D["cells"]])
+for ci, cell in enumerate(D["cells"], start=1):
+    for r in cell["runs"]:
+        if r["divergent"]:
+            fig.add_trace(go.Scatter(x=r["steps"], y=r["grad_norm_block_max"], mode="lines+markers", name=r["label"],
+                                     line=dict(color=D["color_divergent"][ci - 1], width=2.4, dash="solid" if ci == 1 else "dot"),
+                                     marker=dict(size=5, color=D["color_divergent"][ci - 1], symbol="circle" if ci == 1 else "diamond"),
+                                     hovertemplate=r["label"] + "<br>steps %{x}<br>max grad norm %{y:.1f}<extra></extra>"), row=1, col=ci)
+    others = [r for r in cell["runs"] if not r["divergent"]]
+    xs, ys, tx = [], [], []
+    for r in others:
+        xs += r["steps"] + [None]; ys += r["grad_norm_block_max"] + [None]; tx += [r["label"]] * len(r["steps"]) + [""]
+    fig.add_trace(go.Scatter(x=xs, y=ys, mode="lines", name=f"stable seeds, {cell['short']}", text=tx, connectgaps=False,
+                             line=dict(color=D["color_other"][ci - 1], width=1.1, dash=D["dash_other"][ci - 1]), opacity=0.7,
+                             hovertemplate="%{text}<br>steps %{x}<br>max grad norm %{y:.1f}<extra></extra>"), row=1, col=ci)
+    fig.update_xaxes(title="Training step (100-step block start)", row=1, col=ci)
+fig.update_yaxes(type="log", title="Max pre-clip gradient norm in block (log)", row=1, col=1)
+apply_theme(fig, height=420)
+"""
+
+
+def fig_instability(diag, colors, root):
+    cells = []
+    for cond, lrk in (("thr_drop_25", "0.0002"), ("thr_drop_50", "0.0001")):
+        runs = []
+        for k, r in sorted(diag.items(), key=lambda kv: kv[1]["seed"]):
+            if r["condition"] != cond or str(r["lr"]) != lrk:
+                continue
+            n = len(r["grad_norm_block100_max"])
+            runs.append({"label": f"seed {r['seed']}, {cond.split('_')[-1]}% @ {LR_LABEL[lrk]}" + (f" (diverged, NLL {r['eval_nll']:.4f}, clip fired {r['clip_fired_steps']}x)" if r["divergent"] else ""),
+                         "seed": r["seed"], "divergent": bool(r["divergent"]), "eval_nll": r["eval_nll"],
+                         "clip_fired_steps": r["clip_fired_steps"], "steps": [i * 100 for i in range(n)],
+                         "grad_norm_block_max": r["grad_norm_block100_max"]})
+        cells.append({"title": f"magnitude pick {cond.split('_')[-1]}% @ lr {LR_LABEL[lrk]}", "short": f"{cond.split('_')[-1]}% @ {LR_LABEL[lrk]}",
+                      "condition": cond, "lr": lrk, "runs": runs})
+    data = {"cells": cells, "color_divergent": [colors["thr_drop"], "#5E4F2C"],
+            "color_other": [GRAPHITE, "#8C9399"], "dash_other": ["solid", "dash"],
+            "alt": "Two panels of maximum pre-clip gradient norm per 100-step block (log scale) against training step for the five seeds of "
+                   "the magnitude-pick 25% @ 2e-4 and 50% @ 1e-4 cells; the diverged seed in each panel spikes to several hundred late in training "
+                   "while the other seeds stay below about 25."}
+    return render("instability_primary_thr", BODY_INSTAB, data, root)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--analysis", default="results/analysis")
@@ -287,6 +334,7 @@ def main():
     verdicts = json.load(open(os.path.join(args.analysis, "verdicts.json")))
     curves = json.load(open(os.path.join(args.analysis, "curves.json")))
     series = json.load(open(os.path.join(args.analysis, "step_series.json")))
+    diag = json.load(open(os.path.join(args.analysis, "per_run_diagnostics.json")))
     colors = entity_colors(args.root)
     fig_q1(verdicts, colors, args.root)
     for lrk in ("0.0002", "0.0001"):
@@ -295,6 +343,7 @@ def main():
     for lrk, lv in (("0.0002", "25"), ("0.0001", "50")):
         fig_family(curves, colors, args.root, lrk, lv)
         fig_steps(series, colors, args.root, lrk, lv)
+    fig_instability(diag, colors, args.root)
     print("figures written under", args.root)
 
 

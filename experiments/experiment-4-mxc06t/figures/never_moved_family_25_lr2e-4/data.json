@@ -1,0 +1,43 @@
+{
+  "fams": [
+    "attention",
+    "mlp",
+    "embedding",
+    "norm"
+  ],
+  "fam_label": {
+    "attention": "attention",
+    "mlp": "MLP",
+    "embedding": "embedding",
+    "norm": "norm"
+  },
+  "groups": [
+    {
+      "label": "random pick, 25% level",
+      "color": "#B9605B",
+      "opacity": 1.0,
+      "pattern": "",
+      "values": [
+        0.08356205692997686,
+        0.08750269509146734,
+        0.027611089635778352,
+        0.16744080145719492
+      ]
+    },
+    {
+      "label": "magnitude pick, 25% level",
+      "color": "#988453",
+      "opacity": 1.0,
+      "pattern": "/",
+      "values": [
+        0.5050017481674383,
+        0.5597904007523148,
+        0.16294821986445673,
+        0.8969148451730419
+      ]
+    }
+  ],
+  "lr": "0.0002",
+  "level": "25",
+  "alt": "Grouped bars of the fraction of coordinates never moved over 3,000 steps per parameter family (attention, MLP, embedding, norm) at lr 2e-4, random pick against the magnitude pick matched to the 25% level; seed means."
+}

@@ -1,0 +1,1 @@
+Dot-and-interval chart of each five-seed configuration's paired held-out NLL difference against fp32 master weights at lr 5e-5, with 90% Student-t intervals; the larger marker is the pre-registered keno drop 50% at lr 1e-4.

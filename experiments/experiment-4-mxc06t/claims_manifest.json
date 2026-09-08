@@ -1,0 +1,1629 @@
+{
+ "claims": [
+  {
+   "id": "q1_25@0.0002_mean",
+   "claim": "Q1 primary 25% @ lr 0.0002: mean paired keno - threshold NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/primary/25@0.0002/mean",
+   "value": -0.02726891949199186
+  },
+  {
+   "id": "q1_25@0.0002_lo",
+   "claim": "Q1 25% @ 0.0002: 90% interval lower bound",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/primary/25@0.0002/lo",
+   "value": -0.05932044726321234
+  },
+  {
+   "id": "q1_25@0.0002_hi",
+   "claim": "Q1 25% @ 0.0002: 90% interval upper bound",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/primary/25@0.0002/hi",
+   "value": 0.00478260827922862
+  },
+  {
+   "id": "q1_25@0.0002_verdict",
+   "claim": "Q1 25% @ 0.0002: pre-registered verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/primary/25@0.0002/verdict",
+   "value": "undecided"
+  },
+  {
+   "id": "q1_25@0.0002_per_seed",
+   "claim": "Q1 25% @ 0.0002: per-seed differences (seeds 0-4)",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/primary/25@0.0002/per_seed",
+   "value": [
+    -0.011365193285710617,
+    -0.011160109430042864,
+    -0.0873806619420634,
+    -0.013515523512172667,
+    -0.012923109289969759
+   ]
+  },
+  {
+   "id": "q1_25@0.0002_deliv_gap",
+   "claim": "Q1 25% @ 0.0002: mean keno minus threshold cumulative delivery",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/25@0.0002/difference_mean",
+   "value": -0.0029622640691184922
+  },
+  {
+   "id": "q1_25@0.0002_theta",
+   "claim": "Q1 25% @ 0.0002: calibrated threshold theta",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/25@0.0002/theta",
+   "value": 0.3087857366715559
+  },
+  {
+   "id": "q1_50@0.0001_mean",
+   "claim": "Q1 primary 50% @ lr 0.0001: mean paired keno - threshold NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/primary/50@0.0001/mean",
+   "value": -0.012209942658874562
+  },
+  {
+   "id": "q1_50@0.0001_lo",
+   "claim": "Q1 50% @ 0.0001: 90% interval lower bound",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/primary/50@0.0001/lo",
+   "value": -0.029194150804059384
+  },
+  {
+   "id": "q1_50@0.0001_hi",
+   "claim": "Q1 50% @ 0.0001: 90% interval upper bound",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/primary/50@0.0001/hi",
+   "value": 0.0047742654863102574
+  },
+  {
+   "id": "q1_50@0.0001_verdict",
+   "claim": "Q1 50% @ 0.0001: pre-registered verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/primary/50@0.0001/verdict",
+   "value": "undecided"
+  },
+  {
+   "id": "q1_50@0.0001_per_seed",
+   "claim": "Q1 50% @ 0.0001: per-seed differences (seeds 0-4)",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/primary/50@0.0001/per_seed",
+   "value": [
+    -0.00573709940425049,
+    -0.0440269105813309,
+    -0.0029468485719597037,
+    -0.00440156870220032,
+    -0.003937286034631393
+   ]
+  },
+  {
+   "id": "q1_50@0.0001_deliv_gap",
+   "claim": "Q1 50% @ 0.0001: mean keno minus threshold cumulative delivery",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/50@0.0001/difference_mean",
+   "value": -0.0034553956686035115
+  },
+  {
+   "id": "q1_50@0.0001_theta",
+   "claim": "Q1 50% @ 0.0001: calibrated threshold theta",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/50@0.0001/theta",
+   "value": 0.06
+  },
+  {
+   "id": "q1_15@0.0002_mean",
+   "claim": "Q1 secondary 15% @ lr 0.0002: mean paired keno - threshold NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/15@0.0002/mean",
+   "value": -0.019051934322163254
+  },
+  {
+   "id": "q1_15@0.0002_lo",
+   "claim": "Q1 15% @ 0.0002: 90% interval lower bound",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/15@0.0002/lo",
+   "value": -0.02041050558789217
+  },
+  {
+   "id": "q1_15@0.0002_hi",
+   "claim": "Q1 15% @ 0.0002: 90% interval upper bound",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/15@0.0002/hi",
+   "value": -0.017693363056434337
+  },
+  {
+   "id": "q1_15@0.0002_verdict",
+   "claim": "Q1 15% @ 0.0002: pre-registered verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/15@0.0002/verdict",
+   "value": "random wins"
+  },
+  {
+   "id": "q1_15@0.0002_per_seed",
+   "claim": "Q1 15% @ 0.0002: per-seed differences (seeds 0-4)",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/15@0.0002/per_seed",
+   "value": [
+    -0.0189970715617529,
+    -0.018608694612189947,
+    -0.019085952052266597,
+    -0.021260597032973783,
+    -0.017307356351633052
+   ]
+  },
+  {
+   "id": "q1_15@0.0002_deliv_gap",
+   "claim": "Q1 15% @ 0.0002: mean keno minus threshold cumulative delivery",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/15@0.0002/difference_mean",
+   "value": 0.006935968730030323
+  },
+  {
+   "id": "q1_15@0.0002_theta",
+   "claim": "Q1 15% @ 0.0002: calibrated threshold theta",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/15@0.0002/theta",
+   "value": 0.5868351318882165
+  },
+  {
+   "id": "q1_50@0.0002_mean",
+   "claim": "Q1 secondary 50% @ lr 0.0002: mean paired keno - threshold NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/50@0.0002/mean",
+   "value": -0.005812255967942326
+  },
+  {
+   "id": "q1_50@0.0002_lo",
+   "claim": "Q1 50% @ 0.0002: 90% interval lower bound",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/50@0.0002/lo",
+   "value": -0.010913415807769618
+  },
+  {
+   "id": "q1_50@0.0002_hi",
+   "claim": "Q1 50% @ 0.0002: 90% interval upper bound",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/50@0.0002/hi",
+   "value": -0.0007110961281150329
+  },
+  {
+   "id": "q1_50@0.0002_verdict",
+   "claim": "Q1 50% @ 0.0002: pre-registered verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/50@0.0002/verdict",
+   "value": "random wins"
+  },
+  {
+   "id": "q1_50@0.0002_per_seed",
+   "claim": "Q1 50% @ 0.0002: per-seed differences (seeds 0-4)",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/50@0.0002/per_seed",
+   "value": [
+    -0.001413098144016356,
+    -0.0013227043526922166,
+    -0.0049728589080226815,
+    -0.014349319454301623,
+    -0.0070032989806787516
+   ]
+  },
+  {
+   "id": "q1_50@0.0002_deliv_gap",
+   "claim": "Q1 50% @ 0.0002: mean keno minus threshold cumulative delivery",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/50@0.0002/difference_mean",
+   "value": -0.007507951048966044
+  },
+  {
+   "id": "q1_50@0.0002_theta",
+   "claim": "Q1 50% @ 0.0002: calibrated threshold theta",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/50@0.0002/theta",
+   "value": 0.10217312296908035
+  },
+  {
+   "id": "q1_15@0.0001_mean",
+   "claim": "Q1 secondary 15% @ lr 0.0001: mean paired keno - threshold NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/15@0.0001/mean",
+   "value": -0.027661805126330697
+  },
+  {
+   "id": "q1_15@0.0001_lo",
+   "claim": "Q1 15% @ 0.0001: 90% interval lower bound",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/15@0.0001/lo",
+   "value": -0.028612703240772103
+  },
+  {
+   "id": "q1_15@0.0001_hi",
+   "claim": "Q1 15% @ 0.0001: 90% interval upper bound",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/15@0.0001/hi",
+   "value": -0.02671090701188929
+  },
+  {
+   "id": "q1_15@0.0001_verdict",
+   "claim": "Q1 15% @ 0.0001: pre-registered verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/15@0.0001/verdict",
+   "value": "random wins"
+  },
+  {
+   "id": "q1_15@0.0001_per_seed",
+   "claim": "Q1 15% @ 0.0001: per-seed differences (seeds 0-4)",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/15@0.0001/per_seed",
+   "value": [
+    -0.02650687047277267,
+    -0.026699560713617565,
+    -0.028432450263384146,
+    -0.028665867577702064,
+    -0.028004276604177036
+   ]
+  },
+  {
+   "id": "q1_15@0.0001_deliv_gap",
+   "claim": "Q1 15% @ 0.0001: mean keno minus threshold cumulative delivery",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/15@0.0001/difference_mean",
+   "value": -0.006962246884959872
+  },
+  {
+   "id": "q1_15@0.0001_theta",
+   "claim": "Q1 15% @ 0.0001: calibrated threshold theta",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/15@0.0001/theta",
+   "value": 0.35
+  },
+  {
+   "id": "q1_25@0.0001_mean",
+   "claim": "Q1 secondary 25% @ lr 0.0001: mean paired keno - threshold NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/25@0.0001/mean",
+   "value": -0.019935967078550432
+  },
+  {
+   "id": "q1_25@0.0001_lo",
+   "claim": "Q1 25% @ 0.0001: 90% interval lower bound",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/25@0.0001/lo",
+   "value": -0.020420189268922095
+  },
+  {
+   "id": "q1_25@0.0001_hi",
+   "claim": "Q1 25% @ 0.0001: 90% interval upper bound",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/25@0.0001/hi",
+   "value": -0.01945174488817877
+  },
+  {
+   "id": "q1_25@0.0001_verdict",
+   "claim": "Q1 25% @ 0.0001: pre-registered verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/25@0.0001/verdict",
+   "value": "random wins"
+  },
+  {
+   "id": "q1_25@0.0001_per_seed",
+   "claim": "Q1 25% @ 0.0001: per-seed differences (seeds 0-4)",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/secondary/25@0.0001/per_seed",
+   "value": [
+    -0.020214035562448274,
+    -0.019792043904141465,
+    -0.019378874894461218,
+    -0.020664160221184336,
+    -0.019630720810516866
+   ]
+  },
+  {
+   "id": "q1_25@0.0001_deliv_gap",
+   "claim": "Q1 25% @ 0.0001: mean keno minus threshold cumulative delivery",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/25@0.0001/difference_mean",
+   "value": 0.004698088388030241
+  },
+  {
+   "id": "q1_25@0.0001_theta",
+   "claim": "Q1 25% @ 0.0001: calibrated threshold theta",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/25@0.0001/theta",
+   "value": 0.2
+  },
+  {
+   "id": "q1_n_random_wins",
+   "claim": "Q1: number of the six contrasts where random wins",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/n_pairs_random_wins",
+   "value": 4
+  },
+  {
+   "id": "q1_n_magnitude_wins",
+   "claim": "Q1: number of the six contrasts where magnitude wins",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/n_pairs_magnitude_wins",
+   "value": 0
+  },
+  {
+   "id": "q1_all_pairs_mean",
+   "claim": "Q1: mean keno - threshold difference over all six contrasts",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/all_pairs_mean_difference",
+   "value": -0.018656804107642186
+  },
+  {
+   "id": "div_thr25_s2_nll",
+   "claim": "thr_drop_25 @ 2e-4 seed 2 held-out NLL (diverged)",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/primary/25@0.0002/b_per_seed/2",
+   "value": 1.240465926358841
+  },
+  {
+   "id": "div_thr50_s1_nll",
+   "claim": "thr_drop_50 @ 1e-4 seed 1 held-out NLL (diverged)",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/primary/50@0.0001/b_per_seed/1",
+   "value": 1.1975731677462012
+  },
+  {
+   "id": "divergent_runs",
+   "claim": "runs flagged divergent (|NLL - median of other seeds| > 0.02)",
+   "source": "results/analysis/verdicts.json",
+   "key": "divergent_runs",
+   "value": [
+    "thr_drop_25@0.0002@seed2",
+    "thr_drop_50@0.0001@seed1"
+   ]
+  },
+  {
+   "id": "div_thr25_s2_clip",
+   "claim": "thr_25 @ 2e-4 seed 2: steps where the gradient clip fired",
+   "source": "results/analysis/clip_summary.json",
+   "key": "divergent_detail/thr_drop_25@0.0002@seed2/clip_fired_steps",
+   "value": 8
+  },
+  {
+   "id": "div_thr25_s2_gmax",
+   "claim": "thr_25 @ 2e-4 seed 2: max pre-clip gradient norm",
+   "source": "results/analysis/clip_summary.json",
+   "key": "divergent_detail/thr_drop_25@0.0002@seed2/grad_norm_max",
+   "value": 536.0
+  },
+  {
+   "id": "div_thr25_s2_spikes",
+   "claim": "thr_25 @ 2e-4 seed 2: 100-step blocks with grad-norm max > 50",
+   "source": "results/analysis/clip_summary.json",
+   "key": "divergent_detail/thr_drop_25@0.0002@seed2/grad_norm_spike_blocks_steps_and_max",
+   "value": [
+    [
+     2700,
+     2799,
+     356.0
+    ],
+    [
+     2800,
+     2899,
+     536.0
+    ],
+    [
+     2900,
+     2999,
+     310.0
+    ]
+   ]
+  },
+  {
+   "id": "div_thr25_s2_selfrac",
+   "claim": "thr_25 @ 2e-4 seed 2: mean per-step selected fraction",
+   "source": "results/analysis/clip_summary.json",
+   "key": "divergent_detail/thr_drop_25@0.0002@seed2/selected_fraction_block50_mean_over_run",
+   "value": 0.07435243333333334
+  },
+  {
+   "id": "div_thr50_s1_clip",
+   "claim": "thr_50 @ 1e-4 seed 1: steps where the gradient clip fired",
+   "source": "results/analysis/clip_summary.json",
+   "key": "divergent_detail/thr_drop_50@0.0001@seed1/clip_fired_steps",
+   "value": 4
+  },
+  {
+   "id": "div_thr50_s1_gmax",
+   "claim": "thr_50 @ 1e-4 seed 1: max pre-clip gradient norm",
+   "source": "results/analysis/clip_summary.json",
+   "key": "divergent_detail/thr_drop_50@0.0001@seed1/grad_norm_max",
+   "value": 404.0
+  },
+  {
+   "id": "div_thr50_s1_spikes",
+   "claim": "thr_50 @ 1e-4 seed 1: 100-step blocks with grad-norm max > 50",
+   "source": "results/analysis/clip_summary.json",
+   "key": "divergent_detail/thr_drop_50@0.0001@seed1/grad_norm_spike_blocks_steps_and_max",
+   "value": [
+    [
+     1300,
+     1399,
+     104.0
+    ],
+    [
+     2800,
+     2899,
+     404.0
+    ]
+   ]
+  },
+  {
+   "id": "div_thr50_s1_selfrac",
+   "claim": "thr_50 @ 1e-4 seed 1: mean per-step selected fraction",
+   "source": "results/analysis/clip_summary.json",
+   "key": "divergent_detail/thr_drop_50@0.0001@seed1/selected_fraction_block50_mean_over_run",
+   "value": 0.18291405
+  },
+  {
+   "id": "clip_thr_total",
+   "claim": "gradient clip events over all 30 threshold runs",
+   "source": "results/analysis/clip_summary.json",
+   "key": "family_totals/thr/clip_fired_total",
+   "value": 72
+  },
+  {
+   "id": "clip_thr_runs",
+   "claim": "number of threshold runs",
+   "source": "results/analysis/clip_summary.json",
+   "key": "family_totals/thr/n_runs",
+   "value": 30
+  },
+  {
+   "id": "clip_keno_total",
+   "claim": "gradient clip events over all 22 keno runs of this experiment",
+   "source": "results/analysis/clip_summary.json",
+   "key": "family_totals/keno/clip_fired_total",
+   "value": 3
+  },
+  {
+   "id": "clip_keno_runs",
+   "claim": "number of keno runs in this experiment",
+   "source": "results/analysis/clip_summary.json",
+   "key": "family_totals/keno/n_runs",
+   "value": 22
+  },
+  {
+   "id": "sel_thr_drop_15@0.0002_mean",
+   "claim": "thr_drop_15@0.0002 seed 0: mean per-step selected fraction",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_15@0.0002/passes/1/selected_fraction_mean",
+   "value": 0.03733895816294342
+  },
+  {
+   "id": "sel_thr_drop_15@0.0002_first",
+   "claim": "thr_drop_15@0.0002 seed 0: selected fraction, first 100 steps",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_15@0.0002/passes/1/selected_first100",
+   "value": 0.07574718569692981
+  },
+  {
+   "id": "sel_thr_drop_15@0.0002_last",
+   "claim": "thr_drop_15@0.0002 seed 0: selected fraction, last 100 steps",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_15@0.0002/passes/1/selected_last100",
+   "value": 0.02611355574539311
+  },
+  {
+   "id": "sel_thr_drop_25@0.0002_mean",
+   "claim": "thr_drop_25@0.0002 seed 0: mean per-step selected fraction",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_25@0.0002/passes/1/selected_fraction_mean",
+   "value": 0.07136592063392659
+  },
+  {
+   "id": "sel_thr_drop_25@0.0002_first",
+   "claim": "thr_drop_25@0.0002 seed 0: selected fraction, first 100 steps",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_25@0.0002/passes/1/selected_first100",
+   "value": 0.1374489648768411
+  },
+  {
+   "id": "sel_thr_drop_25@0.0002_last",
+   "claim": "thr_drop_25@0.0002 seed 0: selected fraction, last 100 steps",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_25@0.0002/passes/1/selected_last100",
+   "value": 0.051088218423924865
+  },
+  {
+   "id": "sel_thr_drop_50@0.0002_mean",
+   "claim": "thr_drop_50@0.0002 seed 0: mean per-step selected fraction",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_50@0.0002/passes/1/selected_fraction_mean",
+   "value": 0.20518979378122626
+  },
+  {
+   "id": "sel_thr_drop_50@0.0002_first",
+   "claim": "thr_drop_50@0.0002 seed 0: selected fraction, first 100 steps",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_50@0.0002/passes/1/selected_first100",
+   "value": 0.3440951985818564
+  },
+  {
+   "id": "sel_thr_drop_50@0.0002_last",
+   "claim": "thr_drop_50@0.0002 seed 0: selected fraction, last 100 steps",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_50@0.0002/passes/1/selected_last100",
+   "value": 0.1590518919643524
+  },
+  {
+   "id": "sel_thr_drop_15@0.0001_mean",
+   "claim": "thr_drop_15@0.0001 seed 0: mean per-step selected fraction",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_15@0.0001/passes/0/selected_fraction_mean",
+   "value": 0.032980205551983215
+  },
+  {
+   "id": "sel_thr_drop_15@0.0001_first",
+   "claim": "thr_drop_15@0.0001 seed 0: selected fraction, first 100 steps",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_15@0.0001/passes/0/selected_first100",
+   "value": 0.06783189597699017
+  },
+  {
+   "id": "sel_thr_drop_15@0.0001_last",
+   "claim": "thr_drop_15@0.0001 seed 0: selected fraction, last 100 steps",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_15@0.0001/passes/0/selected_last100",
+   "value": 0.023396278726013978
+  },
+  {
+   "id": "sel_thr_drop_25@0.0001_mean",
+   "claim": "thr_drop_25@0.0001 seed 0: mean per-step selected fraction",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_25@0.0001/passes/0/selected_fraction_mean",
+   "value": 0.05892469944568069
+  },
+  {
+   "id": "sel_thr_drop_25@0.0001_first",
+   "claim": "thr_drop_25@0.0001 seed 0: selected fraction, first 100 steps",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_25@0.0001/passes/0/selected_first100",
+   "value": 0.11280196645418183
+  },
+  {
+   "id": "sel_thr_drop_25@0.0001_last",
+   "claim": "thr_drop_25@0.0001 seed 0: selected fraction, last 100 steps",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_25@0.0001/passes/0/selected_last100",
+   "value": 0.042861066774050965
+  },
+  {
+   "id": "sel_thr_drop_50@0.0001_mean",
+   "claim": "thr_drop_50@0.0001 seed 0: mean per-step selected fraction",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_50@0.0001/passes/0/selected_fraction_mean",
+   "value": 0.18355045269248568
+  },
+  {
+   "id": "sel_thr_drop_50@0.0001_first",
+   "claim": "thr_drop_50@0.0001 seed 0: selected fraction, first 100 steps",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_50@0.0001/passes/0/selected_first100",
+   "value": 0.30702361189317995
+  },
+  {
+   "id": "sel_thr_drop_50@0.0001_last",
+   "claim": "thr_drop_50@0.0001 seed 0: selected fraction, last 100 steps",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_50@0.0001/passes/0/selected_last100",
+   "value": 0.13985612111029277
+  },
+  {
+   "id": "nm_keno_15@0.0002",
+   "claim": "keno 15@0.0002: never-moved fraction, seed mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/15@0.0002/keno_never_moved_mean",
+   "value": 0.09867709780012056
+  },
+  {
+   "id": "nm_thr_15@0.0002",
+   "claim": "threshold 15@0.0002: never-moved fraction, seed mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/15@0.0002/thr_never_moved_mean",
+   "value": 0.6463709060627644
+  },
+  {
+   "id": "nm_keno_25@0.0002",
+   "claim": "keno 25@0.0002: never-moved fraction, seed mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/25@0.0002/keno_never_moved_mean",
+   "value": 0.07414055537951572
+  },
+  {
+   "id": "nm_thr_25@0.0002",
+   "claim": "threshold 25@0.0002: never-moved fraction, seed mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/25@0.0002/thr_never_moved_mean",
+   "value": 0.46554383433557095
+  },
+  {
+   "id": "nm_keno_50@0.0002",
+   "claim": "keno 50@0.0002: never-moved fraction, seed mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/50@0.0002/keno_never_moved_mean",
+   "value": 0.05197711767596965
+  },
+  {
+   "id": "nm_thr_50@0.0002",
+   "claim": "threshold 50@0.0002: never-moved fraction, seed mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/50@0.0002/thr_never_moved_mean",
+   "value": 0.1960375023729694
+  },
+  {
+   "id": "nm_keno_15@0.0001",
+   "claim": "keno 15@0.0001: never-moved fraction, seed mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/15@0.0001/keno_never_moved_mean",
+   "value": 0.17905878130713862
+  },
+  {
+   "id": "nm_thr_15@0.0001",
+   "claim": "threshold 15@0.0001: never-moved fraction, seed mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/15@0.0001/thr_never_moved_mean",
+   "value": 0.7152555126042144
+  },
+  {
+   "id": "nm_keno_25@0.0001",
+   "claim": "keno 25@0.0001: never-moved fraction, seed mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/25@0.0001/keno_never_moved_mean",
+   "value": 0.13706201615807806
+  },
+  {
+   "id": "nm_thr_25@0.0001",
+   "claim": "threshold 25@0.0001: never-moved fraction, seed mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/25@0.0001/thr_never_moved_mean",
+   "value": 0.6163244044857805
+  },
+  {
+   "id": "nm_keno_50@0.0001",
+   "claim": "keno 50@0.0001: never-moved fraction, seed mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/50@0.0001/keno_never_moved_mean",
+   "value": 0.09741217128723659
+  },
+  {
+   "id": "nm_thr_50@0.0001",
+   "claim": "threshold 50@0.0001: never-moved fraction, seed mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_random_vs_magnitude/delivery_match/50@0.0001/thr_never_moved_mean",
+   "value": 0.31193670226001846
+  },
+  {
+   "id": "fam_nm_keno_drop_25_0.0002_attention",
+   "claim": "keno_drop_25 @ 0.0002: never-moved fraction in attention parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/keno_drop_25/families/attention/never_moved",
+   "value": 0.08356205692997686
+  },
+  {
+   "id": "fam_dl_keno_drop_25_0.0002_attention",
+   "claim": "keno_drop_25 @ 0.0002: cumulative delivery in attention parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/keno_drop_25/families/attention/cum_length_ratio",
+   "value": 0.46262191319489165
+  },
+  {
+   "id": "fam_nm_keno_drop_25_0.0002_mlp",
+   "claim": "keno_drop_25 @ 0.0002: never-moved fraction in mlp parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/keno_drop_25/families/mlp/never_moved",
+   "value": 0.08750269509146734
+  },
+  {
+   "id": "fam_dl_keno_drop_25_0.0002_mlp",
+   "claim": "keno_drop_25 @ 0.0002: cumulative delivery in mlp parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/keno_drop_25/families/mlp/cum_length_ratio",
+   "value": 0.4650267023150212
+  },
+  {
+   "id": "fam_nm_keno_drop_25_0.0002_embedding",
+   "claim": "keno_drop_25 @ 0.0002: never-moved fraction in embedding parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/keno_drop_25/families/embedding/never_moved",
+   "value": 0.027611089635778352
+  },
+  {
+   "id": "fam_dl_keno_drop_25_0.0002_embedding",
+   "claim": "keno_drop_25 @ 0.0002: cumulative delivery in embedding parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/keno_drop_25/families/embedding/cum_length_ratio",
+   "value": 0.2701611145086445
+  },
+  {
+   "id": "fam_nm_keno_drop_25_0.0002_norm",
+   "claim": "keno_drop_25 @ 0.0002: never-moved fraction in norm parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/keno_drop_25/families/norm/never_moved",
+   "value": 0.16744080145719492
+  },
+  {
+   "id": "fam_dl_keno_drop_25_0.0002_norm",
+   "claim": "keno_drop_25 @ 0.0002: cumulative delivery in norm parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/keno_drop_25/families/norm/cum_length_ratio",
+   "value": 0.45777508456158056
+  },
+  {
+   "id": "fam_nm_thr_drop_25_0.0002_attention",
+   "claim": "thr_drop_25 @ 0.0002: never-moved fraction in attention parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/thr_drop_25/families/attention/never_moved",
+   "value": 0.5050017481674383
+  },
+  {
+   "id": "fam_dl_thr_drop_25_0.0002_attention",
+   "claim": "thr_drop_25 @ 0.0002: cumulative delivery in attention parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/thr_drop_25/families/attention/cum_length_ratio",
+   "value": 0.3930201479504313
+  },
+  {
+   "id": "fam_nm_thr_drop_25_0.0002_mlp",
+   "claim": "thr_drop_25 @ 0.0002: never-moved fraction in mlp parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/thr_drop_25/families/mlp/never_moved",
+   "value": 0.5597904007523148
+  },
+  {
+   "id": "fam_dl_thr_drop_25_0.0002_mlp",
+   "claim": "thr_drop_25 @ 0.0002: cumulative delivery in mlp parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/thr_drop_25/families/mlp/cum_length_ratio",
+   "value": 0.35605764390061434
+  },
+  {
+   "id": "fam_nm_thr_drop_25_0.0002_embedding",
+   "claim": "thr_drop_25 @ 0.0002: never-moved fraction in embedding parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/thr_drop_25/families/embedding/never_moved",
+   "value": 0.16294821986445673
+  },
+  {
+   "id": "fam_dl_thr_drop_25_0.0002_embedding",
+   "claim": "thr_drop_25 @ 0.0002: cumulative delivery in embedding parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/thr_drop_25/families/embedding/cum_length_ratio",
+   "value": 0.3026944228739499
+  },
+  {
+   "id": "fam_nm_thr_drop_25_0.0002_norm",
+   "claim": "thr_drop_25 @ 0.0002: never-moved fraction in norm parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/thr_drop_25/families/norm/never_moved",
+   "value": 0.8969148451730419
+  },
+  {
+   "id": "fam_dl_thr_drop_25_0.0002_norm",
+   "claim": "thr_drop_25 @ 0.0002: cumulative delivery in norm parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/thr_drop_25/families/norm/cum_length_ratio",
+   "value": 0.12094143680584776
+  },
+  {
+   "id": "fam_nm_keno_drop_50_0.0001_attention",
+   "claim": "keno_drop_50 @ 0.0001: never-moved fraction in attention parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/keno_drop_50/families/attention/never_moved",
+   "value": 0.11220191484616127
+  },
+  {
+   "id": "fam_dl_keno_drop_50_0.0001_attention",
+   "claim": "keno_drop_50 @ 0.0001: cumulative delivery in attention parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/keno_drop_50/families/attention/cum_length_ratio",
+   "value": 0.6755058767066543
+  },
+  {
+   "id": "fam_nm_keno_drop_50_0.0001_mlp",
+   "claim": "keno_drop_50 @ 0.0001: never-moved fraction in mlp parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/keno_drop_50/families/mlp/never_moved",
+   "value": 0.11777397249951775
+  },
+  {
+   "id": "fam_dl_keno_drop_50_0.0001_mlp",
+   "claim": "keno_drop_50 @ 0.0001: cumulative delivery in mlp parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/keno_drop_50/families/mlp/cum_length_ratio",
+   "value": 0.6776475647049846
+  },
+  {
+   "id": "fam_nm_keno_drop_50_0.0001_embedding",
+   "claim": "keno_drop_50 @ 0.0001: never-moved fraction in embedding parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/keno_drop_50/families/embedding/never_moved",
+   "value": 0.02612130906846788
+  },
+  {
+   "id": "fam_dl_keno_drop_50_0.0001_embedding",
+   "claim": "keno_drop_50 @ 0.0001: cumulative delivery in embedding parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/keno_drop_50/families/embedding/cum_length_ratio",
+   "value": 0.5135691428475493
+  },
+  {
+   "id": "fam_nm_keno_drop_50_0.0001_norm",
+   "claim": "keno_drop_50 @ 0.0001: never-moved fraction in norm parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/keno_drop_50/families/norm/never_moved",
+   "value": 0.22465277777777776
+  },
+  {
+   "id": "fam_dl_keno_drop_50_0.0001_norm",
+   "claim": "keno_drop_50 @ 0.0001: cumulative delivery in norm parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/keno_drop_50/families/norm/cum_length_ratio",
+   "value": 0.6788937244355493
+  },
+  {
+   "id": "fam_nm_thr_drop_50_0.0001_attention",
+   "claim": "thr_drop_50 @ 0.0001: never-moved fraction in attention parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/thr_drop_50/families/attention/never_moved",
+   "value": 0.3551572672526042
+  },
+  {
+   "id": "fam_dl_thr_drop_50_0.0001_attention",
+   "claim": "thr_drop_50 @ 0.0001: cumulative delivery in attention parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/thr_drop_50/families/attention/cum_length_ratio",
+   "value": 0.5959101216337868
+  },
+  {
+   "id": "fam_nm_thr_drop_50_0.0001_mlp",
+   "claim": "thr_drop_50 @ 0.0001: never-moved fraction in mlp parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/thr_drop_50/families/mlp/never_moved",
+   "value": 0.3815681740089699
+  },
+  {
+   "id": "fam_dl_thr_drop_50_0.0001_mlp",
+   "claim": "thr_drop_50 @ 0.0001: cumulative delivery in mlp parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/thr_drop_50/families/mlp/cum_length_ratio",
+   "value": 0.5623329260306156
+  },
+  {
+   "id": "fam_nm_thr_drop_50_0.0001_embedding",
+   "claim": "thr_drop_50 @ 0.0001: never-moved fraction in embedding parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/thr_drop_50/families/embedding/never_moved",
+   "value": 0.07497665263988354
+  },
+  {
+   "id": "fam_dl_thr_drop_50_0.0001_embedding",
+   "claim": "thr_drop_50 @ 0.0001: cumulative delivery in embedding parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/thr_drop_50/families/embedding/cum_length_ratio",
+   "value": 0.5417485531079498
+  },
+  {
+   "id": "fam_nm_thr_drop_50_0.0001_norm",
+   "claim": "thr_drop_50 @ 0.0001: never-moved fraction in norm parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/thr_drop_50/families/norm/never_moved",
+   "value": 0.7972165300546448
+  },
+  {
+   "id": "fam_dl_thr_drop_50_0.0001_norm",
+   "claim": "thr_drop_50 @ 0.0001: cumulative delivery in norm parameters",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/thr_drop_50/families/norm/cum_length_ratio",
+   "value": 0.2107487787751447
+  },
+  {
+   "id": "rne_nm_2e-4",
+   "claim": "plain rounding @ 2e-4: never-moved fraction, five seeds",
+   "source": "results/analysis/curves.json",
+   "key": "0.0002/rne/never_moved_mean",
+   "value": 0.6131727933287563
+  },
+  {
+   "id": "rne_nm_1e-4",
+   "claim": "plain rounding @ 1e-4: never-moved fraction, five seeds",
+   "source": "results/analysis/curves.json",
+   "key": "0.0001/rne/never_moved_mean",
+   "value": 0.7854362629930483
+  },
+  {
+   "id": "q2_bar_mean",
+   "claim": "fp32 master @ 5e-5 five-seed mean NLL (exp_01m1tgnb6xf98sqwfhm4effknt)",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/bar/mean",
+   "value": 1.1505204325672829
+  },
+  {
+   "id": "q2_bar_per_seed",
+   "claim": "fp32 master @ 5e-5 per-seed NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/bar/per_seed",
+   "value": {
+    "0": 1.1495823056170418,
+    "1": 1.1528823313384164,
+    "2": 1.1487985920987835,
+    "3": 1.1495451933257168,
+    "4": 1.151793740456456
+   }
+  },
+  {
+   "id": "q2_primary_mean",
+   "claim": "Q2 primary keno_drop_50 @ 1e-4 minus fp32 master @ 5e-5: mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/primary/mean",
+   "value": 0.0008637925516846057
+  },
+  {
+   "id": "q2_primary_lo",
+   "claim": "Q2 primary keno_drop_50 @ 1e-4 minus fp32 master @ 5e-5: lo",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/primary/lo",
+   "value": -0.0003056959038493258
+  },
+  {
+   "id": "q2_primary_hi",
+   "claim": "Q2 primary keno_drop_50 @ 1e-4 minus fp32 master @ 5e-5: hi",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/primary/hi",
+   "value": 0.002033281007218537
+  },
+  {
+   "id": "q2_primary_verdict",
+   "claim": "Q2 primary keno_drop_50 @ 1e-4 minus fp32 master @ 5e-5: verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/primary/verdict",
+   "value": "tie"
+  },
+  {
+   "id": "q2_primary_condition_mean",
+   "claim": "Q2 primary keno_drop_50 @ 1e-4 minus fp32 master @ 5e-5: condition_mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/primary/condition_mean",
+   "value": 1.1513842251189677
+  },
+  {
+   "id": "q2_primary_per_seed",
+   "claim": "Q2 primary keno_drop_50 @ 1e-4 minus fp32 master @ 5e-5: per_seed",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/primary/per_seed",
+   "value": [
+    -0.0006940078105883707,
+    0.0006639258264538039,
+    0.00043397335915495994,
+    0.0012593887009848537,
+    0.0026556826824177815
+   ]
+  },
+  {
+   "id": "q2_keno_drop_15@0.0002_mean",
+   "claim": "Q2 exploratory keno_drop_15@0.0002 minus fp32 master @ 5e-5: mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_15@0.0002/mean",
+   "value": 0.0005125696839509697
+  },
+  {
+   "id": "q2_keno_drop_15@0.0002_lo",
+   "claim": "Q2 exploratory keno_drop_15@0.0002 minus fp32 master @ 5e-5: lo",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_15@0.0002/lo",
+   "value": -0.0007147833776969472
+  },
+  {
+   "id": "q2_keno_drop_15@0.0002_hi",
+   "claim": "Q2 exploratory keno_drop_15@0.0002 minus fp32 master @ 5e-5: hi",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_15@0.0002/hi",
+   "value": 0.0017399227455988865
+  },
+  {
+   "id": "q2_keno_drop_15@0.0002_verdict",
+   "claim": "Q2 exploratory keno_drop_15@0.0002 minus fp32 master @ 5e-5: verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_15@0.0002/verdict",
+   "value": "tie"
+  },
+  {
+   "id": "q2_keno_drop_15@0.0002_condition_mean",
+   "claim": "Q2 exploratory keno_drop_15@0.0002 minus fp32 master @ 5e-5: condition_mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_15@0.0002/condition_mean",
+   "value": 1.1510330022512338
+  },
+  {
+   "id": "q2_keno_drop_25@0.0002_mean",
+   "claim": "Q2 exploratory keno_drop_25@0.0002 minus fp32 master @ 5e-5: mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_25@0.0002/mean",
+   "value": 0.002753069354000681
+  },
+  {
+   "id": "q2_keno_drop_25@0.0002_lo",
+   "claim": "Q2 exploratory keno_drop_25@0.0002 minus fp32 master @ 5e-5: lo",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_25@0.0002/lo",
+   "value": 0.0018385472687099229
+  },
+  {
+   "id": "q2_keno_drop_25@0.0002_hi",
+   "claim": "Q2 exploratory keno_drop_25@0.0002 minus fp32 master @ 5e-5: hi",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_25@0.0002/hi",
+   "value": 0.0036675914392914396
+  },
+  {
+   "id": "q2_keno_drop_25@0.0002_verdict",
+   "claim": "Q2 exploratory keno_drop_25@0.0002 minus fp32 master @ 5e-5: verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_25@0.0002/verdict",
+   "value": "tie"
+  },
+  {
+   "id": "q2_keno_drop_25@0.0002_condition_mean",
+   "claim": "Q2 exploratory keno_drop_25@0.0002 minus fp32 master @ 5e-5: condition_mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_25@0.0002/condition_mean",
+   "value": 1.1532735019212836
+  },
+  {
+   "id": "q2_keno_drop_25@0.0001_mean",
+   "claim": "Q2 exploratory keno_drop_25@0.0001 minus fp32 master @ 5e-5: mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_25@0.0001/mean",
+   "value": 0.0008274345766920543
+  },
+  {
+   "id": "q2_keno_drop_25@0.0001_lo",
+   "claim": "Q2 exploratory keno_drop_25@0.0001 minus fp32 master @ 5e-5: lo",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_25@0.0001/lo",
+   "value": 0.00045248957496281833
+  },
+  {
+   "id": "q2_keno_drop_25@0.0001_hi",
+   "claim": "Q2 exploratory keno_drop_25@0.0001 minus fp32 master @ 5e-5: hi",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_25@0.0001/hi",
+   "value": 0.0012023795784212902
+  },
+  {
+   "id": "q2_keno_drop_25@0.0001_verdict",
+   "claim": "Q2 exploratory keno_drop_25@0.0001 minus fp32 master @ 5e-5: verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_25@0.0001/verdict",
+   "value": "tie"
+  },
+  {
+   "id": "q2_keno_drop_25@0.0001_condition_mean",
+   "claim": "Q2 exploratory keno_drop_25@0.0001 minus fp32 master @ 5e-5: condition_mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_25@0.0001/condition_mean",
+   "value": 1.151347867143975
+  },
+  {
+   "id": "q2_keno_drop_50@0.0002_mean",
+   "claim": "Q2 exploratory keno_drop_50@0.0002 minus fp32 master @ 5e-5: mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_50@0.0002/mean",
+   "value": 0.034363574545465306
+  },
+  {
+   "id": "q2_keno_drop_50@0.0002_lo",
+   "claim": "Q2 exploratory keno_drop_50@0.0002 minus fp32 master @ 5e-5: lo",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_50@0.0002/lo",
+   "value": 0.029724560717206056
+  },
+  {
+   "id": "q2_keno_drop_50@0.0002_hi",
+   "claim": "Q2 exploratory keno_drop_50@0.0002 minus fp32 master @ 5e-5: hi",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_50@0.0002/hi",
+   "value": 0.039002588373724556
+  },
+  {
+   "id": "q2_keno_drop_50@0.0002_verdict",
+   "claim": "Q2 exploratory keno_drop_50@0.0002 minus fp32 master @ 5e-5: verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_50@0.0002/verdict",
+   "value": "worse"
+  },
+  {
+   "id": "q2_keno_drop_50@0.0002_condition_mean",
+   "claim": "Q2 exploratory keno_drop_50@0.0002 minus fp32 master @ 5e-5: condition_mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_50@0.0002/condition_mean",
+   "value": 1.1848840071127482
+  },
+  {
+   "id": "q2_keno_drop_15@0.0001_mean",
+   "claim": "Q2 exploratory keno_drop_15@0.0001 minus fp32 master @ 5e-5: mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_15@0.0001/mean",
+   "value": 0.012308473978408906
+  },
+  {
+   "id": "q2_keno_drop_15@0.0001_lo",
+   "claim": "Q2 exploratory keno_drop_15@0.0001 minus fp32 master @ 5e-5: lo",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_15@0.0001/lo",
+   "value": 0.011977726043584082
+  },
+  {
+   "id": "q2_keno_drop_15@0.0001_hi",
+   "claim": "Q2 exploratory keno_drop_15@0.0001 minus fp32 master @ 5e-5: hi",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_15@0.0001/hi",
+   "value": 0.01263922191323373
+  },
+  {
+   "id": "q2_keno_drop_15@0.0001_verdict",
+   "claim": "Q2 exploratory keno_drop_15@0.0001 minus fp32 master @ 5e-5: verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_15@0.0001/verdict",
+   "value": "worse"
+  },
+  {
+   "id": "q2_keno_drop_15@0.0001_condition_mean",
+   "claim": "Q2 exploratory keno_drop_15@0.0001 minus fp32 master @ 5e-5: condition_mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/keno_drop_15@0.0001/condition_mean",
+   "value": 1.1628289065456918
+  },
+  {
+   "id": "q2_thr_drop_15@0.0002_mean",
+   "claim": "Q2 exploratory thr_drop_15@0.0002 minus fp32 master @ 5e-5: mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_15@0.0002/mean",
+   "value": 0.019564504006114224
+  },
+  {
+   "id": "q2_thr_drop_15@0.0002_lo",
+   "claim": "Q2 exploratory thr_drop_15@0.0002 minus fp32 master @ 5e-5: lo",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_15@0.0002/lo",
+   "value": 0.018647277817849695
+  },
+  {
+   "id": "q2_thr_drop_15@0.0002_hi",
+   "claim": "Q2 exploratory thr_drop_15@0.0002 minus fp32 master @ 5e-5: hi",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_15@0.0002/hi",
+   "value": 0.020481730194378753
+  },
+  {
+   "id": "q2_thr_drop_15@0.0002_verdict",
+   "claim": "Q2 exploratory thr_drop_15@0.0002 minus fp32 master @ 5e-5: verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_15@0.0002/verdict",
+   "value": "worse"
+  },
+  {
+   "id": "q2_thr_drop_15@0.0002_condition_mean",
+   "claim": "Q2 exploratory thr_drop_15@0.0002 minus fp32 master @ 5e-5: condition_mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_15@0.0002/condition_mean",
+   "value": 1.1700849365733972
+  },
+  {
+   "id": "q2_thr_drop_25@0.0002_mean",
+   "claim": "Q2 exploratory thr_drop_25@0.0002 minus fp32 master @ 5e-5: mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_25@0.0002/mean",
+   "value": 0.030021988845992543
+  },
+  {
+   "id": "q2_thr_drop_25@0.0002_lo",
+   "claim": "Q2 exploratory thr_drop_25@0.0002 minus fp32 master @ 5e-5: lo",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_25@0.0002/lo",
+   "value": -0.0028547833667929255
+  },
+  {
+   "id": "q2_thr_drop_25@0.0002_hi",
+   "claim": "Q2 exploratory thr_drop_25@0.0002 minus fp32 master @ 5e-5: hi",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_25@0.0002/hi",
+   "value": 0.06289876105877801
+  },
+  {
+   "id": "q2_thr_drop_25@0.0002_verdict",
+   "claim": "Q2 exploratory thr_drop_25@0.0002 minus fp32 master @ 5e-5: verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_25@0.0002/verdict",
+   "value": "undecided"
+  },
+  {
+   "id": "q2_thr_drop_25@0.0002_condition_mean",
+   "claim": "Q2 exploratory thr_drop_25@0.0002 minus fp32 master @ 5e-5: condition_mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_25@0.0002/condition_mean",
+   "value": 1.1805424214132754
+  },
+  {
+   "id": "q2_thr_drop_50@0.0002_mean",
+   "claim": "Q2 exploratory thr_drop_50@0.0002 minus fp32 master @ 5e-5: mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_50@0.0002/mean",
+   "value": 0.04017583051340763
+  },
+  {
+   "id": "q2_thr_drop_50@0.0002_lo",
+   "claim": "Q2 exploratory thr_drop_50@0.0002 minus fp32 master @ 5e-5: lo",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_50@0.0002/lo",
+   "value": 0.035133607565185014
+  },
+  {
+   "id": "q2_thr_drop_50@0.0002_hi",
+   "claim": "Q2 exploratory thr_drop_50@0.0002 minus fp32 master @ 5e-5: hi",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_50@0.0002/hi",
+   "value": 0.04521805346163025
+  },
+  {
+   "id": "q2_thr_drop_50@0.0002_verdict",
+   "claim": "Q2 exploratory thr_drop_50@0.0002 minus fp32 master @ 5e-5: verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_50@0.0002/verdict",
+   "value": "worse"
+  },
+  {
+   "id": "q2_thr_drop_50@0.0002_condition_mean",
+   "claim": "Q2 exploratory thr_drop_50@0.0002 minus fp32 master @ 5e-5: condition_mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_50@0.0002/condition_mean",
+   "value": 1.1906962630806905
+  },
+  {
+   "id": "q2_thr_drop_15@0.0001_mean",
+   "claim": "Q2 exploratory thr_drop_15@0.0001 minus fp32 master @ 5e-5: mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_15@0.0001/mean",
+   "value": 0.0399702791047396
+  },
+  {
+   "id": "q2_thr_drop_15@0.0001_lo",
+   "claim": "Q2 exploratory thr_drop_15@0.0001 minus fp32 master @ 5e-5: lo",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_15@0.0001/lo",
+   "value": 0.0391390798541016
+  },
+  {
+   "id": "q2_thr_drop_15@0.0001_hi",
+   "claim": "Q2 exploratory thr_drop_15@0.0001 minus fp32 master @ 5e-5: hi",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_15@0.0001/hi",
+   "value": 0.040801478355377604
+  },
+  {
+   "id": "q2_thr_drop_15@0.0001_verdict",
+   "claim": "Q2 exploratory thr_drop_15@0.0001 minus fp32 master @ 5e-5: verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_15@0.0001/verdict",
+   "value": "worse"
+  },
+  {
+   "id": "q2_thr_drop_15@0.0001_condition_mean",
+   "claim": "Q2 exploratory thr_drop_15@0.0001 minus fp32 master @ 5e-5: condition_mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_15@0.0001/condition_mean",
+   "value": 1.1904907116720225
+  },
+  {
+   "id": "q2_thr_drop_25@0.0001_mean",
+   "claim": "Q2 exploratory thr_drop_25@0.0001 minus fp32 master @ 5e-5: mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_25@0.0001/mean",
+   "value": 0.020763401655242486
+  },
+  {
+   "id": "q2_thr_drop_25@0.0001_lo",
+   "claim": "Q2 exploratory thr_drop_25@0.0001 minus fp32 master @ 5e-5: lo",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_25@0.0001/lo",
+   "value": 0.02018176879946268
+  },
+  {
+   "id": "q2_thr_drop_25@0.0001_hi",
+   "claim": "Q2 exploratory thr_drop_25@0.0001 minus fp32 master @ 5e-5: hi",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_25@0.0001/hi",
+   "value": 0.021345034511022293
+  },
+  {
+   "id": "q2_thr_drop_25@0.0001_verdict",
+   "claim": "Q2 exploratory thr_drop_25@0.0001 minus fp32 master @ 5e-5: verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_25@0.0001/verdict",
+   "value": "worse"
+  },
+  {
+   "id": "q2_thr_drop_25@0.0001_condition_mean",
+   "claim": "Q2 exploratory thr_drop_25@0.0001 minus fp32 master @ 5e-5: condition_mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_25@0.0001/condition_mean",
+   "value": 1.1712838342225254
+  },
+  {
+   "id": "q2_thr_drop_50@0.0001_mean",
+   "claim": "Q2 exploratory thr_drop_50@0.0001 minus fp32 master @ 5e-5: mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_50@0.0001/mean",
+   "value": 0.013073735210559167
+  },
+  {
+   "id": "q2_thr_drop_50@0.0001_lo",
+   "claim": "Q2 exploratory thr_drop_50@0.0001 minus fp32 master @ 5e-5: lo",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_50@0.0001/lo",
+   "value": -0.00381389940194762
+  },
+  {
+   "id": "q2_thr_drop_50@0.0001_hi",
+   "claim": "Q2 exploratory thr_drop_50@0.0001 minus fp32 master @ 5e-5: hi",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_50@0.0001/hi",
+   "value": 0.029961369823065954
+  },
+  {
+   "id": "q2_thr_drop_50@0.0001_verdict",
+   "claim": "Q2 exploratory thr_drop_50@0.0001 minus fp32 master @ 5e-5: verdict",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_50@0.0001/verdict",
+   "value": "undecided"
+  },
+  {
+   "id": "q2_thr_drop_50@0.0001_condition_mean",
+   "claim": "Q2 exploratory thr_drop_50@0.0001 minus fp32 master @ 5e-5: condition_mean",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_tuned_keno_vs_tuned_exact/exploratory/thr_drop_50@0.0001/condition_mean",
+   "value": 1.163594167777842
+  },
+  {
+   "id": "q3_0.0002_mean",
+   "claim": "Q3 @ lr 0.0002: mean of interpolated keno NLL at rne's delivery minus rne NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_plain_rounding_on_keno_curve/per_lr/0.0002/mean",
+   "value": -0.01688659255104983
+  },
+  {
+   "id": "q3_0.0002_min",
+   "claim": "Q3 @ lr 0.0002: min of interpolated keno NLL at rne's delivery minus rne NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_plain_rounding_on_keno_curve/per_lr/0.0002/min",
+   "value": -0.023254914731294374
+  },
+  {
+   "id": "q3_0.0002_max",
+   "claim": "Q3 @ lr 0.0002: max of interpolated keno NLL at rne's delivery minus rne NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_plain_rounding_on_keno_curve/per_lr/0.0002/max",
+   "value": -0.012338284551865808
+  },
+  {
+   "id": "q3_0.0002_n_interpolated",
+   "claim": "Q3 @ lr 0.0002: n_interpolated of interpolated keno NLL at rne's delivery minus rne NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_plain_rounding_on_keno_curve/per_lr/0.0002/n_interpolated",
+   "value": 5
+  },
+  {
+   "id": "q3_0.0002_n_extrapolated",
+   "claim": "Q3 @ lr 0.0002: n_extrapolated of interpolated keno NLL at rne's delivery minus rne NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_plain_rounding_on_keno_curve/per_lr/0.0002/n_extrapolated",
+   "value": 0
+  },
+  {
+   "id": "q3_0.0002_rne_delivery_mean",
+   "claim": "Q3 @ lr 0.0002: rne_delivery_mean of interpolated keno NLL at rne's delivery minus rne NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_plain_rounding_on_keno_curve/per_lr/0.0002/rne_delivery_mean",
+   "value": 0.26367954233887103
+  },
+  {
+   "id": "q3_0.0002_keno_drop_15_delivery_mean",
+   "claim": "Q3 @ lr 0.0002: keno_drop_15_delivery_mean of interpolated keno NLL at rne's delivery minus rne NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_plain_rounding_on_keno_curve/per_lr/0.0002/keno_drop_15_delivery_mean",
+   "value": 0.20273892122178835
+  },
+  {
+   "id": "q3_0.0001_mean",
+   "claim": "Q3 @ lr 0.0001: mean of interpolated keno NLL at rne's delivery minus rne NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_plain_rounding_on_keno_curve/per_lr/0.0001/mean",
+   "value": -0.03473701172735142
+  },
+  {
+   "id": "q3_0.0001_min",
+   "claim": "Q3 @ lr 0.0001: min of interpolated keno NLL at rne's delivery minus rne NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_plain_rounding_on_keno_curve/per_lr/0.0001/min",
+   "value": -0.036222793147988375
+  },
+  {
+   "id": "q3_0.0001_max",
+   "claim": "Q3 @ lr 0.0001: max of interpolated keno NLL at rne's delivery minus rne NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_plain_rounding_on_keno_curve/per_lr/0.0001/max",
+   "value": -0.03340489556284476
+  },
+  {
+   "id": "q3_0.0001_n_interpolated",
+   "claim": "Q3 @ lr 0.0001: n_interpolated of interpolated keno NLL at rne's delivery minus rne NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_plain_rounding_on_keno_curve/per_lr/0.0001/n_interpolated",
+   "value": 0
+  },
+  {
+   "id": "q3_0.0001_n_extrapolated",
+   "claim": "Q3 @ lr 0.0001: n_extrapolated of interpolated keno NLL at rne's delivery minus rne NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_plain_rounding_on_keno_curve/per_lr/0.0001/n_extrapolated",
+   "value": 5
+  },
+  {
+   "id": "q3_0.0001_rne_delivery_mean",
+   "claim": "Q3 @ lr 0.0001: rne_delivery_mean of interpolated keno NLL at rne's delivery minus rne NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_plain_rounding_on_keno_curve/per_lr/0.0001/rne_delivery_mean",
+   "value": 0.18449111113489153
+  },
+  {
+   "id": "q3_0.0001_keno_drop_15_delivery_mean",
+   "claim": "Q3 @ lr 0.0001: keno_drop_15_delivery_mean of interpolated keno NLL at rne's delivery minus rne NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_plain_rounding_on_keno_curve/per_lr/0.0001/keno_drop_15_delivery_mean",
+   "value": 0.19537324815554413
+  },
+  {
+   "id": "harness_passed",
+   "claim": "rne seed 2 lr 2e-4 harness reproduction passed",
+   "source": "results/analysis/verdicts.json",
+   "key": "harness/all_passed",
+   "value": true
+  },
+  {
+   "id": "harness_abs_diff",
+   "claim": "harness reproduction |NLL difference|",
+   "source": "results/analysis/verdicts.json",
+   "key": "harness/checks/0/eval_nll_abs_diff",
+   "value": 0.0
+  },
+  {
+   "id": "harness_loss_diff",
+   "claim": "harness reproduction max |per-step loss difference| over 3000 steps",
+   "source": "results/analysis/verdicts.json",
+   "key": "harness/checks/0/losses_max_abs_diff",
+   "value": 0.0
+  },
+  {
+   "id": "harness_ref",
+   "claim": "harness reference NLL",
+   "source": "results/analysis/verdicts.json",
+   "key": "harness/checks/0/eval_nll_reference",
+   "value": 1.163403438942883
+  },
+  {
+   "id": "n_records",
+   "claim": "records produced by this experiment",
+   "source": "results/analysis/verdicts.json",
+   "key": "n_records_this_run",
+   "value": 53
+  },
+  {
+   "id": "cells_complete",
+   "claim": "planned cells with five seeds",
+   "source": "results/analysis/verdicts.json",
+   "key": "planned_grid/n_complete",
+   "value": 12
+  },
+  {
+   "id": "cells_planned",
+   "claim": "planned cells",
+   "source": "results/analysis/verdicts.json",
+   "key": "planned_grid/n_planned",
+   "value": 12
+  },
+  {
+   "id": "eval_tokens",
+   "claim": "held-out evaluation tokens",
+   "source": "results/analysis/verdicts.json",
+   "key": "timing/eval_tokens/0",
+   "value": 49277
+  },
+  {
+   "id": "cal_thr_drop_15@0.0002_theta",
+   "claim": "calibrated theta for thr_drop_15@0.0002",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_15@0.0002/theta",
+   "value": 0.5868351318882165
+  },
+  {
+   "id": "cal_thr_drop_15@0.0002_gap",
+   "claim": "seed-0 delivery gap threshold minus keno for thr_drop_15@0.0002",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_15@0.0002/passes/1/gap",
+   "value": -0.006536931357592646
+  },
+  {
+   "id": "cal_thr_drop_25@0.0002_theta",
+   "claim": "calibrated theta for thr_drop_25@0.0002",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_25@0.0002/theta",
+   "value": 0.3087857366715559
+  },
+  {
+   "id": "cal_thr_drop_25@0.0002_gap",
+   "claim": "seed-0 delivery gap threshold minus keno for thr_drop_25@0.0002",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_25@0.0002/passes/1/gap",
+   "value": 0.005922910305923235
+  },
+  {
+   "id": "cal_thr_drop_50@0.0002_theta",
+   "claim": "calibrated theta for thr_drop_50@0.0002",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_50@0.0002/theta",
+   "value": 0.10217312296908035
+  },
+  {
+   "id": "cal_thr_drop_50@0.0002_gap",
+   "claim": "seed-0 delivery gap threshold minus keno for thr_drop_50@0.0002",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_50@0.0002/passes/1/gap",
+   "value": 0.011068383569710849
+  },
+  {
+   "id": "cal_thr_drop_15@0.0001_theta",
+   "claim": "calibrated theta for thr_drop_15@0.0001",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_15@0.0001/theta",
+   "value": 0.35
+  },
+  {
+   "id": "cal_thr_drop_15@0.0001_gap",
+   "claim": "seed-0 delivery gap threshold minus keno for thr_drop_15@0.0001",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_15@0.0001/passes/0/gap",
+   "value": 0.007254659051040335
+  },
+  {
+   "id": "cal_thr_drop_25@0.0001_theta",
+   "claim": "calibrated theta for thr_drop_25@0.0001",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_25@0.0001/theta",
+   "value": 0.2
+  },
+  {
+   "id": "cal_thr_drop_25@0.0001_gap",
+   "claim": "seed-0 delivery gap threshold minus keno for thr_drop_25@0.0001",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_25@0.0001/passes/0/gap",
+   "value": -0.004388246965180809
+  },
+  {
+   "id": "cal_thr_drop_50@0.0001_theta",
+   "claim": "calibrated theta for thr_drop_50@0.0001",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_50@0.0001/theta",
+   "value": 0.06
+  },
+  {
+   "id": "cal_thr_drop_50@0.0001_gap",
+   "claim": "seed-0 delivery gap threshold minus keno for thr_drop_50@0.0001",
+   "source": "results/analysis/verdicts.json",
+   "key": "calibration/thr_drop_50@0.0001/passes/0/gap",
+   "value": 0.004644243701140804
+  }
+ ]
+}
