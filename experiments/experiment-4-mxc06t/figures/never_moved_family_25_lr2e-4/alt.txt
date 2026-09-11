@@ -1,0 +1,1 @@
+Grouped bars of the fraction of coordinates never moved over 3,000 steps per parameter family (attention, MLP, embedding, norm) at lr 2e-4, random pick against the magnitude pick matched to the 25% level; seed means.

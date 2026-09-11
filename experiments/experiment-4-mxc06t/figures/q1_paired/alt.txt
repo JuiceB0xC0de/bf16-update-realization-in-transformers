@@ -1,0 +1,1 @@
+Dot-and-interval chart of the paired held-out NLL difference random minus magnitude-based selection at matched delivery for three levels and two learning rates; diamonds mark the two pre-registered contrasts, bars are 90% Student-t intervals over five seeds, open circles are per-seed values, with reference lines at 0 and ±0.01.

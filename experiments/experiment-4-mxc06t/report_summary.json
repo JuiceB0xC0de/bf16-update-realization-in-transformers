@@ -1,0 +1,513 @@
+{
+ "title": "Both primary random-vs-magnitude contrasts are undecided on SmolLM2-135M; random selection wins four secondary cells and loses none; a 50% random writer at lr 1e-4 ties tuned fp32 master",
+ "headline": "The two pre-registered primary contrasts are undecided under the interval rule (25% @ 2e-4: -0.0273 [-0.0593, +0.0048]; 50% @ 1e-4: -0.0122 [-0.0292, +0.0048]) because one threshold seed in each cell degraded with late gradient spikes (NLL 1.2405 and 1.1976); the four secondary contrasts all have 90% intervals entirely below zero (random wins). The tuned keno writer, 50% @ lr 1e-4, ties tuned fp32 master @ 5e-5: +0.0009 [-0.0003, +0.0020], and three other keno configurations are within 0.003 of the same bar. Plain bf16 rounding sits above the keno delivery-loss curve at both learning rates (-0.0169 at 2e-4, interpolated; -0.0347 at 1e-4, a short extrapolation below the 15% level). Delivering a uniformly random fraction of each AdamW update (keno) gives lower held-out NLL than delivering the same cumulative amount through the coordinates with the largest relative update (threshold) in all six matched cells; the mean keno minus threshold difference over the six cells is -0.0187 nats and magnitude wins none.",
+ "assessment": "partial_signal",
+ "research_question": "Given that a random 25% keno write distributor reproduced plain bf16 rounding's advantage over fp32 master, does it matter which coordinates receive the update? Compare random selection (keno-drop) with magnitude-based selection (threshold-drop: |update|/bf16 spacing >= theta) at matched cumulative delivery and identical exact-write precision; test whether a tuned keno writer beats tuned exact delivery; and locate plain rounding on the keno delivery-loss curve.",
+ "decision_rules": {
+  "q1": "paired per seed over five seeds, 90% Student-t interval of NLL(keno_drop_f) - NLL(thr_drop_f matched to it): entirely < 0 random wins; entirely > 0 magnitude wins; inside +-0.01 indistinguishable; otherwise undecided. Primary: 25% @ 2e-4 and 50% @ 1e-4; 15% level and the remaining cells secondary.",
+  "q1_verdicts": {
+   "25@0.0002": "undecided",
+   "50@0.0001": "undecided",
+   "15@0.0002": "random wins",
+   "50@0.0002": "random wins",
+   "15@0.0001": "random wins",
+   "25@0.0001": "random wins"
+  },
+  "q2": "paired per seed, 90% interval of NLL(keno_drop_50 @ 1e-4) - NLL(fp32_master @ 5e-5 from exp_01m1tgnb6xf98sqwfhm4effknt): entirely < 0 beats; inside +-0.01 tie; otherwise as reported. Other configurations exploratory.",
+  "q2_verdict": "tie",
+  "q3": "descriptive: per lr and seed, keno_drop NLL linearly interpolated over the keno curve at rne's measured delivery, minus rne's NLL",
+  "divergent_runs": "researcher instruction: report thr_drop_25@2e-4 seed 2 and thr_drop_50@1e-4 seed 1 as-is, do not exclude, characterise with clip counts and per-step selected fractions"
+ },
+ "methods": {
+  "model": "HuggingFaceTB/SmolLM2-135M @ 93efa2f097d58c2a74874c7e644dbc9b0cee75a2, bfloat16 parameters and moments, CompensatedAdamW with a write distributor",
+  "data": "gsm8k main @ 740312add88f781978c0658806c59bc2815b9866; 3000 steps, batch size 1, seed-specific fixed order; held-out NLL on 49,277 tokens",
+  "selectors": "keno-drop f: every 50 steps redraw a uniform random mask covering fraction f of coordinates; drawn coordinates get the exact write t = p + i + c, p <- rne(t), c <- t - p; undrawn requests are discarded. threshold-drop theta: every step select coordinates with |i| / spacing(p) >= theta (spacing = 2^(exponent-7)); same exact write on selected coordinates, unselected discarded.",
+  "calibration": "theta per (lr, level) chosen on seed 0 by a secant search on the full 3000-step run until the threshold writer's cumulative delivery (sum of realised update length / sum of intended update length) matched keno's within 0.02; the converged pass is the seed-0 production record. theta = {\"thr_drop_15@0.0001\": 0.35, \"thr_drop_15@0.0002\": 0.5868, \"thr_drop_25@0.0001\": 0.2, \"thr_drop_25@0.0002\": 0.3088, \"thr_drop_50@0.0001\": 0.06, \"thr_drop_50@0.0002\": 0.1022}",
+  "grid": "levels 15%, 25%, 50% x lr 2e-4, 1e-4 x seeds 0-4 for both selectors (keno 25%/50% seeds 0,1 from exp_01m1tvjx4ee3xshh9djt6db5bx); reference rne, fp32_master, kahan, torch_adamw from exp_01m1tgnb6xf98sqwfhm4effknt",
+  "harness_check": "rne seed 2 lr 2e-4 rerun in this pipeline reproduced 1.163403438942883 with |diff| 0.0 and all 3000 per-step losses identical",
+  "compute": "one H100 per job, three concurrent jobs; keno about 0.13 s/step, threshold about 0.16 s/step",
+  "uncertainty": "90% Student-t intervals on paired per-seed differences, n = 5",
+  "seeds": "0, 1, 2, 3, 4 (data order, init and keno mask share the seed)",
+  "logging": "W&B project default-exp-exp_01m1v355jafe8sqbzmwmmxc06t; 14 threshold runs from Sept 8 trained without W&B after the API handshake failed, their records carry wandb_url null"
+ },
+ "results": {
+  "q1": {
+   "25@0.0002": {
+    "kind": "primary",
+    "mean": -0.02726891949199186,
+    "lo": -0.05932044726321234,
+    "hi": 0.00478260827922862,
+    "verdict": "undecided",
+    "per_seed": [
+     -0.011365193285710617,
+     -0.011160109430042864,
+     -0.0873806619420634,
+     -0.013515523512172667,
+     -0.012923109289969759
+    ],
+    "thr_delivery_gap_mean": -0.0029622640691184922,
+    "theta": 0.3087857366715559
+   },
+   "50@0.0001": {
+    "kind": "primary",
+    "mean": -0.012209942658874562,
+    "lo": -0.029194150804059384,
+    "hi": 0.0047742654863102574,
+    "verdict": "undecided",
+    "per_seed": [
+     -0.00573709940425049,
+     -0.0440269105813309,
+     -0.0029468485719597037,
+     -0.00440156870220032,
+     -0.003937286034631393
+    ],
+    "thr_delivery_gap_mean": -0.0034553956686035115,
+    "theta": 0.06
+   },
+   "15@0.0002": {
+    "kind": "secondary",
+    "mean": -0.019051934322163254,
+    "lo": -0.02041050558789217,
+    "hi": -0.017693363056434337,
+    "verdict": "random wins",
+    "per_seed": [
+     -0.0189970715617529,
+     -0.018608694612189947,
+     -0.019085952052266597,
+     -0.021260597032973783,
+     -0.017307356351633052
+    ],
+    "thr_delivery_gap_mean": 0.006935968730030323,
+    "theta": 0.5868351318882165
+   },
+   "50@0.0002": {
+    "kind": "secondary",
+    "mean": -0.005812255967942326,
+    "lo": -0.010913415807769618,
+    "hi": -0.0007110961281150329,
+    "verdict": "random wins",
+    "per_seed": [
+     -0.001413098144016356,
+     -0.0013227043526922166,
+     -0.0049728589080226815,
+     -0.014349319454301623,
+     -0.0070032989806787516
+    ],
+    "thr_delivery_gap_mean": -0.007507951048966044,
+    "theta": 0.10217312296908035
+   },
+   "15@0.0001": {
+    "kind": "secondary",
+    "mean": -0.027661805126330697,
+    "lo": -0.028612703240772103,
+    "hi": -0.02671090701188929,
+    "verdict": "random wins",
+    "per_seed": [
+     -0.02650687047277267,
+     -0.026699560713617565,
+     -0.028432450263384146,
+     -0.028665867577702064,
+     -0.028004276604177036
+    ],
+    "thr_delivery_gap_mean": -0.006962246884959872,
+    "theta": 0.35
+   },
+   "25@0.0001": {
+    "kind": "secondary",
+    "mean": -0.019935967078550432,
+    "lo": -0.020420189268922095,
+    "hi": -0.01945174488817877,
+    "verdict": "random wins",
+    "per_seed": [
+     -0.020214035562448274,
+     -0.019792043904141465,
+     -0.019378874894461218,
+     -0.020664160221184336,
+     -0.019630720810516866
+    ],
+    "thr_delivery_gap_mean": 0.004698088388030241,
+    "theta": 0.2
+   }
+  },
+  "q1_selection_schedule_seed0": {
+   "thr_drop_15@0.0002": {
+    "selected_fraction_mean": 0.03733895816294342,
+    "selected_first100": 0.07574718569692981,
+    "selected_last100": 0.02611355574539311
+   },
+   "thr_drop_25@0.0002": {
+    "selected_fraction_mean": 0.07136592063392659,
+    "selected_first100": 0.1374489648768411,
+    "selected_last100": 0.051088218423924865
+   },
+   "thr_drop_50@0.0002": {
+    "selected_fraction_mean": 0.20518979378122626,
+    "selected_first100": 0.3440951985818564,
+    "selected_last100": 0.1590518919643524
+   },
+   "thr_drop_15@0.0001": {
+    "selected_fraction_mean": 0.032980205551983215,
+    "selected_first100": 0.06783189597699017,
+    "selected_last100": 0.023396278726013978
+   },
+   "thr_drop_25@0.0001": {
+    "selected_fraction_mean": 0.05892469944568069,
+    "selected_first100": 0.11280196645418183,
+    "selected_last100": 0.042861066774050965
+   },
+   "thr_drop_50@0.0001": {
+    "selected_fraction_mean": 0.18355045269248568,
+    "selected_first100": 0.30702361189317995,
+    "selected_last100": 0.13985612111029277
+   }
+  },
+  "never_moved_by_cell": {
+   "15@0.0002": {
+    "keno": 0.09867709780012056,
+    "thr": 0.6463709060627644
+   },
+   "25@0.0002": {
+    "keno": 0.07414055537951572,
+    "thr": 0.46554383433557095
+   },
+   "50@0.0002": {
+    "keno": 0.05197711767596965,
+    "thr": 0.1960375023729694
+   },
+   "15@0.0001": {
+    "keno": 0.17905878130713862,
+    "thr": 0.7152555126042144
+   },
+   "25@0.0001": {
+    "keno": 0.13706201615807806,
+    "thr": 0.6163244044857805
+   },
+   "50@0.0001": {
+    "keno": 0.09741217128723659,
+    "thr": 0.31193670226001846
+   }
+  },
+  "never_moved_by_family": {
+   "keno_drop_25@0.0002/attention": {
+    "never_moved": 0.08356205692997686,
+    "delivery": 0.46262191319489165
+   },
+   "keno_drop_25@0.0002/mlp": {
+    "never_moved": 0.08750269509146734,
+    "delivery": 0.4650267023150212
+   },
+   "keno_drop_25@0.0002/embedding": {
+    "never_moved": 0.027611089635778352,
+    "delivery": 0.2701611145086445
+   },
+   "keno_drop_25@0.0002/norm": {
+    "never_moved": 0.16744080145719492,
+    "delivery": 0.45777508456158056
+   },
+   "thr_drop_25@0.0002/attention": {
+    "never_moved": 0.5050017481674383,
+    "delivery": 0.3930201479504313
+   },
+   "thr_drop_25@0.0002/mlp": {
+    "never_moved": 0.5597904007523148,
+    "delivery": 0.35605764390061434
+   },
+   "thr_drop_25@0.0002/embedding": {
+    "never_moved": 0.16294821986445673,
+    "delivery": 0.3026944228739499
+   },
+   "thr_drop_25@0.0002/norm": {
+    "never_moved": 0.8969148451730419,
+    "delivery": 0.12094143680584776
+   },
+   "keno_drop_50@0.0001/attention": {
+    "never_moved": 0.11220191484616127,
+    "delivery": 0.6755058767066543
+   },
+   "keno_drop_50@0.0001/mlp": {
+    "never_moved": 0.11777397249951775,
+    "delivery": 0.6776475647049846
+   },
+   "keno_drop_50@0.0001/embedding": {
+    "never_moved": 0.02612130906846788,
+    "delivery": 0.5135691428475493
+   },
+   "keno_drop_50@0.0001/norm": {
+    "never_moved": 0.22465277777777776,
+    "delivery": 0.6788937244355493
+   },
+   "thr_drop_50@0.0001/attention": {
+    "never_moved": 0.3551572672526042,
+    "delivery": 0.5959101216337868
+   },
+   "thr_drop_50@0.0001/mlp": {
+    "never_moved": 0.3815681740089699,
+    "delivery": 0.5623329260306156
+   },
+   "thr_drop_50@0.0001/embedding": {
+    "never_moved": 0.07497665263988354,
+    "delivery": 0.5417485531079498
+   },
+   "thr_drop_50@0.0001/norm": {
+    "never_moved": 0.7972165300546448,
+    "delivery": 0.2107487787751447
+   }
+  },
+  "instability": {
+   "clip_thr_total": 72,
+   "clip_thr_runs": 30,
+   "clip_keno_total": 3,
+   "clip_keno_runs": 22,
+   "divergent_detail": {
+    "thr_drop_50@0.0001@seed1": {
+     "eval_nll": 1.1975731677462012,
+     "nll_minus_cell_median_of_other_seeds": 0.04265739377639832,
+     "clip_fired_steps": 4,
+     "grad_norm_max": 404.0,
+     "grad_norm_spike_blocks_steps_and_max": [
+      [
+       1300,
+       1399,
+       104.0
+      ],
+      [
+       2800,
+       2899,
+       404.0
+      ]
+     ],
+     "loss_block100_mean_last5": [
+      1.13818,
+      1.10847,
+      1.09111,
+      1.21058,
+      1.12684
+     ],
+     "selected_fraction_block50_first3": [
+      0.346019,
+      0.267855,
+      0.239574
+     ],
+     "selected_fraction_block50_last3": [
+      0.158094,
+      0.14147,
+      0.15036
+     ],
+     "selected_fraction_block50_mean_over_run": 0.18291405
+    },
+    "thr_drop_25@0.0002@seed2": {
+     "eval_nll": 1.240465926358841,
+     "nll_minus_cell_median_of_other_seeds": 0.07455215394323944,
+     "clip_fired_steps": 8,
+     "grad_norm_max": 536.0,
+     "grad_norm_spike_blocks_steps_and_max": [
+      [
+       2700,
+       2799,
+       356.0
+      ],
+      [
+       2800,
+       2899,
+       536.0
+      ],
+      [
+       2900,
+       2999,
+       310.0
+      ]
+     ],
+     "loss_block100_mean_last5": [
+      1.17971,
+      1.17927,
+      1.20949,
+      1.18171,
+      1.18305
+     ],
+     "selected_fraction_block50_first3": [
+      0.161658,
+      0.10966,
+      0.105436
+     ],
+     "selected_fraction_block50_last3": [
+      0.068557,
+      0.065748,
+      0.054159
+     ],
+     "selected_fraction_block50_mean_over_run": 0.07435243333333334
+    }
+   }
+  },
+  "q2": {
+   "bar_mean": 1.1505204325672829,
+   "bar_per_seed": {
+    "0": 1.1495823056170418,
+    "1": 1.1528823313384164,
+    "2": 1.1487985920987835,
+    "3": 1.1495451933257168,
+    "4": 1.151793740456456
+   },
+   "primary": {
+    "mean": 0.0008637925516846057,
+    "lo": -0.0003056959038493258,
+    "hi": 0.002033281007218537,
+    "verdict": "tie",
+    "condition_mean": 1.1513842251189677,
+    "per_seed": [
+     -0.0006940078105883707,
+     0.0006639258264538039,
+     0.00043397335915495994,
+     0.0012593887009848537,
+     0.0026556826824177815
+    ]
+   },
+   "exploratory": {
+    "keno_drop_15@0.0002": {
+     "mean": 0.0005125696839509697,
+     "lo": -0.0007147833776969472,
+     "hi": 0.0017399227455988865,
+     "verdict": "tie",
+     "condition_mean": 1.1510330022512338
+    },
+    "keno_drop_25@0.0002": {
+     "mean": 0.002753069354000681,
+     "lo": 0.0018385472687099229,
+     "hi": 0.0036675914392914396,
+     "verdict": "tie",
+     "condition_mean": 1.1532735019212836
+    },
+    "keno_drop_25@0.0001": {
+     "mean": 0.0008274345766920543,
+     "lo": 0.00045248957496281833,
+     "hi": 0.0012023795784212902,
+     "verdict": "tie",
+     "condition_mean": 1.151347867143975
+    },
+    "keno_drop_50@0.0002": {
+     "mean": 0.034363574545465306,
+     "lo": 0.029724560717206056,
+     "hi": 0.039002588373724556,
+     "verdict": "worse",
+     "condition_mean": 1.1848840071127482
+    },
+    "keno_drop_15@0.0001": {
+     "mean": 0.012308473978408906,
+     "lo": 0.011977726043584082,
+     "hi": 0.01263922191323373,
+     "verdict": "worse",
+     "condition_mean": 1.1628289065456918
+    },
+    "thr_drop_15@0.0002": {
+     "mean": 0.019564504006114224,
+     "lo": 0.018647277817849695,
+     "hi": 0.020481730194378753,
+     "verdict": "worse",
+     "condition_mean": 1.1700849365733972
+    },
+    "thr_drop_25@0.0002": {
+     "mean": 0.030021988845992543,
+     "lo": -0.0028547833667929255,
+     "hi": 0.06289876105877801,
+     "verdict": "undecided",
+     "condition_mean": 1.1805424214132754
+    },
+    "thr_drop_50@0.0002": {
+     "mean": 0.04017583051340763,
+     "lo": 0.035133607565185014,
+     "hi": 0.04521805346163025,
+     "verdict": "worse",
+     "condition_mean": 1.1906962630806905
+    },
+    "thr_drop_15@0.0001": {
+     "mean": 0.0399702791047396,
+     "lo": 0.0391390798541016,
+     "hi": 0.040801478355377604,
+     "verdict": "worse",
+     "condition_mean": 1.1904907116720225
+    },
+    "thr_drop_25@0.0001": {
+     "mean": 0.020763401655242486,
+     "lo": 0.02018176879946268,
+     "hi": 0.021345034511022293,
+     "verdict": "worse",
+     "condition_mean": 1.1712838342225254
+    },
+    "thr_drop_50@0.0001": {
+     "mean": 0.013073735210559167,
+     "lo": -0.00381389940194762,
+     "hi": 0.029961369823065954,
+     "verdict": "undecided",
+     "condition_mean": 1.163594167777842
+    }
+   },
+   "within_0.003_of_bar": {
+    "keno_drop_15@0.0002": true,
+    "keno_drop_25@0.0002": true,
+    "keno_drop_25@0.0001": true,
+    "keno_drop_50@0.0001": true
+   }
+  },
+  "q3": {
+   "0.0002": {
+    "mean": -0.01688659255104983,
+    "min": -0.023254914731294374,
+    "max": -0.012338284551865808,
+    "n_interpolated": 5,
+    "n_extrapolated": 0,
+    "rne_delivery_mean": 0.26367954233887103,
+    "keno_drop_15_delivery_mean": 0.20273892122178835
+   },
+   "0.0001": {
+    "mean": -0.03473701172735142,
+    "min": -0.036222793147988375,
+    "max": -0.03340489556284476,
+    "n_interpolated": 0,
+    "n_extrapolated": 5,
+    "rne_delivery_mean": 0.18449111113489153,
+    "keno_drop_15_delivery_mean": 0.19537324815554413
+   }
+  },
+  "harness": {
+   "passed": true,
+   "abs_diff": 0.0,
+   "losses_max_abs_diff": 0.0,
+   "reference": 1.163403438942883
+  },
+  "coverage": {
+   "n_records_this_run": 53,
+   "cells_complete": 12,
+   "cells_planned": 12,
+   "eval_tokens": 49277
+  }
+ },
+ "limitations": [
+  "Q1 primary verdicts are undecided under the pre-registered interval rule because one threshold seed in each primary cell degraded with late gradient spikes; the four stable seeds in each cell favour random selection by 0.011 to 0.014 (25% @ 2e-4) and 0.003 to 0.006 (50% @ 1e-4), and excluding the divergent seeds is post-hoc and not done.",
+  "Matched cumulative delivery is not matched selection count or schedule: threshold selects 3 to 21% of coordinates per step with an early-heavy decaying schedule while keno selects a flat 15 to 50%, and threshold leaves 20 to 72% of coordinates never moved (norm parameters 63 to 97%) versus 5 to 18% for keno. The Q1 result is therefore about the selection rule as a whole, not about random versus magnitude at equal counts.",
+  "The calibrated thetas for the 25% and 50% levels are below the bf16 format's own effective threshold of one half spacing (only 15% @ 2e-4 at theta 0.587 is stricter), so threshold-drop is a softer version of the format's pick rather than a replica; the rounding-overshoot account of plain rounding's position above the keno curve is an interpretation.",
+  "Q3 at lr 1e-4 is a short linear extrapolation below the 15% level (rne delivery 0.184 vs keno 15% at 0.195) and is descriptive only.",
+  "Single model (SmolLM2-135M), single dataset (GSM8K), batch size 1, 3000 steps."
+ ],
+ "artifacts": {
+  "verdicts": "results/analysis/verdicts.json",
+  "curves": "results/analysis/curves.json",
+  "step_series": "results/analysis/step_series.json",
+  "per_run_diagnostics": "results/analysis/per_run_diagnostics.json",
+  "clip_summary": "results/analysis/clip_summary.json",
+  "runs_table": "results/analysis/runs_table.csv",
+  "theta_table": "results/calibration/theta_table_full.json",
+  "runs_store": "artifact://juiceb0xc0de-15787e/experiments/exp_01m1v355jafe8sqbzmwmmxc06t/runs/",
+  "runs_bundle": "artifact://juiceb0xc0de-15787e/experiments/exp_01m1v355jafe8sqbzmwmmxc06t/bundles/runs_all.tar.gz",
+  "figures": [
+   "figures/q1_paired",
+   "figures/delivery_vs_loss_lr2e-4",
+   "figures/delivery_vs_loss_lr1e-4",
+   "figures/q2_vs_master",
+   "figures/never_moved_family_25_lr2e-4",
+   "figures/never_moved_family_50_lr1e-4",
+   "figures/delivery_over_steps_25_lr2e-4",
+   "figures/delivery_over_steps_50_lr1e-4",
+   "figures/instability_primary_thr"
+  ],
+  "distributor": "src/write_distributor.py"
+ }
+}

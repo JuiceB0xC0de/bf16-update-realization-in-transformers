@@ -1,0 +1,62 @@
+[
+ {
+  "seed": 3,
+  "lr": 0.0002,
+  "condition": "keno_drop_15"
+ },
+ {
+  "seed": 3,
+  "lr": 0.0002,
+  "condition": "keno_drop_25"
+ },
+ {
+  "seed": 3,
+  "lr": 0.0002,
+  "condition": "keno_drop_50"
+ },
+ {
+  "seed": 3,
+  "lr": 0.0001,
+  "condition": "keno_drop_15"
+ },
+ {
+  "seed": 3,
+  "lr": 0.0001,
+  "condition": "keno_drop_25"
+ },
+ {
+  "seed": 3,
+  "lr": 0.0001,
+  "condition": "keno_drop_50"
+ },
+ {
+  "seed": 4,
+  "lr": 0.0002,
+  "condition": "keno_drop_15"
+ },
+ {
+  "seed": 4,
+  "lr": 0.0002,
+  "condition": "keno_drop_25"
+ },
+ {
+  "seed": 4,
+  "lr": 0.0002,
+  "condition": "keno_drop_50"
+ },
+ {
+  "seed": 4,
+  "lr": 0.0001,
+  "condition": "keno_drop_15"
+ },
+ {
+  "seed": 4,
+  "lr": 0.0001,
+  "condition": "keno_drop_25"
+ },
+ {
+  "seed": 4,
+  "lr": 0.0001,
+  "condition": "keno_drop_50"
+ }
+]

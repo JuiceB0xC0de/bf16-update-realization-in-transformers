@@ -1,0 +1,1 @@
+Held-out NLL against cumulative delivery at lr 1e-4: the random-pick keno-drop curve at 15/25/50/75%, the threshold-drop points calibrated to the same delivery, plus plain rounding, kahan and fp32 master; error bars are seed standard deviations and the horizontal line is fp32 master at lr 5e-5.

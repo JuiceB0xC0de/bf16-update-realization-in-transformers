@@ -1,0 +1,1 @@
+Two panels of maximum pre-clip gradient norm per 100-step block (log scale) against training step for the five seeds of the magnitude-pick 25% @ 2e-4 and 50% @ 1e-4 cells; the diverged seed in each panel spikes to several hundred late in training while the other seeds stay below about 25.

@@ -1,0 +1,138 @@
+{
+  "rows": [
+    {
+      "key": "keno_drop_15@0.0002",
+      "label": "keno 15% @ 2e-4",
+      "series": "keno_drop",
+      "mean": 0.0005125696839509697,
+      "lo": -0.0007147833776969472,
+      "hi": 0.0017399227455988865,
+      "verdict": "tie",
+      "primary": false
+    },
+    {
+      "key": "keno_drop_25@0.0002",
+      "label": "keno 25% @ 2e-4",
+      "series": "keno_drop",
+      "mean": 0.002753069354000681,
+      "lo": 0.0018385472687099229,
+      "hi": 0.0036675914392914396,
+      "verdict": "tie",
+      "primary": false
+    },
+    {
+      "key": "keno_drop_50@0.0002",
+      "label": "keno 50% @ 2e-4",
+      "series": "keno_drop",
+      "mean": 0.034363574545465306,
+      "lo": 0.029724560717206056,
+      "hi": 0.039002588373724556,
+      "verdict": "worse",
+      "primary": false
+    },
+    {
+      "key": "keno_drop_15@0.0001",
+      "label": "keno 15% @ 1e-4",
+      "series": "keno_drop",
+      "mean": 0.012308473978408906,
+      "lo": 0.011977726043584082,
+      "hi": 0.01263922191323373,
+      "verdict": "worse",
+      "primary": false
+    },
+    {
+      "key": "keno_drop_25@0.0001",
+      "label": "keno 25% @ 1e-4",
+      "series": "keno_drop",
+      "mean": 0.0008274345766920543,
+      "lo": 0.00045248957496281833,
+      "hi": 0.0012023795784212902,
+      "verdict": "tie",
+      "primary": false
+    },
+    {
+      "key": "keno_drop_50@0.0001",
+      "label": "keno 50% @ 1e-4",
+      "series": "keno_drop",
+      "mean": 0.0008637925516846057,
+      "lo": -0.0003056959038493258,
+      "hi": 0.002033281007218537,
+      "verdict": "tie",
+      "primary": true
+    },
+    {
+      "key": "thr_drop_15@0.0002",
+      "label": "thr 15% @ 2e-4",
+      "series": "thr_drop",
+      "mean": 0.019564504006114224,
+      "lo": 0.018647277817849695,
+      "hi": 0.020481730194378753,
+      "verdict": "worse",
+      "primary": false
+    },
+    {
+      "key": "thr_drop_25@0.0002",
+      "label": "thr 25% @ 2e-4",
+      "series": "thr_drop",
+      "mean": 0.030021988845992543,
+      "lo": -0.0028547833667929255,
+      "hi": 0.06289876105877801,
+      "verdict": "undecided",
+      "primary": false
+    },
+    {
+      "key": "thr_drop_50@0.0002",
+      "label": "thr 50% @ 2e-4",
+      "series": "thr_drop",
+      "mean": 0.04017583051340763,
+      "lo": 0.035133607565185014,
+      "hi": 0.04521805346163025,
+      "verdict": "worse",
+      "primary": false
+    },
+    {
+      "key": "thr_drop_15@0.0001",
+      "label": "thr 15% @ 1e-4",
+      "series": "thr_drop",
+      "mean": 0.0399702791047396,
+      "lo": 0.0391390798541016,
+      "hi": 0.040801478355377604,
+      "verdict": "worse",
+      "primary": false
+    },
+    {
+      "key": "thr_drop_25@0.0001",
+      "label": "thr 25% @ 1e-4",
+      "series": "thr_drop",
+      "mean": 0.020763401655242486,
+      "lo": 0.02018176879946268,
+      "hi": 0.021345034511022293,
+      "verdict": "worse",
+      "primary": false
+    },
+    {
+      "key": "thr_drop_50@0.0001",
+      "label": "thr 50% @ 1e-4",
+      "series": "thr_drop",
+      "mean": 0.013073735210559167,
+      "lo": -0.00381389940194762,
+      "hi": 0.029961369823065954,
+      "verdict": "undecided",
+      "primary": false
+    }
+  ],
+  "colors": {
+    "kahan": "#C4650D",
+    "rne": "#4E728A",
+    "fp32_master": "#2E6E4E",
+    "keno_drop": "#B9605B",
+    "keno_tab": "#31362E",
+    "torch_adamw": "#7495AB",
+    "thr_drop": "#988453"
+  },
+  "names": {
+    "keno_drop": "random pick (keno drop)",
+    "thr_drop": "magnitude pick (threshold drop)"
+  },
+  "alt": "Dot-and-interval chart of each five-seed configuration's paired held-out NLL difference against fp32 master weights at lr 5e-5, with 90% Student-t intervals; the larger marker is the pre-registered keno drop 50% at lr 1e-4."
+}
