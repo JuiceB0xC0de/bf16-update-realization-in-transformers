@@ -1,0 +1,1 @@
+Line chart of the cumulative length ratio of realized to intended update against training step at learning rate 2e-4, one line per writer, seed means, with a reference line at 1.

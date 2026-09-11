@@ -1,0 +1,115 @@
+{
+ "session_id": "272965646572",
+ "command": "train_sweep.py --seed 0 --conditions torch_adamw rne kahan --lrs 2e-4 --steps 100 --stats-every 25 --eval-n 32 --equivalence-steps 20",
+ "environment": {
+  "torch": "2.11.0+cu130",
+  "transformers": "5.12.1",
+  "datasets": "4.4.1",
+  "wandb": "0.28.2",
+  "gpu": "NVIDIA H100 80GB HBM3"
+ },
+ "untrained_nll_32q": 1.94788,
+ "equivalence": {
+  "n_steps": 20,
+  "min_exact_write_agreement": 0.99793,
+  "step1": 0.99848,
+  "step20": 0.99915,
+  "exp_avg_bitwise_equal": 1.0,
+  "exp_avg_sq_bitwise_equal": 1.0,
+  "torch_resolved_foreach": true,
+  "threshold": 0.997,
+  "passed": true
+ },
+ "runs_100_steps_lr2e-4": {
+  "torch_adamw": {
+   "eval_nll_32q": 1.30602,
+   "cum_length_ratio": 0.4833,
+   "cum_overshoot": 0.9083,
+   "cum_cosine": 0.5321,
+   "never_moved": 0.7007,
+   "s_per_step": 0.171,
+   "peak_gb": 3.82,
+   "step100_per_step": {
+    "rho": 1.323,
+    "len": 0.529,
+    "unmoved": 0.927,
+    "exact": 0.9993
+   }
+  },
+  "rne": {
+   "eval_nll_32q": 1.30772,
+   "cum_length_ratio": 0.4831,
+   "cum_overshoot": 0.9088,
+   "cum_cosine": 0.5316,
+   "never_moved": 0.7008,
+   "s_per_step": 0.102,
+   "peak_gb": 3.5,
+   "step100_per_step": {
+    "rho": 1.321,
+    "len": 0.531,
+    "unmoved": 0.927,
+    "exact": 1.0
+   }
+  },
+  "kahan": {
+   "eval_nll_32q": 1.43687,
+   "cum_length_ratio": 1.0049,
+   "cum_overshoot": 1.0099,
+   "cum_cosine": 0.995,
+   "never_moved": 0.1417,
+   "s_per_step": 0.109,
+   "peak_gb": 3.77
+  }
+ },
+ "independent_run_loss_agreement_torch_vs_rne": {
+  "step25": [
+   1.6621,
+   1.6598
+  ],
+  "step50": [
+   1.8139,
+   1.8048
+  ],
+  "step100": [
+   1.9968,
+   2.0031
+  ]
+ },
+ "wandb_project": "default-exp-exp_01m1tgnb6xf98sqwfhm4effknt",
+ "note": "per-step statistics for compensated writers (kahan/selective) include carried residuals and are not comparable to the one-write model; cumulative delivery is the comparable quantity",
+ "writers_gpu_check_50_steps_lr2e-4": {
+  "session_id": "388746612513",
+  "eval_n": 16,
+  "fp32_master": {
+   "cum_length_ratio": 1.0104,
+   "cum_overshoot": 1.0218,
+   "cum_cosine": 0.9889,
+   "never_moved": 0.1769,
+   "eval_nll_16q": 1.55365,
+   "s_per_step": 0.21,
+   "note": "first run in process includes warmup"
+  },
+  "selective": {
+   "cum_length_ratio": 1.5446,
+   "cum_overshoot": 1.5762,
+   "cum_cosine": 0.98,
+   "never_moved": 0.1207,
+   "eval_nll_16q": 1.68307,
+   "s_per_step": 0.1
+  },
+  "sr": {
+   "cum_length_ratio": 1.2029,
+   "cum_overshoot": 1.4474,
+   "cum_cosine": 0.8311,
+   "never_moved": 0.1534,
+   "eval_nll_16q": 1.55835,
+   "s_per_step": 0.092
+  },
+  "kahan_step50_from_first_smoke": {
+   "cum_length_ratio": 1.0105,
+   "cum_overshoot": 1.0218,
+   "cum_cosine": 0.9889,
+   "never_moved": 0.1769
+  }
+ }
+}

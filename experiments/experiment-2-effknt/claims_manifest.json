@@ -1,0 +1,2452 @@
+{
+ "claims": [
+  {
+   "id": "q1_kahan_length_ratio_2e-4",
+   "claim": "kahan_length_ratio at lr 2e-4 (seed mean) is 1.0001",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.0.0002.kahan_length_ratio",
+   "value": 1.0001087121387626
+  },
+  {
+   "id": "q1_kahan_overshoot_2e-4",
+   "claim": "kahan_overshoot at lr 2e-4 (seed mean) is 1.0004",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.0.0002.kahan_overshoot",
+   "value": 1.000407174854295
+  },
+  {
+   "id": "q1_kahan_never_moved_2e-4",
+   "claim": "kahan_never_moved at lr 2e-4 (seed mean) is 0.0366",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.0.0002.kahan_never_moved",
+   "value": 0.036589539510713934
+  },
+  {
+   "id": "q1_rne_length_ratio_2e-4",
+   "claim": "rne_length_ratio at lr 2e-4 (seed mean) is 0.2637",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.0.0002.rne_length_ratio",
+   "value": 0.26367954233887103
+  },
+  {
+   "id": "q1_rne_overshoot_2e-4",
+   "claim": "rne_overshoot at lr 2e-4 (seed mean) is 0.5105",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.0.0002.rne_overshoot",
+   "value": 0.5105443213061381
+  },
+  {
+   "id": "q1_rne_never_moved_2e-4",
+   "claim": "rne_never_moved at lr 2e-4 (seed mean) is 0.6132",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.0.0002.rne_never_moved",
+   "value": 0.6131727933287563
+  },
+  {
+   "id": "q1_fp32_master_bf16_copy_length_ratio_2e-4",
+   "claim": "fp32_master_bf16_copy_length_ratio at lr 2e-4 (seed mean) is 1.0003",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.0.0002.fp32_master_bf16_copy_length_ratio",
+   "value": 1.0002890896479382
+  },
+  {
+   "id": "q1_fp32_master_bf16_copy_never_moved_2e-4",
+   "claim": "fp32_master_bf16_copy_never_moved at lr 2e-4 (seed mean) is 0.0363",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.0.0002.fp32_master_bf16_copy_never_moved",
+   "value": 0.03631323874284719
+  },
+  {
+   "id": "q1_kahan_length_ratio_1e-4",
+   "claim": "kahan_length_ratio at lr 1e-4 (seed mean) is 1.0001",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.0.0001.kahan_length_ratio",
+   "value": 1.0001467179113817
+  },
+  {
+   "id": "q1_kahan_overshoot_1e-4",
+   "claim": "kahan_overshoot at lr 1e-4 (seed mean) is 1.0009",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.0.0001.kahan_overshoot",
+   "value": 1.0009184301690237
+  },
+  {
+   "id": "q1_kahan_never_moved_1e-4",
+   "claim": "kahan_never_moved at lr 1e-4 (seed mean) is 0.0695",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.0.0001.kahan_never_moved",
+   "value": 0.06950135259256722
+  },
+  {
+   "id": "q1_rne_length_ratio_1e-4",
+   "claim": "rne_length_ratio at lr 1e-4 (seed mean) is 0.1845",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.0.0001.rne_length_ratio",
+   "value": 0.18449111113489153
+  },
+  {
+   "id": "q1_rne_overshoot_1e-4",
+   "claim": "rne_overshoot at lr 1e-4 (seed mean) is 0.4813",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.0.0001.rne_overshoot",
+   "value": 0.48130360283527673
+  },
+  {
+   "id": "q1_rne_never_moved_1e-4",
+   "claim": "rne_never_moved at lr 1e-4 (seed mean) is 0.7854",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.0.0001.rne_never_moved",
+   "value": 0.7854362629930483
+  },
+  {
+   "id": "q1_fp32_master_bf16_copy_length_ratio_1e-4",
+   "claim": "fp32_master_bf16_copy_length_ratio at lr 1e-4 (seed mean) is 1.0008",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.0.0001.fp32_master_bf16_copy_length_ratio",
+   "value": 1.0007560669568325
+  },
+  {
+   "id": "q1_fp32_master_bf16_copy_never_moved_1e-4",
+   "claim": "fp32_master_bf16_copy_never_moved at lr 1e-4 (seed mean) is 0.0696",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.0.0001.fp32_master_bf16_copy_never_moved",
+   "value": 0.0695761115369372
+  },
+  {
+   "id": "q1_kahan_length_ratio_5e-5",
+   "claim": "kahan_length_ratio at lr 5e-5 (seed mean) is 0.9998",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.5e-05.kahan_length_ratio",
+   "value": 0.9997540837355583
+  },
+  {
+   "id": "q1_kahan_overshoot_5e-5",
+   "claim": "kahan_overshoot at lr 5e-5 (seed mean) is 1.0019",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.5e-05.kahan_overshoot",
+   "value": 1.00190933783827
+  },
+  {
+   "id": "q1_kahan_never_moved_5e-5",
+   "claim": "kahan_never_moved at lr 5e-5 (seed mean) is 0.1269",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.5e-05.kahan_never_moved",
+   "value": 0.12686026231362973
+  },
+  {
+   "id": "q1_rne_length_ratio_5e-5",
+   "claim": "rne_length_ratio at lr 5e-5 (seed mean) is 0.1302",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.5e-05.rne_length_ratio",
+   "value": 0.13019833445207993
+  },
+  {
+   "id": "q1_rne_overshoot_5e-5",
+   "claim": "rne_overshoot at lr 5e-5 (seed mean) is 0.4978",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.5e-05.rne_overshoot",
+   "value": 0.497758319832365
+  },
+  {
+   "id": "q1_rne_never_moved_5e-5",
+   "claim": "rne_never_moved at lr 5e-5 (seed mean) is 0.8869",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.5e-05.rne_never_moved",
+   "value": 0.8869234383125487
+  },
+  {
+   "id": "q1_fp32_master_bf16_copy_length_ratio_5e-5",
+   "claim": "fp32_master_bf16_copy_length_ratio at lr 5e-5 (seed mean) is 1.002",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.5e-05.fp32_master_bf16_copy_length_ratio",
+   "value": 1.0020083705560132
+  },
+  {
+   "id": "q1_fp32_master_bf16_copy_never_moved_5e-5",
+   "claim": "fp32_master_bf16_copy_never_moved at lr 5e-5 (seed mean) is 0.1266",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.per_lr.5e-05.fp32_master_bf16_copy_never_moved",
+   "value": 0.12656129790365103
+  },
+  {
+   "id": "q1_verdict",
+   "claim": "Q1 verdict: supports",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_delivery.verdict",
+   "value": "supports"
+  },
+  {
+   "id": "q2_2e-4",
+   "claim": "Kahan minus fp32 master held-out NLL at lr 2e-4: mean -0.0090, 90% CI [-0.0243, +0.0062]",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_kahan_vs_master.per_lr.0.0002",
+   "value": {
+    "mean": -0.009045270093983326,
+    "ci_lo": -0.024295875796374697,
+    "ci_hi": 0.0062053356084080455,
+    "inside_band": false,
+    "per_seed": [
+     -0.004209870478258049,
+     -0.011130528264268635,
+     -0.031011654132589772,
+     -0.012255628754121783,
+     0.013381331159321608
+    ]
+   }
+  },
+  {
+   "id": "q2_1e-4",
+   "claim": "Kahan minus fp32 master held-out NLL at lr 1e-4: mean +0.0005, 90% CI [-0.0019, +0.0028]",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_kahan_vs_master.per_lr.0.0001",
+   "value": {
+    "mean": 0.0004509879592650812,
+    "ci_lo": -0.0019130244514657376,
+    "ci_hi": 0.0028150003699959,
+    "inside_band": true,
+    "per_seed": [
+     -0.0023430904816272857,
+     0.0029653884831977173,
+     0.002603577914813471,
+     -0.001913178262693771,
+     0.0009422421426352745
+    ]
+   }
+  },
+  {
+   "id": "q2_5e-5",
+   "claim": "Kahan minus fp32 master held-out NLL at lr 5e-5: mean +0.0002, 90% CI [-0.0008, +0.0011]",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_kahan_vs_master.per_lr.5e-05",
+   "value": {
+    "mean": 0.0001572665019205388,
+    "ci_lo": -0.0007885631053336725,
+    "ci_hi": 0.0011030961091747502,
+    "inside_band": true,
+    "per_seed": [
+     0.0003666099270756007,
+     0.001043425645935958,
+     4.1822064635654854e-05,
+     -0.0014760292026108068,
+     0.0008105040745662873
+    ]
+   }
+  },
+  {
+   "id": "q2_verdict",
+   "claim": "Q2 verdict: not decided at this power",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_kahan_vs_master.verdict",
+   "value": "not decided at this power"
+  },
+  {
+   "id": "q3_2e-4",
+   "claim": "RNE minus fp32 master held-out NLL at lr 2e-4: mean -0.1062, 90% CI [-0.1172, -0.0952]",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_lr_reversal.per_lr.0.0002",
+   "value": {
+    "mean": -0.1061941726768448,
+    "ci_lo": -0.11722187032149478,
+    "ci_hi": -0.09516647503219483,
+    "per_seed": [
+     -0.09704680188144366,
+     -0.10494727113648161,
+     -0.12625609754289546,
+     -0.10075898106193915,
+     -0.10196171176146418
+    ]
+   }
+  },
+  {
+   "id": "q3_1e-4",
+   "claim": "RNE minus fp32 master held-out NLL at lr 1e-4: mean +0.0175, 90% CI [+0.0159, +0.0191]",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_lr_reversal.per_lr.0.0001",
+   "value": {
+    "mean": 0.017476317816349417,
+    "ci_lo": 0.015896152728053368,
+    "ci_hi": 0.019056482904645466,
+    "per_seed": [
+     0.017934736882643243,
+     0.018563006895375267,
+     0.018240433504488562,
+     0.01810312910020162,
+     0.014540282699038398
+    ]
+   }
+  },
+  {
+   "id": "q3_5e-5",
+   "claim": "RNE minus fp32 master held-out NLL at lr 5e-5: mean +0.1233, 90% CI [+0.1223, +0.1244]",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_lr_reversal.per_lr.5e-05",
+   "value": {
+    "mean": 0.12333742334347382,
+    "ci_lo": 0.12230933211156708,
+    "ci_hi": 0.12436551457538056,
+    "per_seed": [
+     0.12454703501307862,
+     0.12218899308303399,
+     0.1234060233465264,
+     0.1242359107289217,
+     0.12230915454580837
+    ]
+   }
+  },
+  {
+   "id": "q3_verdict",
+   "claim": "Q3 verdict: supports",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_lr_reversal.verdict",
+   "value": "supports"
+  },
+  {
+   "id": "null_2e-4",
+   "claim": "RNE minus torch AdamW held-out NLL at lr 2e-4: mean +0.000414, 90% CI [-0.00371, +0.00453]",
+   "source": "results/analysis/verdicts.json",
+   "key": "null_control_rne_minus_torch.per_lr.0.0002",
+   "value": {
+    "mean": 0.00041399058490174665,
+    "ci_lo": -0.003706007594357822,
+    "ci_hi": 0.004533988764161315
+   }
+  },
+  {
+   "id": "null_1e-4",
+   "claim": "RNE minus torch AdamW held-out NLL at lr 1e-4: mean +0.000031, 90% CI [-0.00048, +0.00054]",
+   "source": "results/analysis/verdicts.json",
+   "key": "null_control_rne_minus_torch.per_lr.0.0001",
+   "value": {
+    "mean": 3.0501998447940436e-05,
+    "ci_lo": -0.0004797610778010571,
+    "ci_hi": 0.000540765074696938
+   }
+  },
+  {
+   "id": "null_5e-5",
+   "claim": "RNE minus torch AdamW held-out NLL at lr 5e-5: mean +0.000065, 90% CI [-0.00016, +0.00029]",
+   "source": "results/analysis/verdicts.json",
+   "key": "null_control_rne_minus_torch.per_lr.5e-05",
+   "value": {
+    "mean": 6.54452562230734e-05,
+    "ci_lo": -0.00015528373497759567,
+    "ci_hi": 0.00028617424742374245
+   }
+  },
+  {
+   "id": "null_max_abs_mean",
+   "claim": "Largest null-floor mean magnitude across LRs is 0.00041",
+   "source": "results/analysis/verdicts.json",
+   "key": "null_control_rne_minus_torch.max_abs_mean",
+   "value": 0.00041399058490174665
+  },
+  {
+   "id": "null_reference_C",
+   "claim": "Experiment C null floor reference 0.000396",
+   "source": "results/analysis/verdicts.json",
+   "key": "null_control_rne_minus_torch.reference_C",
+   "value": 0.000396
+  },
+  {
+   "id": "vsmaster_torch_adamw_2e-4",
+   "claim": "torch_adamw minus fp32 master at lr 2e-4: mean -0.1066, 90% CI [-0.1176, -0.0956]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_master.0.0002.torch_adamw",
+   "value": {
+    "mean": -0.10660816326174656,
+    "ci_lo": -0.11758778957831367,
+    "ci_hi": -0.09562853694517945
+   }
+  },
+  {
+   "id": "vsmaster_rne_2e-4",
+   "claim": "rne minus fp32 master at lr 2e-4: mean -0.1062, 90% CI [-0.1172, -0.0952]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_master.0.0002.rne",
+   "value": {
+    "mean": -0.1061941726768448,
+    "ci_lo": -0.11722187032149478,
+    "ci_hi": -0.09516647503219483
+   }
+  },
+  {
+   "id": "vsmaster_kahan_2e-4",
+   "claim": "kahan minus fp32 master at lr 2e-4: mean -0.0090, 90% CI [-0.0243, +0.0062]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_master.0.0002.kahan",
+   "value": {
+    "mean": -0.009045270093983326,
+    "ci_lo": -0.024295875796374697,
+    "ci_hi": 0.0062053356084080455
+   }
+  },
+  {
+   "id": "vsmaster_selective_2e-4",
+   "claim": "selective minus fp32 master at lr 2e-4: mean +0.1077, 90% CI [+0.0863, +0.1291]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_master.0.0002.selective",
+   "value": {
+    "mean": 0.10772306611234712,
+    "ci_lo": 0.08629669441524893,
+    "ci_hi": 0.12914943780944532
+   }
+  },
+  {
+   "id": "vsmaster_sr_2e-4",
+   "claim": "sr minus fp32 master at lr 2e-4: mean +0.0184, 90% CI [-0.0163, +0.0531]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_master.0.0002.sr",
+   "value": {
+    "mean": 0.01839583199851118,
+    "ci_lo": -0.0163414537541192,
+    "ci_hi": 0.05313311775114156
+   }
+  },
+  {
+   "id": "vsrne_kahan_2e-4",
+   "claim": "kahan minus RNE at lr 2e-4: mean +0.0971, 90% CI [+0.0872, +0.1071]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_rne.0.0002.kahan",
+   "value": {
+    "mean": 0.09714890258286149,
+    "ci_lo": 0.08715993625504188,
+    "ci_hi": 0.1071378689106811
+   }
+  },
+  {
+   "id": "vsrne_fp32_master_2e-4",
+   "claim": "fp32_master minus RNE at lr 2e-4: mean +0.1062, 90% CI [+0.0952, +0.1172]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_rne.0.0002.fp32_master",
+   "value": {
+    "mean": 0.1061941726768448,
+    "ci_lo": 0.09516647503219483,
+    "ci_hi": 0.11722187032149478
+   }
+  },
+  {
+   "id": "vsrne_selective_2e-4",
+   "claim": "selective minus RNE at lr 2e-4: mean +0.2139, 90% CI [+0.1984, +0.2294]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_rne.0.0002.selective",
+   "value": {
+    "mean": 0.21391723878919194,
+    "ci_lo": 0.19841629540736405,
+    "ci_hi": 0.22941818217101984
+   }
+  },
+  {
+   "id": "vsrne_sr_2e-4",
+   "claim": "sr minus RNE at lr 2e-4: mean +0.1246, 90% CI [+0.0911, +0.1581]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_rne.0.0002.sr",
+   "value": {
+    "mean": 0.124590004675356,
+    "ci_lo": 0.09105017740062486,
+    "ci_hi": 0.15812983195008712
+   }
+  },
+  {
+   "id": "nll_torch_adamw_2e-4",
+   "claim": "Mean held-out NLL of torch_adamw at lr 2e-4 over 5 seeds is 1.1688 (sd 0.0039)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.0.0002.torch_adamw",
+   "value": {
+    "mean": 1.1687893556441027,
+    "sd": 0.003929727681090808,
+    "n": 5
+   }
+  },
+  {
+   "id": "nll_rne_2e-4",
+   "claim": "Mean held-out NLL of rne at lr 2e-4 over 5 seeds is 1.1692 (sd 0.0048)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.0.0002.rne",
+   "value": {
+    "mean": 1.1692033462290046,
+    "sd": 0.0047674412586425265,
+    "n": 5
+   }
+  },
+  {
+   "id": "nll_kahan_2e-4",
+   "claim": "Mean held-out NLL of kahan at lr 2e-4 over 5 seeds is 1.2664 (sd 0.0115)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.0.0002.kahan",
+   "value": {
+    "mean": 1.2663522488118661,
+    "sd": 0.011472318382351299,
+    "n": 5
+   }
+  },
+  {
+   "id": "nll_fp32_master_2e-4",
+   "claim": "Mean held-out NLL of fp32_master at lr 2e-4 over 5 seeds is 1.2754 (sd 0.01)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.0.0002.fp32_master",
+   "value": {
+    "mean": 1.2753975189058493,
+    "sd": 0.009967553358243614,
+    "n": 5
+   }
+  },
+  {
+   "id": "nll_selective_2e-4",
+   "claim": "Mean held-out NLL of selective at lr 2e-4 over 5 seeds is 1.3831 (sd 0.0142)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.0.0002.selective",
+   "value": {
+    "mean": 1.3831205850181965,
+    "sd": 0.014183858430558097,
+    "n": 5
+   }
+  },
+  {
+   "id": "nll_sr_2e-4",
+   "claim": "Mean held-out NLL of sr at lr 2e-4 over 5 seeds is 1.2938 (sd 0.0361)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.0.0002.sr",
+   "value": {
+    "mean": 1.2937933509043607,
+    "sd": 0.036096138776492454,
+    "n": 5
+   }
+  },
+  {
+   "id": "vsmaster_torch_adamw_1e-4",
+   "claim": "torch_adamw minus fp32 master at lr 1e-4: mean +0.0174, 90% CI [+0.0156, +0.0193]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_master.0.0001.torch_adamw",
+   "value": {
+    "mean": 0.01744581581790148,
+    "ci_lo": 0.015575007952921174,
+    "ci_hi": 0.019316623682881784
+   }
+  },
+  {
+   "id": "vsmaster_rne_1e-4",
+   "claim": "rne minus fp32 master at lr 1e-4: mean +0.0175, 90% CI [+0.0159, +0.0191]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_master.0.0001.rne",
+   "value": {
+    "mean": 0.017476317816349417,
+    "ci_lo": 0.015896152728053368,
+    "ci_hi": 0.019056482904645466
+   }
+  },
+  {
+   "id": "vsmaster_kahan_1e-4",
+   "claim": "kahan minus fp32 master at lr 1e-4: mean +0.0005, 90% CI [-0.0019, +0.0028]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_master.0.0001.kahan",
+   "value": {
+    "mean": 0.0004509879592650812,
+    "ci_lo": -0.0019130244514657376,
+    "ci_hi": 0.0028150003699959
+   }
+  },
+  {
+   "id": "vsmaster_selective_1e-4",
+   "claim": "selective minus fp32 master at lr 1e-4: mean +0.0589, 90% CI [+0.0547, +0.0630]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_master.0.0001.selective",
+   "value": {
+    "mean": 0.058853578752329216,
+    "ci_lo": 0.05469722454408422,
+    "ci_hi": 0.06300993296057422
+   }
+  },
+  {
+   "id": "vsmaster_sr_1e-4",
+   "claim": "sr minus fp32 master at lr 1e-4: mean +0.0063, 90% CI [+0.0004, +0.0122]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_master.0.0001.sr",
+   "value": {
+    "mean": 0.006286133259300763,
+    "ci_lo": 0.00035199722918736066,
+    "ci_hi": 0.012220269289414165
+   }
+  },
+  {
+   "id": "vsrne_kahan_1e-4",
+   "claim": "kahan minus RNE at lr 1e-4: mean -0.0170, 90% CI [-0.0199, -0.0142]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_rne.0.0001.kahan",
+   "value": {
+    "mean": -0.017025329857084336,
+    "ci_lo": -0.019855039047310574,
+    "ci_hi": -0.014195620666858099
+   }
+  },
+  {
+   "id": "vsrne_fp32_master_1e-4",
+   "claim": "fp32_master minus RNE at lr 1e-4: mean -0.0175, 90% CI [-0.0191, -0.0159]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_rne.0.0001.fp32_master",
+   "value": {
+    "mean": -0.017476317816349417,
+    "ci_lo": -0.019056482904645466,
+    "ci_hi": -0.015896152728053368
+   }
+  },
+  {
+   "id": "vsrne_selective_1e-4",
+   "claim": "selective minus RNE at lr 1e-4: mean +0.0414, 90% CI [+0.0364, +0.0464]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_rne.0.0001.selective",
+   "value": {
+    "mean": 0.0413772609359798,
+    "ci_lo": 0.03636842136769161,
+    "ci_hi": 0.04638610050426799
+   }
+  },
+  {
+   "id": "vsrne_sr_1e-4",
+   "claim": "sr minus RNE at lr 1e-4: mean -0.0112, 90% CI [-0.0167, -0.0056]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_rne.0.0001.sr",
+   "value": {
+    "mean": -0.011190184557048654,
+    "ci_lo": -0.016734481626405093,
+    "ci_hi": -0.005645887487692216
+   }
+  },
+  {
+   "id": "nll_torch_adamw_1e-4",
+   "claim": "Mean held-out NLL of torch_adamw at lr 1e-4 over 5 seeds is 1.1988 (sd 0.001)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.0.0001.torch_adamw",
+   "value": {
+    "mean": 1.198753949290086,
+    "sd": 0.00099901421959736,
+    "n": 5
+   }
+  },
+  {
+   "id": "nll_rne_1e-4",
+   "claim": "Mean held-out NLL of rne at lr 1e-4 over 5 seeds is 1.1988 (sd 0.001)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.0.0001.rne",
+   "value": {
+    "mean": 1.198784451288534,
+    "sd": 0.0009918150722277228,
+    "n": 5
+   }
+  },
+  {
+   "id": "nll_kahan_1e-4",
+   "claim": "Mean held-out NLL of kahan at lr 1e-4 over 5 seeds is 1.1818 (sd 0.0038)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.0.0001.kahan",
+   "value": {
+    "mean": 1.1817591214314498,
+    "sd": 0.0037592723818711516,
+    "n": 5
+   }
+  },
+  {
+   "id": "nll_fp32_master_1e-4",
+   "claim": "Mean held-out NLL of fp32_master at lr 1e-4 over 5 seeds is 1.1813 (sd 0.0023)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.0.0001.fp32_master",
+   "value": {
+    "mean": 1.1813081334721847,
+    "sd": 0.002257445848158902,
+    "n": 5
+   }
+  },
+  {
+   "id": "nll_selective_1e-4",
+   "claim": "Mean held-out NLL of selective at lr 1e-4 over 5 seeds is 1.2402 (sd 0.0061)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.0.0001.selective",
+   "value": {
+    "mean": 1.2401617122245139,
+    "sd": 0.0061157233140152235,
+    "n": 5
+   }
+  },
+  {
+   "id": "nll_sr_1e-4",
+   "claim": "Mean held-out NLL of sr at lr 1e-4 over 5 seeds is 1.1876 (sd 0.0066)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.0.0001.sr",
+   "value": {
+    "mean": 1.1875942667314854,
+    "sd": 0.0065965862088535835,
+    "n": 5
+   }
+  },
+  {
+   "id": "vsmaster_torch_adamw_5e-5",
+   "claim": "torch_adamw minus fp32 master at lr 5e-5: mean +0.1233, 90% CI [+0.1224, +0.1241]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_master.5e-05.torch_adamw",
+   "value": {
+    "mean": 0.12327197808725074,
+    "ci_lo": 0.1224186288020441,
+    "ci_hi": 0.12412532737245738
+   }
+  },
+  {
+   "id": "vsmaster_rne_5e-5",
+   "claim": "rne minus fp32 master at lr 5e-5: mean +0.1233, 90% CI [+0.1223, +0.1244]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_master.5e-05.rne",
+   "value": {
+    "mean": 0.12333742334347382,
+    "ci_lo": 0.12230933211156708,
+    "ci_hi": 0.12436551457538056
+   }
+  },
+  {
+   "id": "vsmaster_kahan_5e-5",
+   "claim": "kahan minus fp32 master at lr 5e-5: mean +0.0002, 90% CI [-0.0008, +0.0011]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_master.5e-05.kahan",
+   "value": {
+    "mean": 0.0001572665019205388,
+    "ci_lo": -0.0007885631053336725,
+    "ci_hi": 0.0011030961091747502
+   }
+  },
+  {
+   "id": "vsmaster_selective_5e-5",
+   "claim": "selective minus fp32 master at lr 5e-5: mean +0.0202, 90% CI [+0.0171, +0.0233]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_master.5e-05.selective",
+   "value": {
+    "mean": 0.020188445469474604,
+    "ci_lo": 0.017083143313086413,
+    "ci_hi": 0.023293747625862796
+   }
+  },
+  {
+   "id": "vsmaster_sr_5e-5",
+   "claim": "sr minus fp32 master at lr 5e-5: mean +0.0028, 90% CI [+0.0022, +0.0034]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_master.5e-05.sr",
+   "value": {
+    "mean": 0.0028313974708377375,
+    "ci_lo": 0.002224472513451262,
+    "ci_hi": 0.003438322428224213
+   }
+  },
+  {
+   "id": "vsrne_kahan_5e-5",
+   "claim": "kahan minus RNE at lr 5e-5: mean -0.1232, 90% CI [-0.1250, -0.1214]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_rne.5e-05.kahan",
+   "value": {
+    "mean": -0.12318015684155328,
+    "ci_lo": -0.12498980172032619,
+    "ci_hi": -0.12137051196278038
+   }
+  },
+  {
+   "id": "vsrne_fp32_master_5e-5",
+   "claim": "fp32_master minus RNE at lr 5e-5: mean -0.1233, 90% CI [-0.1244, -0.1223]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_rne.5e-05.fp32_master",
+   "value": {
+    "mean": -0.12333742334347382,
+    "ci_lo": -0.12436551457538056,
+    "ci_hi": -0.12230933211156708
+   }
+  },
+  {
+   "id": "vsrne_selective_5e-5",
+   "claim": "selective minus RNE at lr 5e-5: mean -0.1031, 90% CI [-0.1070, -0.0993]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_rne.5e-05.selective",
+   "value": {
+    "mean": -0.10314897787399921,
+    "ci_lo": -0.10698410162066596,
+    "ci_hi": -0.09931385412733246
+   }
+  },
+  {
+   "id": "vsrne_sr_5e-5",
+   "claim": "sr minus RNE at lr 5e-5: mean -0.1205, 90% CI [-0.1220, -0.1190]",
+   "source": "results/analysis/verdicts.json",
+   "key": "vs_rne.5e-05.sr",
+   "value": {
+    "mean": -0.12050602587263608,
+    "ci_lo": -0.12202160134892681,
+    "ci_hi": -0.11899045039634534
+   }
+  },
+  {
+   "id": "nll_torch_adamw_5e-5",
+   "claim": "Mean held-out NLL of torch_adamw at lr 5e-5 over 5 seeds is 1.2738 (sd 0.001)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.5e-05.torch_adamw",
+   "value": {
+    "mean": 1.2737924106545337,
+    "sd": 0.0010113942830060154,
+    "n": 5
+   }
+  },
+  {
+   "id": "nll_rne_5e-5",
+   "claim": "Mean held-out NLL of rne at lr 5e-5 over 5 seeds is 1.2739 (sd 0.001)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.5e-05.rne",
+   "value": {
+    "mean": 1.2738578559107567,
+    "sd": 0.0010422750140519983,
+    "n": 5
+   }
+  },
+  {
+   "id": "nll_kahan_5e-5",
+   "claim": "Mean held-out NLL of kahan at lr 5e-5 over 5 seeds is 1.1507 (sd 0.0025)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.5e-05.kahan",
+   "value": {
+    "mean": 1.1506776990692034,
+    "sd": 0.0024986322985329212,
+    "n": 5
+   }
+  },
+  {
+   "id": "nll_fp32_master_5e-5",
+   "claim": "Mean held-out NLL of fp32_master at lr 5e-5 over 5 seeds is 1.1505 (sd 0.0017)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.5e-05.fp32_master",
+   "value": {
+    "mean": 1.1505204325672829,
+    "sd": 0.0017317467437340385,
+    "n": 5
+   }
+  },
+  {
+   "id": "nll_selective_5e-5",
+   "claim": "Mean held-out NLL of selective at lr 5e-5 over 5 seeds is 1.1707 (sd 0.0042)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.5e-05.selective",
+   "value": {
+    "mean": 1.1707088780367576,
+    "sd": 0.004242909836268643,
+    "n": 5
+   }
+  },
+  {
+   "id": "nll_sr_5e-5",
+   "claim": "Mean held-out NLL of sr at lr 5e-5 over 5 seeds is 1.1534 (sd 0.0023)",
+   "source": "results/analysis/verdicts.json",
+   "key": "nll_summary.5e-05.sr",
+   "value": {
+    "mean": 1.1533518300381205,
+    "sd": 0.0022930194988262263,
+    "n": 5
+   }
+  },
+  {
+   "id": "deliv_selective_cumulative_length_ratio_2e-4",
+   "claim": "selective cumulative_length_ratio at lr 2e-4: seed mean 1.7117 (sd 0.0036)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.selective.cumulative_length_ratio.mean",
+   "value": 1.7117142851671623
+  },
+  {
+   "id": "deliv_selective_cumulative_overshoot_2e-4",
+   "claim": "selective cumulative_overshoot at lr 2e-4: seed mean 1.7318 (sd 0.0033)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.selective.cumulative_overshoot.mean",
+   "value": 1.7318417759477118
+  },
+  {
+   "id": "deliv_selective_cumulative_cosine_2e-4",
+   "claim": "selective cumulative_cosine at lr 2e-4: seed mean 0.9884 (sd 0.0002)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.selective.cumulative_cosine.mean",
+   "value": 0.9883777404174161
+  },
+  {
+   "id": "deliv_selective_never_moved_fraction_2e-4",
+   "claim": "selective never_moved_fraction at lr 2e-4: seed mean 0.0208 (sd 0.0002)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.selective.never_moved_fraction.mean",
+   "value": 0.02076841269637363
+  },
+  {
+   "id": "deliv_selective_never_attention_2e-4",
+   "claim": "selective never-moved fraction in attention at lr 2e-4: 0.0235",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.selective.families.attention.never_moved_fraction.mean",
+   "value": 0.0235130931712963
+  },
+  {
+   "id": "deliv_selective_never_mlp_2e-4",
+   "claim": "selective never-moved fraction in mlp at lr 2e-4: 0.0248",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.selective.families.mlp.never_moved_fraction.mean",
+   "value": 0.02476489157343107
+  },
+  {
+   "id": "deliv_selective_never_embedding_2e-4",
+   "claim": "selective never-moved fraction in embedding at lr 2e-4: 0.0069",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.selective.families.embedding.never_moved_fraction.mean",
+   "value": 0.006925851327401621
+  },
+  {
+   "id": "deliv_selective_never_norm_2e-4",
+   "claim": "selective never-moved fraction in norm at lr 2e-4: 0.0444",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.selective.families.norm.never_moved_fraction.mean",
+   "value": 0.044398907103825144
+  },
+  {
+   "id": "deliv_selective_extra_bytes_2e-4",
+   "claim": "selective extra optimizer state 269.0 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.selective.extra_state_bytes",
+   "value": 269030016
+  },
+  {
+   "id": "deliv_selective_clip_2e-4",
+   "claim": "selective clip fired on 148 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.selective.clip_fired_total",
+   "value": 148
+  },
+  {
+   "id": "deliv_sr_cumulative_length_ratio_2e-4",
+   "claim": "sr cumulative_length_ratio at lr 2e-4: seed mean 1.1523 (sd 0.0022)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.sr.cumulative_length_ratio.mean",
+   "value": 1.1522839214710034
+  },
+  {
+   "id": "deliv_sr_cumulative_overshoot_2e-4",
+   "claim": "sr cumulative_overshoot at lr 2e-4: seed mean 1.3325 (sd 0.0051)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.sr.cumulative_overshoot.mean",
+   "value": 1.3325418489816891
+  },
+  {
+   "id": "deliv_sr_cumulative_cosine_2e-4",
+   "claim": "sr cumulative_cosine at lr 2e-4: seed mean 0.8647 (sd 0.0017)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.sr.cumulative_cosine.mean",
+   "value": 0.8647314158038129
+  },
+  {
+   "id": "deliv_sr_never_moved_fraction_2e-4",
+   "claim": "sr never_moved_fraction at lr 2e-4: seed mean 0.0237 (sd 0.0003)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.sr.never_moved_fraction.mean",
+   "value": 0.02366291053560358
+  },
+  {
+   "id": "deliv_sr_never_attention_2e-4",
+   "claim": "sr never-moved fraction in attention at lr 2e-4: 0.0264",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.sr.families.attention.never_moved_fraction.mean",
+   "value": 0.026354370117187498
+  },
+  {
+   "id": "deliv_sr_never_mlp_2e-4",
+   "claim": "sr never-moved fraction in mlp at lr 2e-4: 0.0277",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.sr.families.mlp.never_moved_fraction.mean",
+   "value": 0.027716694898566104
+  },
+  {
+   "id": "deliv_sr_never_embedding_2e-4",
+   "claim": "sr never-moved fraction in embedding at lr 2e-4: 0.0097",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.sr.families.embedding.never_moved_fraction.mean",
+   "value": 0.009708376283998843
+  },
+  {
+   "id": "deliv_sr_never_norm_2e-4",
+   "claim": "sr never-moved fraction in norm at lr 2e-4: 0.0479",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.sr.families.norm.never_moved_fraction.mean",
+   "value": 0.04785405282331512
+  },
+  {
+   "id": "deliv_sr_extra_bytes_2e-4",
+   "claim": "sr extra optimizer state 0.0 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.sr.extra_state_bytes",
+   "value": 0
+  },
+  {
+   "id": "deliv_sr_clip_2e-4",
+   "claim": "sr clip fired on 28 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.sr.clip_fired_total",
+   "value": 28
+  },
+  {
+   "id": "deliv_kahan_cumulative_length_ratio_2e-4",
+   "claim": "kahan cumulative_length_ratio at lr 2e-4: seed mean 1.0001 (sd 0.0)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.kahan.cumulative_length_ratio.mean",
+   "value": 1.0001087121387626
+  },
+  {
+   "id": "deliv_kahan_cumulative_overshoot_2e-4",
+   "claim": "kahan cumulative_overshoot at lr 2e-4: seed mean 1.0004 (sd 0.0)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.kahan.cumulative_overshoot.mean",
+   "value": 1.000407174854295
+  },
+  {
+   "id": "deliv_kahan_cumulative_cosine_2e-4",
+   "claim": "kahan cumulative_cosine at lr 2e-4: seed mean 0.9997 (sd 0.0)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.kahan.cumulative_cosine.mean",
+   "value": 0.9997016588344018
+  },
+  {
+   "id": "deliv_kahan_never_moved_fraction_2e-4",
+   "claim": "kahan never_moved_fraction at lr 2e-4: seed mean 0.0366 (sd 0.0007)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.kahan.never_moved_fraction.mean",
+   "value": 0.036589539510713934
+  },
+  {
+   "id": "deliv_kahan_never_attention_2e-4",
+   "claim": "kahan never-moved fraction in attention at lr 2e-4: 0.0417",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.kahan.families.attention.never_moved_fraction.mean",
+   "value": 0.04169768156828704
+  },
+  {
+   "id": "deliv_kahan_never_mlp_2e-4",
+   "claim": "kahan never-moved fraction in mlp at lr 2e-4: 0.0443",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.kahan.families.mlp.never_moved_fraction.mean",
+   "value": 0.04429660373263889
+  },
+  {
+   "id": "deliv_kahan_never_embedding_2e-4",
+   "claim": "kahan never-moved fraction in embedding at lr 2e-4: 0.0101",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.kahan.families.embedding.never_moved_fraction.mean",
+   "value": 0.010068208199960214
+  },
+  {
+   "id": "deliv_kahan_never_norm_2e-4",
+   "claim": "kahan never-moved fraction in norm at lr 2e-4: 0.082",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.kahan.families.norm.never_moved_fraction.mean",
+   "value": 0.08197859744990892
+  },
+  {
+   "id": "deliv_kahan_extra_bytes_2e-4",
+   "claim": "kahan extra optimizer state 269.0 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.kahan.extra_state_bytes",
+   "value": 269030016
+  },
+  {
+   "id": "deliv_kahan_clip_2e-4",
+   "claim": "kahan clip fired on 57 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.kahan.clip_fired_total",
+   "value": 57
+  },
+  {
+   "id": "deliv_rne_cumulative_length_ratio_2e-4",
+   "claim": "rne cumulative_length_ratio at lr 2e-4: seed mean 0.2637 (sd 0.0015)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.rne.cumulative_length_ratio.mean",
+   "value": 0.26367954233887103
+  },
+  {
+   "id": "deliv_rne_cumulative_overshoot_2e-4",
+   "claim": "rne cumulative_overshoot at lr 2e-4: seed mean 0.5105 (sd 0.0023)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.rne.cumulative_overshoot.mean",
+   "value": 0.5105443213061381
+  },
+  {
+   "id": "deliv_rne_cumulative_cosine_2e-4",
+   "claim": "rne cumulative_cosine at lr 2e-4: seed mean 0.5165 (sd 0.0029)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.rne.cumulative_cosine.mean",
+   "value": 0.5164718190127392
+  },
+  {
+   "id": "deliv_rne_never_moved_fraction_2e-4",
+   "claim": "rne never_moved_fraction at lr 2e-4: seed mean 0.6132 (sd 0.0071)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.rne.never_moved_fraction.mean",
+   "value": 0.6131727933287563
+  },
+  {
+   "id": "deliv_rne_never_attention_2e-4",
+   "claim": "rne never-moved fraction in attention at lr 2e-4: 0.6676",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.rne.families.attention.never_moved_fraction.mean",
+   "value": 0.6675738073278357
+  },
+  {
+   "id": "deliv_rne_never_mlp_2e-4",
+   "claim": "rne never-moved fraction in mlp at lr 2e-4: 0.7138",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.rne.families.mlp.never_moved_fraction.mean",
+   "value": 0.7137504043893068
+  },
+  {
+   "id": "deliv_rne_never_embedding_2e-4",
+   "claim": "rne never-moved fraction in embedding at lr 2e-4: 0.2789",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.rne.families.embedding.never_moved_fraction.mean",
+   "value": 0.2788544478239836
+  },
+  {
+   "id": "deliv_rne_never_norm_2e-4",
+   "claim": "rne never-moved fraction in norm at lr 2e-4: 0.97",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.rne.families.norm.never_moved_fraction.mean",
+   "value": 0.9700193533697631
+  },
+  {
+   "id": "deliv_rne_extra_bytes_2e-4",
+   "claim": "rne extra optimizer state 0.0 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.rne.extra_state_bytes",
+   "value": 0
+  },
+  {
+   "id": "deliv_rne_clip_2e-4",
+   "claim": "rne clip fired on 3 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.rne.clip_fired_total",
+   "value": 3
+  },
+  {
+   "id": "deliv_fp32_master_cumulative_length_ratio_2e-4",
+   "claim": "fp32_master cumulative_length_ratio at lr 2e-4: seed mean 1.0003 (sd 0.0)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.fp32_master.cumulative_length_ratio.mean",
+   "value": 1.0002890896479382
+  },
+  {
+   "id": "deliv_fp32_master_cumulative_overshoot_2e-4",
+   "claim": "fp32_master cumulative_overshoot at lr 2e-4: seed mean 1.0006 (sd 0.0)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.fp32_master.cumulative_overshoot.mean",
+   "value": 1.0005677211778377
+  },
+  {
+   "id": "deliv_fp32_master_cumulative_cosine_2e-4",
+   "claim": "fp32_master cumulative_cosine at lr 2e-4: seed mean 0.9997 (sd 0.0)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.fp32_master.cumulative_cosine.mean",
+   "value": 0.9997215266938912
+  },
+  {
+   "id": "deliv_fp32_master_never_moved_fraction_2e-4",
+   "claim": "fp32_master never_moved_fraction at lr 2e-4: seed mean 0.0363 (sd 0.0008)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.fp32_master.never_moved_fraction.mean",
+   "value": 0.03631323874284719
+  },
+  {
+   "id": "deliv_fp32_master_never_attention_2e-4",
+   "claim": "fp32_master never-moved fraction in attention at lr 2e-4: 0.0412",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.fp32_master.families.attention.never_moved_fraction.mean",
+   "value": 0.04118674949363425
+  },
+  {
+   "id": "deliv_fp32_master_never_mlp_2e-4",
+   "claim": "fp32_master never-moved fraction in mlp at lr 2e-4: 0.044",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.fp32_master.families.mlp.never_moved_fraction.mean",
+   "value": 0.04402485663017618
+  },
+  {
+   "id": "deliv_fp32_master_never_embedding_2e-4",
+   "claim": "fp32_master never-moved fraction in embedding at lr 2e-4: 0.01",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.fp32_master.families.embedding.never_moved_fraction.mean",
+   "value": 0.010000525580512154
+  },
+  {
+   "id": "deliv_fp32_master_never_norm_2e-4",
+   "claim": "fp32_master never-moved fraction in norm at lr 2e-4: 0.0805",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.fp32_master.families.norm.never_moved_fraction.mean",
+   "value": 0.08052709471766849
+  },
+  {
+   "id": "deliv_fp32_master_extra_bytes_2e-4",
+   "claim": "fp32_master extra optimizer state 538.1 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.fp32_master.extra_state_bytes",
+   "value": 538060032
+  },
+  {
+   "id": "deliv_fp32_master_clip_2e-4",
+   "claim": "fp32_master clip fired on 83 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.fp32_master.clip_fired_total",
+   "value": 83
+  },
+  {
+   "id": "deliv_torch_adamw_cumulative_length_ratio_2e-4",
+   "claim": "torch_adamw cumulative_length_ratio at lr 2e-4: seed mean 0.2638 (sd 0.0022)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.torch_adamw.cumulative_length_ratio.mean",
+   "value": 0.2638142821893082
+  },
+  {
+   "id": "deliv_torch_adamw_cumulative_overshoot_2e-4",
+   "claim": "torch_adamw cumulative_overshoot at lr 2e-4: seed mean 0.5105 (sd 0.0022)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.torch_adamw.cumulative_overshoot.mean",
+   "value": 0.5104517579638621
+  },
+  {
+   "id": "deliv_torch_adamw_cumulative_cosine_2e-4",
+   "claim": "torch_adamw cumulative_cosine at lr 2e-4: seed mean 0.5168 (sd 0.0032)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.torch_adamw.cumulative_cosine.mean",
+   "value": 0.5168227912460901
+  },
+  {
+   "id": "deliv_torch_adamw_never_moved_fraction_2e-4",
+   "claim": "torch_adamw never_moved_fraction at lr 2e-4: seed mean 0.6122 (sd 0.0048)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.torch_adamw.never_moved_fraction.mean",
+   "value": 0.6122034085594374
+  },
+  {
+   "id": "deliv_torch_adamw_never_attention_2e-4",
+   "claim": "torch_adamw never-moved fraction in attention at lr 2e-4: 0.6646",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.torch_adamw.families.attention.never_moved_fraction.mean",
+   "value": 0.6645503592785494
+  },
+  {
+   "id": "deliv_torch_adamw_never_mlp_2e-4",
+   "claim": "torch_adamw never-moved fraction in mlp at lr 2e-4: 0.7134",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.torch_adamw.families.mlp.never_moved_fraction.mean",
+   "value": 0.7134064223050091
+  },
+  {
+   "id": "deliv_torch_adamw_never_embedding_2e-4",
+   "claim": "torch_adamw never-moved fraction in embedding at lr 2e-4: 0.2781",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.torch_adamw.families.embedding.never_moved_fraction.mean",
+   "value": 0.27805057808204936
+  },
+  {
+   "id": "deliv_torch_adamw_never_norm_2e-4",
+   "claim": "torch_adamw never-moved fraction in norm at lr 2e-4: 0.97",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.torch_adamw.families.norm.never_moved_fraction.mean",
+   "value": 0.9700364298724955
+  },
+  {
+   "id": "deliv_torch_adamw_extra_bytes_2e-4",
+   "claim": "torch_adamw extra optimizer state 0.0 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.torch_adamw.extra_state_bytes",
+   "value": 0
+  },
+  {
+   "id": "deliv_torch_adamw_clip_2e-4",
+   "claim": "torch_adamw clip fired on 3 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0002.torch_adamw.clip_fired_total",
+   "value": 3
+  },
+  {
+   "id": "deliv_selective_cumulative_length_ratio_1e-4",
+   "claim": "selective cumulative_length_ratio at lr 1e-4: seed mean 1.8075 (sd 0.0008)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.selective.cumulative_length_ratio.mean",
+   "value": 1.807511468364718
+  },
+  {
+   "id": "deliv_selective_cumulative_overshoot_1e-4",
+   "claim": "selective cumulative_overshoot at lr 1e-4: seed mean 1.8205 (sd 0.0007)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.selective.cumulative_overshoot.mean",
+   "value": 1.820515257449341
+  },
+  {
+   "id": "deliv_selective_cumulative_cosine_1e-4",
+   "claim": "selective cumulative_cosine at lr 1e-4: seed mean 0.9929 (sd 0.0)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.selective.cumulative_cosine.mean",
+   "value": 0.9928570712380125
+  },
+  {
+   "id": "deliv_selective_never_moved_fraction_1e-4",
+   "claim": "selective never_moved_fraction at lr 1e-4: seed mean 0.0386 (sd 0.0002)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.selective.never_moved_fraction.mean",
+   "value": 0.03860759536958136
+  },
+  {
+   "id": "deliv_selective_never_attention_1e-4",
+   "claim": "selective never-moved fraction in attention at lr 1e-4: 0.0444",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.selective.families.attention.never_moved_fraction.mean",
+   "value": 0.0443902286482446
+  },
+  {
+   "id": "deliv_selective_never_mlp_1e-4",
+   "claim": "selective never-moved fraction in mlp at lr 1e-4: 0.0466",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.selective.families.mlp.never_moved_fraction.mean",
+   "value": 0.0466163415477109
+  },
+  {
+   "id": "deliv_selective_never_embedding_1e-4",
+   "claim": "selective never-moved fraction in embedding at lr 1e-4: 0.0106",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.selective.families.embedding.never_moved_fraction.mean",
+   "value": 0.010601735998083044
+  },
+  {
+   "id": "deliv_selective_never_norm_1e-4",
+   "claim": "selective never-moved fraction in norm at lr 1e-4: 0.087",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.selective.families.norm.never_moved_fraction.mean",
+   "value": 0.08698770491803279
+  },
+  {
+   "id": "deliv_selective_extra_bytes_1e-4",
+   "claim": "selective extra optimizer state 269.0 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.selective.extra_state_bytes",
+   "value": 269030016
+  },
+  {
+   "id": "deliv_selective_clip_1e-4",
+   "claim": "selective clip fired on 10 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.selective.clip_fired_total",
+   "value": 10
+  },
+  {
+   "id": "deliv_sr_cumulative_length_ratio_1e-4",
+   "claim": "sr cumulative_length_ratio at lr 1e-4: seed mean 1.208 (sd 0.0026)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.sr.cumulative_length_ratio.mean",
+   "value": 1.2080013440242423
+  },
+  {
+   "id": "deliv_sr_cumulative_overshoot_1e-4",
+   "claim": "sr cumulative_overshoot at lr 1e-4: seed mean 1.4631 (sd 0.0063)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.sr.cumulative_overshoot.mean",
+   "value": 1.4630867525603555
+  },
+  {
+   "id": "deliv_sr_cumulative_cosine_1e-4",
+   "claim": "sr cumulative_cosine at lr 1e-4: seed mean 0.8257 (sd 0.0018)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.sr.cumulative_cosine.mean",
+   "value": 0.8256587173278322
+  },
+  {
+   "id": "deliv_sr_never_moved_fraction_1e-4",
+   "claim": "sr never_moved_fraction at lr 1e-4: seed mean 0.0367 (sd 0.0002)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.sr.never_moved_fraction.mean",
+   "value": 0.03666352530715383
+  },
+  {
+   "id": "deliv_sr_never_attention_1e-4",
+   "claim": "sr never-moved fraction in attention at lr 1e-4: 0.0407",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.sr.families.attention.never_moved_fraction.mean",
+   "value": 0.04067951720437886
+  },
+  {
+   "id": "deliv_sr_never_mlp_1e-4",
+   "claim": "sr never-moved fraction in mlp at lr 1e-4: 0.043",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.sr.families.mlp.never_moved_fraction.mean",
+   "value": 0.042961905522601596
+  },
+  {
+   "id": "deliv_sr_never_embedding_1e-4",
+   "claim": "sr never-moved fraction in embedding at lr 1e-4: 0.0151",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.sr.families.embedding.never_moved_fraction.mean",
+   "value": 0.015143521626790366
+  },
+  {
+   "id": "deliv_sr_never_norm_1e-4",
+   "claim": "sr never-moved fraction in norm at lr 1e-4: 0.0696",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.sr.families.norm.never_moved_fraction.mean",
+   "value": 0.0695525956284153
+  },
+  {
+   "id": "deliv_sr_extra_bytes_1e-4",
+   "claim": "sr extra optimizer state 0.0 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.sr.extra_state_bytes",
+   "value": 0
+  },
+  {
+   "id": "deliv_sr_clip_1e-4",
+   "claim": "sr clip fired on 8 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.sr.clip_fired_total",
+   "value": 8
+  },
+  {
+   "id": "deliv_kahan_cumulative_length_ratio_1e-4",
+   "claim": "kahan cumulative_length_ratio at lr 1e-4: seed mean 1.0001 (sd 0.0)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.kahan.cumulative_length_ratio.mean",
+   "value": 1.0001467179113817
+  },
+  {
+   "id": "deliv_kahan_cumulative_overshoot_1e-4",
+   "claim": "kahan cumulative_overshoot at lr 1e-4: seed mean 1.0009 (sd 0.0)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.kahan.cumulative_overshoot.mean",
+   "value": 1.0009184301690237
+  },
+  {
+   "id": "deliv_kahan_cumulative_cosine_1e-4",
+   "claim": "kahan cumulative_cosine at lr 1e-4: seed mean 0.9992 (sd 0.0)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.kahan.cumulative_cosine.mean",
+   "value": 0.999228995925437
+  },
+  {
+   "id": "deliv_kahan_never_moved_fraction_1e-4",
+   "claim": "kahan never_moved_fraction at lr 1e-4: seed mean 0.0695 (sd 0.0006)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.kahan.never_moved_fraction.mean",
+   "value": 0.06950135259256722
+  },
+  {
+   "id": "deliv_kahan_never_attention_1e-4",
+   "claim": "kahan never-moved fraction in attention at lr 1e-4: 0.0804",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.kahan.families.attention.never_moved_fraction.mean",
+   "value": 0.08042237835165895
+  },
+  {
+   "id": "deliv_kahan_never_mlp_1e-4",
+   "claim": "kahan never-moved fraction in mlp at lr 1e-4: 0.0849",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.kahan.families.mlp.never_moved_fraction.mean",
+   "value": 0.08488380714699074
+  },
+  {
+   "id": "deliv_kahan_never_embedding_1e-4",
+   "claim": "kahan never-moved fraction in embedding at lr 1e-4: 0.0159",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.kahan.families.embedding.never_moved_fraction.mean",
+   "value": 0.01588977531150535
+  },
+  {
+   "id": "deliv_kahan_never_norm_1e-4",
+   "claim": "kahan never-moved fraction in norm at lr 1e-4: 0.1581",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.kahan.families.norm.never_moved_fraction.mean",
+   "value": 0.1581056466302368
+  },
+  {
+   "id": "deliv_kahan_extra_bytes_1e-4",
+   "claim": "kahan extra optimizer state 269.0 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.kahan.extra_state_bytes",
+   "value": 269030016
+  },
+  {
+   "id": "deliv_kahan_clip_1e-4",
+   "claim": "kahan clip fired on 6 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.kahan.clip_fired_total",
+   "value": 6
+  },
+  {
+   "id": "deliv_rne_cumulative_length_ratio_1e-4",
+   "claim": "rne cumulative_length_ratio at lr 1e-4: seed mean 0.1845 (sd 0.001)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.rne.cumulative_length_ratio.mean",
+   "value": 0.18449111113489153
+  },
+  {
+   "id": "deliv_rne_cumulative_overshoot_1e-4",
+   "claim": "rne cumulative_overshoot at lr 1e-4: seed mean 0.4813 (sd 0.0028)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.rne.cumulative_overshoot.mean",
+   "value": 0.48130360283527673
+  },
+  {
+   "id": "deliv_rne_cumulative_cosine_1e-4",
+   "claim": "rne cumulative_cosine at lr 1e-4: seed mean 0.3833 (sd 0.0023)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.rne.cumulative_cosine.mean",
+   "value": 0.38332192138615473
+  },
+  {
+   "id": "deliv_rne_never_moved_fraction_1e-4",
+   "claim": "rne never_moved_fraction at lr 1e-4: seed mean 0.7854 (sd 0.0008)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.rne.never_moved_fraction.mean",
+   "value": 0.7854362629930483
+  },
+  {
+   "id": "deliv_rne_never_attention_1e-4",
+   "claim": "rne never-moved fraction in attention at lr 1e-4: 0.8285",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.rne.families.attention.never_moved_fraction.mean",
+   "value": 0.8285012101538388
+  },
+  {
+   "id": "deliv_rne_never_mlp_1e-4",
+   "claim": "rne never-moved fraction in mlp at lr 1e-4: 0.857",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.rne.families.mlp.never_moved_fraction.mean",
+   "value": 0.8570174304349922
+  },
+  {
+   "id": "deliv_rne_never_embedding_1e-4",
+   "claim": "rne never-moved fraction in embedding at lr 1e-4: 0.5435",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.rne.families.embedding.never_moved_fraction.mean",
+   "value": 0.5434910809552227
+  },
+  {
+   "id": "deliv_rne_never_norm_1e-4",
+   "claim": "rne never-moved fraction in norm at lr 1e-4: 0.9867",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.rne.families.norm.never_moved_fraction.mean",
+   "value": 0.9866860200364298
+  },
+  {
+   "id": "deliv_rne_extra_bytes_1e-4",
+   "claim": "rne extra optimizer state 0.0 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.rne.extra_state_bytes",
+   "value": 0
+  },
+  {
+   "id": "deliv_rne_clip_1e-4",
+   "claim": "rne clip fired on 0 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.rne.clip_fired_total",
+   "value": 0
+  },
+  {
+   "id": "deliv_fp32_master_cumulative_length_ratio_1e-4",
+   "claim": "fp32_master cumulative_length_ratio at lr 1e-4: seed mean 1.0008 (sd 0.0)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.fp32_master.cumulative_length_ratio.mean",
+   "value": 1.0007560669568325
+  },
+  {
+   "id": "deliv_fp32_master_cumulative_overshoot_1e-4",
+   "claim": "fp32_master cumulative_overshoot at lr 1e-4: seed mean 1.0015 (sd 0.0)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.fp32_master.cumulative_overshoot.mean",
+   "value": 1.0014914985999765
+  },
+  {
+   "id": "deliv_fp32_master_cumulative_cosine_1e-4",
+   "claim": "fp32_master cumulative_cosine at lr 1e-4: seed mean 0.9993 (sd 0.0)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.fp32_master.cumulative_cosine.mean",
+   "value": 0.9992656640050017
+  },
+  {
+   "id": "deliv_fp32_master_never_moved_fraction_1e-4",
+   "claim": "fp32_master never_moved_fraction at lr 1e-4: seed mean 0.0696 (sd 0.0004)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.fp32_master.never_moved_fraction.mean",
+   "value": 0.0695761115369372
+  },
+  {
+   "id": "deliv_fp32_master_never_attention_1e-4",
+   "claim": "fp32_master never-moved fraction in attention at lr 1e-4: 0.0807",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.fp32_master.families.attention.never_moved_fraction.mean",
+   "value": 0.08069178451726466
+  },
+  {
+   "id": "deliv_fp32_master_never_mlp_1e-4",
+   "claim": "fp32_master never-moved fraction in mlp at lr 1e-4: 0.0851",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.fp32_master.families.mlp.never_moved_fraction.mean",
+   "value": 0.08509574230806327
+  },
+  {
+   "id": "deliv_fp32_master_never_embedding_1e-4",
+   "claim": "fp32_master never-moved fraction in embedding at lr 1e-4: 0.0154",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.fp32_master.families.embedding.never_moved_fraction.mean",
+   "value": 0.015396012200249564
+  },
+  {
+   "id": "deliv_fp32_master_never_norm_1e-4",
+   "claim": "fp32_master never-moved fraction in norm at lr 1e-4: 0.1584",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.fp32_master.families.norm.never_moved_fraction.mean",
+   "value": 0.1583674863387978
+  },
+  {
+   "id": "deliv_fp32_master_extra_bytes_1e-4",
+   "claim": "fp32_master extra optimizer state 538.1 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.fp32_master.extra_state_bytes",
+   "value": 538060032
+  },
+  {
+   "id": "deliv_fp32_master_clip_1e-4",
+   "claim": "fp32_master clip fired on 6 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.fp32_master.clip_fired_total",
+   "value": 6
+  },
+  {
+   "id": "deliv_torch_adamw_cumulative_length_ratio_1e-4",
+   "claim": "torch_adamw cumulative_length_ratio at lr 1e-4: seed mean 0.1846 (sd 0.001)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.torch_adamw.cumulative_length_ratio.mean",
+   "value": 0.18459281828531016
+  },
+  {
+   "id": "deliv_torch_adamw_cumulative_overshoot_1e-4",
+   "claim": "torch_adamw cumulative_overshoot at lr 1e-4: seed mean 0.4814 (sd 0.0029)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.torch_adamw.cumulative_overshoot.mean",
+   "value": 0.4813606223380682
+  },
+  {
+   "id": "deliv_torch_adamw_cumulative_cosine_1e-4",
+   "claim": "torch_adamw cumulative_cosine at lr 1e-4: seed mean 0.3835 (sd 0.0023)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.torch_adamw.cumulative_cosine.mean",
+   "value": 0.38348771460792375
+  },
+  {
+   "id": "deliv_torch_adamw_never_moved_fraction_1e-4",
+   "claim": "torch_adamw never_moved_fraction at lr 1e-4: seed mean 0.7854 (sd 0.0008)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.torch_adamw.never_moved_fraction.mean",
+   "value": 0.785374663918542
+  },
+  {
+   "id": "deliv_torch_adamw_never_attention_1e-4",
+   "claim": "torch_adamw never-moved fraction in attention at lr 1e-4: 0.8284",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.torch_adamw.families.attention.never_moved_fraction.mean",
+   "value": 0.8283799611786267
+  },
+  {
+   "id": "deliv_torch_adamw_never_mlp_1e-4",
+   "claim": "torch_adamw never-moved fraction in mlp at lr 1e-4: 0.857",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.torch_adamw.families.mlp.never_moved_fraction.mean",
+   "value": 0.8570018777729553
+  },
+  {
+   "id": "deliv_torch_adamw_never_embedding_1e-4",
+   "claim": "torch_adamw never-moved fraction in embedding at lr 1e-4: 0.5434",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.torch_adamw.families.embedding.never_moved_fraction.mean",
+   "value": 0.5433559135154441
+  },
+  {
+   "id": "deliv_torch_adamw_never_norm_1e-4",
+   "claim": "torch_adamw never-moved fraction in norm at lr 1e-4: 0.9866",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.torch_adamw.families.norm.never_moved_fraction.mean",
+   "value": 0.9866120218579233
+  },
+  {
+   "id": "deliv_torch_adamw_extra_bytes_1e-4",
+   "claim": "torch_adamw extra optimizer state 0.0 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.torch_adamw.extra_state_bytes",
+   "value": 0
+  },
+  {
+   "id": "deliv_torch_adamw_clip_1e-4",
+   "claim": "torch_adamw clip fired on 0 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "0.0001.torch_adamw.clip_fired_total",
+   "value": 0
+  },
+  {
+   "id": "deliv_selective_cumulative_length_ratio_5e-5",
+   "claim": "selective cumulative_length_ratio at lr 5e-5: seed mean 1.8608 (sd 0.0005)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.selective.cumulative_length_ratio.mean",
+   "value": 1.8607942197637073
+  },
+  {
+   "id": "deliv_selective_cumulative_overshoot_5e-5",
+   "claim": "selective cumulative_overshoot at lr 5e-5: seed mean 1.8709 (sd 0.0005)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.selective.cumulative_overshoot.mean",
+   "value": 1.8709085621339887
+  },
+  {
+   "id": "deliv_selective_cumulative_cosine_5e-5",
+   "claim": "selective cumulative_cosine at lr 5e-5: seed mean 0.9946 (sd 0.0)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.selective.cumulative_cosine.mean",
+   "value": 0.9945938910226355
+  },
+  {
+   "id": "deliv_selective_never_moved_fraction_5e-5",
+   "claim": "selective never_moved_fraction at lr 5e-5: seed mean 0.0739 (sd 0.0004)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.selective.never_moved_fraction.mean",
+   "value": 0.07389999337471698
+  },
+  {
+   "id": "deliv_selective_never_attention_5e-5",
+   "claim": "selective never-moved fraction in attention at lr 5e-5: 0.0863",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.selective.families.attention.never_moved_fraction.mean",
+   "value": 0.08627517511815201
+  },
+  {
+   "id": "deliv_selective_never_mlp_5e-5",
+   "claim": "selective never-moved fraction in mlp at lr 5e-5: 0.0899",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.selective.families.mlp.never_moved_fraction.mean",
+   "value": 0.08989902826003086
+  },
+  {
+   "id": "deliv_selective_never_embedding_5e-5",
+   "claim": "selective never-moved fraction in embedding at lr 5e-5: 0.0172",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.selective.families.embedding.never_moved_fraction.mean",
+   "value": 0.01717732747395833
+  },
+  {
+   "id": "deliv_selective_never_norm_5e-5",
+   "claim": "selective never-moved fraction in norm at lr 5e-5: 0.1735",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.selective.families.norm.never_moved_fraction.mean",
+   "value": 0.1735314207650273
+  },
+  {
+   "id": "deliv_selective_extra_bytes_5e-5",
+   "claim": "selective extra optimizer state 269.0 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.selective.extra_state_bytes",
+   "value": 269030016
+  },
+  {
+   "id": "deliv_selective_clip_5e-5",
+   "claim": "selective clip fired on 1 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.selective.clip_fired_total",
+   "value": 1
+  },
+  {
+   "id": "deliv_sr_cumulative_length_ratio_5e-5",
+   "claim": "sr cumulative_length_ratio at lr 5e-5: seed mean 1.2877 (sd 0.0064)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.sr.cumulative_length_ratio.mean",
+   "value": 1.2877233514804267
+  },
+  {
+   "id": "deliv_sr_cumulative_overshoot_5e-5",
+   "claim": "sr cumulative_overshoot at lr 5e-5: seed mean 1.6614 (sd 0.0164)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.sr.cumulative_overshoot.mean",
+   "value": 1.6613700162387186
+  },
+  {
+   "id": "deliv_sr_cumulative_cosine_5e-5",
+   "claim": "sr cumulative_cosine at lr 5e-5: seed mean 0.7751 (sd 0.0038)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.sr.cumulative_cosine.mean",
+   "value": 0.77512735011009
+  },
+  {
+   "id": "deliv_sr_never_moved_fraction_5e-5",
+   "claim": "sr never_moved_fraction at lr 5e-5: seed mean 0.0558 (sd 0.0002)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.sr.never_moved_fraction.mean",
+   "value": 0.05578863438048489
+  },
+  {
+   "id": "deliv_sr_never_attention_5e-5",
+   "claim": "sr never-moved fraction in attention at lr 5e-5: 0.0616",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.sr.families.attention.never_moved_fraction.mean",
+   "value": 0.06162544909818672
+  },
+  {
+   "id": "deliv_sr_never_mlp_5e-5",
+   "claim": "sr never-moved fraction in mlp at lr 5e-5: 0.0648",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.sr.families.mlp.never_moved_fraction.mean",
+   "value": 0.06476447462545011
+  },
+  {
+   "id": "deliv_sr_never_embedding_5e-5",
+   "claim": "sr never-moved fraction in embedding at lr 5e-5: 0.025",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.sr.families.embedding.never_moved_fraction.mean",
+   "value": 0.02501456649215133
+  },
+  {
+   "id": "deliv_sr_never_norm_5e-5",
+   "claim": "sr never-moved fraction in norm at lr 5e-5: 0.1021",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.sr.families.norm.never_moved_fraction.mean",
+   "value": 0.10212317850637523
+  },
+  {
+   "id": "deliv_sr_extra_bytes_5e-5",
+   "claim": "sr extra optimizer state 0.0 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.sr.extra_state_bytes",
+   "value": 0
+  },
+  {
+   "id": "deliv_sr_clip_5e-5",
+   "claim": "sr clip fired on 0 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.sr.clip_fired_total",
+   "value": 0
+  },
+  {
+   "id": "deliv_kahan_cumulative_length_ratio_5e-5",
+   "claim": "kahan cumulative_length_ratio at lr 5e-5: seed mean 0.9998 (sd 0.0001)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.kahan.cumulative_length_ratio.mean",
+   "value": 0.9997540837355583
+  },
+  {
+   "id": "deliv_kahan_cumulative_overshoot_5e-5",
+   "claim": "kahan cumulative_overshoot at lr 5e-5: seed mean 1.0019 (sd 0.0001)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.kahan.cumulative_overshoot.mean",
+   "value": 1.00190933783827
+  },
+  {
+   "id": "deliv_kahan_cumulative_cosine_5e-5",
+   "claim": "kahan cumulative_cosine at lr 5e-5: seed mean 0.9978 (sd 0.0001)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.kahan.cumulative_cosine.mean",
+   "value": 0.9978488558513113
+  },
+  {
+   "id": "deliv_kahan_never_moved_fraction_5e-5",
+   "claim": "kahan never_moved_fraction at lr 5e-5: seed mean 0.1269 (sd 0.0006)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.kahan.never_moved_fraction.mean",
+   "value": 0.12686026231362973
+  },
+  {
+   "id": "deliv_kahan_never_attention_5e-5",
+   "claim": "kahan never-moved fraction in attention at lr 5e-5: 0.1477",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.kahan.families.attention.never_moved_fraction.mean",
+   "value": 0.14773295084635418
+  },
+  {
+   "id": "deliv_kahan_never_mlp_5e-5",
+   "claim": "kahan never-moved fraction in mlp at lr 5e-5: 0.1556",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.kahan.families.mlp.never_moved_fraction.mean",
+   "value": 0.15555346328044625
+  },
+  {
+   "id": "deliv_kahan_never_embedding_5e-5",
+   "claim": "kahan never-moved fraction in embedding at lr 5e-5: 0.0264",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.kahan.families.embedding.never_moved_fraction.mean",
+   "value": 0.026389072559497972
+  },
+  {
+   "id": "deliv_kahan_never_norm_5e-5",
+   "claim": "kahan never-moved fraction in norm at lr 5e-5: 0.2908",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.kahan.families.norm.never_moved_fraction.mean",
+   "value": 0.2907673041894353
+  },
+  {
+   "id": "deliv_kahan_extra_bytes_5e-5",
+   "claim": "kahan extra optimizer state 269.0 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.kahan.extra_state_bytes",
+   "value": 269030016
+  },
+  {
+   "id": "deliv_kahan_clip_5e-5",
+   "claim": "kahan clip fired on 0 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.kahan.clip_fired_total",
+   "value": 0
+  },
+  {
+   "id": "deliv_rne_cumulative_length_ratio_5e-5",
+   "claim": "rne cumulative_length_ratio at lr 5e-5: seed mean 0.1302 (sd 0.0003)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.rne.cumulative_length_ratio.mean",
+   "value": 0.13019833445207993
+  },
+  {
+   "id": "deliv_rne_cumulative_overshoot_5e-5",
+   "claim": "rne cumulative_overshoot at lr 5e-5: seed mean 0.4978 (sd 0.0013)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.rne.cumulative_overshoot.mean",
+   "value": 0.497758319832365
+  },
+  {
+   "id": "deliv_rne_cumulative_cosine_5e-5",
+   "claim": "rne cumulative_cosine at lr 5e-5: seed mean 0.2616 (sd 0.0011)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.rne.cumulative_cosine.mean",
+   "value": 0.26157143333188754
+  },
+  {
+   "id": "deliv_rne_never_moved_fraction_5e-5",
+   "claim": "rne never_moved_fraction at lr 5e-5: seed mean 0.8869 (sd 0.0009)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.rne.never_moved_fraction.mean",
+   "value": 0.8869234383125487
+  },
+  {
+   "id": "deliv_rne_never_attention_5e-5",
+   "claim": "rne never-moved fraction in attention at lr 5e-5: 0.9105",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.rne.families.attention.never_moved_fraction.mean",
+   "value": 0.9105079029224538
+  },
+  {
+   "id": "deliv_rne_never_mlp_5e-5",
+   "claim": "rne never-moved fraction in mlp at lr 5e-5: 0.9272",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.rne.families.mlp.never_moved_fraction.mean",
+   "value": 0.9271519413700811
+  },
+  {
+   "id": "deliv_rne_never_embedding_5e-5",
+   "claim": "rne never-moved fraction in embedding at lr 5e-5: 0.7515",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.rne.families.embedding.never_moved_fraction.mean",
+   "value": 0.7515369839138455
+  },
+  {
+   "id": "deliv_rne_never_norm_5e-5",
+   "claim": "rne never-moved fraction in norm at lr 5e-5: 0.9944",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.rne.families.norm.never_moved_fraction.mean",
+   "value": 0.9943761384335155
+  },
+  {
+   "id": "deliv_rne_extra_bytes_5e-5",
+   "claim": "rne extra optimizer state 0.0 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.rne.extra_state_bytes",
+   "value": 0
+  },
+  {
+   "id": "deliv_rne_clip_5e-5",
+   "claim": "rne clip fired on 0 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.rne.clip_fired_total",
+   "value": 0
+  },
+  {
+   "id": "deliv_fp32_master_cumulative_length_ratio_5e-5",
+   "claim": "fp32_master cumulative_length_ratio at lr 5e-5: seed mean 1.002 (sd 0.0001)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.fp32_master.cumulative_length_ratio.mean",
+   "value": 1.0020083705560132
+  },
+  {
+   "id": "deliv_fp32_master_cumulative_overshoot_5e-5",
+   "claim": "fp32_master cumulative_overshoot at lr 5e-5: seed mean 1.004 (sd 0.0001)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.fp32_master.cumulative_overshoot.mean",
+   "value": 1.0040180663814748
+  },
+  {
+   "id": "deliv_fp32_master_cumulative_cosine_5e-5",
+   "claim": "fp32_master cumulative_cosine at lr 5e-5: seed mean 0.998 (sd 0.0001)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.fp32_master.cumulative_cosine.mean",
+   "value": 0.9979983525851047
+  },
+  {
+   "id": "deliv_fp32_master_never_moved_fraction_5e-5",
+   "claim": "fp32_master never_moved_fraction at lr 5e-5: seed mean 0.1266 (sd 0.0006)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.fp32_master.never_moved_fraction.mean",
+   "value": 0.12656129790365103
+  },
+  {
+   "id": "deliv_fp32_master_never_attention_5e-5",
+   "claim": "fp32_master never-moved fraction in attention at lr 5e-5: 0.1477",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.fp32_master.families.attention.never_moved_fraction.mean",
+   "value": 0.1476929012345679
+  },
+  {
+   "id": "deliv_fp32_master_never_mlp_5e-5",
+   "claim": "fp32_master never-moved fraction in mlp at lr 5e-5: 0.1556",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.fp32_master.families.mlp.never_moved_fraction.mean",
+   "value": 0.15555556309076002
+  },
+  {
+   "id": "deliv_fp32_master_never_embedding_5e-5",
+   "claim": "fp32_master never-moved fraction in embedding at lr 5e-5: 0.025",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.fp32_master.families.embedding.never_moved_fraction.mean",
+   "value": 0.025000042385525167
+  },
+  {
+   "id": "deliv_fp32_master_never_norm_5e-5",
+   "claim": "fp32_master never-moved fraction in norm at lr 5e-5: 0.2909",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.fp32_master.families.norm.never_moved_fraction.mean",
+   "value": 0.2909437613843352
+  },
+  {
+   "id": "deliv_fp32_master_extra_bytes_5e-5",
+   "claim": "fp32_master extra optimizer state 538.1 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.fp32_master.extra_state_bytes",
+   "value": 538060032
+  },
+  {
+   "id": "deliv_fp32_master_clip_5e-5",
+   "claim": "fp32_master clip fired on 0 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.fp32_master.clip_fired_total",
+   "value": 0
+  },
+  {
+   "id": "deliv_torch_adamw_cumulative_length_ratio_5e-5",
+   "claim": "torch_adamw cumulative_length_ratio at lr 5e-5: seed mean 0.1303 (sd 0.0003)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.torch_adamw.cumulative_length_ratio.mean",
+   "value": 0.1302561820739517
+  },
+  {
+   "id": "deliv_torch_adamw_cumulative_overshoot_5e-5",
+   "claim": "torch_adamw cumulative_overshoot at lr 5e-5: seed mean 0.4979 (sd 0.0014)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.torch_adamw.cumulative_overshoot.mean",
+   "value": 0.49786750139543684
+  },
+  {
+   "id": "deliv_torch_adamw_cumulative_cosine_5e-5",
+   "claim": "torch_adamw cumulative_cosine at lr 5e-5: seed mean 0.2616 (sd 0.001)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.torch_adamw.cumulative_cosine.mean",
+   "value": 0.26163021644166917
+  },
+  {
+   "id": "deliv_torch_adamw_never_moved_fraction_5e-5",
+   "claim": "torch_adamw never_moved_fraction at lr 5e-5: seed mean 0.8869 (sd 0.0008)",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.torch_adamw.never_moved_fraction.mean",
+   "value": 0.8869156577680908
+  },
+  {
+   "id": "deliv_torch_adamw_never_attention_5e-5",
+   "claim": "torch_adamw never-moved fraction in attention at lr 5e-5: 0.9108",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.torch_adamw.families.attention.never_moved_fraction.mean",
+   "value": 0.9107561653043017
+  },
+  {
+   "id": "deliv_torch_adamw_never_mlp_5e-5",
+   "claim": "torch_adamw never-moved fraction in mlp at lr 5e-5: 0.9271",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.torch_adamw.families.mlp.never_moved_fraction.mean",
+   "value": 0.9270946009757587
+  },
+  {
+   "id": "deliv_torch_adamw_never_embedding_5e-5",
+   "claim": "torch_adamw never-moved fraction in embedding at lr 5e-5: 0.7514",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.torch_adamw.families.embedding.never_moved_fraction.mean",
+   "value": 0.7514275444878472
+  },
+  {
+   "id": "deliv_torch_adamw_never_norm_5e-5",
+   "claim": "torch_adamw never-moved fraction in norm at lr 5e-5: 0.9952",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.torch_adamw.families.norm.never_moved_fraction.mean",
+   "value": 0.9951787340619308
+  },
+  {
+   "id": "deliv_torch_adamw_extra_bytes_5e-5",
+   "claim": "torch_adamw extra optimizer state 0.0 MB",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.torch_adamw.extra_state_bytes",
+   "value": 0
+  },
+  {
+   "id": "deliv_torch_adamw_clip_5e-5",
+   "claim": "torch_adamw clip fired on 0 steps summed over 5 seeds",
+   "source": "results/analysis/delivery_table.json",
+   "key": "5e-05.torch_adamw.clip_fired_total",
+   "value": 0
+  },
+  {
+   "id": "cost_peak_torch_adamw",
+   "claim": "torch_adamw mean peak GPU memory 3.836 GB over 15 runs",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(peak_gpu_mem_gb | condition=torch_adamw)",
+   "value": 3.8363590314666665
+  },
+  {
+   "id": "cost_step_torch_adamw",
+   "claim": "torch_adamw mean step time 0.1123 s over 15 runs",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(s_per_step | condition=torch_adamw)",
+   "value": 0.11230134955512153
+  },
+  {
+   "id": "cost_clip_torch_adamw",
+   "claim": "torch_adamw mean clipped steps per run 0.20",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(clip_fired_steps | condition=torch_adamw)",
+   "value": 0.2
+  },
+  {
+   "id": "cost_peak_rne",
+   "claim": "rne mean peak GPU memory 3.518 GB over 15 runs",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(peak_gpu_mem_gb | condition=rne)",
+   "value": 3.5179912533333333
+  },
+  {
+   "id": "cost_step_rne",
+   "claim": "rne mean step time 0.1174 s over 15 runs",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(s_per_step | condition=rne)",
+   "value": 0.11744044804573059
+  },
+  {
+   "id": "cost_clip_rne",
+   "claim": "rne mean clipped steps per run 0.20",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(clip_fired_steps | condition=rne)",
+   "value": 0.2
+  },
+  {
+   "id": "cost_peak_kahan",
+   "claim": "kahan mean peak GPU memory 3.786 GB over 15 runs",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(peak_gpu_mem_gb | condition=kahan)",
+   "value": 3.7857143808
+  },
+  {
+   "id": "cost_step_kahan",
+   "claim": "kahan mean step time 0.1266 s over 15 runs",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(s_per_step | condition=kahan)",
+   "value": 0.12655923438072206
+  },
+  {
+   "id": "cost_clip_kahan",
+   "claim": "kahan mean clipped steps per run 4.20",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(clip_fired_steps | condition=kahan)",
+   "value": 4.2
+  },
+  {
+   "id": "cost_peak_fp32_master",
+   "claim": "fp32_master mean peak GPU memory 4.073 GB over 15 runs",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(peak_gpu_mem_gb | condition=fp32_master)",
+   "value": 4.072798344533333
+  },
+  {
+   "id": "cost_step_fp32_master",
+   "claim": "fp32_master mean step time 0.1186 s over 15 runs",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(s_per_step | condition=fp32_master)",
+   "value": 0.11863508294423421
+  },
+  {
+   "id": "cost_clip_fp32_master",
+   "claim": "fp32_master mean clipped steps per run 5.93",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(clip_fired_steps | condition=fp32_master)",
+   "value": 5.933333333333334
+  },
+  {
+   "id": "cost_peak_selective",
+   "claim": "selective mean peak GPU memory 3.785 GB over 15 runs",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(peak_gpu_mem_gb | condition=selective)",
+   "value": 3.7845951146666668
+  },
+  {
+   "id": "cost_step_selective",
+   "claim": "selective mean step time 0.1313 s over 15 runs",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(s_per_step | condition=selective)",
+   "value": 0.13127110973993938
+  },
+  {
+   "id": "cost_clip_selective",
+   "claim": "selective mean clipped steps per run 10.60",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(clip_fired_steps | condition=selective)",
+   "value": 10.6
+  },
+  {
+   "id": "cost_peak_sr",
+   "claim": "sr mean peak GPU memory 3.512 GB over 15 runs",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(peak_gpu_mem_gb | condition=sr)",
+   "value": 3.5124415829333335
+  },
+  {
+   "id": "cost_step_sr",
+   "claim": "sr mean step time 0.1289 s over 15 runs",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(s_per_step | condition=sr)",
+   "value": 0.12888528188069662
+  },
+  {
+   "id": "cost_clip_sr",
+   "claim": "sr mean clipped steps per run 2.40",
+   "source": "results/analysis/runs_table.csv",
+   "key": "mean(clip_fired_steps | condition=sr)",
+   "value": 2.4
+  },
+  {
+   "id": "sr_2e-4_nll_sd",
+   "claim": "stochastic rounding held-out NLL sd across 5 seeds at lr 2e-4 is 0.036",
+   "source": "results/analysis/runs_table.csv",
+   "key": "stdev(eval_nll | condition=sr, lr=2e-4)",
+   "value": 0.0361
+  },
+  {
+   "id": "sr_2e-4_nll_min",
+   "claim": "stochastic rounding held-out NLL at lr 2e-4 ranges from 1.264",
+   "source": "results/analysis/runs_table.csv",
+   "key": "min(eval_nll | condition=sr, lr=2e-4)",
+   "value": 1.2636
+  },
+  {
+   "id": "sr_2e-4_nll_max",
+   "claim": "stochastic rounding held-out NLL at lr 2e-4 ranges up to 1.349",
+   "source": "results/analysis/runs_table.csv",
+   "key": "max(eval_nll | condition=sr, lr=2e-4)",
+   "value": 1.3493
+  },
+  {
+   "id": "clip_2e-4_compensated_share",
+   "claim": "316 of 353 clipped steps are compensated writers (kahan, fp32_master, selective, sr) at lr 2e-4",
+   "source": "results/analysis/runs_table.csv",
+   "key": "sum(clip_fired_steps | condition in {kahan,fp32_master,selective,sr}, lr=2e-4)",
+   "value": 316
+  },
+  {
+   "id": "untrained_nll",
+   "claim": "Untrained model held-out NLL is 1.9372",
+   "source": "results/analysis/verdicts.json",
+   "key": "untrained_nll_per_seed.0",
+   "value": 1.9371732942909525
+  },
+  {
+   "id": "n_runs",
+   "claim": "90 runs analysed",
+   "source": "results/analysis/verdicts.json",
+   "key": "n_runs",
+   "value": 90
+  },
+  {
+   "id": "eval_tokens",
+   "claim": "Held-out probe scores 49,277 tokens over 256 questions",
+   "source": "results/analysis/verdicts.json",
+   "key": "timing.eval_tokens",
+   "value": [
+    49277
+   ]
+  },
+  {
+   "id": "clip_total",
+   "claim": "Clipping at 32 fired on 353 of 270,000 optimizer steps",
+   "source": "results/analysis/verdicts.json",
+   "key": "timing.clip_fired_total",
+   "value": 353
+  },
+  {
+   "id": "equiv_min_agreement",
+   "claim": "Equivalence check passed in all 5 seeds; min exact write agreement 0.99793",
+   "source": "results/analysis/verdicts.json",
+   "key": "equivalence_per_seed.*.min_exact_write_agreement",
+   "value": {
+    "0": 0.9979253987778077,
+    "1": 0.9979522210636897,
+    "2": 0.997926038111673,
+    "3": 0.9979452329958602,
+    "4": 0.9979731778330638
+   }
+  },
+  {
+   "id": "equiv_loss_diff",
+   "claim": "Equivalence check: RNE and torch losses identical over 20 steps in every seed",
+   "source": "results/analysis/verdicts.json",
+   "key": "equivalence_per_seed.*.max_abs_loss_diff",
+   "value": {
+    "0": 0.0,
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0
+   }
+  },
+  {
+   "id": "ref_C_master_minus_bf16",
+   "claim": "Experiment C (Mamba-3 187M) fp32 master minus bf16 baseline: +0.1326 at 2e-4, -0.04477 at 1e-4, -0.2036 at 5e-5",
+   "source": "checkpoint-001.json",
+   "key": "accepted plan text (checkpoint-001)",
+   "value": {
+    "2e-4": 0.1326,
+    "1e-4": -0.04477,
+    "5e-5": -0.2036
+   }
+  },
+  {
+   "id": "cfg_steps",
+   "claim": "3000 optimizer steps per run",
+   "source": "report_summary.json",
+   "key": "methods.data",
+   "value": 3000
+  },
+  {
+   "id": "cfg_batch",
+   "claim": "batch size 1",
+   "source": "report_summary.json",
+   "key": "methods.data",
+   "value": 1
+  },
+  {
+   "id": "cfg_seeds",
+   "claim": "5 seeds (0 to 4)",
+   "source": "report_summary.json",
+   "key": "methods.seeds",
+   "value": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "id": "cfg_lrs",
+   "claim": "learning rates 2e-4, 1e-4, 5e-5",
+   "source": "report_summary.json",
+   "key": "methods.learning_rates",
+   "value": [
+    0.0002,
+    0.0001,
+    5e-05
+   ]
+  },
+  {
+   "id": "cfg_conditions",
+   "claim": "6 conditions",
+   "source": "report_summary.json",
+   "key": "methods.conditions",
+   "value": 6
+  },
+  {
+   "id": "cfg_heldout_n",
+   "claim": "256 held-out test questions",
+   "source": "report_summary.json",
+   "key": "methods.held_out",
+   "value": 256
+  },
+  {
+   "id": "cfg_max_len",
+   "claim": "max sequence length 512",
+   "source": "report_summary.json",
+   "key": "methods.data",
+   "value": 512
+  },
+  {
+   "id": "cfg_clip",
+   "claim": "gradient clip bound 32",
+   "source": "report_summary.json",
+   "key": "methods.optimizer",
+   "value": 32
+  },
+  {
+   "id": "cfg_q2_band",
+   "claim": "Q2 equivalence band +/-0.01 nats",
+   "source": "report_summary.json",
+   "key": "decision_rules.q2",
+   "value": 0.01
+  },
+  {
+   "id": "cfg_q1_len",
+   "claim": "Q1 length ratio threshold 0.98 and |rho-1| <= 0.02",
+   "source": "report_summary.json",
+   "key": "decision_rules.q1",
+   "value": [
+    0.98,
+    0.02
+   ]
+  },
+  {
+   "id": "cfg_ci",
+   "claim": "90% Student-t intervals over seeds",
+   "source": "report_summary.json",
+   "key": "methods.statistics",
+   "value": 0.9
+  },
+  {
+   "id": "cfg_equiv_threshold",
+   "claim": "equivalence threshold 0.997 exact write agreement",
+   "source": "report_summary.json",
+   "key": "methods.equivalence_check",
+   "value": 0.997
+  },
+  {
+   "id": "cfg_equiv_steps",
+   "claim": "equivalence check 20 steps",
+   "source": "report_summary.json",
+   "key": "methods.equivalence_check",
+   "value": 20
+  },
+  {
+   "id": "cfg_betas",
+   "claim": "betas 0.9, 0.999; eps 1e-8; weight decay 0.01",
+   "source": "report_summary.json",
+   "key": "methods.optimizer",
+   "value": [
+    0.9,
+    0.999,
+    1e-08,
+    0.01
+   ]
+  },
+  {
+   "id": "cfg_model_params",
+   "claim": "SmolLM2-135M parameter count observed per run n = 134,515,008 coordinates",
+   "source": "report_summary.json",
+   "key": "runs (n field)",
+   "value": 134515008
+  }
+ ],
+ "n_claims": 307,
+ "note": "keys are dotted paths into the named JSON source; runs_table keys are aggregate expressions"
+}

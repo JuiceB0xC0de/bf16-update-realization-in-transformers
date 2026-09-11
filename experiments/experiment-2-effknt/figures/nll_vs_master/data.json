@@ -1,0 +1,163 @@
+{
+  "rows": [
+    {
+      "lr": "5e-5",
+      "log10_lr": -4.301029995663981,
+      "condition": "torch_adamw",
+      "label": "torch AdamW (null)",
+      "mean": 0.12327197808725074,
+      "ci_lo": 0.1224186288020441,
+      "ci_hi": 0.12412532737245738,
+      "color": "#7495AB"
+    },
+    {
+      "lr": "5e-5",
+      "log10_lr": -4.301029995663981,
+      "condition": "rne",
+      "label": "rne (baseline)",
+      "mean": 0.12333742334347382,
+      "ci_lo": 0.12230933211156708,
+      "ci_hi": 0.12436551457538056,
+      "color": "#4E728A"
+    },
+    {
+      "lr": "5e-5",
+      "log10_lr": -4.301029995663981,
+      "condition": "kahan",
+      "label": "kahan",
+      "mean": 0.0001572665019205388,
+      "ci_lo": -0.0007885631053336725,
+      "ci_hi": 0.0011030961091747502,
+      "color": "#C4650D"
+    },
+    {
+      "lr": "5e-5",
+      "log10_lr": -4.301029995663981,
+      "condition": "selective",
+      "label": "selective",
+      "mean": 0.020188445469474604,
+      "ci_lo": 0.017083143313086413,
+      "ci_hi": 0.023293747625862796,
+      "color": "#988453"
+    },
+    {
+      "lr": "5e-5",
+      "log10_lr": -4.301029995663981,
+      "condition": "sr",
+      "label": "stochastic rounding",
+      "mean": 0.0028313974708377375,
+      "ci_lo": 0.002224472513451262,
+      "ci_hi": 0.003438322428224213,
+      "color": "#B9605B"
+    },
+    {
+      "lr": "1e-4",
+      "log10_lr": -4.0,
+      "condition": "torch_adamw",
+      "label": "torch AdamW (null)",
+      "mean": 0.01744581581790148,
+      "ci_lo": 0.015575007952921174,
+      "ci_hi": 0.019316623682881784,
+      "color": "#7495AB"
+    },
+    {
+      "lr": "1e-4",
+      "log10_lr": -4.0,
+      "condition": "rne",
+      "label": "rne (baseline)",
+      "mean": 0.017476317816349417,
+      "ci_lo": 0.015896152728053368,
+      "ci_hi": 0.019056482904645466,
+      "color": "#4E728A"
+    },
+    {
+      "lr": "1e-4",
+      "log10_lr": -4.0,
+      "condition": "kahan",
+      "label": "kahan",
+      "mean": 0.0004509879592650812,
+      "ci_lo": -0.0019130244514657376,
+      "ci_hi": 0.0028150003699959,
+      "color": "#C4650D"
+    },
+    {
+      "lr": "1e-4",
+      "log10_lr": -4.0,
+      "condition": "selective",
+      "label": "selective",
+      "mean": 0.058853578752329216,
+      "ci_lo": 0.05469722454408422,
+      "ci_hi": 0.06300993296057422,
+      "color": "#988453"
+    },
+    {
+      "lr": "1e-4",
+      "log10_lr": -4.0,
+      "condition": "sr",
+      "label": "stochastic rounding",
+      "mean": 0.006286133259300763,
+      "ci_lo": 0.00035199722918736066,
+      "ci_hi": 0.012220269289414165,
+      "color": "#B9605B"
+    },
+    {
+      "lr": "2e-4",
+      "log10_lr": -3.6989700043360187,
+      "condition": "torch_adamw",
+      "label": "torch AdamW (null)",
+      "mean": -0.10660816326174656,
+      "ci_lo": -0.11758778957831367,
+      "ci_hi": -0.09562853694517945,
+      "color": "#7495AB"
+    },
+    {
+      "lr": "2e-4",
+      "log10_lr": -3.6989700043360187,
+      "condition": "rne",
+      "label": "rne (baseline)",
+      "mean": -0.1061941726768448,
+      "ci_lo": -0.11722187032149478,
+      "ci_hi": -0.09516647503219483,
+      "color": "#4E728A"
+    },
+    {
+      "lr": "2e-4",
+      "log10_lr": -3.6989700043360187,
+      "condition": "kahan",
+      "label": "kahan",
+      "mean": -0.009045270093983326,
+      "ci_lo": -0.024295875796374697,
+      "ci_hi": 0.0062053356084080455,
+      "color": "#C4650D"
+    },
+    {
+      "lr": "2e-4",
+      "log10_lr": -3.6989700043360187,
+      "condition": "selective",
+      "label": "selective",
+      "mean": 0.10772306611234712,
+      "ci_lo": 0.08629669441524893,
+      "ci_hi": 0.12914943780944532,
+      "color": "#988453"
+    },
+    {
+      "lr": "2e-4",
+      "log10_lr": -3.6989700043360187,
+      "condition": "sr",
+      "label": "stochastic rounding",
+      "mean": 0.01839583199851118,
+      "ci_lo": -0.0163414537541192,
+      "ci_hi": 0.05313311775114156,
+      "color": "#B9605B"
+    }
+  ],
+  "offsets": {
+    "rne": -0.06,
+    "kahan": -0.03,
+    "selective": 0.0,
+    "sr": 0.03,
+    "torch_adamw": 0.06
+  },
+  "band": 0.01,
+  "alt": "Dot and interval chart of the paired held-out NLL difference from fp32 master weights at three learning rates, one series per writer, with 90% Student-t intervals and a shaded \u00b10.01 band."
+}

@@ -1,0 +1,9 @@
+{
+ "kahan": "#C4650D",
+ "rne": "#4E728A",
+ "fp32_master": "#2E6E4E",
+ "selective": "#988453",
+ "sr": "#B9605B",
+ "torch_adamw": "#7495AB",
+ "untrained": "#31362E"
+}
