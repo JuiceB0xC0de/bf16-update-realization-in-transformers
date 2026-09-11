@@ -1,0 +1,36 @@
+experiment: 1
+eid: "exp_01m1tdvatwe1rrek9g34p75vje"
+title: "Does the BF16 update-realization pattern appear in a small pretrained Transformer under AdamW?"
+date: "2026-09-06"
+status: complete
+data:
+  model: "HuggingFaceTB/SmolLM2-135M @ 93efa2f097d58c2a74874c7e644dbc9b0cee75a2 (134,515,008 bf16 params)"
+  dataset: "openai/gsm8k main/train @ 740312add88f781978c0658806c59bc2815b9866 (7,473 rows; orders = default_rng(seed).permutation(7473)[:300], seeds 0 and 1)"
+  mamba_reference: "public Mamba-3 187M step-100 replay bundle, revision d30ed00178a04810ea197a7f621e543c1aa9f091"
+outputs:
+  run_outputs: "artifact://juiceb0xc0de-15787e/experiments/exp_01m1tdvatwe1rrek9g34p75vje/run1/"
+  run_log: "artifact://juiceb0xc0de-15787e/experiments/exp_01m1tdvatwe1rrek9g34p75vje/run1_stdout.log"
+  analysis_outputs: "artifact://juiceb0xc0de-15787e/experiments/exp_01m1tdvatwe1rrek9g34p75vje/analysis/"
+  analysis_copies: "results/analysis/"
+  reference_check: "results/reference_check.json"
+  figures: "figures/{overshoot_per_step,predicted_vs_stored,shadow_curve,x_histogram,family_overshoot_per_step}"
+  report: "/srv/silico-state/_shared/silico/experiments/exp_01m1tdvatwe1rrek9g34p75vje/apps/index.html"
+  wandb_project: "https://wandb.ai/ricks-holmberg-juiceb0xc0de/default-exp-exp_01m1tdvatwe1rrek9g34p75vje"
+results:
+  q1_signature_present: present
+  q2_write_model_transfers: supports
+  q3_magnitude_dependence: supports
+  median_rho_order0: 1.3222
+  median_rho_order1: 1.3227
+  median_rho_pooled: 1.3224
+  mamba_reference_median: 1.334
+  min_exact_write_agreement_captured: 0.99754
+  max_abs_predicted_gap_captured: 0.00078
+  shadow_span_order0: 0.2288
+  shadow_span_order1: 0.2277
+  clip_fired_steps: 0
+on_demand_jobs:
+  - id: "653635765785"
+    role: "production run (1xH100, 8 min)"
+  - id: "212300581606"
+    role: "CPU analysis (1 min)"

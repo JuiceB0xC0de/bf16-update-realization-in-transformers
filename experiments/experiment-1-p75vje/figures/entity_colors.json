@@ -1,0 +1,9 @@
+{
+  "order 0": "#C4650D",
+  "order 1": "#4E728A",
+  "Mamba-3 187M reference": "#31362E",
+  "attention": "#2E6E4E",
+  "mlp": "#988453",
+  "embedding": "#B9605B",
+  "norm": "#7495AB"
+}

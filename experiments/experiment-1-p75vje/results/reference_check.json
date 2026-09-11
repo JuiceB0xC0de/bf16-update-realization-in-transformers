@@ -1,0 +1,161 @@
+{
+ "bundle_url": "https://huggingface.co/datasets/juiceb0xc0de/mmb3-slt-6xcam-results/resolve/d30ed00178a04810ea197a7f621e543c1aa9f091/observed-runs/20260810T091311Z/e1_s000100/camera-3/step_000100_optimizer_delivery.npz",
+ "group_settings": {
+  "group_lr": 0.0002,
+  "group_weight_decay": 0.01,
+  "group_eps": 1e-08,
+  "bias_correction1": 0.9999734386011124,
+  "bias_correction2": 0.09520785288629108
+ },
+ "pooled": {
+  "n": 958464,
+  "overshoot": 1.298739340421714,
+  "length_ratio": 0.6083778912927718,
+  "cosine": 0.46843725477294407,
+  "unmoved_fraction": 0.8773840227697649,
+  "multi_spacing_share_of_movers": 0.35804055376394406,
+  "round_agreement": 0.9984798594417735,
+  "exact_write_agreement": 0.9988982371794872,
+  "predicted_overshoot": 1.2982609490531265,
+  "predicted_minus_stored": -0.0004783913685875163,
+  "intent_norm": 0.0459692538157605,
+  "realized_norm": 0.027966677700734573,
+  "shadow": [
+   {
+    "factor": 0.0625,
+    "overshoot": 1.3466412422296439,
+    "unmoved_fraction": 0.9915990584935898
+   },
+   {
+    "factor": 0.125,
+    "overshoot": 1.3303641660254903,
+    "unmoved_fraction": 0.9832367204193376
+   },
+   {
+    "factor": 0.25,
+    "overshoot": 1.3253819192460696,
+    "unmoved_fraction": 0.9667259281517094
+   },
+   {
+    "factor": 0.5,
+    "overshoot": 1.316846174499738,
+    "unmoved_fraction": 0.9351723173744658
+   },
+   {
+    "factor": 1.0,
+    "overshoot": 1.2982609490531265,
+    "unmoved_fraction": 0.8774101061698718
+   },
+   {
+    "factor": 2.0,
+    "overshoot": 1.275053105993339,
+    "unmoved_fraction": 0.7784987229567307
+   },
+   {
+    "factor": 4.0,
+    "overshoot": 1.221316189655743,
+    "unmoved_fraction": 0.6294905181623932
+   },
+   {
+    "factor": 8.0,
+    "overshoot": 1.1481668781138439,
+    "unmoved_fraction": 0.4472155448717949
+   },
+   {
+    "factor": 16.0,
+    "overshoot": 1.0720935734752315,
+    "unmoved_fraction": 0.27590916299412394
+   }
+  ],
+  "x_hist_log2": {
+   "log2_min": -16,
+   "counts": [
+    281,
+    309,
+    568,
+    1214,
+    2405,
+    4831,
+    9632,
+    19324,
+    37618,
+    69890,
+    119147,
+    164425,
+    174670,
+    142462,
+    94367,
+    55371,
+    30137,
+    15794,
+    7989,
+    4028,
+    2029,
+    974,
+    462,
+    537
+   ]
+  }
+ },
+ "n_tensors": 48,
+ "checks": {
+  "n": {
+   "reviewed": 958464,
+   "observed": 958464,
+   "gap": 0,
+   "tolerance": 0,
+   "pass": true
+  },
+  "overshoot": {
+   "reviewed": 1.299,
+   "observed": 1.298739340421714,
+   "gap": 0.00026065957828591557,
+   "tolerance": 0.01,
+   "pass": true
+  },
+  "predicted_overshoot": {
+   "reviewed": 1.298,
+   "observed": 1.2982609490531265,
+   "gap": 0.000260949053126458,
+   "tolerance": 0.01,
+   "pass": true
+  },
+  "exact_write_agreement": {
+   "reviewed": 0.9989,
+   "observed": 0.9988982371794872,
+   "gap": 1.7628205127850904e-06,
+   "tolerance": 0.001,
+   "pass": true
+  },
+  "length_ratio": {
+   "reviewed": 0.6084,
+   "observed": 0.6083778912927718,
+   "gap": 2.210870722829661e-05,
+   "tolerance": 0.001,
+   "pass": true
+  },
+  "cosine": {
+   "reviewed": 0.4684,
+   "observed": 0.46843725477294407,
+   "gap": 3.725477294408419e-05,
+   "tolerance": 0.001,
+   "pass": true
+  },
+  "multi_spacing_share_of_movers": {
+   "reviewed": 0.3588,
+   "observed": 0.35804055376394406,
+   "gap": 0.0007594462360559495,
+   "tolerance": 0.001,
+   "pass": true
+  },
+  "unmoved_fraction": {
+   "reviewed": 0.8774,
+   "observed": 0.8773840227697649,
+   "gap": 1.5977230235053597e-05,
+   "tolerance": 0.001,
+   "pass": true
+  }
+ },
+ "pass": true,
+ "torch_version": "2.11.0+cpu"
+}

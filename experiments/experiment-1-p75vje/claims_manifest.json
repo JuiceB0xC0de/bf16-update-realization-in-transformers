@@ -1,0 +1,2308 @@
+{
+ "experiment": "exp_01m1tdvatwe1rrek9g34p75vje",
+ "n_claims": 274,
+ "claims": [
+  {
+   "id": "verdict_q1",
+   "claim": "Q1 verdict: signature present",
+   "value": "present",
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q1_signature_present/verdict",
+   "kind": "categorical"
+  },
+  {
+   "id": "verdict_q2",
+   "claim": "Q2 verdict: write model transfers",
+   "value": "supports",
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/verdict",
+   "kind": "categorical"
+  },
+  {
+   "id": "verdict_q3",
+   "claim": "Q3 verdict: magnitude dependence",
+   "value": "supports",
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q3_magnitude_dependence/verdict",
+   "kind": "categorical"
+  },
+  {
+   "id": "q3_tolerance",
+   "claim": "Q3 adjacent-rise tolerance",
+   "value": 0.005,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q3_magnitude_dependence/rise_tolerance",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_median_rho",
+   "claim": "order0 median whole-model rho over 300 steps",
+   "value": 1.3222438017344353,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_min_rho",
+   "claim": "order0 minimum rho (step 1)",
+   "value": 1.1791485552155494,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/min_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_max_rho",
+   "claim": "order0 maximum rho",
+   "value": 1.3451347571487864,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/max_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_p05_rho",
+   "claim": "order0 5th percentile rho",
+   "value": 1.3141413352407711,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/p05_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_p95_rho",
+   "claim": "order0 95th percentile rho",
+   "value": 1.3300025208220663,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/p95_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_steps_len_below_one",
+   "claim": "order0 steps with length ratio below one",
+   "value": 300,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/steps_length_ratio_below_one",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_max_len",
+   "claim": "order0 maximum length ratio",
+   "value": 0.6656317699685848,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/max_length_ratio",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_median_len",
+   "claim": "order0 median length ratio",
+   "value": 0.5219303293297217,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/median_length_ratio",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_min_unmoved",
+   "claim": "order0 minimum unmoved fraction",
+   "value": 0.6986423998131123,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/min_unmoved_fraction",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_median_unmoved",
+   "claim": "order0 median unmoved fraction",
+   "value": 0.9322039478301187,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/median_unmoved_fraction",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_median_cos",
+   "claim": "order0 median cosine",
+   "value": 0.3942264190311163,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/median_cosine",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_clip_fired",
+   "claim": "order0 steps on which clipping fired",
+   "value": 0,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/clip_fired_steps",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_n_truncated",
+   "claim": "order0 truncated rows",
+   "value": 0,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/n_truncated",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_max_len_tokens",
+   "claim": "order0 longest example in tokens",
+   "value": 447,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/n_tokens_max",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_median_tokens",
+   "claim": "order0 median tokens per step",
+   "value": 180.5,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/n_tokens_median",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_foreach",
+   "claim": "order0 torch resolved foreach path",
+   "value": true,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/resolved_foreach",
+   "kind": "categorical"
+  },
+  {
+   "id": "order0_shadow_median",
+   "claim": "order0 median shadow rho at the nine factors",
+   "value": [
+    1.3333582205419248,
+    1.3324944860817465,
+    1.330435884421199,
+    1.3278567864562594,
+    1.3216487436718793,
+    1.3071148905586638,
+    1.2570642314558556,
+    1.1875354576446435,
+    1.104599209213142
+   ],
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/shadow_median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_shadow_unmoved",
+   "claim": "order0 median shadow unmoved fraction at the nine factors",
+   "value": [
+    0.9956257669032738,
+    0.9912550761622079,
+    0.9825674730659051,
+    0.9653793723894363,
+    0.9322205853788448,
+    0.8675138353335266,
+    0.7528554731974592,
+    0.5827166846691189,
+    0.3871689841478506
+   ],
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/shadow_median_unmoved",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_shadow_span",
+   "claim": "order0 shadow span",
+   "value": 0.22875901132878274,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/shadow_stats/span",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_shadow_slope_per_log2_factor",
+   "claim": "order0 shadow slope_per_log2_factor",
+   "value": -0.02528997220757874,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/shadow_stats/slope_per_log2_factor",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_shadow_max_adjacent_rise",
+   "claim": "order0 shadow max_adjacent_rise",
+   "value": 0.0,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/shadow_stats/max_adjacent_rise",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_shadow_plateau_end_factor",
+   "claim": "order0 shadow plateau_end_factor",
+   "value": 0.5,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/shadow_stats/plateau_end_factor",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_shadow_plateau_span",
+   "claim": "order0 shadow plateau_span",
+   "value": 0.005501434085665391,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/shadow_stats/plateau_span",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_shadow_monotone_within_tol",
+   "claim": "order0 shadow monotone_within_tol",
+   "value": true,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/shadow_stats/monotone_within_tol",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_shadow_strictly_decreasing",
+   "claim": "order0 shadow strictly_decreasing",
+   "value": true,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/shadow_stats/strictly_decreasing",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_attention_n_coords",
+   "claim": "order0 attention coordinates",
+   "value": 26542080,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/families/attention/n_coords",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_attention_median_rho",
+   "claim": "order0 attention median rho",
+   "value": 1.3207815499223288,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/families/attention/median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_attention_median_unmoved",
+   "claim": "order0 attention median unmoved",
+   "value": 0.9321072802131558,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/families/attention/median_unmoved",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_mlp_n_coords",
+   "claim": "order0 mlp coordinates",
+   "value": 79626240,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/families/mlp/n_coords",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_mlp_median_rho",
+   "claim": "order0 mlp median rho",
+   "value": 1.327111267855642,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/families/mlp/median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_mlp_median_unmoved",
+   "claim": "order0 mlp median unmoved",
+   "value": 0.9450593171296295,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/families/mlp/median_unmoved",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_embedding_n_coords",
+   "claim": "order0 embedding coordinates",
+   "value": 28311552,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/families/embedding/n_coords",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_embedding_median_rho",
+   "claim": "order0 embedding median rho",
+   "value": 1.3190522586844493,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/families/embedding/median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_embedding_median_unmoved",
+   "claim": "order0 embedding median unmoved",
+   "value": 0.8990581300523546,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/families/embedding/median_unmoved",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_norm_n_coords",
+   "claim": "order0 norm coordinates",
+   "value": 35136,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/families/norm/n_coords",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_norm_median_rho",
+   "claim": "order0 norm median rho",
+   "value": 1.418790149195234,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/families/norm/median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_norm_median_unmoved",
+   "claim": "order0 norm median unmoved",
+   "value": 0.9967412340619308,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/families/norm/median_unmoved",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_n_detail",
+   "claim": "order0 detail coordinates per bundle",
+   "value": 2013504,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/n_detail_coordinates",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_online_max_gap",
+   "claim": "order0 max |predicted - stored| online",
+   "value": 0.002449000941666668,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/max_abs_predicted_gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_online_median_gap",
+   "claim": "order0 median |predicted - stored| online",
+   "value": 0.00046922215827871483,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/median_abs_predicted_gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_online_min_exact",
+   "claim": "order0 min exact write agreement online",
+   "value": 0.9979211836347659,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/min_exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_loss_first10",
+   "claim": "order0 mean loss first 10 steps",
+   "value": 1.9010156273841858,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/loss_first10_mean",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order0_loss_last50",
+   "claim": "order0 mean loss last 50 steps",
+   "value": 1.3026808488368988,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order0/loss_last50_mean",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_median_rho",
+   "claim": "order1 median whole-model rho over 300 steps",
+   "value": 1.3226548406323577,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_min_rho",
+   "claim": "order1 minimum rho (step 1)",
+   "value": 1.178983403590617,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/min_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_max_rho",
+   "claim": "order1 maximum rho",
+   "value": 1.3412190920578497,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/max_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_p05_rho",
+   "claim": "order1 5th percentile rho",
+   "value": 1.3116281545650026,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/p05_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_p95_rho",
+   "claim": "order1 95th percentile rho",
+   "value": 1.3327860111641159,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/p95_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_steps_len_below_one",
+   "claim": "order1 steps with length ratio below one",
+   "value": 300,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/steps_length_ratio_below_one",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_max_len",
+   "claim": "order1 maximum length ratio",
+   "value": 0.6657231303648763,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/max_length_ratio",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_median_len",
+   "claim": "order1 median length ratio",
+   "value": 0.5188719081530042,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/median_length_ratio",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_min_unmoved",
+   "claim": "order1 minimum unmoved fraction",
+   "value": 0.6971936321038616,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/min_unmoved_fraction",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_median_unmoved",
+   "claim": "order1 median unmoved fraction",
+   "value": 0.9338445677377502,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/median_unmoved_fraction",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_median_cos",
+   "claim": "order1 median cosine",
+   "value": 0.39259736168331616,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/median_cosine",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_clip_fired",
+   "claim": "order1 steps on which clipping fired",
+   "value": 0,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/clip_fired_steps",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_n_truncated",
+   "claim": "order1 truncated rows",
+   "value": 0,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/n_truncated",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_max_len_tokens",
+   "claim": "order1 longest example in tokens",
+   "value": 394,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/n_tokens_max",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_median_tokens",
+   "claim": "order1 median tokens per step",
+   "value": 176.0,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/n_tokens_median",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_foreach",
+   "claim": "order1 torch resolved foreach path",
+   "value": true,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/resolved_foreach",
+   "kind": "categorical"
+  },
+  {
+   "id": "order1_shadow_median",
+   "claim": "order1 median shadow rho at the nine factors",
+   "value": [
+    1.3336972105314313,
+    1.3331285133035653,
+    1.3309333856674908,
+    1.32778429197788,
+    1.3221477868462785,
+    1.30633369700208,
+    1.2565103614094304,
+    1.189448983858783,
+    1.1059994453930928
+   ],
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/shadow_median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_shadow_unmoved",
+   "claim": "order1 median shadow unmoved fraction at the nine factors",
+   "value": [
+    0.9957403674986214,
+    0.9914859871992872,
+    0.983016619974479,
+    0.9662266087067399,
+    0.933862799904082,
+    0.870975352430563,
+    0.7593915542866414,
+    0.5916873751366093,
+    0.3952926204338478
+   ],
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/shadow_median_unmoved",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_shadow_span",
+   "claim": "order1 shadow span",
+   "value": 0.2276977651383385,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/shadow_stats/span",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_shadow_slope_per_log2_factor",
+   "claim": "order1 shadow slope_per_log2_factor",
+   "value": -0.02520210487299369,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/shadow_stats/slope_per_log2_factor",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_shadow_max_adjacent_rise",
+   "claim": "order1 shadow max_adjacent_rise",
+   "value": 0.0,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/shadow_stats/max_adjacent_rise",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_shadow_plateau_end_factor",
+   "claim": "order1 shadow plateau_end_factor",
+   "value": 0.5,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/shadow_stats/plateau_end_factor",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_shadow_plateau_span",
+   "claim": "order1 shadow plateau_span",
+   "value": 0.005912918553551361,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/shadow_stats/plateau_span",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_shadow_monotone_within_tol",
+   "claim": "order1 shadow monotone_within_tol",
+   "value": true,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/shadow_stats/monotone_within_tol",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_shadow_strictly_decreasing",
+   "claim": "order1 shadow strictly_decreasing",
+   "value": true,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/shadow_stats/strictly_decreasing",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_attention_n_coords",
+   "claim": "order1 attention coordinates",
+   "value": 26542080,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/families/attention/n_coords",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_attention_median_rho",
+   "claim": "order1 attention median rho",
+   "value": 1.32079572880874,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/families/attention/median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_attention_median_unmoved",
+   "claim": "order1 attention median unmoved",
+   "value": 0.9318970291702835,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/families/attention/median_unmoved",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_mlp_n_coords",
+   "claim": "order1 mlp coordinates",
+   "value": 79626240,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/families/mlp/n_coords",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_mlp_median_rho",
+   "claim": "order1 mlp median rho",
+   "value": 1.3268634536472594,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/families/mlp/median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_mlp_median_unmoved",
+   "claim": "order1 mlp median unmoved",
+   "value": 0.9446384634010095,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/families/mlp/median_unmoved",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_embedding_n_coords",
+   "claim": "order1 embedding coordinates",
+   "value": 28311552,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/families/embedding/n_coords",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_embedding_median_rho",
+   "claim": "order1 embedding median rho",
+   "value": 1.3199564936414994,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/families/embedding/median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_embedding_median_unmoved",
+   "claim": "order1 embedding median unmoved",
+   "value": 0.903219982429787,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/families/embedding/median_unmoved",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_norm_n_coords",
+   "claim": "order1 norm coordinates",
+   "value": 35136,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/families/norm/n_coords",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_norm_median_rho",
+   "claim": "order1 norm median rho",
+   "value": 1.403887017671019,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/families/norm/median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_norm_median_unmoved",
+   "claim": "order1 norm median unmoved",
+   "value": 0.9963285519125683,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/families/norm/median_unmoved",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_n_detail",
+   "claim": "order1 detail coordinates per bundle",
+   "value": 2013504,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/n_detail_coordinates",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_online_max_gap",
+   "claim": "order1 max |predicted - stored| online",
+   "value": 0.0026670086017588357,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/max_abs_predicted_gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_online_median_gap",
+   "claim": "order1 median |predicted - stored| online",
+   "value": 0.00047883394313286143,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/median_abs_predicted_gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_online_min_exact",
+   "claim": "order1 min exact write agreement online",
+   "value": 0.9979461919966581,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/min_exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_loss_first10",
+   "claim": "order1 mean loss first 10 steps",
+   "value": 1.8572994112968444,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/loss_first10_mean",
+   "kind": "quantitative"
+  },
+  {
+   "id": "order1_loss_last50",
+   "claim": "order1 mean loss last 50 steps",
+   "value": 1.267738540172577,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/per_order.json",
+   "key": "order1/loss_last50_mean",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_n_steps",
+   "claim": "pooled over both orders: n_steps",
+   "value": 600,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/n_steps",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_median_overshoot",
+   "claim": "pooled over both orders: median_overshoot",
+   "value": 1.3223768304884604,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_p05_overshoot",
+   "claim": "pooled over both orders: p05_overshoot",
+   "value": 1.3130276719771252,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/p05_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_p95_overshoot",
+   "claim": "pooled over both orders: p95_overshoot",
+   "value": 1.3310898868400791,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/p95_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_min_overshoot",
+   "claim": "pooled over both orders: min_overshoot",
+   "value": 1.178983403590617,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/min_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_max_overshoot",
+   "claim": "pooled over both orders: max_overshoot",
+   "value": 1.3451347571487864,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/max_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_median_length_ratio",
+   "claim": "pooled over both orders: median_length_ratio",
+   "value": 0.5200533090489448,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/median_length_ratio",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_max_length_ratio",
+   "claim": "pooled over both orders: max_length_ratio",
+   "value": 0.6657231303648763,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/max_length_ratio",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_median_unmoved_fraction",
+   "claim": "pooled over both orders: median_unmoved_fraction",
+   "value": 0.933030119583385,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/median_unmoved_fraction",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_min_unmoved_fraction",
+   "claim": "pooled over both orders: min_unmoved_fraction",
+   "value": 0.6971936321038616,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/min_unmoved_fraction",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_median_cosine",
+   "claim": "pooled over both orders: median_cosine",
+   "value": 0.39323139718861666,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/median_cosine",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_median_abs_online_predicted_gap",
+   "claim": "pooled over both orders: median_abs_online_predicted_gap",
+   "value": 0.0004771292666935212,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/median_abs_online_predicted_gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_max_abs_online_predicted_gap",
+   "claim": "pooled over both orders: max_abs_online_predicted_gap",
+   "value": 0.0026670086017588357,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/max_abs_online_predicted_gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_median_exact_write_agreement",
+   "claim": "pooled over both orders: median_exact_write_agreement",
+   "value": 0.9993774709510481,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/median_exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_min_exact_write_agreement",
+   "claim": "pooled over both orders: min_exact_write_agreement",
+   "value": 0.9979211836347659,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/min_exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_median_multi_spacing_share_of_movers",
+   "claim": "pooled over both orders: median_multi_spacing_share_of_movers",
+   "value": 0.34160481279586496,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/median_multi_spacing_share_of_movers",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_gap_to_mamba_median",
+   "claim": "pooled over both orders: gap_to_mamba_median",
+   "value": -0.011623169511539633,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/gap_to_mamba_median",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_loss_first_order0",
+   "claim": "order 0 loss at step 1",
+   "value": 2.2574076652526855,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/loss_first_step/order0",
+   "kind": "quantitative"
+  },
+  {
+   "id": "pooled_loss_first_order1",
+   "claim": "order 1 loss at step 1",
+   "value": 2.7269670963287354,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "pooled_both_orders/loss_first_step/order1",
+   "kind": "quantitative"
+  },
+  {
+   "id": "mamba_median_clip1",
+   "claim": "Mamba-3 reference median rho (clip 1)",
+   "value": 1.334,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "mamba_reference_medians/clip1",
+   "kind": "quantitative"
+  },
+  {
+   "id": "mamba_median_clip8",
+   "claim": "Mamba-3 reference median rho (clip 8)",
+   "value": 1.335,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "mamba_reference_medians/clip8",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_attention_n_coords",
+   "claim": "attention pooled n_coords",
+   "value": 26542080,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/attention/n_coords",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_attention_share_of_parameters",
+   "claim": "attention pooled share_of_parameters",
+   "value": 0.19731686742344764,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/attention/share_of_parameters",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_attention_median_overshoot",
+   "claim": "attention pooled median_overshoot",
+   "value": 1.3207906882929528,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/attention/median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_attention_p05_overshoot",
+   "claim": "attention pooled p05_overshoot",
+   "value": 1.3176679187036058,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/attention/p05_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_attention_p95_overshoot",
+   "claim": "attention pooled p95_overshoot",
+   "value": 1.3232096031524152,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/attention/p95_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_attention_median_unmoved",
+   "claim": "attention pooled median_unmoved",
+   "value": 0.9319393581814237,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/attention/median_unmoved",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_attention_median_length_ratio",
+   "claim": "attention pooled median_length_ratio",
+   "value": 0.47309051063287977,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/attention/median_length_ratio",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_attention_moving_coords_per_step_median",
+   "claim": "attention pooled moving_coords_per_step_median",
+   "value": 1806470.999999999,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/attention/moving_coords_per_step_median",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_mlp_n_coords",
+   "claim": "mlp pooled n_coords",
+   "value": 79626240,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/mlp/n_coords",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_mlp_share_of_parameters",
+   "claim": "mlp pooled share_of_parameters",
+   "value": 0.5919506022703429,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/mlp/share_of_parameters",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_mlp_median_overshoot",
+   "claim": "mlp pooled median_overshoot",
+   "value": 1.3270004967541151,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/mlp/median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_mlp_p05_overshoot",
+   "claim": "mlp pooled p05_overshoot",
+   "value": 1.3242598256455829,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/mlp/p05_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_mlp_p95_overshoot",
+   "claim": "mlp pooled p95_overshoot",
+   "value": 1.3300820519143897,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/mlp/p95_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_mlp_median_unmoved",
+   "claim": "mlp pooled median_unmoved",
+   "value": 0.9448127212838381,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/mlp/median_unmoved",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_mlp_median_length_ratio",
+   "claim": "mlp pooled median_length_ratio",
+   "value": 0.43250600716575893,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/mlp/median_length_ratio",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_mlp_moving_coords_per_step_median",
+   "claim": "mlp pooled moving_coords_per_step_median",
+   "value": 4394355.5,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/mlp/moving_coords_per_step_median",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_embedding_n_coords",
+   "claim": "embedding pooled n_coords",
+   "value": 28311552,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/embedding/n_coords",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_embedding_share_of_parameters",
+   "claim": "embedding pooled share_of_parameters",
+   "value": 0.2104713252516775,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/embedding/share_of_parameters",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_embedding_median_overshoot",
+   "claim": "embedding pooled median_overshoot",
+   "value": 1.3193573377862993,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/embedding/median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_embedding_p05_overshoot",
+   "claim": "embedding pooled p05_overshoot",
+   "value": 1.3013991342321607,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/embedding/p05_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_embedding_p95_overshoot",
+   "claim": "embedding pooled p95_overshoot",
+   "value": 1.3350423112665255,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/embedding/p95_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_embedding_median_unmoved",
+   "claim": "embedding pooled median_unmoved",
+   "value": 0.9018823835584853,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/embedding/median_unmoved",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_embedding_median_length_ratio",
+   "claim": "embedding pooled median_length_ratio",
+   "value": 0.6474218772788791,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/embedding/median_length_ratio",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_embedding_moving_coords_per_step_median",
+   "claim": "embedding pooled moving_coords_per_step_median",
+   "value": 2777861.999999999,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/embedding/moving_coords_per_step_median",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_norm_n_coords",
+   "claim": "norm pooled n_coords",
+   "value": 35136,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/norm/n_coords",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_norm_share_of_parameters",
+   "claim": "norm pooled share_of_parameters",
+   "value": 0.0002612050545319077,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/norm/share_of_parameters",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_norm_median_overshoot",
+   "claim": "norm pooled median_overshoot",
+   "value": 1.411627397865369,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/norm/median_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_norm_p05_overshoot",
+   "claim": "norm pooled p05_overshoot",
+   "value": 1.3209434815114875,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/norm/p05_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_norm_p95_overshoot",
+   "claim": "norm pooled p95_overshoot",
+   "value": 1.4957112225220968,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/norm/p95_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_norm_median_unmoved",
+   "claim": "norm pooled median_unmoved",
+   "value": 0.9965420081967213,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/norm/median_unmoved",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_norm_median_length_ratio",
+   "claim": "norm pooled median_length_ratio",
+   "value": 0.12406470397415482,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/norm/median_length_ratio",
+   "kind": "quantitative"
+  },
+  {
+   "id": "fam_norm_moving_coords_per_step_median",
+   "claim": "norm pooled moving_coords_per_step_median",
+   "value": 121.49999999999898,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "families_pooled/norm/moving_coords_per_step_median",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_min_exact",
+   "claim": "minimum exact write agreement over the twelve captured steps",
+   "value": 0.9975401091827978,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/min_exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_max_gap",
+   "claim": "maximum |predicted - stored rho| over the twelve captured steps",
+   "value": 0.000779957759070582,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/max_abs_gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_median_gap",
+   "claim": "median |predicted - stored rho| over the twelve captured steps",
+   "value": 0.0004373764467430208,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/median_abs_gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step1_stored",
+   "claim": "order0 step 1 detail stored",
+   "value": 1.1834717822448608,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/0/stored",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step1_predicted",
+   "claim": "order0 step 1 detail predicted",
+   "value": 1.1831386186602815,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/0/predicted",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step1_gap",
+   "claim": "order0 step 1 detail gap",
+   "value": -0.0003331635845793546,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/0/gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step1_exact_write_agreement",
+   "claim": "order0 step 1 detail exact_write_agreement",
+   "value": 0.9975401091827978,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/0/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step1_round_agreement",
+   "claim": "order0 step 1 detail round_agreement",
+   "value": 0.995894222211627,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/0/round_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step1_n",
+   "claim": "order0 step 1 detail n",
+   "value": 2013504,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/0/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step10_stored",
+   "claim": "order0 step 10 detail stored",
+   "value": 1.336853692452789,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/1/stored",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step10_predicted",
+   "claim": "order0 step 10 detail predicted",
+   "value": 1.3363720996189747,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/1/predicted",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step10_gap",
+   "claim": "order0 step 10 detail gap",
+   "value": -0.000481592833814215,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/1/gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step10_exact_write_agreement",
+   "claim": "order0 step 10 detail exact_write_agreement",
+   "value": 0.998374972187788,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/1/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step10_round_agreement",
+   "claim": "order0 step 10 detail round_agreement",
+   "value": 0.9978018419630654,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/1/round_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step10_n",
+   "claim": "order0 step 10 detail n",
+   "value": 2013504,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/1/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step50_stored",
+   "claim": "order0 step 50 detail stored",
+   "value": 1.3344020838298187,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/2/stored",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step50_predicted",
+   "claim": "order0 step 50 detail predicted",
+   "value": 1.3340955497056697,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/2/predicted",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step50_gap",
+   "claim": "order0 step 50 detail gap",
+   "value": -0.00030653412414904935,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/2/gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step50_exact_write_agreement",
+   "claim": "order0 step 50 detail exact_write_agreement",
+   "value": 0.9989893240837863,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/2/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step50_round_agreement",
+   "claim": "order0 step 50 detail round_agreement",
+   "value": 0.9986148525158133,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/2/round_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step50_n",
+   "claim": "order0 step 50 detail n",
+   "value": 2013504,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/2/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step100_stored",
+   "claim": "order0 step 100 detail stored",
+   "value": 1.3138435256654952,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/3/stored",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step100_predicted",
+   "claim": "order0 step 100 detail predicted",
+   "value": 1.3133524150064653,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/3/predicted",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step100_gap",
+   "claim": "order0 step 100 detail gap",
+   "value": -0.0004911106590299585,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/3/gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step100_exact_write_agreement",
+   "claim": "order0 step 100 detail exact_write_agreement",
+   "value": 0.9991313650233623,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/3/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step100_round_agreement",
+   "claim": "order0 step 100 detail round_agreement",
+   "value": 0.9988462898509265,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/3/round_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step100_n",
+   "claim": "order0 step 100 detail n",
+   "value": 2013504,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/3/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step200_stored",
+   "claim": "order0 step 200 detail stored",
+   "value": 1.311253601497826,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/4/stored",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step200_predicted",
+   "claim": "order0 step 200 detail predicted",
+   "value": 1.3112320591183417,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/4/predicted",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step200_gap",
+   "claim": "order0 step 200 detail gap",
+   "value": -2.1542379484262852e-05,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/4/gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step200_exact_write_agreement",
+   "claim": "order0 step 200 detail exact_write_agreement",
+   "value": 0.9992962517084645,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/4/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step200_round_agreement",
+   "claim": "order0 step 200 detail round_agreement",
+   "value": 0.9990394853946155,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/4/round_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step200_n",
+   "claim": "order0 step 200 detail n",
+   "value": 2013504,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/4/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step300_stored",
+   "claim": "order0 step 300 detail stored",
+   "value": 1.291832995604312,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/5/stored",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step300_predicted",
+   "claim": "order0 step 300 detail predicted",
+   "value": 1.2912930021932036,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/5/predicted",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step300_gap",
+   "claim": "order0 step 300 detail gap",
+   "value": -0.0005399934111083304,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/5/gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step300_exact_write_agreement",
+   "claim": "order0 step 300 detail exact_write_agreement",
+   "value": 0.9993950843901974,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/5/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step300_round_agreement",
+   "claim": "order0 step 300 detail round_agreement",
+   "value": 0.9991949357935221,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/5/round_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order0_step300_n",
+   "claim": "order0 step 300 detail n",
+   "value": 2013504,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/5/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step1_stored",
+   "claim": "order1 step 1 detail stored",
+   "value": 1.1833857903783824,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/6/stored",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step1_predicted",
+   "claim": "order1 step 1 detail predicted",
+   "value": 1.183037451857754,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/6/predicted",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step1_gap",
+   "claim": "order1 step 1 detail gap",
+   "value": -0.00034833852062843285,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/6/gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step1_exact_write_agreement",
+   "claim": "order1 step 1 detail exact_write_agreement",
+   "value": 0.9975728878611614,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/6/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step1_round_agreement",
+   "claim": "order1 step 1 detail round_agreement",
+   "value": 0.9958291615015415,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/6/round_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step1_n",
+   "claim": "order1 step 1 detail n",
+   "value": 2013504,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/6/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step10_stored",
+   "claim": "order1 step 10 detail stored",
+   "value": 1.3356005420207502,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/7/stored",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step10_predicted",
+   "claim": "order1 step 10 detail predicted",
+   "value": 1.3352065554550498,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/7/predicted",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step10_gap",
+   "claim": "order1 step 10 detail gap",
+   "value": -0.00039398656570033275,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/7/gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step10_exact_write_agreement",
+   "claim": "order1 step 10 detail exact_write_agreement",
+   "value": 0.9984231469120498,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/7/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step10_round_agreement",
+   "claim": "order1 step 10 detail round_agreement",
+   "value": 0.9978862718921839,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/7/round_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step10_n",
+   "claim": "order1 step 10 detail n",
+   "value": 2013504,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/7/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step50_stored",
+   "claim": "order1 step 50 detail stored",
+   "value": 1.3306680815144676,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/8/stored",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step50_predicted",
+   "claim": "order1 step 50 detail predicted",
+   "value": 1.3301673920424217,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/8/predicted",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step50_gap",
+   "claim": "order1 step 50 detail gap",
+   "value": -0.0005006894720458455,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/8/gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step50_exact_write_agreement",
+   "claim": "order1 step 50 detail exact_write_agreement",
+   "value": 0.9989495923524363,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/8/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step50_round_agreement",
+   "claim": "order1 step 50 detail round_agreement",
+   "value": 0.9985939933568545,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/8/round_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step50_n",
+   "claim": "order1 step 50 detail n",
+   "value": 2013504,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/8/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step100_stored",
+   "claim": "order1 step 100 detail stored",
+   "value": 1.309624313955625,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/9/stored",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step100_predicted",
+   "claim": "order1 step 100 detail predicted",
+   "value": 1.3094045786380197,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/9/predicted",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step100_gap",
+   "claim": "order1 step 100 detail gap",
+   "value": -0.00021973531760521858,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/9/gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step100_exact_write_agreement",
+   "claim": "order1 step 100 detail exact_write_agreement",
+   "value": 0.9992316876450208,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/9/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step100_round_agreement",
+   "claim": "order1 step 100 detail round_agreement",
+   "value": 0.9989490957057945,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/9/round_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step100_n",
+   "claim": "order1 step 100 detail n",
+   "value": 2013504,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/9/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step200_stored",
+   "claim": "order1 step 200 detail stored",
+   "value": 1.3062110574028865,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/10/stored",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step200_predicted",
+   "claim": "order1 step 200 detail predicted",
+   "value": 1.3057302910751007,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/10/predicted",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step200_gap",
+   "claim": "order1 step 200 detail gap",
+   "value": -0.0004807663277857088,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/10/gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step200_exact_write_agreement",
+   "claim": "order1 step 200 detail exact_write_agreement",
+   "value": 0.9992495669241283,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/10/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step200_round_agreement",
+   "claim": "order1 step 200 detail round_agreement",
+   "value": 0.9989833643240837,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/10/round_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step200_n",
+   "claim": "order1 step 200 detail n",
+   "value": 2013504,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/10/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step300_stored",
+   "claim": "order1 step 300 detail stored",
+   "value": 1.3112010524774846,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/11/stored",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step300_predicted",
+   "claim": "order1 step 300 detail predicted",
+   "value": 1.310421094718414,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/11/predicted",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step300_gap",
+   "claim": "order1 step 300 detail gap",
+   "value": -0.000779957759070582,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/11/gap",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step300_exact_write_agreement",
+   "claim": "order1 step 300 detail exact_write_agreement",
+   "value": 0.9992674462032357,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/11/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step300_round_agreement",
+   "claim": "order1 step 300 detail round_agreement",
+   "value": 0.9989962771367725,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/11/round_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q2_order1_step300_n",
+   "claim": "order1 step 300 detail n",
+   "value": 2013504,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q2_write_model_transfers/captured_steps/11/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q3_mamba_bundle_shadow",
+   "claim": "Mamba bundle shadow rho at the nine factors",
+   "value": [
+    1.3466412422296439,
+    1.3303641660254903,
+    1.3253819192460696,
+    1.316846174499738,
+    1.2982609490531265,
+    1.275053105993339,
+    1.221316189655743,
+    1.1481668781138439,
+    1.0720935734752315
+   ],
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q3_magnitude_dependence/mamba_reference_bundle_shadow",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q3_mamba_span",
+   "claim": "Mamba bundle shadow span",
+   "value": 0.2745476687544124,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q3_magnitude_dependence/mamba_reference_bundle_stats/span",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q3_mamba_slope_per_log2_factor",
+   "claim": "Mamba bundle shadow slope_per_log2_factor",
+   "value": -0.03157845110732737,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q3_magnitude_dependence/mamba_reference_bundle_stats/slope_per_log2_factor",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q3_mamba_plateau_end_factor",
+   "claim": "Mamba bundle shadow plateau_end_factor",
+   "value": 0.0625,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q3_magnitude_dependence/mamba_reference_bundle_stats/plateau_end_factor",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q3_mamba_strictly_decreasing",
+   "claim": "Mamba bundle shadow strictly_decreasing",
+   "value": true,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q3_magnitude_dependence/mamba_reference_bundle_stats/strictly_decreasing",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q3_mamba_reviewed_small",
+   "claim": "Mamba reviewed sweep rho at smallest factor",
+   "value": 1.3323,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q3_magnitude_dependence/mamba_reviewed_sweep/small_factor",
+   "kind": "quantitative"
+  },
+  {
+   "id": "q3_mamba_reviewed_large",
+   "claim": "Mamba reviewed sweep rho at largest factor",
+   "value": 1.1661,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/verdicts.json",
+   "key": "q3_magnitude_dependence/mamba_reviewed_sweep/large_factor",
+   "kind": "quantitative"
+  },
+  {
+   "id": "xhist_order0_whole_below_half",
+   "claim": "order0 step 100 fraction of intended updates below half a spacing",
+   "value": 0.9270067916882553,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": [
+    "x_hist_step100",
+    "order0/step100",
+    "whole_model",
+    "fraction_below_half_spacing"
+   ],
+   "kind": "quantitative"
+  },
+  {
+   "id": "xhist_order0_whole_median_log2x",
+   "claim": "order0 step 100 median log2 x",
+   "value": -4.323846834680034,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": [
+    "x_hist_step100",
+    "order0/step100",
+    "whole_model",
+    "median_log2_x"
+   ],
+   "kind": "quantitative"
+  },
+  {
+   "id": "xhist_order0_attention_below_half",
+   "claim": "order0 step 100 attention fraction below half a spacing",
+   "value": 0.9297635302131558,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": [
+    "x_hist_step100",
+    "order0/step100",
+    "attention",
+    "fraction_below_half_spacing"
+   ],
+   "kind": "quantitative"
+  },
+  {
+   "id": "xhist_order0_mlp_below_half",
+   "claim": "order0 step 100 mlp fraction below half a spacing",
+   "value": 0.9421942188906571,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": [
+    "x_hist_step100",
+    "order0/step100",
+    "mlp",
+    "fraction_below_half_spacing"
+   ],
+   "kind": "quantitative"
+  },
+  {
+   "id": "xhist_order0_embedding_below_half",
+   "claim": "order0 step 100 embedding fraction below half a spacing",
+   "value": 0.8816221025254991,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": [
+    "x_hist_step100",
+    "order0/step100",
+    "embedding",
+    "fraction_below_half_spacing"
+   ],
+   "kind": "quantitative"
+  },
+  {
+   "id": "xhist_order0_norm_below_half",
+   "claim": "order0 step 100 norm fraction below half a spacing",
+   "value": 0.9959870218579235,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": [
+    "x_hist_step100",
+    "order0/step100",
+    "norm",
+    "fraction_below_half_spacing"
+   ],
+   "kind": "quantitative"
+  },
+  {
+   "id": "xhist_order1_whole_below_half",
+   "claim": "order1 step 100 fraction of intended updates below half a spacing",
+   "value": 0.931866056165272,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": [
+    "x_hist_step100",
+    "order1/step100",
+    "whole_model",
+    "fraction_below_half_spacing"
+   ],
+   "kind": "quantitative"
+  },
+  {
+   "id": "xhist_order1_whole_median_log2x",
+   "claim": "order1 step 100 median log2 x",
+   "value": -4.401598832392968,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": [
+    "x_hist_step100",
+    "order1/step100",
+    "whole_model",
+    "median_log2_x"
+   ],
+   "kind": "quantitative"
+  },
+  {
+   "id": "xhist_order1_attention_below_half",
+   "claim": "order1 step 100 attention fraction below half a spacing",
+   "value": 0.9284104335455247,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": [
+    "x_hist_step100",
+    "order1/step100",
+    "attention",
+    "fraction_below_half_spacing"
+   ],
+   "kind": "quantitative"
+  },
+  {
+   "id": "xhist_order1_mlp_below_half",
+   "claim": "order1 step 100 mlp fraction below half a spacing",
+   "value": 0.942316276644483,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": [
+    "x_hist_step100",
+    "order1/step100",
+    "mlp",
+    "fraction_below_half_spacing"
+   ],
+   "kind": "quantitative"
+  },
+  {
+   "id": "xhist_order1_embedding_below_half",
+   "claim": "order1 step 100 embedding fraction below half a spacing",
+   "value": 0.9056345621744791,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": [
+    "x_hist_step100",
+    "order1/step100",
+    "embedding",
+    "fraction_below_half_spacing"
+   ],
+   "kind": "quantitative"
+  },
+  {
+   "id": "xhist_order1_norm_below_half",
+   "claim": "order1 step 100 norm fraction below half a spacing",
+   "value": 0.9962431693989071,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": [
+    "x_hist_step100",
+    "order1/step100",
+    "norm",
+    "fraction_below_half_spacing"
+   ],
+   "kind": "quantitative"
+  },
+  {
+   "id": "xhist_mamba_below_half",
+   "claim": "Mamba bundle fraction of intended updates below half a spacing",
+   "value": 0.8775947766426282,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "x_hist_step100/mamba_step100_bundle/fraction_below_half_spacing",
+   "kind": "quantitative"
+  },
+  {
+   "id": "xhist_mamba_median_log2x",
+   "claim": "Mamba bundle median log2 x",
+   "value": -3.7161046544913265,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/derived.json",
+   "key": "x_hist_step100/mamba_step100_bundle/median_log2_x",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_attention_n",
+   "claim": "order 0 step 100 detail group 'attention' n",
+   "value": 368640,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/attention/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_attention_overshoot",
+   "claim": "order 0 step 100 detail group 'attention' overshoot",
+   "value": 1.3025331023770517,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/attention/overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_attention_length_ratio",
+   "claim": "order 0 step 100 detail group 'attention' length_ratio",
+   "value": 0.5046973082490951,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/attention/length_ratio",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_attention_unmoved_fraction",
+   "claim": "order 0 step 100 detail group 'attention' unmoved_fraction",
+   "value": 0.9146728515625,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/attention/unmoved_fraction",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_attention_exact_write_agreement",
+   "claim": "order 0 step 100 detail group 'attention' exact_write_agreement",
+   "value": 0.9991536458333333,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/attention/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_embedding_seen_rows_n",
+   "claim": "order 0 step 100 detail group 'embedding (seen rows)' n",
+   "value": 589824,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/embedding (seen rows)/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_embedding_seen_rows_overshoot",
+   "claim": "order 0 step 100 detail group 'embedding (seen rows)' overshoot",
+   "value": 1.3135886987714318,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/embedding (seen rows)/overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_embedding_seen_rows_length_ratio",
+   "claim": "order 0 step 100 detail group 'embedding (seen rows)' length_ratio",
+   "value": 0.7018408673165655,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/embedding (seen rows)/length_ratio",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_embedding_seen_rows_unmoved_fraction",
+   "claim": "order 0 step 100 detail group 'embedding (seen rows)' unmoved_fraction",
+   "value": 0.9064364963107638,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/embedding (seen rows)/unmoved_fraction",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_embedding_seen_rows_exact_write_agreement",
+   "claim": "order 0 step 100 detail group 'embedding (seen rows)' exact_write_agreement",
+   "value": 0.9991777208116319,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/embedding (seen rows)/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_embedding_unseen_rows_n",
+   "claim": "order 0 step 100 detail group 'embedding (unseen rows)' n",
+   "value": 589824,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/embedding (unseen rows)/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_embedding_unseen_rows_overshoot",
+   "claim": "order 0 step 100 detail group 'embedding (unseen rows)' overshoot",
+   "value": 1.3121721995584426,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/embedding (unseen rows)/overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_embedding_unseen_rows_length_ratio",
+   "claim": "order 0 step 100 detail group 'embedding (unseen rows)' length_ratio",
+   "value": 0.6456367906839462,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/embedding (unseen rows)/length_ratio",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_embedding_unseen_rows_unmoved_fraction",
+   "claim": "order 0 step 100 detail group 'embedding (unseen rows)' unmoved_fraction",
+   "value": 0.8827226426866319,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/embedding (unseen rows)/unmoved_fraction",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_embedding_unseen_rows_exact_write_agreement",
+   "claim": "order 0 step 100 detail group 'embedding (unseen rows)' exact_write_agreement",
+   "value": 0.9987657335069444,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/embedding (unseen rows)/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_mlp_n",
+   "claim": "order 0 step 100 detail group 'mlp' n",
+   "value": 430080,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/mlp/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_mlp_overshoot",
+   "claim": "order 0 step 100 detail group 'mlp' overshoot",
+   "value": 1.3370368257666587,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/mlp/overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_mlp_length_ratio",
+   "claim": "order 0 step 100 detail group 'mlp' length_ratio",
+   "value": 0.44705003468244,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/mlp/length_ratio",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_mlp_unmoved_fraction",
+   "claim": "order 0 step 100 detail group 'mlp' unmoved_fraction",
+   "value": 0.9420805431547619,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/mlp/unmoved_fraction",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_mlp_exact_write_agreement",
+   "claim": "order 0 step 100 detail group 'mlp' exact_write_agreement",
+   "value": 0.9994861421130953,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/mlp/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_norm_n",
+   "claim": "order 0 step 100 detail group 'norm' n",
+   "value": 35136,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/norm/n",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_norm_overshoot",
+   "claim": "order 0 step 100 detail group 'norm' overshoot",
+   "value": 1.4441684046574765,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/norm/overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_norm_length_ratio",
+   "claim": "order 0 step 100 detail group 'norm' length_ratio",
+   "value": 0.1448911173343964,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/norm/length_ratio",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_norm_unmoved_fraction",
+   "claim": "order 0 step 100 detail group 'norm' unmoved_fraction",
+   "value": 0.9959870218579235,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/norm/unmoved_fraction",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_norm_exact_write_agreement",
+   "claim": "order 0 step 100 detail group 'norm' exact_write_agreement",
+   "value": 0.9999146174863388,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/groups/norm/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "detail_o0_s100_bc2",
+   "claim": "order 0 step 100 bias_correction2",
+   "value": 0.09520785288629108,
+   "source_file": "experiments/experiment-1-p75vje/results/analysis/detail_checks.json",
+   "key": "order0/3/settings/bias_correction2",
+   "kind": "quantitative"
+  },
+  {
+   "id": "ref_overshoot",
+   "claim": "Mamba step-100 bundle reference check overshoot",
+   "value": 1.298739340421714,
+   "source_file": "experiments/experiment-1-p75vje/results/reference_check.json",
+   "key": "pooled/overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "ref_predicted_overshoot",
+   "claim": "Mamba step-100 bundle reference check predicted_overshoot",
+   "value": 1.2982609490531265,
+   "source_file": "experiments/experiment-1-p75vje/results/reference_check.json",
+   "key": "pooled/predicted_overshoot",
+   "kind": "quantitative"
+  },
+  {
+   "id": "ref_exact_write_agreement",
+   "claim": "Mamba step-100 bundle reference check exact_write_agreement",
+   "value": 0.9988982371794872,
+   "source_file": "experiments/experiment-1-p75vje/results/reference_check.json",
+   "key": "pooled/exact_write_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "ref_round_agreement",
+   "claim": "Mamba step-100 bundle reference check round_agreement",
+   "value": 0.9984798594417735,
+   "source_file": "experiments/experiment-1-p75vje/results/reference_check.json",
+   "key": "pooled/round_agreement",
+   "kind": "quantitative"
+  },
+  {
+   "id": "ref_length_ratio",
+   "claim": "Mamba step-100 bundle reference check length_ratio",
+   "value": 0.6083778912927718,
+   "source_file": "experiments/experiment-1-p75vje/results/reference_check.json",
+   "key": "pooled/length_ratio",
+   "kind": "quantitative"
+  },
+  {
+   "id": "ref_cosine",
+   "claim": "Mamba step-100 bundle reference check cosine",
+   "value": 0.46843725477294407,
+   "source_file": "experiments/experiment-1-p75vje/results/reference_check.json",
+   "key": "pooled/cosine",
+   "kind": "quantitative"
+  },
+  {
+   "id": "ref_unmoved_fraction",
+   "claim": "Mamba step-100 bundle reference check unmoved_fraction",
+   "value": 0.8773840227697649,
+   "source_file": "experiments/experiment-1-p75vje/results/reference_check.json",
+   "key": "pooled/unmoved_fraction",
+   "kind": "quantitative"
+  },
+  {
+   "id": "ref_multi_spacing_share_of_movers",
+   "claim": "Mamba step-100 bundle reference check multi_spacing_share_of_movers",
+   "value": 0.35804055376394406,
+   "source_file": "experiments/experiment-1-p75vje/results/reference_check.json",
+   "key": "pooled/multi_spacing_share_of_movers",
+   "kind": "quantitative"
+  },
+  {
+   "id": "ref_n",
+   "claim": "Mamba step-100 bundle reference check n",
+   "value": 958464,
+   "source_file": "experiments/experiment-1-p75vje/results/reference_check.json",
+   "key": "pooled/n",
+   "kind": "quantitative"
+  }
+ ]
+}

@@ -1,0 +1,371 @@
+{
+  "title": "The bfloat16 update-realization signature seen in Mamba-3 also appears in SmolLM2-135M under AdamW, with a slightly smaller overshoot",
+  "headline": "Fine-tuning SmolLM2-135M (all parameters bfloat16) on GSM8K with plain torch AdamW at lr 2e-4 shows the same qualitative bfloat16 signature as Mamba-3 on both fixed data orders: the pooled overshoot rho stays near 1.32 on every step after the first (median 1.3222 and 1.3227, a small but systematic 0.012 below Mamba's 1.334, which lies above the Transformer's 95th percentile of 1.3311), less than half of the intended update length reaches the weights, about 93% of coordinates do not move on a typical step, the round-to-nearest write model predicts rho to within 0.0008 with at least 99.75% exact write agreement on all twelve captured steps, and rescaling the intended update by 1/16 to 16 moves the median rho from 1.333 to 1.105 with a plateau below factor 1/2 followed by a fall. All three pre-registered verdicts are positive on each order separately and pooled.",
+  "assessment": "signal",
+  "research_question": "Does the BF16 update-realization pattern measured on mamba3-siso-187m (pooled overshoot rho about 1.33, length ratio below 1, most coordinates unmoved, round-to-nearest write model, rho falling with update magnitude) appear in a small pretrained Transformer trained with plain AdamW, or is it specific to the Mamba architecture or optimizer implementation?",
+  "decision_rule": {
+    "q1_signature_present": "present if the median whole-model bf16 rho over 300 steps is > 1.05, the length ratio is < 1 on every step and the unmoved fraction is > 50% on every step; absent if the median is within 0.02 of 1 or below 1. Evaluated per order, then pooled.",
+    "q2_write_model_transfers": "supports if exact write agreement (bf16_RNE(p_pre + intent) == stored p_post) is >= 99% of detail coordinates and |predicted - stored rho| <= 0.02 on every captured step; refutes if agreement < 95% or gap > 0.05 on any captured step. Exact write agreement is the metric that reproduces the reviewed Mamba 99.89% on the reference bundle (round-of-x gives 0.99848 there); the plan's round-of-x agreement is reported beside it and also clears 99% on every captured step.",
+    "q3_magnitude_dependence": "supports if the median shadow rho falls monotonically across factors 1/16..16 and spans > 0.05; refutes if flat or rising. Operationalised before the results were read as: no adjacent rise of the median curve larger than 0.005, a negative least-squares slope of median rho against log2(factor), and rho(1/16) - rho(16) > 0.05; flat-or-rising means span <= 0.05 or slope >= 0.",
+    "reference_lines": "rho = 1 (nothing lost) and the Mamba-3 187M median 1.334 (clip-1 run; 1.335 at clip 8)."
+  },
+  "methods": {
+    "model": "HuggingFaceTB/SmolLM2-135M, revision 93efa2f097d58c2a74874c7e644dbc9b0cee75a2, 134,515,008 parameters, all bfloat16, tied embedding, 30 layers, hidden 576, intermediate 1536, vocab 49152.",
+    "data": "openai/gsm8k, config main, train split (7,473 rows), revision 740312add88f781978c0658806c59bc2815b9866. Each row is formatted as question + newline + answer + <|endoftext|> (eos id 0), tokenised without added special tokens, every token scored. Two fixed orders: numpy default_rng(seed).permutation(7473)[:300] for seeds 0 and 1; no row was truncated (longest 447 and 394 tokens, max length 512).",
+    "optimizer": "torch.optim.AdamW(fused=False) with torch defaults betas (0.9, 0.999), eps 1e-8, weight decay 0.01, lr 2e-4, no schedule, batch size 1, 300 steps, parameters and moments in bfloat16; torch resolved the non-fused path to foreach=True. Gradient clipping at 32 was calibrated as 2 x p95 of 20 unclipped grad norms (p95 = 14.38) rounded up to a power of two and never fired.",
+    "statistics": "At each step the observer snapshots the pre-step weights in fp32, rebuilds the AdamW intent i = -(lr/bc1) m / (sqrt(v)/sqrt(bc2) + eps) - lr wd p_pre from the stored bf16 moments, and compares it with the realized change r = p_post - p_pre: pooled overshoot rho = |r|^2 / <i, r>, length ratio |r|/|i|, cosine, unmoved fraction, exact write agreement with r_hat = bf16_RNE(p_pre + i) - p_pre, a nine-factor shadow curve (intent scaled by 2^-4..2^4, single RNE bf16 write, trajectory unchanged) and a log2 histogram of x = |i| / bf16 spacing at p_pre. Whole-model statistics cover all 134.5M coordinates every step; twelve detail bundles (steps 1, 10, 50, 100, 200, 300 per order) store 2,013,504 coordinates (rows 0:32 of the seven projections in layers 0, 7, 15, 22, 29; 1024 seen and 1024 unseen embedding rows; every norm weight) and are re-analysed offline with the same code.",
+    "reference_check": "The same code applied to the public Mamba-3 step-100 replay bundle (revision d30ed00178a04810ea197a7f621e543c1aa9f091, 958,464 coordinates) reproduces the reviewed numbers: stored rho 1.2987 vs reviewed 1.299, write-model rho 1.2983 vs 1.298, exact write agreement 0.99890 vs 99.89%, length ratio 0.6084, cosine 0.4684, unmoved 0.8774.",
+    "seeds": "torch and numpy seed 42; data orders from seeds 0 and 1.",
+    "compute": "One H100, 8 minutes for calibration plus both 300-step runs (about 0.8 s/step), peak GPU memory 3.54 GB; CPU analysis job about 1 minute."
+  },
+  "results": {
+    "q1_per_order": {
+      "order0": {
+        "median_rho": 1.3222438017344353,
+        "min_rho": 1.1791485552155494,
+        "max_rho": 1.3451347571487864,
+        "p05_rho": 1.3141413352407711,
+        "p95_rho": 1.3300025208220663,
+        "steps_length_ratio_below_one": 300,
+        "max_length_ratio": 0.6656317699685848,
+        "median_length_ratio": 0.5219303293297217,
+        "min_unmoved": 0.6986423998131123,
+        "median_unmoved": 0.9322039478301187,
+        "median_cosine": 0.3942264190311163,
+        "verdict": "present"
+      },
+      "order1": {
+        "median_rho": 1.3226548406323577,
+        "min_rho": 1.178983403590617,
+        "max_rho": 1.3412190920578497,
+        "p05_rho": 1.3116281545650026,
+        "p95_rho": 1.3327860111641159,
+        "steps_length_ratio_below_one": 300,
+        "max_length_ratio": 0.6657231303648763,
+        "median_length_ratio": 0.5188719081530042,
+        "min_unmoved": 0.6971936321038616,
+        "median_unmoved": 0.9338445677377502,
+        "median_cosine": 0.39259736168331616,
+        "verdict": "present"
+      },
+      "pooled_600_steps": {
+        "median_rho": 1.3223768304884604,
+        "p05_rho": 1.3130276719771252,
+        "p95_rho": 1.3310898868400791,
+        "median_length_ratio": 0.5200533090489448,
+        "median_unmoved": 0.933030119583385,
+        "min_unmoved": 0.6971936321038616,
+        "median_cosine": 0.39323139718861666,
+        "gap_to_mamba_median_1_334": -0.011623169511539633
+      }
+    },
+    "q2_captured_steps": {
+      "n_coords_per_bundle": 2013504,
+      "min_exact_write_agreement": 0.9975401091827978,
+      "max_abs_gap": 0.000779957759070582,
+      "median_abs_gap": 0.0004373764467430208,
+      "worst_step": "step 1 of both orders (agreement 0.99754 and 0.99757); agreement rises to 0.99940 and 0.99927 by step 300",
+      "online_whole_model_600_steps": {
+        "median_abs_gap": 0.0004771292666935212,
+        "max_abs_gap": 0.0026670086017588357,
+        "min_exact_agreement": 0.9979211836347659,
+        "median_exact_agreement": 0.9993774709510481
+      },
+      "verdict": "supports",
+      "min_round_of_x_agreement_plan_metric": 0.9958291615015415,
+      "round_of_x_note": "The plan's original metric, n = round(x) agreement, also clears 99% on all twelve captured steps (minimum 0.99583 at order 1 step 1). Exact write agreement is reported as the primary metric because it reproduces the reviewed Mamba figure of 99.89% on the reference bundle, where round-of-x gives 0.99848.",
+      "per_step": [
+        {
+          "order": "order0",
+          "step": 1,
+          "stored_rho": 1.1835,
+          "predicted_rho": 1.1831,
+          "exact_write_agreement": 0.99754,
+          "round_of_x_agreement": 0.99589
+        },
+        {
+          "order": "order0",
+          "step": 10,
+          "stored_rho": 1.3369,
+          "predicted_rho": 1.3364,
+          "exact_write_agreement": 0.99837,
+          "round_of_x_agreement": 0.9978
+        },
+        {
+          "order": "order0",
+          "step": 50,
+          "stored_rho": 1.3344,
+          "predicted_rho": 1.3341,
+          "exact_write_agreement": 0.99899,
+          "round_of_x_agreement": 0.99861
+        },
+        {
+          "order": "order0",
+          "step": 100,
+          "stored_rho": 1.3138,
+          "predicted_rho": 1.3134,
+          "exact_write_agreement": 0.99913,
+          "round_of_x_agreement": 0.99885
+        },
+        {
+          "order": "order0",
+          "step": 200,
+          "stored_rho": 1.3113,
+          "predicted_rho": 1.3112,
+          "exact_write_agreement": 0.9993,
+          "round_of_x_agreement": 0.99904
+        },
+        {
+          "order": "order0",
+          "step": 300,
+          "stored_rho": 1.2918,
+          "predicted_rho": 1.2913,
+          "exact_write_agreement": 0.9994,
+          "round_of_x_agreement": 0.99919
+        },
+        {
+          "order": "order1",
+          "step": 1,
+          "stored_rho": 1.1834,
+          "predicted_rho": 1.183,
+          "exact_write_agreement": 0.99757,
+          "round_of_x_agreement": 0.99583
+        },
+        {
+          "order": "order1",
+          "step": 10,
+          "stored_rho": 1.3356,
+          "predicted_rho": 1.3352,
+          "exact_write_agreement": 0.99842,
+          "round_of_x_agreement": 0.99789
+        },
+        {
+          "order": "order1",
+          "step": 50,
+          "stored_rho": 1.3307,
+          "predicted_rho": 1.3302,
+          "exact_write_agreement": 0.99895,
+          "round_of_x_agreement": 0.99859
+        },
+        {
+          "order": "order1",
+          "step": 100,
+          "stored_rho": 1.3096,
+          "predicted_rho": 1.3094,
+          "exact_write_agreement": 0.99923,
+          "round_of_x_agreement": 0.99895
+        },
+        {
+          "order": "order1",
+          "step": 200,
+          "stored_rho": 1.3062,
+          "predicted_rho": 1.3057,
+          "exact_write_agreement": 0.99925,
+          "round_of_x_agreement": 0.99898
+        },
+        {
+          "order": "order1",
+          "step": 300,
+          "stored_rho": 1.3112,
+          "predicted_rho": 1.3104,
+          "exact_write_agreement": 0.99927,
+          "round_of_x_agreement": 0.999
+        }
+      ]
+    },
+    "q3_shadow_curve": {
+      "factors": [
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "order0_median_rho": [
+        1.3333582205419248,
+        1.3324944860817465,
+        1.330435884421199,
+        1.3278567864562594,
+        1.3216487436718793,
+        1.3071148905586638,
+        1.2570642314558556,
+        1.1875354576446435,
+        1.104599209213142
+      ],
+      "order1_median_rho": [
+        1.3336972105314313,
+        1.3331285133035653,
+        1.3309333856674908,
+        1.32778429197788,
+        1.3221477868462785,
+        1.30633369700208,
+        1.2565103614094304,
+        1.189448983858783,
+        1.1059994453930928
+      ],
+      "mamba_bundle_rho": [
+        1.3466412422296439,
+        1.3303641660254903,
+        1.3253819192460696,
+        1.316846174499738,
+        1.2982609490531265,
+        1.275053105993339,
+        1.221316189655743,
+        1.1481668781138439,
+        1.0720935734752315
+      ],
+      "order0_stats": {
+        "span": 0.22875901132878274,
+        "slope_per_log2_factor": -0.02528997220757874,
+        "max_adjacent_rise": 0.0,
+        "plateau_end_factor": 0.5,
+        "plateau_span": 0.005501434085665391
+      },
+      "order1_stats": {
+        "span": 0.2276977651383385,
+        "slope_per_log2_factor": -0.02520210487299369,
+        "max_adjacent_rise": 0.0,
+        "plateau_end_factor": 0.5,
+        "plateau_span": 0.005912918553551361
+      },
+      "mamba_stats": {
+        "span": 0.2745476687544124,
+        "slope_per_log2_factor": -0.03157845110732737,
+        "plateau_end_factor": 0.0625
+      },
+      "shape": "Both orders: nearly flat from 1/16 to 1/2 (drop about 0.006), then falling 0.22 from 1/2 to 16. The Mamba bundle falls from the first factor onward. Unmoved fraction along the curve goes from 0.996 at 1/16 to 0.39 at 16.",
+      "verdict": "supports"
+    },
+    "per_family_pooled_600_steps": {
+      "attention": {
+        "n_coords": 26542080,
+        "share": 0.19731686742344764,
+        "median_rho": 1.3207906882929528,
+        "median_unmoved": 0.9319393581814237,
+        "median_length_ratio": 0.47309051063287977
+      },
+      "mlp": {
+        "n_coords": 79626240,
+        "share": 0.5919506022703429,
+        "median_rho": 1.3270004967541151,
+        "median_unmoved": 0.9448127212838381,
+        "median_length_ratio": 0.43250600716575893
+      },
+      "embedding": {
+        "n_coords": 28311552,
+        "share": 0.2104713252516775,
+        "median_rho": 1.3193573377862993,
+        "median_unmoved": 0.9018823835584853,
+        "median_length_ratio": 0.6474218772788791
+      },
+      "norm": {
+        "n_coords": 35136,
+        "share": 0.0002612050545319077,
+        "median_rho": 1.411627397865369,
+        "p05_rho": 1.3209434815114875,
+        "p95_rho": 1.4957112225220968,
+        "median_unmoved": 0.9965420081967213,
+        "median_length_ratio": 0.12406470397415482,
+        "moving_coords_per_step_median": 121.5
+      },
+      "note": "The plan expected norm weights (near 1.0, spacing 2^-7) to be unmoved on essentially every step. About 0.35% of the 35,136 norm coordinates move per step, so the norm rho is defined every step but noisy."
+    },
+    "x_histogram_step100": {
+      "whole_model_fraction_below_half_spacing": {
+        "order0": 0.9270067916882553,
+        "order1": 0.931866056165272,
+        "mamba_bundle": 0.8775947766426282
+      },
+      "whole_model_median_log2_x": {
+        "order0": -4.323846834680034,
+        "order1": -4.401598832392968,
+        "mamba_bundle": -3.7161046544913265
+      },
+      "family_fraction_below_half_order0": {
+        "attention": 0.9297635302131558,
+        "mlp": 0.9421942188906571,
+        "embedding": 0.8816221025254991,
+        "norm": 0.9959870218579235
+      }
+    },
+    "detail_step100_order0_groups": {
+      "attention": {
+        "n": 368640,
+        "rho": 1.30253,
+        "exact_write_agreement": 0.99915
+      },
+      "embedding_seen_rows": {
+        "n": 589824,
+        "rho": 1.31359,
+        "length_ratio": 0.70184,
+        "exact_write_agreement": 0.99918
+      },
+      "embedding_unseen_rows": {
+        "n": 589824,
+        "rho": 1.31217,
+        "length_ratio": 0.64564,
+        "exact_write_agreement": 0.99877
+      },
+      "mlp": {
+        "n": 430080,
+        "rho": 1.33704,
+        "exact_write_agreement": 0.99949
+      },
+      "norm": {
+        "n": 35136,
+        "rho": 1.44417,
+        "unmoved": 0.99599,
+        "exact_write_agreement": 0.99991
+      }
+    },
+    "training_sanity": {
+      "loss_first_step": {
+        "order0": 2.2574076652526855,
+        "order1": 2.7269670963287354
+      },
+      "loss_last50_mean": {
+        "order0": 1.3026808488368988,
+        "order1": 1.267738540172577
+      },
+      "clip_fired_steps": 0,
+      "n_truncated": 0
+    }
+  },
+  "interpretation": "The signature is a property of writing an AdamW-shaped update into bfloat16 storage, not of the Mamba architecture or its optimizer implementation: a plain Transformer with torch's reference AdamW is described by the same round-to-nearest write model (exact agreement >= 99.75%, predicted-minus-stored gap <= 0.0008), shows the same qualitative signature (overshoot above 1, less than half the intended length realized, most coordinates unmoved), and has the same sign of magnitude dependence. The overshoot value itself is not identical: the pooled median 1.3224 sits 0.012 below Mamba's 1.334, and Mamba's value lies above the Transformer's 95th percentile on both orders, so the level of rho depends on the distribution of intended update sizes relative to the bfloat16 spacing (93% below half a spacing here versus 88% in the Mamba bundle) rather than being a universal constant. The plan pre-registered that rho may differ across models and that the transferable claim is the write model. The step-1 dip (rho 1.18, unmoved 0.70) is where the bias-corrected first update equals sign(g) x lr for every coordinate, so more coordinates cross half a spacing. The shadow curve is flat from factor 1/16 to 1/2 because shrinking an update that is already below half a spacing for 93% of coordinates changes little; the fall begins once the scaled update is comparable to the spacing. The Mamba bundle falls from the first factor, so the two curves share the sign of the dependence but differ in low-factor shape.",
+  "limitations": [
+    "One model size and one optimizer setting (lr 2e-4, batch 1, 300 steps); the value near 1.32 is not shown to hold at other learning rates or batch sizes.",
+    "The detail bundles cover 2.0M of 134.5M coordinates (rows 0:32 of five layers, 2048 embedding rows, all norms), so Q2 is verified exactly on that subset and online on the whole model.",
+    "The Mamba shadow reference plotted is the replay of the public step-100 bundle (1.3466 to 1.0721); the reviewed nine-run sweep (1.3323 to 1.1661) is cited as text only."
+  ],
+  "design_changes_tried": [
+    "Clip rule kept as planned (2 x p95 of 20 unclipped grad norms rounded up to a power of two = 32); it never fired, so the runs are effectively unclipped.",
+    "Exact write agreement (bf16_RNE(p_pre + i) == stored p_post) used as the primary Q2 agreement metric; the alternative round-of-x rule is reported beside it (0.99848 vs 0.99890 on the Mamba bundle).",
+    "Q3 'falls monotonically' operationalised with a 0.005 adjacent-rise tolerance plus fitted slope before the production shadow results were read; the production curves are in fact strictly decreasing, so the tolerance was not needed.",
+    "Detail capture is 2,013,504 coordinates per bundle (above the plan's 'about one million') because all norm weights and 2048 embedding rows were included."
+  ],
+  "artifacts": {
+    "run_outputs": "artifact://juiceb0xc0de-15787e/experiments/exp_01m1tdvatwe1rrek9g34p75vje/run1/",
+    "analysis_outputs": "artifact://juiceb0xc0de-15787e/experiments/exp_01m1tdvatwe1rrek9g34p75vje/analysis/",
+    "results_dir": "experiments/experiment-1-p75vje/results/analysis",
+    "reference_check": "experiments/experiment-1-p75vje/results/reference_check.json",
+    "figures": [
+      "experiments/experiment-1-p75vje/figures/overshoot_per_step",
+      "experiments/experiment-1-p75vje/figures/predicted_vs_stored",
+      "experiments/experiment-1-p75vje/figures/shadow_curve",
+      "experiments/experiment-1-p75vje/figures/x_histogram",
+      "experiments/experiment-1-p75vje/figures/family_overshoot_per_step"
+    ],
+    "code": [
+      "experiments/experiment-1-p75vje/src/realization.py",
+      "experiments/experiment-1-p75vje/src/train_observe.py",
+      "experiments/experiment-1-p75vje/src/analyze.py",
+      "experiments/experiment-1-p75vje/src/derive_report_values.py",
+      "experiments/experiment-1-p75vje/src/reference_check.py"
+    ],
+    "wandb_project": "https://wandb.ai/ricks-holmberg-juiceb0xc0de/default-exp-exp_01m1tdvatwe1rrek9g34p75vje"
+  }
+}

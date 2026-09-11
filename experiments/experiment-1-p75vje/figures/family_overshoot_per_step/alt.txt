@@ -1,0 +1,1 @@
+Line chart of the pooled bfloat16 overshoot per training step for the attention, MLP, embedding and norm parameter families of SmolLM2-135M on data order 0; the norm series is noisy because only about 0.4% of its 35,136 coordinates move on a typical step.

@@ -1,0 +1,6011 @@
+{
+  "rows": [
+    {
+      "step": 1,
+      "family": "attention",
+      "overshoot": 1.1655185268198147
+    },
+    {
+      "step": 2,
+      "family": "attention",
+      "overshoot": 1.2474357298759693
+    },
+    {
+      "step": 3,
+      "family": "attention",
+      "overshoot": 1.2868403276338556
+    },
+    {
+      "step": 4,
+      "family": "attention",
+      "overshoot": 1.3122517995043066
+    },
+    {
+      "step": 5,
+      "family": "attention",
+      "overshoot": 1.327692697011296
+    },
+    {
+      "step": 6,
+      "family": "attention",
+      "overshoot": 1.333684476476636
+    },
+    {
+      "step": 7,
+      "family": "attention",
+      "overshoot": 1.336969722924513
+    },
+    {
+      "step": 8,
+      "family": "attention",
+      "overshoot": 1.33703467710834
+    },
+    {
+      "step": 9,
+      "family": "attention",
+      "overshoot": 1.3364714326957134
+    },
+    {
+      "step": 10,
+      "family": "attention",
+      "overshoot": 1.3350244919006486
+    },
+    {
+      "step": 11,
+      "family": "attention",
+      "overshoot": 1.332135509106646
+    },
+    {
+      "step": 12,
+      "family": "attention",
+      "overshoot": 1.3281714633574364
+    },
+    {
+      "step": 13,
+      "family": "attention",
+      "overshoot": 1.3280696839598103
+    },
+    {
+      "step": 14,
+      "family": "attention",
+      "overshoot": 1.3273962147103453
+    },
+    {
+      "step": 15,
+      "family": "attention",
+      "overshoot": 1.3226296373120887
+    },
+    {
+      "step": 16,
+      "family": "attention",
+      "overshoot": 1.3198409599788168
+    },
+    {
+      "step": 17,
+      "family": "attention",
+      "overshoot": 1.3190062745695483
+    },
+    {
+      "step": 18,
+      "family": "attention",
+      "overshoot": 1.3194031852587935
+    },
+    {
+      "step": 19,
+      "family": "attention",
+      "overshoot": 1.3194201445184306
+    },
+    {
+      "step": 20,
+      "family": "attention",
+      "overshoot": 1.319806629470937
+    },
+    {
+      "step": 21,
+      "family": "attention",
+      "overshoot": 1.321479745239656
+    },
+    {
+      "step": 22,
+      "family": "attention",
+      "overshoot": 1.320031557927812
+    },
+    {
+      "step": 23,
+      "family": "attention",
+      "overshoot": 1.3177013108205544
+    },
+    {
+      "step": 24,
+      "family": "attention",
+      "overshoot": 1.316719922018823
+    },
+    {
+      "step": 25,
+      "family": "attention",
+      "overshoot": 1.314934872044077
+    },
+    {
+      "step": 26,
+      "family": "attention",
+      "overshoot": 1.316659150717063
+    },
+    {
+      "step": 27,
+      "family": "attention",
+      "overshoot": 1.3155106219340835
+    },
+    {
+      "step": 28,
+      "family": "attention",
+      "overshoot": 1.3152138990409965
+    },
+    {
+      "step": 29,
+      "family": "attention",
+      "overshoot": 1.3171002145855562
+    },
+    {
+      "step": 30,
+      "family": "attention",
+      "overshoot": 1.3174548736940677
+    },
+    {
+      "step": 31,
+      "family": "attention",
+      "overshoot": 1.3192112965450375
+    },
+    {
+      "step": 32,
+      "family": "attention",
+      "overshoot": 1.319492141326358
+    },
+    {
+      "step": 33,
+      "family": "attention",
+      "overshoot": 1.3174666721421635
+    },
+    {
+      "step": 34,
+      "family": "attention",
+      "overshoot": 1.3182409237263566
+    },
+    {
+      "step": 35,
+      "family": "attention",
+      "overshoot": 1.3198993795886111
+    },
+    {
+      "step": 36,
+      "family": "attention",
+      "overshoot": 1.3215498358178386
+    },
+    {
+      "step": 37,
+      "family": "attention",
+      "overshoot": 1.3183649576585645
+    },
+    {
+      "step": 38,
+      "family": "attention",
+      "overshoot": 1.3175303271369718
+    },
+    {
+      "step": 39,
+      "family": "attention",
+      "overshoot": 1.323139759389791
+    },
+    {
+      "step": 40,
+      "family": "attention",
+      "overshoot": 1.3195575595669078
+    },
+    {
+      "step": 41,
+      "family": "attention",
+      "overshoot": 1.3184264230649134
+    },
+    {
+      "step": 42,
+      "family": "attention",
+      "overshoot": 1.3176008611700163
+    },
+    {
+      "step": 43,
+      "family": "attention",
+      "overshoot": 1.3183375930383519
+    },
+    {
+      "step": 44,
+      "family": "attention",
+      "overshoot": 1.3173389984541284
+    },
+    {
+      "step": 45,
+      "family": "attention",
+      "overshoot": 1.3181008858583405
+    },
+    {
+      "step": 46,
+      "family": "attention",
+      "overshoot": 1.3185153981397446
+    },
+    {
+      "step": 47,
+      "family": "attention",
+      "overshoot": 1.3200260755917372
+    },
+    {
+      "step": 48,
+      "family": "attention",
+      "overshoot": 1.3195456966213408
+    },
+    {
+      "step": 49,
+      "family": "attention",
+      "overshoot": 1.3203366110219827
+    },
+    {
+      "step": 50,
+      "family": "attention",
+      "overshoot": 1.3209383871802955
+    },
+    {
+      "step": 51,
+      "family": "attention",
+      "overshoot": 1.320351000310415
+    },
+    {
+      "step": 52,
+      "family": "attention",
+      "overshoot": 1.320733126456727
+    },
+    {
+      "step": 53,
+      "family": "attention",
+      "overshoot": 1.3197710610136653
+    },
+    {
+      "step": 54,
+      "family": "attention",
+      "overshoot": 1.3199742946744832
+    },
+    {
+      "step": 55,
+      "family": "attention",
+      "overshoot": 1.3190993458825357
+    },
+    {
+      "step": 56,
+      "family": "attention",
+      "overshoot": 1.31941019242424
+    },
+    {
+      "step": 57,
+      "family": "attention",
+      "overshoot": 1.3203792452879268
+    },
+    {
+      "step": 58,
+      "family": "attention",
+      "overshoot": 1.3205685094797595
+    },
+    {
+      "step": 59,
+      "family": "attention",
+      "overshoot": 1.320118671586336
+    },
+    {
+      "step": 60,
+      "family": "attention",
+      "overshoot": 1.3187184868501654
+    },
+    {
+      "step": 61,
+      "family": "attention",
+      "overshoot": 1.3192862708711213
+    },
+    {
+      "step": 62,
+      "family": "attention",
+      "overshoot": 1.3200333158867257
+    },
+    {
+      "step": 63,
+      "family": "attention",
+      "overshoot": 1.3216487111849218
+    },
+    {
+      "step": 64,
+      "family": "attention",
+      "overshoot": 1.3191348600322905
+    },
+    {
+      "step": 65,
+      "family": "attention",
+      "overshoot": 1.322515669347905
+    },
+    {
+      "step": 66,
+      "family": "attention",
+      "overshoot": 1.32165124371175
+    },
+    {
+      "step": 67,
+      "family": "attention",
+      "overshoot": 1.3202556949179962
+    },
+    {
+      "step": 68,
+      "family": "attention",
+      "overshoot": 1.3208690080244678
+    },
+    {
+      "step": 69,
+      "family": "attention",
+      "overshoot": 1.3196184217741498
+    },
+    {
+      "step": 70,
+      "family": "attention",
+      "overshoot": 1.319518325456969
+    },
+    {
+      "step": 71,
+      "family": "attention",
+      "overshoot": 1.3195720974223468
+    },
+    {
+      "step": 72,
+      "family": "attention",
+      "overshoot": 1.3194709856906888
+    },
+    {
+      "step": 73,
+      "family": "attention",
+      "overshoot": 1.3196167761819453
+    },
+    {
+      "step": 74,
+      "family": "attention",
+      "overshoot": 1.320111239444081
+    },
+    {
+      "step": 75,
+      "family": "attention",
+      "overshoot": 1.3231946473143184
+    },
+    {
+      "step": 76,
+      "family": "attention",
+      "overshoot": 1.3220359643591058
+    },
+    {
+      "step": 77,
+      "family": "attention",
+      "overshoot": 1.3211099858185675
+    },
+    {
+      "step": 78,
+      "family": "attention",
+      "overshoot": 1.3205665489965686
+    },
+    {
+      "step": 79,
+      "family": "attention",
+      "overshoot": 1.3209283492878117
+    },
+    {
+      "step": 80,
+      "family": "attention",
+      "overshoot": 1.319691210158334
+    },
+    {
+      "step": 81,
+      "family": "attention",
+      "overshoot": 1.3198411636677418
+    },
+    {
+      "step": 82,
+      "family": "attention",
+      "overshoot": 1.3196748958705613
+    },
+    {
+      "step": 83,
+      "family": "attention",
+      "overshoot": 1.3205190261488426
+    },
+    {
+      "step": 84,
+      "family": "attention",
+      "overshoot": 1.319991019179918
+    },
+    {
+      "step": 85,
+      "family": "attention",
+      "overshoot": 1.3209108490011598
+    },
+    {
+      "step": 86,
+      "family": "attention",
+      "overshoot": 1.3211656099885467
+    },
+    {
+      "step": 87,
+      "family": "attention",
+      "overshoot": 1.3205553304158846
+    },
+    {
+      "step": 88,
+      "family": "attention",
+      "overshoot": 1.321689009751155
+    },
+    {
+      "step": 89,
+      "family": "attention",
+      "overshoot": 1.3222388226847992
+    },
+    {
+      "step": 90,
+      "family": "attention",
+      "overshoot": 1.3218972513043357
+    },
+    {
+      "step": 91,
+      "family": "attention",
+      "overshoot": 1.3212222342321083
+    },
+    {
+      "step": 92,
+      "family": "attention",
+      "overshoot": 1.3207184321059913
+    },
+    {
+      "step": 93,
+      "family": "attention",
+      "overshoot": 1.3222135439974612
+    },
+    {
+      "step": 94,
+      "family": "attention",
+      "overshoot": 1.321874042394371
+    },
+    {
+      "step": 95,
+      "family": "attention",
+      "overshoot": 1.3222549228663547
+    },
+    {
+      "step": 96,
+      "family": "attention",
+      "overshoot": 1.3218867329261492
+    },
+    {
+      "step": 97,
+      "family": "attention",
+      "overshoot": 1.320360051884371
+    },
+    {
+      "step": 98,
+      "family": "attention",
+      "overshoot": 1.32076380438988
+    },
+    {
+      "step": 99,
+      "family": "attention",
+      "overshoot": 1.3215469585252733
+    },
+    {
+      "step": 100,
+      "family": "attention",
+      "overshoot": 1.320869692448229
+    },
+    {
+      "step": 101,
+      "family": "attention",
+      "overshoot": 1.3204947522280368
+    },
+    {
+      "step": 102,
+      "family": "attention",
+      "overshoot": 1.3205556100059934
+    },
+    {
+      "step": 103,
+      "family": "attention",
+      "overshoot": 1.3207051438841741
+    },
+    {
+      "step": 104,
+      "family": "attention",
+      "overshoot": 1.3210891223244166
+    },
+    {
+      "step": 105,
+      "family": "attention",
+      "overshoot": 1.320838501817238
+    },
+    {
+      "step": 106,
+      "family": "attention",
+      "overshoot": 1.3206752097543006
+    },
+    {
+      "step": 107,
+      "family": "attention",
+      "overshoot": 1.3213819900500905
+    },
+    {
+      "step": 108,
+      "family": "attention",
+      "overshoot": 1.3217084975989348
+    },
+    {
+      "step": 109,
+      "family": "attention",
+      "overshoot": 1.32036209240166
+    },
+    {
+      "step": 110,
+      "family": "attention",
+      "overshoot": 1.3203167375576483
+    },
+    {
+      "step": 111,
+      "family": "attention",
+      "overshoot": 1.3210349145878495
+    },
+    {
+      "step": 112,
+      "family": "attention",
+      "overshoot": 1.3211799324402143
+    },
+    {
+      "step": 113,
+      "family": "attention",
+      "overshoot": 1.3216268552166246
+    },
+    {
+      "step": 114,
+      "family": "attention",
+      "overshoot": 1.3219603306078287
+    },
+    {
+      "step": 115,
+      "family": "attention",
+      "overshoot": 1.322053325765384
+    },
+    {
+      "step": 116,
+      "family": "attention",
+      "overshoot": 1.321228652293016
+    },
+    {
+      "step": 117,
+      "family": "attention",
+      "overshoot": 1.3212831699036225
+    },
+    {
+      "step": 118,
+      "family": "attention",
+      "overshoot": 1.3216162353604457
+    },
+    {
+      "step": 119,
+      "family": "attention",
+      "overshoot": 1.3246248989323508
+    },
+    {
+      "step": 120,
+      "family": "attention",
+      "overshoot": 1.324731444715079
+    },
+    {
+      "step": 121,
+      "family": "attention",
+      "overshoot": 1.3215938408563188
+    },
+    {
+      "step": 122,
+      "family": "attention",
+      "overshoot": 1.3210054691407367
+    },
+    {
+      "step": 123,
+      "family": "attention",
+      "overshoot": 1.3216284683818889
+    },
+    {
+      "step": 124,
+      "family": "attention",
+      "overshoot": 1.32066016610924
+    },
+    {
+      "step": 125,
+      "family": "attention",
+      "overshoot": 1.3210720316385896
+    },
+    {
+      "step": 126,
+      "family": "attention",
+      "overshoot": 1.3213046251565916
+    },
+    {
+      "step": 127,
+      "family": "attention",
+      "overshoot": 1.3216730755899766
+    },
+    {
+      "step": 128,
+      "family": "attention",
+      "overshoot": 1.3209231954719356
+    },
+    {
+      "step": 129,
+      "family": "attention",
+      "overshoot": 1.3210709130508655
+    },
+    {
+      "step": 130,
+      "family": "attention",
+      "overshoot": 1.3197237956311632
+    },
+    {
+      "step": 131,
+      "family": "attention",
+      "overshoot": 1.320172825532621
+    },
+    {
+      "step": 132,
+      "family": "attention",
+      "overshoot": 1.3203414656414048
+    },
+    {
+      "step": 133,
+      "family": "attention",
+      "overshoot": 1.3206327885007156
+    },
+    {
+      "step": 134,
+      "family": "attention",
+      "overshoot": 1.3202434359864095
+    },
+    {
+      "step": 135,
+      "family": "attention",
+      "overshoot": 1.3199913797411789
+    },
+    {
+      "step": 136,
+      "family": "attention",
+      "overshoot": 1.3213500782718686
+    },
+    {
+      "step": 137,
+      "family": "attention",
+      "overshoot": 1.321325841783246
+    },
+    {
+      "step": 138,
+      "family": "attention",
+      "overshoot": 1.321949983405141
+    },
+    {
+      "step": 139,
+      "family": "attention",
+      "overshoot": 1.3212506145276701
+    },
+    {
+      "step": 140,
+      "family": "attention",
+      "overshoot": 1.3214061797523613
+    },
+    {
+      "step": 141,
+      "family": "attention",
+      "overshoot": 1.3209568564010141
+    },
+    {
+      "step": 142,
+      "family": "attention",
+      "overshoot": 1.3218809261371935
+    },
+    {
+      "step": 143,
+      "family": "attention",
+      "overshoot": 1.3217157515096292
+    },
+    {
+      "step": 144,
+      "family": "attention",
+      "overshoot": 1.3214231633945863
+    },
+    {
+      "step": 145,
+      "family": "attention",
+      "overshoot": 1.3215530833519158
+    },
+    {
+      "step": 146,
+      "family": "attention",
+      "overshoot": 1.32119963630053
+    },
+    {
+      "step": 147,
+      "family": "attention",
+      "overshoot": 1.3202154516274691
+    },
+    {
+      "step": 148,
+      "family": "attention",
+      "overshoot": 1.3209059164536054
+    },
+    {
+      "step": 149,
+      "family": "attention",
+      "overshoot": 1.321759487732838
+    },
+    {
+      "step": 150,
+      "family": "attention",
+      "overshoot": 1.321394219519071
+    },
+    {
+      "step": 151,
+      "family": "attention",
+      "overshoot": 1.3195692921460416
+    },
+    {
+      "step": 152,
+      "family": "attention",
+      "overshoot": 1.3211633318294338
+    },
+    {
+      "step": 153,
+      "family": "attention",
+      "overshoot": 1.3215154690977242
+    },
+    {
+      "step": 154,
+      "family": "attention",
+      "overshoot": 1.320649184495924
+    },
+    {
+      "step": 155,
+      "family": "attention",
+      "overshoot": 1.3207498787564402
+    },
+    {
+      "step": 156,
+      "family": "attention",
+      "overshoot": 1.3200776456732404
+    },
+    {
+      "step": 157,
+      "family": "attention",
+      "overshoot": 1.3203859768303057
+    },
+    {
+      "step": 158,
+      "family": "attention",
+      "overshoot": 1.3208661670784945
+    },
+    {
+      "step": 159,
+      "family": "attention",
+      "overshoot": 1.3207041959261046
+    },
+    {
+      "step": 160,
+      "family": "attention",
+      "overshoot": 1.3211543135455281
+    },
+    {
+      "step": 161,
+      "family": "attention",
+      "overshoot": 1.3211236813016307
+    },
+    {
+      "step": 162,
+      "family": "attention",
+      "overshoot": 1.3213066667365052
+    },
+    {
+      "step": 163,
+      "family": "attention",
+      "overshoot": 1.3202374306824505
+    },
+    {
+      "step": 164,
+      "family": "attention",
+      "overshoot": 1.320186526020076
+    },
+    {
+      "step": 165,
+      "family": "attention",
+      "overshoot": 1.3197789431834235
+    },
+    {
+      "step": 166,
+      "family": "attention",
+      "overshoot": 1.3196949598133594
+    },
+    {
+      "step": 167,
+      "family": "attention",
+      "overshoot": 1.3200047895712823
+    },
+    {
+      "step": 168,
+      "family": "attention",
+      "overshoot": 1.3201767024003617
+    },
+    {
+      "step": 169,
+      "family": "attention",
+      "overshoot": 1.320788561535466
+    },
+    {
+      "step": 170,
+      "family": "attention",
+      "overshoot": 1.3198040925051648
+    },
+    {
+      "step": 171,
+      "family": "attention",
+      "overshoot": 1.3196492265085764
+    },
+    {
+      "step": 172,
+      "family": "attention",
+      "overshoot": 1.3198242615547908
+    },
+    {
+      "step": 173,
+      "family": "attention",
+      "overshoot": 1.320604028302845
+    },
+    {
+      "step": 174,
+      "family": "attention",
+      "overshoot": 1.3189583488369838
+    },
+    {
+      "step": 175,
+      "family": "attention",
+      "overshoot": 1.3196980303735923
+    },
+    {
+      "step": 176,
+      "family": "attention",
+      "overshoot": 1.3205839303270641
+    },
+    {
+      "step": 177,
+      "family": "attention",
+      "overshoot": 1.3210840203100715
+    },
+    {
+      "step": 178,
+      "family": "attention",
+      "overshoot": 1.3220887215522261
+    },
+    {
+      "step": 179,
+      "family": "attention",
+      "overshoot": 1.3213369918615203
+    },
+    {
+      "step": 180,
+      "family": "attention",
+      "overshoot": 1.3214725929196063
+    },
+    {
+      "step": 181,
+      "family": "attention",
+      "overshoot": 1.3209367992568217
+    },
+    {
+      "step": 182,
+      "family": "attention",
+      "overshoot": 1.3202789535638726
+    },
+    {
+      "step": 183,
+      "family": "attention",
+      "overshoot": 1.321855640339732
+    },
+    {
+      "step": 184,
+      "family": "attention",
+      "overshoot": 1.3213519364196105
+    },
+    {
+      "step": 185,
+      "family": "attention",
+      "overshoot": 1.3203950362236243
+    },
+    {
+      "step": 186,
+      "family": "attention",
+      "overshoot": 1.3205171910928803
+    },
+    {
+      "step": 187,
+      "family": "attention",
+      "overshoot": 1.3214030009741145
+    },
+    {
+      "step": 188,
+      "family": "attention",
+      "overshoot": 1.3222293241477778
+    },
+    {
+      "step": 189,
+      "family": "attention",
+      "overshoot": 1.3222822281894206
+    },
+    {
+      "step": 190,
+      "family": "attention",
+      "overshoot": 1.3218138385345946
+    },
+    {
+      "step": 191,
+      "family": "attention",
+      "overshoot": 1.3227959002226841
+    },
+    {
+      "step": 192,
+      "family": "attention",
+      "overshoot": 1.3224824126398924
+    },
+    {
+      "step": 193,
+      "family": "attention",
+      "overshoot": 1.3225404975394819
+    },
+    {
+      "step": 194,
+      "family": "attention",
+      "overshoot": 1.321696293452758
+    },
+    {
+      "step": 195,
+      "family": "attention",
+      "overshoot": 1.3226629037510291
+    },
+    {
+      "step": 196,
+      "family": "attention",
+      "overshoot": 1.3220184176042975
+    },
+    {
+      "step": 197,
+      "family": "attention",
+      "overshoot": 1.3217473787779297
+    },
+    {
+      "step": 198,
+      "family": "attention",
+      "overshoot": 1.3223367497002454
+    },
+    {
+      "step": 199,
+      "family": "attention",
+      "overshoot": 1.3203345338036048
+    },
+    {
+      "step": 200,
+      "family": "attention",
+      "overshoot": 1.319974194033065
+    },
+    {
+      "step": 201,
+      "family": "attention",
+      "overshoot": 1.320980727205763
+    },
+    {
+      "step": 202,
+      "family": "attention",
+      "overshoot": 1.3213694326580658
+    },
+    {
+      "step": 203,
+      "family": "attention",
+      "overshoot": 1.3220434452155558
+    },
+    {
+      "step": 204,
+      "family": "attention",
+      "overshoot": 1.3232243503490133
+    },
+    {
+      "step": 205,
+      "family": "attention",
+      "overshoot": 1.321835185463178
+    },
+    {
+      "step": 206,
+      "family": "attention",
+      "overshoot": 1.3218470582784612
+    },
+    {
+      "step": 207,
+      "family": "attention",
+      "overshoot": 1.3227434443755344
+    },
+    {
+      "step": 208,
+      "family": "attention",
+      "overshoot": 1.3220894765469329
+    },
+    {
+      "step": 209,
+      "family": "attention",
+      "overshoot": 1.3229287836074803
+    },
+    {
+      "step": 210,
+      "family": "attention",
+      "overshoot": 1.3228995932116083
+    },
+    {
+      "step": 211,
+      "family": "attention",
+      "overshoot": 1.3225303846009842
+    },
+    {
+      "step": 212,
+      "family": "attention",
+      "overshoot": 1.3235628858653943
+    },
+    {
+      "step": 213,
+      "family": "attention",
+      "overshoot": 1.3238492789487974
+    },
+    {
+      "step": 214,
+      "family": "attention",
+      "overshoot": 1.321094755796754
+    },
+    {
+      "step": 215,
+      "family": "attention",
+      "overshoot": 1.3207113086141666
+    },
+    {
+      "step": 216,
+      "family": "attention",
+      "overshoot": 1.3220769978667495
+    },
+    {
+      "step": 217,
+      "family": "attention",
+      "overshoot": 1.3222096829459182
+    },
+    {
+      "step": 218,
+      "family": "attention",
+      "overshoot": 1.3212397735692563
+    },
+    {
+      "step": 219,
+      "family": "attention",
+      "overshoot": 1.320562106494865
+    },
+    {
+      "step": 220,
+      "family": "attention",
+      "overshoot": 1.3203126083666452
+    },
+    {
+      "step": 221,
+      "family": "attention",
+      "overshoot": 1.317784276614045
+    },
+    {
+      "step": 222,
+      "family": "attention",
+      "overshoot": 1.3179263044871472
+    },
+    {
+      "step": 223,
+      "family": "attention",
+      "overshoot": 1.3188191502792863
+    },
+    {
+      "step": 224,
+      "family": "attention",
+      "overshoot": 1.3187047686955655
+    },
+    {
+      "step": 225,
+      "family": "attention",
+      "overshoot": 1.3201287342802948
+    },
+    {
+      "step": 226,
+      "family": "attention",
+      "overshoot": 1.321553011676519
+    },
+    {
+      "step": 227,
+      "family": "attention",
+      "overshoot": 1.320267752565866
+    },
+    {
+      "step": 228,
+      "family": "attention",
+      "overshoot": 1.3207216315331307
+    },
+    {
+      "step": 229,
+      "family": "attention",
+      "overshoot": 1.3207725166806836
+    },
+    {
+      "step": 230,
+      "family": "attention",
+      "overshoot": 1.3214915554928184
+    },
+    {
+      "step": 231,
+      "family": "attention",
+      "overshoot": 1.3219973904653803
+    },
+    {
+      "step": 232,
+      "family": "attention",
+      "overshoot": 1.32308926958259
+    },
+    {
+      "step": 233,
+      "family": "attention",
+      "overshoot": 1.322740703461799
+    },
+    {
+      "step": 234,
+      "family": "attention",
+      "overshoot": 1.322598878390528
+    },
+    {
+      "step": 235,
+      "family": "attention",
+      "overshoot": 1.3220444756641732
+    },
+    {
+      "step": 236,
+      "family": "attention",
+      "overshoot": 1.322245388110324
+    },
+    {
+      "step": 237,
+      "family": "attention",
+      "overshoot": 1.321548044013993
+    },
+    {
+      "step": 238,
+      "family": "attention",
+      "overshoot": 1.3172852472627696
+    },
+    {
+      "step": 239,
+      "family": "attention",
+      "overshoot": 1.3196068123170834
+    },
+    {
+      "step": 240,
+      "family": "attention",
+      "overshoot": 1.3163911411283349
+    },
+    {
+      "step": 241,
+      "family": "attention",
+      "overshoot": 1.3192255169453546
+    },
+    {
+      "step": 242,
+      "family": "attention",
+      "overshoot": 1.3195933936230846
+    },
+    {
+      "step": 243,
+      "family": "attention",
+      "overshoot": 1.3196413724978147
+    },
+    {
+      "step": 244,
+      "family": "attention",
+      "overshoot": 1.3199810993074617
+    },
+    {
+      "step": 245,
+      "family": "attention",
+      "overshoot": 1.3196474202083657
+    },
+    {
+      "step": 246,
+      "family": "attention",
+      "overshoot": 1.3196652006452088
+    },
+    {
+      "step": 247,
+      "family": "attention",
+      "overshoot": 1.3199264985266232
+    },
+    {
+      "step": 248,
+      "family": "attention",
+      "overshoot": 1.3198529498863485
+    },
+    {
+      "step": 249,
+      "family": "attention",
+      "overshoot": 1.3187558414985308
+    },
+    {
+      "step": 250,
+      "family": "attention",
+      "overshoot": 1.3187475490898186
+    },
+    {
+      "step": 251,
+      "family": "attention",
+      "overshoot": 1.3191746124006714
+    },
+    {
+      "step": 252,
+      "family": "attention",
+      "overshoot": 1.319725067241773
+    },
+    {
+      "step": 253,
+      "family": "attention",
+      "overshoot": 1.3198763917650904
+    },
+    {
+      "step": 254,
+      "family": "attention",
+      "overshoot": 1.3211979521188315
+    },
+    {
+      "step": 255,
+      "family": "attention",
+      "overshoot": 1.3215094547511181
+    },
+    {
+      "step": 256,
+      "family": "attention",
+      "overshoot": 1.3214838181469402
+    },
+    {
+      "step": 257,
+      "family": "attention",
+      "overshoot": 1.3213228166087891
+    },
+    {
+      "step": 258,
+      "family": "attention",
+      "overshoot": 1.321094805520018
+    },
+    {
+      "step": 259,
+      "family": "attention",
+      "overshoot": 1.3196861226544372
+    },
+    {
+      "step": 260,
+      "family": "attention",
+      "overshoot": 1.3196889614737903
+    },
+    {
+      "step": 261,
+      "family": "attention",
+      "overshoot": 1.3198211604659345
+    },
+    {
+      "step": 262,
+      "family": "attention",
+      "overshoot": 1.3201842194110596
+    },
+    {
+      "step": 263,
+      "family": "attention",
+      "overshoot": 1.320622827395395
+    },
+    {
+      "step": 264,
+      "family": "attention",
+      "overshoot": 1.3210680782011197
+    },
+    {
+      "step": 265,
+      "family": "attention",
+      "overshoot": 1.3209561489848132
+    },
+    {
+      "step": 266,
+      "family": "attention",
+      "overshoot": 1.321916921657899
+    },
+    {
+      "step": 267,
+      "family": "attention",
+      "overshoot": 1.32266853191596
+    },
+    {
+      "step": 268,
+      "family": "attention",
+      "overshoot": 1.3218707991586622
+    },
+    {
+      "step": 269,
+      "family": "attention",
+      "overshoot": 1.3224041144343002
+    },
+    {
+      "step": 270,
+      "family": "attention",
+      "overshoot": 1.3211540140612887
+    },
+    {
+      "step": 271,
+      "family": "attention",
+      "overshoot": 1.3219660241118487
+    },
+    {
+      "step": 272,
+      "family": "attention",
+      "overshoot": 1.321645545765155
+    },
+    {
+      "step": 273,
+      "family": "attention",
+      "overshoot": 1.3210329425045864
+    },
+    {
+      "step": 274,
+      "family": "attention",
+      "overshoot": 1.3203062286489975
+    },
+    {
+      "step": 275,
+      "family": "attention",
+      "overshoot": 1.3196771945300265
+    },
+    {
+      "step": 276,
+      "family": "attention",
+      "overshoot": 1.320829106039226
+    },
+    {
+      "step": 277,
+      "family": "attention",
+      "overshoot": 1.3220919031051257
+    },
+    {
+      "step": 278,
+      "family": "attention",
+      "overshoot": 1.3218109585393754
+    },
+    {
+      "step": 279,
+      "family": "attention",
+      "overshoot": 1.3207505899943912
+    },
+    {
+      "step": 280,
+      "family": "attention",
+      "overshoot": 1.3187821953291319
+    },
+    {
+      "step": 281,
+      "family": "attention",
+      "overshoot": 1.320194699137581
+    },
+    {
+      "step": 282,
+      "family": "attention",
+      "overshoot": 1.321384643314194
+    },
+    {
+      "step": 283,
+      "family": "attention",
+      "overshoot": 1.3209252049060158
+    },
+    {
+      "step": 284,
+      "family": "attention",
+      "overshoot": 1.3191138684645665
+    },
+    {
+      "step": 285,
+      "family": "attention",
+      "overshoot": 1.3183693512339913
+    },
+    {
+      "step": 286,
+      "family": "attention",
+      "overshoot": 1.3223094821600534
+    },
+    {
+      "step": 287,
+      "family": "attention",
+      "overshoot": 1.322337982681005
+    },
+    {
+      "step": 288,
+      "family": "attention",
+      "overshoot": 1.3196744610010192
+    },
+    {
+      "step": 289,
+      "family": "attention",
+      "overshoot": 1.3194594533195845
+    },
+    {
+      "step": 290,
+      "family": "attention",
+      "overshoot": 1.3230289157365824
+    },
+    {
+      "step": 291,
+      "family": "attention",
+      "overshoot": 1.322194063701917
+    },
+    {
+      "step": 292,
+      "family": "attention",
+      "overshoot": 1.3209516890474464
+    },
+    {
+      "step": 293,
+      "family": "attention",
+      "overshoot": 1.3213840596715238
+    },
+    {
+      "step": 294,
+      "family": "attention",
+      "overshoot": 1.3207745383091918
+    },
+    {
+      "step": 295,
+      "family": "attention",
+      "overshoot": 1.3232128444370943
+    },
+    {
+      "step": 296,
+      "family": "attention",
+      "overshoot": 1.3205100760709247
+    },
+    {
+      "step": 297,
+      "family": "attention",
+      "overshoot": 1.3141198250264619
+    },
+    {
+      "step": 298,
+      "family": "attention",
+      "overshoot": 1.3097456595370172
+    },
+    {
+      "step": 299,
+      "family": "attention",
+      "overshoot": 1.3143682427111525
+    },
+    {
+      "step": 300,
+      "family": "attention",
+      "overshoot": 1.3176702626332966
+    },
+    {
+      "step": 1,
+      "family": "mlp",
+      "overshoot": 1.1682345631761517
+    },
+    {
+      "step": 2,
+      "family": "mlp",
+      "overshoot": 1.2525676975833389
+    },
+    {
+      "step": 3,
+      "family": "mlp",
+      "overshoot": 1.2941340243912454
+    },
+    {
+      "step": 4,
+      "family": "mlp",
+      "overshoot": 1.3220761443996358
+    },
+    {
+      "step": 5,
+      "family": "mlp",
+      "overshoot": 1.3365151529009072
+    },
+    {
+      "step": 6,
+      "family": "mlp",
+      "overshoot": 1.3433175482217992
+    },
+    {
+      "step": 7,
+      "family": "mlp",
+      "overshoot": 1.3472606548880937
+    },
+    {
+      "step": 8,
+      "family": "mlp",
+      "overshoot": 1.347913322122929
+    },
+    {
+      "step": 9,
+      "family": "mlp",
+      "overshoot": 1.3472406748909553
+    },
+    {
+      "step": 10,
+      "family": "mlp",
+      "overshoot": 1.3458876608956103
+    },
+    {
+      "step": 11,
+      "family": "mlp",
+      "overshoot": 1.3424765064880106
+    },
+    {
+      "step": 12,
+      "family": "mlp",
+      "overshoot": 1.3388240183936388
+    },
+    {
+      "step": 13,
+      "family": "mlp",
+      "overshoot": 1.338288386996404
+    },
+    {
+      "step": 14,
+      "family": "mlp",
+      "overshoot": 1.3371840346082635
+    },
+    {
+      "step": 15,
+      "family": "mlp",
+      "overshoot": 1.3329054688018838
+    },
+    {
+      "step": 16,
+      "family": "mlp",
+      "overshoot": 1.3296922176603285
+    },
+    {
+      "step": 17,
+      "family": "mlp",
+      "overshoot": 1.3282968560696449
+    },
+    {
+      "step": 18,
+      "family": "mlp",
+      "overshoot": 1.3289921534890172
+    },
+    {
+      "step": 19,
+      "family": "mlp",
+      "overshoot": 1.3290403551556718
+    },
+    {
+      "step": 20,
+      "family": "mlp",
+      "overshoot": 1.328603383283119
+    },
+    {
+      "step": 21,
+      "family": "mlp",
+      "overshoot": 1.330002574084109
+    },
+    {
+      "step": 22,
+      "family": "mlp",
+      "overshoot": 1.3275601338253942
+    },
+    {
+      "step": 23,
+      "family": "mlp",
+      "overshoot": 1.3242963713149754
+    },
+    {
+      "step": 24,
+      "family": "mlp",
+      "overshoot": 1.3218691602923531
+    },
+    {
+      "step": 25,
+      "family": "mlp",
+      "overshoot": 1.3243002138558033
+    },
+    {
+      "step": 26,
+      "family": "mlp",
+      "overshoot": 1.324335853461305
+    },
+    {
+      "step": 27,
+      "family": "mlp",
+      "overshoot": 1.3244401237334864
+    },
+    {
+      "step": 28,
+      "family": "mlp",
+      "overshoot": 1.3226276557093428
+    },
+    {
+      "step": 29,
+      "family": "mlp",
+      "overshoot": 1.323809080274391
+    },
+    {
+      "step": 30,
+      "family": "mlp",
+      "overshoot": 1.3239270184141965
+    },
+    {
+      "step": 31,
+      "family": "mlp",
+      "overshoot": 1.3244524066887766
+    },
+    {
+      "step": 32,
+      "family": "mlp",
+      "overshoot": 1.3257712145937302
+    },
+    {
+      "step": 33,
+      "family": "mlp",
+      "overshoot": 1.3236422606330176
+    },
+    {
+      "step": 34,
+      "family": "mlp",
+      "overshoot": 1.326169796859849
+    },
+    {
+      "step": 35,
+      "family": "mlp",
+      "overshoot": 1.3265351376258403
+    },
+    {
+      "step": 36,
+      "family": "mlp",
+      "overshoot": 1.327887359124347
+    },
+    {
+      "step": 37,
+      "family": "mlp",
+      "overshoot": 1.3246927907477157
+    },
+    {
+      "step": 38,
+      "family": "mlp",
+      "overshoot": 1.3245818167632297
+    },
+    {
+      "step": 39,
+      "family": "mlp",
+      "overshoot": 1.3300767461099645
+    },
+    {
+      "step": 40,
+      "family": "mlp",
+      "overshoot": 1.3275989130454797
+    },
+    {
+      "step": 41,
+      "family": "mlp",
+      "overshoot": 1.3267577519674623
+    },
+    {
+      "step": 42,
+      "family": "mlp",
+      "overshoot": 1.3247829678091243
+    },
+    {
+      "step": 43,
+      "family": "mlp",
+      "overshoot": 1.3253674069499803
+    },
+    {
+      "step": 44,
+      "family": "mlp",
+      "overshoot": 1.3238918496094145
+    },
+    {
+      "step": 45,
+      "family": "mlp",
+      "overshoot": 1.3236024618315891
+    },
+    {
+      "step": 46,
+      "family": "mlp",
+      "overshoot": 1.3236052918256944
+    },
+    {
+      "step": 47,
+      "family": "mlp",
+      "overshoot": 1.3241803675304114
+    },
+    {
+      "step": 48,
+      "family": "mlp",
+      "overshoot": 1.324226158383977
+    },
+    {
+      "step": 49,
+      "family": "mlp",
+      "overshoot": 1.3245914846689304
+    },
+    {
+      "step": 50,
+      "family": "mlp",
+      "overshoot": 1.3250947241868891
+    },
+    {
+      "step": 51,
+      "family": "mlp",
+      "overshoot": 1.3256272239658446
+    },
+    {
+      "step": 52,
+      "family": "mlp",
+      "overshoot": 1.3261702322746804
+    },
+    {
+      "step": 53,
+      "family": "mlp",
+      "overshoot": 1.3262504396959205
+    },
+    {
+      "step": 54,
+      "family": "mlp",
+      "overshoot": 1.3256127048079485
+    },
+    {
+      "step": 55,
+      "family": "mlp",
+      "overshoot": 1.3255472642340613
+    },
+    {
+      "step": 56,
+      "family": "mlp",
+      "overshoot": 1.3257279051424835
+    },
+    {
+      "step": 57,
+      "family": "mlp",
+      "overshoot": 1.3264398424550063
+    },
+    {
+      "step": 58,
+      "family": "mlp",
+      "overshoot": 1.3273370981927497
+    },
+    {
+      "step": 59,
+      "family": "mlp",
+      "overshoot": 1.326519424469357
+    },
+    {
+      "step": 60,
+      "family": "mlp",
+      "overshoot": 1.3266784433539698
+    },
+    {
+      "step": 61,
+      "family": "mlp",
+      "overshoot": 1.3253646931286454
+    },
+    {
+      "step": 62,
+      "family": "mlp",
+      "overshoot": 1.3259849670899488
+    },
+    {
+      "step": 63,
+      "family": "mlp",
+      "overshoot": 1.3306239876199093
+    },
+    {
+      "step": 64,
+      "family": "mlp",
+      "overshoot": 1.3264625460486885
+    },
+    {
+      "step": 65,
+      "family": "mlp",
+      "overshoot": 1.3289381162052403
+    },
+    {
+      "step": 66,
+      "family": "mlp",
+      "overshoot": 1.329601757521113
+    },
+    {
+      "step": 67,
+      "family": "mlp",
+      "overshoot": 1.3284428004958495
+    },
+    {
+      "step": 68,
+      "family": "mlp",
+      "overshoot": 1.3273281975383069
+    },
+    {
+      "step": 69,
+      "family": "mlp",
+      "overshoot": 1.3256817056316088
+    },
+    {
+      "step": 70,
+      "family": "mlp",
+      "overshoot": 1.3259729156149904
+    },
+    {
+      "step": 71,
+      "family": "mlp",
+      "overshoot": 1.3267234778616395
+    },
+    {
+      "step": 72,
+      "family": "mlp",
+      "overshoot": 1.327180094163866
+    },
+    {
+      "step": 73,
+      "family": "mlp",
+      "overshoot": 1.3267185926813205
+    },
+    {
+      "step": 74,
+      "family": "mlp",
+      "overshoot": 1.3259653763405013
+    },
+    {
+      "step": 75,
+      "family": "mlp",
+      "overshoot": 1.3288145947066081
+    },
+    {
+      "step": 76,
+      "family": "mlp",
+      "overshoot": 1.3266712079360385
+    },
+    {
+      "step": 77,
+      "family": "mlp",
+      "overshoot": 1.325797024778811
+    },
+    {
+      "step": 78,
+      "family": "mlp",
+      "overshoot": 1.3257268211868918
+    },
+    {
+      "step": 79,
+      "family": "mlp",
+      "overshoot": 1.3266909890024063
+    },
+    {
+      "step": 80,
+      "family": "mlp",
+      "overshoot": 1.3270998203438191
+    },
+    {
+      "step": 81,
+      "family": "mlp",
+      "overshoot": 1.3278383034420356
+    },
+    {
+      "step": 82,
+      "family": "mlp",
+      "overshoot": 1.3275336364615624
+    },
+    {
+      "step": 83,
+      "family": "mlp",
+      "overshoot": 1.3275746011741862
+    },
+    {
+      "step": 84,
+      "family": "mlp",
+      "overshoot": 1.3262767597038927
+    },
+    {
+      "step": 85,
+      "family": "mlp",
+      "overshoot": 1.3296973524454783
+    },
+    {
+      "step": 86,
+      "family": "mlp",
+      "overshoot": 1.3293980269006638
+    },
+    {
+      "step": 87,
+      "family": "mlp",
+      "overshoot": 1.3278780235322993
+    },
+    {
+      "step": 88,
+      "family": "mlp",
+      "overshoot": 1.3291102872299232
+    },
+    {
+      "step": 89,
+      "family": "mlp",
+      "overshoot": 1.3281376648126526
+    },
+    {
+      "step": 90,
+      "family": "mlp",
+      "overshoot": 1.3274884171674355
+    },
+    {
+      "step": 91,
+      "family": "mlp",
+      "overshoot": 1.3261283365615024
+    },
+    {
+      "step": 92,
+      "family": "mlp",
+      "overshoot": 1.3259341768935946
+    },
+    {
+      "step": 93,
+      "family": "mlp",
+      "overshoot": 1.3271442069924837
+    },
+    {
+      "step": 94,
+      "family": "mlp",
+      "overshoot": 1.3270312378180213
+    },
+    {
+      "step": 95,
+      "family": "mlp",
+      "overshoot": 1.3267474657600673
+    },
+    {
+      "step": 96,
+      "family": "mlp",
+      "overshoot": 1.3267675914551547
+    },
+    {
+      "step": 97,
+      "family": "mlp",
+      "overshoot": 1.3273325737439012
+    },
+    {
+      "step": 98,
+      "family": "mlp",
+      "overshoot": 1.327404371988855
+    },
+    {
+      "step": 99,
+      "family": "mlp",
+      "overshoot": 1.327647014184409
+    },
+    {
+      "step": 100,
+      "family": "mlp",
+      "overshoot": 1.3292543762801934
+    },
+    {
+      "step": 101,
+      "family": "mlp",
+      "overshoot": 1.3284007720102609
+    },
+    {
+      "step": 102,
+      "family": "mlp",
+      "overshoot": 1.3270867746872201
+    },
+    {
+      "step": 103,
+      "family": "mlp",
+      "overshoot": 1.3263763552510812
+    },
+    {
+      "step": 104,
+      "family": "mlp",
+      "overshoot": 1.3283636186179941
+    },
+    {
+      "step": 105,
+      "family": "mlp",
+      "overshoot": 1.3273607754627756
+    },
+    {
+      "step": 106,
+      "family": "mlp",
+      "overshoot": 1.326035425189723
+    },
+    {
+      "step": 107,
+      "family": "mlp",
+      "overshoot": 1.3253599280272272
+    },
+    {
+      "step": 108,
+      "family": "mlp",
+      "overshoot": 1.3273343215292972
+    },
+    {
+      "step": 109,
+      "family": "mlp",
+      "overshoot": 1.3266377947357775
+    },
+    {
+      "step": 110,
+      "family": "mlp",
+      "overshoot": 1.3256012366419776
+    },
+    {
+      "step": 111,
+      "family": "mlp",
+      "overshoot": 1.3269173345845056
+    },
+    {
+      "step": 112,
+      "family": "mlp",
+      "overshoot": 1.3273804452227345
+    },
+    {
+      "step": 113,
+      "family": "mlp",
+      "overshoot": 1.3272926156423326
+    },
+    {
+      "step": 114,
+      "family": "mlp",
+      "overshoot": 1.3279869961899038
+    },
+    {
+      "step": 115,
+      "family": "mlp",
+      "overshoot": 1.3281843471557775
+    },
+    {
+      "step": 116,
+      "family": "mlp",
+      "overshoot": 1.3279512908098017
+    },
+    {
+      "step": 117,
+      "family": "mlp",
+      "overshoot": 1.3276213485514137
+    },
+    {
+      "step": 118,
+      "family": "mlp",
+      "overshoot": 1.3268251807740035
+    },
+    {
+      "step": 119,
+      "family": "mlp",
+      "overshoot": 1.3284762110131327
+    },
+    {
+      "step": 120,
+      "family": "mlp",
+      "overshoot": 1.3295800508078859
+    },
+    {
+      "step": 121,
+      "family": "mlp",
+      "overshoot": 1.3295626402882856
+    },
+    {
+      "step": 122,
+      "family": "mlp",
+      "overshoot": 1.328605144697973
+    },
+    {
+      "step": 123,
+      "family": "mlp",
+      "overshoot": 1.3299353874323308
+    },
+    {
+      "step": 124,
+      "family": "mlp",
+      "overshoot": 1.3293787319328234
+    },
+    {
+      "step": 125,
+      "family": "mlp",
+      "overshoot": 1.3283594327262054
+    },
+    {
+      "step": 126,
+      "family": "mlp",
+      "overshoot": 1.3289441213555029
+    },
+    {
+      "step": 127,
+      "family": "mlp",
+      "overshoot": 1.3292518397710626
+    },
+    {
+      "step": 128,
+      "family": "mlp",
+      "overshoot": 1.3276267441177094
+    },
+    {
+      "step": 129,
+      "family": "mlp",
+      "overshoot": 1.3269849798932962
+    },
+    {
+      "step": 130,
+      "family": "mlp",
+      "overshoot": 1.3252686583274813
+    },
+    {
+      "step": 131,
+      "family": "mlp",
+      "overshoot": 1.3249439468095219
+    },
+    {
+      "step": 132,
+      "family": "mlp",
+      "overshoot": 1.3263092967077093
+    },
+    {
+      "step": 133,
+      "family": "mlp",
+      "overshoot": 1.3266821910617708
+    },
+    {
+      "step": 134,
+      "family": "mlp",
+      "overshoot": 1.3261902800790275
+    },
+    {
+      "step": 135,
+      "family": "mlp",
+      "overshoot": 1.3263081577094606
+    },
+    {
+      "step": 136,
+      "family": "mlp",
+      "overshoot": 1.3266349939894333
+    },
+    {
+      "step": 137,
+      "family": "mlp",
+      "overshoot": 1.3278434504600956
+    },
+    {
+      "step": 138,
+      "family": "mlp",
+      "overshoot": 1.3292927988029872
+    },
+    {
+      "step": 139,
+      "family": "mlp",
+      "overshoot": 1.3288780275821133
+    },
+    {
+      "step": 140,
+      "family": "mlp",
+      "overshoot": 1.3289642833086455
+    },
+    {
+      "step": 141,
+      "family": "mlp",
+      "overshoot": 1.327614690850532
+    },
+    {
+      "step": 142,
+      "family": "mlp",
+      "overshoot": 1.3276870033509425
+    },
+    {
+      "step": 143,
+      "family": "mlp",
+      "overshoot": 1.3265699148030823
+    },
+    {
+      "step": 144,
+      "family": "mlp",
+      "overshoot": 1.3271227153674647
+    },
+    {
+      "step": 145,
+      "family": "mlp",
+      "overshoot": 1.3264047305397055
+    },
+    {
+      "step": 146,
+      "family": "mlp",
+      "overshoot": 1.3269026887967306
+    },
+    {
+      "step": 147,
+      "family": "mlp",
+      "overshoot": 1.326556235567784
+    },
+    {
+      "step": 148,
+      "family": "mlp",
+      "overshoot": 1.3268774565806805
+    },
+    {
+      "step": 149,
+      "family": "mlp",
+      "overshoot": 1.327415185867897
+    },
+    {
+      "step": 150,
+      "family": "mlp",
+      "overshoot": 1.3275795840191686
+    },
+    {
+      "step": 151,
+      "family": "mlp",
+      "overshoot": 1.3261274708568478
+    },
+    {
+      "step": 152,
+      "family": "mlp",
+      "overshoot": 1.3273503799581123
+    },
+    {
+      "step": 153,
+      "family": "mlp",
+      "overshoot": 1.3271728827778957
+    },
+    {
+      "step": 154,
+      "family": "mlp",
+      "overshoot": 1.3263865614136943
+    },
+    {
+      "step": 155,
+      "family": "mlp",
+      "overshoot": 1.3269836168366411
+    },
+    {
+      "step": 156,
+      "family": "mlp",
+      "overshoot": 1.327597484400045
+    },
+    {
+      "step": 157,
+      "family": "mlp",
+      "overshoot": 1.3271984563965975
+    },
+    {
+      "step": 158,
+      "family": "mlp",
+      "overshoot": 1.3275012311340366
+    },
+    {
+      "step": 159,
+      "family": "mlp",
+      "overshoot": 1.3276383812391066
+    },
+    {
+      "step": 160,
+      "family": "mlp",
+      "overshoot": 1.327774027671773
+    },
+    {
+      "step": 161,
+      "family": "mlp",
+      "overshoot": 1.3276362673815836
+    },
+    {
+      "step": 162,
+      "family": "mlp",
+      "overshoot": 1.3281972207277817
+    },
+    {
+      "step": 163,
+      "family": "mlp",
+      "overshoot": 1.3272223875125382
+    },
+    {
+      "step": 164,
+      "family": "mlp",
+      "overshoot": 1.3271695992538073
+    },
+    {
+      "step": 165,
+      "family": "mlp",
+      "overshoot": 1.3266121739733203
+    },
+    {
+      "step": 166,
+      "family": "mlp",
+      "overshoot": 1.3268208904614798
+    },
+    {
+      "step": 167,
+      "family": "mlp",
+      "overshoot": 1.3265599987910641
+    },
+    {
+      "step": 168,
+      "family": "mlp",
+      "overshoot": 1.3265655494339865
+    },
+    {
+      "step": 169,
+      "family": "mlp",
+      "overshoot": 1.3264660496637541
+    },
+    {
+      "step": 170,
+      "family": "mlp",
+      "overshoot": 1.3264835421191055
+    },
+    {
+      "step": 171,
+      "family": "mlp",
+      "overshoot": 1.3261326113441139
+    },
+    {
+      "step": 172,
+      "family": "mlp",
+      "overshoot": 1.3264324366983826
+    },
+    {
+      "step": 173,
+      "family": "mlp",
+      "overshoot": 1.32630885797452
+    },
+    {
+      "step": 174,
+      "family": "mlp",
+      "overshoot": 1.326782990181595
+    },
+    {
+      "step": 175,
+      "family": "mlp",
+      "overshoot": 1.3261873132862823
+    },
+    {
+      "step": 176,
+      "family": "mlp",
+      "overshoot": 1.3265141967611604
+    },
+    {
+      "step": 177,
+      "family": "mlp",
+      "overshoot": 1.3267375000839579
+    },
+    {
+      "step": 178,
+      "family": "mlp",
+      "overshoot": 1.3271918435238441
+    },
+    {
+      "step": 179,
+      "family": "mlp",
+      "overshoot": 1.327724314311953
+    },
+    {
+      "step": 180,
+      "family": "mlp",
+      "overshoot": 1.3276947472216152
+    },
+    {
+      "step": 181,
+      "family": "mlp",
+      "overshoot": 1.3278050346946113
+    },
+    {
+      "step": 182,
+      "family": "mlp",
+      "overshoot": 1.3276836117656527
+    },
+    {
+      "step": 183,
+      "family": "mlp",
+      "overshoot": 1.3278023080576686
+    },
+    {
+      "step": 184,
+      "family": "mlp",
+      "overshoot": 1.3270076089644163
+    },
+    {
+      "step": 185,
+      "family": "mlp",
+      "overshoot": 1.3262889697724496
+    },
+    {
+      "step": 186,
+      "family": "mlp",
+      "overshoot": 1.32694072964377
+    },
+    {
+      "step": 187,
+      "family": "mlp",
+      "overshoot": 1.326411213557176
+    },
+    {
+      "step": 188,
+      "family": "mlp",
+      "overshoot": 1.3277726242794776
+    },
+    {
+      "step": 189,
+      "family": "mlp",
+      "overshoot": 1.327507106675733
+    },
+    {
+      "step": 190,
+      "family": "mlp",
+      "overshoot": 1.3267099278878551
+    },
+    {
+      "step": 191,
+      "family": "mlp",
+      "overshoot": 1.3266443147013156
+    },
+    {
+      "step": 192,
+      "family": "mlp",
+      "overshoot": 1.3273591475530864
+    },
+    {
+      "step": 193,
+      "family": "mlp",
+      "overshoot": 1.3272197618931707
+    },
+    {
+      "step": 194,
+      "family": "mlp",
+      "overshoot": 1.3261602314639698
+    },
+    {
+      "step": 195,
+      "family": "mlp",
+      "overshoot": 1.325823400842508
+    },
+    {
+      "step": 196,
+      "family": "mlp",
+      "overshoot": 1.3275258485204153
+    },
+    {
+      "step": 197,
+      "family": "mlp",
+      "overshoot": 1.3275683598657884
+    },
+    {
+      "step": 198,
+      "family": "mlp",
+      "overshoot": 1.328031047941993
+    },
+    {
+      "step": 199,
+      "family": "mlp",
+      "overshoot": 1.3272747504128968
+    },
+    {
+      "step": 200,
+      "family": "mlp",
+      "overshoot": 1.326444915668718
+    },
+    {
+      "step": 201,
+      "family": "mlp",
+      "overshoot": 1.3271594249856378
+    },
+    {
+      "step": 202,
+      "family": "mlp",
+      "overshoot": 1.32616211918451
+    },
+    {
+      "step": 203,
+      "family": "mlp",
+      "overshoot": 1.3269166898669842
+    },
+    {
+      "step": 204,
+      "family": "mlp",
+      "overshoot": 1.3275763325996053
+    },
+    {
+      "step": 205,
+      "family": "mlp",
+      "overshoot": 1.3278106647219874
+    },
+    {
+      "step": 206,
+      "family": "mlp",
+      "overshoot": 1.3277125436954529
+    },
+    {
+      "step": 207,
+      "family": "mlp",
+      "overshoot": 1.3274903686923103
+    },
+    {
+      "step": 208,
+      "family": "mlp",
+      "overshoot": 1.32686219842235
+    },
+    {
+      "step": 209,
+      "family": "mlp",
+      "overshoot": 1.3277502496670017
+    },
+    {
+      "step": 210,
+      "family": "mlp",
+      "overshoot": 1.3277684233830713
+    },
+    {
+      "step": 211,
+      "family": "mlp",
+      "overshoot": 1.326235780858516
+    },
+    {
+      "step": 212,
+      "family": "mlp",
+      "overshoot": 1.3268134413065358
+    },
+    {
+      "step": 213,
+      "family": "mlp",
+      "overshoot": 1.3272730900047065
+    },
+    {
+      "step": 214,
+      "family": "mlp",
+      "overshoot": 1.3281026241467593
+    },
+    {
+      "step": 215,
+      "family": "mlp",
+      "overshoot": 1.3265967088599204
+    },
+    {
+      "step": 216,
+      "family": "mlp",
+      "overshoot": 1.3290123405294072
+    },
+    {
+      "step": 217,
+      "family": "mlp",
+      "overshoot": 1.3285534858092178
+    },
+    {
+      "step": 218,
+      "family": "mlp",
+      "overshoot": 1.3276304147115592
+    },
+    {
+      "step": 219,
+      "family": "mlp",
+      "overshoot": 1.327499347969199
+    },
+    {
+      "step": 220,
+      "family": "mlp",
+      "overshoot": 1.327792643056628
+    },
+    {
+      "step": 221,
+      "family": "mlp",
+      "overshoot": 1.3282960331244897
+    },
+    {
+      "step": 222,
+      "family": "mlp",
+      "overshoot": 1.3261887947313884
+    },
+    {
+      "step": 223,
+      "family": "mlp",
+      "overshoot": 1.3263453685511344
+    },
+    {
+      "step": 224,
+      "family": "mlp",
+      "overshoot": 1.3262644454369867
+    },
+    {
+      "step": 225,
+      "family": "mlp",
+      "overshoot": 1.3275646353971928
+    },
+    {
+      "step": 226,
+      "family": "mlp",
+      "overshoot": 1.3278717627813192
+    },
+    {
+      "step": 227,
+      "family": "mlp",
+      "overshoot": 1.327390252933882
+    },
+    {
+      "step": 228,
+      "family": "mlp",
+      "overshoot": 1.3264107575168698
+    },
+    {
+      "step": 229,
+      "family": "mlp",
+      "overshoot": 1.3252579756980818
+    },
+    {
+      "step": 230,
+      "family": "mlp",
+      "overshoot": 1.325847388064691
+    },
+    {
+      "step": 231,
+      "family": "mlp",
+      "overshoot": 1.3264861725338142
+    },
+    {
+      "step": 232,
+      "family": "mlp",
+      "overshoot": 1.3265626751402857
+    },
+    {
+      "step": 233,
+      "family": "mlp",
+      "overshoot": 1.3274855089915836
+    },
+    {
+      "step": 234,
+      "family": "mlp",
+      "overshoot": 1.3277517299349044
+    },
+    {
+      "step": 235,
+      "family": "mlp",
+      "overshoot": 1.3273485043543143
+    },
+    {
+      "step": 236,
+      "family": "mlp",
+      "overshoot": 1.3270244710591774
+    },
+    {
+      "step": 237,
+      "family": "mlp",
+      "overshoot": 1.3270330879465364
+    },
+    {
+      "step": 238,
+      "family": "mlp",
+      "overshoot": 1.3269429092881402
+    },
+    {
+      "step": 239,
+      "family": "mlp",
+      "overshoot": 1.3290821870229708
+    },
+    {
+      "step": 240,
+      "family": "mlp",
+      "overshoot": 1.327777391130521
+    },
+    {
+      "step": 241,
+      "family": "mlp",
+      "overshoot": 1.3283313575282985
+    },
+    {
+      "step": 242,
+      "family": "mlp",
+      "overshoot": 1.3281043711731548
+    },
+    {
+      "step": 243,
+      "family": "mlp",
+      "overshoot": 1.3275606210817692
+    },
+    {
+      "step": 244,
+      "family": "mlp",
+      "overshoot": 1.327207680099318
+    },
+    {
+      "step": 245,
+      "family": "mlp",
+      "overshoot": 1.3261748857443139
+    },
+    {
+      "step": 246,
+      "family": "mlp",
+      "overshoot": 1.326151905852572
+    },
+    {
+      "step": 247,
+      "family": "mlp",
+      "overshoot": 1.3250715890981088
+    },
+    {
+      "step": 248,
+      "family": "mlp",
+      "overshoot": 1.3257623436407413
+    },
+    {
+      "step": 249,
+      "family": "mlp",
+      "overshoot": 1.3257204866091936
+    },
+    {
+      "step": 250,
+      "family": "mlp",
+      "overshoot": 1.3253045577451714
+    },
+    {
+      "step": 251,
+      "family": "mlp",
+      "overshoot": 1.326288301429095
+    },
+    {
+      "step": 252,
+      "family": "mlp",
+      "overshoot": 1.3261639217466477
+    },
+    {
+      "step": 253,
+      "family": "mlp",
+      "overshoot": 1.3267771446926782
+    },
+    {
+      "step": 254,
+      "family": "mlp",
+      "overshoot": 1.3273989756081064
+    },
+    {
+      "step": 255,
+      "family": "mlp",
+      "overshoot": 1.327154440512677
+    },
+    {
+      "step": 256,
+      "family": "mlp",
+      "overshoot": 1.3270688215836444
+    },
+    {
+      "step": 257,
+      "family": "mlp",
+      "overshoot": 1.3274363916285143
+    },
+    {
+      "step": 258,
+      "family": "mlp",
+      "overshoot": 1.32738251156651
+    },
+    {
+      "step": 259,
+      "family": "mlp",
+      "overshoot": 1.3278722848817157
+    },
+    {
+      "step": 260,
+      "family": "mlp",
+      "overshoot": 1.3275335947795857
+    },
+    {
+      "step": 261,
+      "family": "mlp",
+      "overshoot": 1.3268040237864203
+    },
+    {
+      "step": 262,
+      "family": "mlp",
+      "overshoot": 1.3272377467897176
+    },
+    {
+      "step": 263,
+      "family": "mlp",
+      "overshoot": 1.3269362481485014
+    },
+    {
+      "step": 264,
+      "family": "mlp",
+      "overshoot": 1.327459931581162
+    },
+    {
+      "step": 265,
+      "family": "mlp",
+      "overshoot": 1.3273489860247503
+    },
+    {
+      "step": 266,
+      "family": "mlp",
+      "overshoot": 1.3274551842648952
+    },
+    {
+      "step": 267,
+      "family": "mlp",
+      "overshoot": 1.3269471177004886
+    },
+    {
+      "step": 268,
+      "family": "mlp",
+      "overshoot": 1.3277079406545331
+    },
+    {
+      "step": 269,
+      "family": "mlp",
+      "overshoot": 1.3283345959886126
+    },
+    {
+      "step": 270,
+      "family": "mlp",
+      "overshoot": 1.3278630059501506
+    },
+    {
+      "step": 271,
+      "family": "mlp",
+      "overshoot": 1.3285034661969202
+    },
+    {
+      "step": 272,
+      "family": "mlp",
+      "overshoot": 1.3291774681462547
+    },
+    {
+      "step": 273,
+      "family": "mlp",
+      "overshoot": 1.3275182800323362
+    },
+    {
+      "step": 274,
+      "family": "mlp",
+      "overshoot": 1.3269590338129797
+    },
+    {
+      "step": 275,
+      "family": "mlp",
+      "overshoot": 1.3256867743740186
+    },
+    {
+      "step": 276,
+      "family": "mlp",
+      "overshoot": 1.3267893402702127
+    },
+    {
+      "step": 277,
+      "family": "mlp",
+      "overshoot": 1.3283352387624872
+    },
+    {
+      "step": 278,
+      "family": "mlp",
+      "overshoot": 1.327991775499913
+    },
+    {
+      "step": 279,
+      "family": "mlp",
+      "overshoot": 1.3265607998313333
+    },
+    {
+      "step": 280,
+      "family": "mlp",
+      "overshoot": 1.3270176651859318
+    },
+    {
+      "step": 281,
+      "family": "mlp",
+      "overshoot": 1.3284989271063599
+    },
+    {
+      "step": 282,
+      "family": "mlp",
+      "overshoot": 1.3282820445096881
+    },
+    {
+      "step": 283,
+      "family": "mlp",
+      "overshoot": 1.327970842855961
+    },
+    {
+      "step": 284,
+      "family": "mlp",
+      "overshoot": 1.3252575615671567
+    },
+    {
+      "step": 285,
+      "family": "mlp",
+      "overshoot": 1.3240841182464362
+    },
+    {
+      "step": 286,
+      "family": "mlp",
+      "overshoot": 1.3269933845438142
+    },
+    {
+      "step": 287,
+      "family": "mlp",
+      "overshoot": 1.326656542813006
+    },
+    {
+      "step": 288,
+      "family": "mlp",
+      "overshoot": 1.3254286727418274
+    },
+    {
+      "step": 289,
+      "family": "mlp",
+      "overshoot": 1.3245132457744393
+    },
+    {
+      "step": 290,
+      "family": "mlp",
+      "overshoot": 1.329203194638202
+    },
+    {
+      "step": 291,
+      "family": "mlp",
+      "overshoot": 1.3286922149192517
+    },
+    {
+      "step": 292,
+      "family": "mlp",
+      "overshoot": 1.3275911855312064
+    },
+    {
+      "step": 293,
+      "family": "mlp",
+      "overshoot": 1.3268028391863564
+    },
+    {
+      "step": 294,
+      "family": "mlp",
+      "overshoot": 1.3256176041943148
+    },
+    {
+      "step": 295,
+      "family": "mlp",
+      "overshoot": 1.32922471904313
+    },
+    {
+      "step": 296,
+      "family": "mlp",
+      "overshoot": 1.3263692196484793
+    },
+    {
+      "step": 297,
+      "family": "mlp",
+      "overshoot": 1.3236840675835913
+    },
+    {
+      "step": 298,
+      "family": "mlp",
+      "overshoot": 1.3260373010889204
+    },
+    {
+      "step": 299,
+      "family": "mlp",
+      "overshoot": 1.3273712311658896
+    },
+    {
+      "step": 300,
+      "family": "mlp",
+      "overshoot": 1.3266319013150163
+    },
+    {
+      "step": 1,
+      "family": "embedding",
+      "overshoot": 1.2230339159613521
+    },
+    {
+      "step": 2,
+      "family": "embedding",
+      "overshoot": 1.3005705981397475
+    },
+    {
+      "step": 3,
+      "family": "embedding",
+      "overshoot": 1.3235291677283296
+    },
+    {
+      "step": 4,
+      "family": "embedding",
+      "overshoot": 1.331925034106215
+    },
+    {
+      "step": 5,
+      "family": "embedding",
+      "overshoot": 1.3337703607943219
+    },
+    {
+      "step": 6,
+      "family": "embedding",
+      "overshoot": 1.3440533456692827
+    },
+    {
+      "step": 7,
+      "family": "embedding",
+      "overshoot": 1.3463401660469618
+    },
+    {
+      "step": 8,
+      "family": "embedding",
+      "overshoot": 1.3443575920738815
+    },
+    {
+      "step": 9,
+      "family": "embedding",
+      "overshoot": 1.3448104324047432
+    },
+    {
+      "step": 10,
+      "family": "embedding",
+      "overshoot": 1.3429899453273444
+    },
+    {
+      "step": 11,
+      "family": "embedding",
+      "overshoot": 1.341849121625116
+    },
+    {
+      "step": 12,
+      "family": "embedding",
+      "overshoot": 1.3387552029747571
+    },
+    {
+      "step": 13,
+      "family": "embedding",
+      "overshoot": 1.3402309023552599
+    },
+    {
+      "step": 14,
+      "family": "embedding",
+      "overshoot": 1.334656578873959
+    },
+    {
+      "step": 15,
+      "family": "embedding",
+      "overshoot": 1.330605470216663
+    },
+    {
+      "step": 16,
+      "family": "embedding",
+      "overshoot": 1.3287211734533602
+    },
+    {
+      "step": 17,
+      "family": "embedding",
+      "overshoot": 1.3271198754509814
+    },
+    {
+      "step": 18,
+      "family": "embedding",
+      "overshoot": 1.3279382534648314
+    },
+    {
+      "step": 19,
+      "family": "embedding",
+      "overshoot": 1.3247471892505893
+    },
+    {
+      "step": 20,
+      "family": "embedding",
+      "overshoot": 1.3241654004920973
+    },
+    {
+      "step": 21,
+      "family": "embedding",
+      "overshoot": 1.3218694368963528
+    },
+    {
+      "step": 22,
+      "family": "embedding",
+      "overshoot": 1.3236180227238528
+    },
+    {
+      "step": 23,
+      "family": "embedding",
+      "overshoot": 1.3239257956592487
+    },
+    {
+      "step": 24,
+      "family": "embedding",
+      "overshoot": 1.322270604978566
+    },
+    {
+      "step": 25,
+      "family": "embedding",
+      "overshoot": 1.327952524303419
+    },
+    {
+      "step": 26,
+      "family": "embedding",
+      "overshoot": 1.3268120985605114
+    },
+    {
+      "step": 27,
+      "family": "embedding",
+      "overshoot": 1.326018839464353
+    },
+    {
+      "step": 28,
+      "family": "embedding",
+      "overshoot": 1.3247078655662705
+    },
+    {
+      "step": 29,
+      "family": "embedding",
+      "overshoot": 1.3188927923880662
+    },
+    {
+      "step": 30,
+      "family": "embedding",
+      "overshoot": 1.3170533086499236
+    },
+    {
+      "step": 31,
+      "family": "embedding",
+      "overshoot": 1.320884261501522
+    },
+    {
+      "step": 32,
+      "family": "embedding",
+      "overshoot": 1.31874223427813
+    },
+    {
+      "step": 33,
+      "family": "embedding",
+      "overshoot": 1.317755667228363
+    },
+    {
+      "step": 34,
+      "family": "embedding",
+      "overshoot": 1.3124134837794095
+    },
+    {
+      "step": 35,
+      "family": "embedding",
+      "overshoot": 1.3153409824278846
+    },
+    {
+      "step": 36,
+      "family": "embedding",
+      "overshoot": 1.3172053758502504
+    },
+    {
+      "step": 37,
+      "family": "embedding",
+      "overshoot": 1.3210937574508106
+    },
+    {
+      "step": 38,
+      "family": "embedding",
+      "overshoot": 1.3137547370399623
+    },
+    {
+      "step": 39,
+      "family": "embedding",
+      "overshoot": 1.310100531406885
+    },
+    {
+      "step": 40,
+      "family": "embedding",
+      "overshoot": 1.3097079936953118
+    },
+    {
+      "step": 41,
+      "family": "embedding",
+      "overshoot": 1.3030870379336656
+    },
+    {
+      "step": 42,
+      "family": "embedding",
+      "overshoot": 1.3106990957313174
+    },
+    {
+      "step": 43,
+      "family": "embedding",
+      "overshoot": 1.3084919528728527
+    },
+    {
+      "step": 44,
+      "family": "embedding",
+      "overshoot": 1.314631919378679
+    },
+    {
+      "step": 45,
+      "family": "embedding",
+      "overshoot": 1.3102486419718222
+    },
+    {
+      "step": 46,
+      "family": "embedding",
+      "overshoot": 1.3185054746862195
+    },
+    {
+      "step": 47,
+      "family": "embedding",
+      "overshoot": 1.3189643732055552
+    },
+    {
+      "step": 48,
+      "family": "embedding",
+      "overshoot": 1.330573683292233
+    },
+    {
+      "step": 49,
+      "family": "embedding",
+      "overshoot": 1.3359967945521947
+    },
+    {
+      "step": 50,
+      "family": "embedding",
+      "overshoot": 1.3337710192313137
+    },
+    {
+      "step": 51,
+      "family": "embedding",
+      "overshoot": 1.3327384199261727
+    },
+    {
+      "step": 52,
+      "family": "embedding",
+      "overshoot": 1.3288017615951802
+    },
+    {
+      "step": 53,
+      "family": "embedding",
+      "overshoot": 1.3228106795355292
+    },
+    {
+      "step": 54,
+      "family": "embedding",
+      "overshoot": 1.3203727625044734
+    },
+    {
+      "step": 55,
+      "family": "embedding",
+      "overshoot": 1.323824413360805
+    },
+    {
+      "step": 56,
+      "family": "embedding",
+      "overshoot": 1.3262396169034993
+    },
+    {
+      "step": 57,
+      "family": "embedding",
+      "overshoot": 1.3225593110535268
+    },
+    {
+      "step": 58,
+      "family": "embedding",
+      "overshoot": 1.32251799287423
+    },
+    {
+      "step": 59,
+      "family": "embedding",
+      "overshoot": 1.321264347705295
+    },
+    {
+      "step": 60,
+      "family": "embedding",
+      "overshoot": 1.3193265897393558
+    },
+    {
+      "step": 61,
+      "family": "embedding",
+      "overshoot": 1.3212618794613962
+    },
+    {
+      "step": 62,
+      "family": "embedding",
+      "overshoot": 1.325912240185191
+    },
+    {
+      "step": 63,
+      "family": "embedding",
+      "overshoot": 1.324282466597516
+    },
+    {
+      "step": 64,
+      "family": "embedding",
+      "overshoot": 1.3240627725152148
+    },
+    {
+      "step": 65,
+      "family": "embedding",
+      "overshoot": 1.326745954904991
+    },
+    {
+      "step": 66,
+      "family": "embedding",
+      "overshoot": 1.321365232433301
+    },
+    {
+      "step": 67,
+      "family": "embedding",
+      "overshoot": 1.318449937624654
+    },
+    {
+      "step": 68,
+      "family": "embedding",
+      "overshoot": 1.3172586529922918
+    },
+    {
+      "step": 69,
+      "family": "embedding",
+      "overshoot": 1.3161483993111989
+    },
+    {
+      "step": 70,
+      "family": "embedding",
+      "overshoot": 1.3220029167577338
+    },
+    {
+      "step": 71,
+      "family": "embedding",
+      "overshoot": 1.3263329973292037
+    },
+    {
+      "step": 72,
+      "family": "embedding",
+      "overshoot": 1.3245304501503576
+    },
+    {
+      "step": 73,
+      "family": "embedding",
+      "overshoot": 1.3295225048905581
+    },
+    {
+      "step": 74,
+      "family": "embedding",
+      "overshoot": 1.3261980001296239
+    },
+    {
+      "step": 75,
+      "family": "embedding",
+      "overshoot": 1.3258621075190404
+    },
+    {
+      "step": 76,
+      "family": "embedding",
+      "overshoot": 1.3248322696409036
+    },
+    {
+      "step": 77,
+      "family": "embedding",
+      "overshoot": 1.3251034970215916
+    },
+    {
+      "step": 78,
+      "family": "embedding",
+      "overshoot": 1.3246096356082833
+    },
+    {
+      "step": 79,
+      "family": "embedding",
+      "overshoot": 1.321463465036013
+    },
+    {
+      "step": 80,
+      "family": "embedding",
+      "overshoot": 1.3170090431764299
+    },
+    {
+      "step": 81,
+      "family": "embedding",
+      "overshoot": 1.3200805816852363
+    },
+    {
+      "step": 82,
+      "family": "embedding",
+      "overshoot": 1.3183075402941327
+    },
+    {
+      "step": 83,
+      "family": "embedding",
+      "overshoot": 1.3193955358535376
+    },
+    {
+      "step": 84,
+      "family": "embedding",
+      "overshoot": 1.3265557388222433
+    },
+    {
+      "step": 85,
+      "family": "embedding",
+      "overshoot": 1.3240805789821464
+    },
+    {
+      "step": 86,
+      "family": "embedding",
+      "overshoot": 1.32244527003735
+    },
+    {
+      "step": 87,
+      "family": "embedding",
+      "overshoot": 1.319592300954045
+    },
+    {
+      "step": 88,
+      "family": "embedding",
+      "overshoot": 1.3196325598723733
+    },
+    {
+      "step": 89,
+      "family": "embedding",
+      "overshoot": 1.316319952499386
+    },
+    {
+      "step": 90,
+      "family": "embedding",
+      "overshoot": 1.3174844094609732
+    },
+    {
+      "step": 91,
+      "family": "embedding",
+      "overshoot": 1.3206281820817183
+    },
+    {
+      "step": 92,
+      "family": "embedding",
+      "overshoot": 1.3170894998621816
+    },
+    {
+      "step": 93,
+      "family": "embedding",
+      "overshoot": 1.3132449306891656
+    },
+    {
+      "step": 94,
+      "family": "embedding",
+      "overshoot": 1.3153110006013837
+    },
+    {
+      "step": 95,
+      "family": "embedding",
+      "overshoot": 1.324608967042642
+    },
+    {
+      "step": 96,
+      "family": "embedding",
+      "overshoot": 1.3187015842501406
+    },
+    {
+      "step": 97,
+      "family": "embedding",
+      "overshoot": 1.316646913828921
+    },
+    {
+      "step": 98,
+      "family": "embedding",
+      "overshoot": 1.3194555606422798
+    },
+    {
+      "step": 99,
+      "family": "embedding",
+      "overshoot": 1.32019177547002
+    },
+    {
+      "step": 100,
+      "family": "embedding",
+      "overshoot": 1.3189547792797724
+    },
+    {
+      "step": 101,
+      "family": "embedding",
+      "overshoot": 1.3146884771484473
+    },
+    {
+      "step": 102,
+      "family": "embedding",
+      "overshoot": 1.3184634216852598
+    },
+    {
+      "step": 103,
+      "family": "embedding",
+      "overshoot": 1.3187215352056025
+    },
+    {
+      "step": 104,
+      "family": "embedding",
+      "overshoot": 1.3025842275260637
+    },
+    {
+      "step": 105,
+      "family": "embedding",
+      "overshoot": 1.3128743906312232
+    },
+    {
+      "step": 106,
+      "family": "embedding",
+      "overshoot": 1.3160628181274527
+    },
+    {
+      "step": 107,
+      "family": "embedding",
+      "overshoot": 1.3254963420300376
+    },
+    {
+      "step": 108,
+      "family": "embedding",
+      "overshoot": 1.3166941285314948
+    },
+    {
+      "step": 109,
+      "family": "embedding",
+      "overshoot": 1.3145308568114527
+    },
+    {
+      "step": 110,
+      "family": "embedding",
+      "overshoot": 1.3136003008316492
+    },
+    {
+      "step": 111,
+      "family": "embedding",
+      "overshoot": 1.3043619529867538
+    },
+    {
+      "step": 112,
+      "family": "embedding",
+      "overshoot": 1.3137843434831546
+    },
+    {
+      "step": 113,
+      "family": "embedding",
+      "overshoot": 1.3168911754752666
+    },
+    {
+      "step": 114,
+      "family": "embedding",
+      "overshoot": 1.314508759484723
+    },
+    {
+      "step": 115,
+      "family": "embedding",
+      "overshoot": 1.3200350458159293
+    },
+    {
+      "step": 116,
+      "family": "embedding",
+      "overshoot": 1.322281949305543
+    },
+    {
+      "step": 117,
+      "family": "embedding",
+      "overshoot": 1.3168927608726897
+    },
+    {
+      "step": 118,
+      "family": "embedding",
+      "overshoot": 1.3105641930695013
+    },
+    {
+      "step": 119,
+      "family": "embedding",
+      "overshoot": 1.311710226603015
+    },
+    {
+      "step": 120,
+      "family": "embedding",
+      "overshoot": 1.311155740273927
+    },
+    {
+      "step": 121,
+      "family": "embedding",
+      "overshoot": 1.3125583389929931
+    },
+    {
+      "step": 122,
+      "family": "embedding",
+      "overshoot": 1.3152078971110261
+    },
+    {
+      "step": 123,
+      "family": "embedding",
+      "overshoot": 1.3174640634765271
+    },
+    {
+      "step": 124,
+      "family": "embedding",
+      "overshoot": 1.317482525374886
+    },
+    {
+      "step": 125,
+      "family": "embedding",
+      "overshoot": 1.3190737503133323
+    },
+    {
+      "step": 126,
+      "family": "embedding",
+      "overshoot": 1.3137677441586908
+    },
+    {
+      "step": 127,
+      "family": "embedding",
+      "overshoot": 1.310357624077797
+    },
+    {
+      "step": 128,
+      "family": "embedding",
+      "overshoot": 1.3110169198322188
+    },
+    {
+      "step": 129,
+      "family": "embedding",
+      "overshoot": 1.302799534122789
+    },
+    {
+      "step": 130,
+      "family": "embedding",
+      "overshoot": 1.3078741115691044
+    },
+    {
+      "step": 131,
+      "family": "embedding",
+      "overshoot": 1.3079584847872996
+    },
+    {
+      "step": 132,
+      "family": "embedding",
+      "overshoot": 1.3089940787107168
+    },
+    {
+      "step": 133,
+      "family": "embedding",
+      "overshoot": 1.3057577973453045
+    },
+    {
+      "step": 134,
+      "family": "embedding",
+      "overshoot": 1.3088626351096135
+    },
+    {
+      "step": 135,
+      "family": "embedding",
+      "overshoot": 1.3039769826551262
+    },
+    {
+      "step": 136,
+      "family": "embedding",
+      "overshoot": 1.298906452261274
+    },
+    {
+      "step": 137,
+      "family": "embedding",
+      "overshoot": 1.2905977628087588
+    },
+    {
+      "step": 138,
+      "family": "embedding",
+      "overshoot": 1.293293504136896
+    },
+    {
+      "step": 139,
+      "family": "embedding",
+      "overshoot": 1.3079772501517766
+    },
+    {
+      "step": 140,
+      "family": "embedding",
+      "overshoot": 1.3233577449628076
+    },
+    {
+      "step": 141,
+      "family": "embedding",
+      "overshoot": 1.3285067077418842
+    },
+    {
+      "step": 142,
+      "family": "embedding",
+      "overshoot": 1.3318158653436327
+    },
+    {
+      "step": 143,
+      "family": "embedding",
+      "overshoot": 1.3256672963073721
+    },
+    {
+      "step": 144,
+      "family": "embedding",
+      "overshoot": 1.3187177030092918
+    },
+    {
+      "step": 145,
+      "family": "embedding",
+      "overshoot": 1.3136643415518507
+    },
+    {
+      "step": 146,
+      "family": "embedding",
+      "overshoot": 1.3116504895356802
+    },
+    {
+      "step": 147,
+      "family": "embedding",
+      "overshoot": 1.3075410031589794
+    },
+    {
+      "step": 148,
+      "family": "embedding",
+      "overshoot": 1.3145660336009408
+    },
+    {
+      "step": 149,
+      "family": "embedding",
+      "overshoot": 1.3121363415804381
+    },
+    {
+      "step": 150,
+      "family": "embedding",
+      "overshoot": 1.3136813506710818
+    },
+    {
+      "step": 151,
+      "family": "embedding",
+      "overshoot": 1.3174524860484542
+    },
+    {
+      "step": 152,
+      "family": "embedding",
+      "overshoot": 1.3227304703037135
+    },
+    {
+      "step": 153,
+      "family": "embedding",
+      "overshoot": 1.3187512601542832
+    },
+    {
+      "step": 154,
+      "family": "embedding",
+      "overshoot": 1.310004751837528
+    },
+    {
+      "step": 155,
+      "family": "embedding",
+      "overshoot": 1.3088565110373251
+    },
+    {
+      "step": 156,
+      "family": "embedding",
+      "overshoot": 1.304087190235405
+    },
+    {
+      "step": 157,
+      "family": "embedding",
+      "overshoot": 1.2974175232925365
+    },
+    {
+      "step": 158,
+      "family": "embedding",
+      "overshoot": 1.3028612948764187
+    },
+    {
+      "step": 159,
+      "family": "embedding",
+      "overshoot": 1.3070661173351534
+    },
+    {
+      "step": 160,
+      "family": "embedding",
+      "overshoot": 1.313651532476037
+    },
+    {
+      "step": 161,
+      "family": "embedding",
+      "overshoot": 1.311557569495955
+    },
+    {
+      "step": 162,
+      "family": "embedding",
+      "overshoot": 1.3152850530597897
+    },
+    {
+      "step": 163,
+      "family": "embedding",
+      "overshoot": 1.3165625993148118
+    },
+    {
+      "step": 164,
+      "family": "embedding",
+      "overshoot": 1.3047871118991605
+    },
+    {
+      "step": 165,
+      "family": "embedding",
+      "overshoot": 1.3130041489063122
+    },
+    {
+      "step": 166,
+      "family": "embedding",
+      "overshoot": 1.3192820959786153
+    },
+    {
+      "step": 167,
+      "family": "embedding",
+      "overshoot": 1.3137006832694094
+    },
+    {
+      "step": 168,
+      "family": "embedding",
+      "overshoot": 1.3208136181815242
+    },
+    {
+      "step": 169,
+      "family": "embedding",
+      "overshoot": 1.3127962544612846
+    },
+    {
+      "step": 170,
+      "family": "embedding",
+      "overshoot": 1.3147406609254482
+    },
+    {
+      "step": 171,
+      "family": "embedding",
+      "overshoot": 1.3143357915394422
+    },
+    {
+      "step": 172,
+      "family": "embedding",
+      "overshoot": 1.3150316068778867
+    },
+    {
+      "step": 173,
+      "family": "embedding",
+      "overshoot": 1.3171822701324762
+    },
+    {
+      "step": 174,
+      "family": "embedding",
+      "overshoot": 1.31154432035362
+    },
+    {
+      "step": 175,
+      "family": "embedding",
+      "overshoot": 1.3132410034478177
+    },
+    {
+      "step": 176,
+      "family": "embedding",
+      "overshoot": 1.301034582363872
+    },
+    {
+      "step": 177,
+      "family": "embedding",
+      "overshoot": 1.3131285671777124
+    },
+    {
+      "step": 178,
+      "family": "embedding",
+      "overshoot": 1.3255304894995092
+    },
+    {
+      "step": 179,
+      "family": "embedding",
+      "overshoot": 1.3117473009674685
+    },
+    {
+      "step": 180,
+      "family": "embedding",
+      "overshoot": 1.3026377948941221
+    },
+    {
+      "step": 181,
+      "family": "embedding",
+      "overshoot": 1.3156240728650275
+    },
+    {
+      "step": 182,
+      "family": "embedding",
+      "overshoot": 1.3069339927489376
+    },
+    {
+      "step": 183,
+      "family": "embedding",
+      "overshoot": 1.2964072459577551
+    },
+    {
+      "step": 184,
+      "family": "embedding",
+      "overshoot": 1.3173840905743774
+    },
+    {
+      "step": 185,
+      "family": "embedding",
+      "overshoot": 1.3295248720968915
+    },
+    {
+      "step": 186,
+      "family": "embedding",
+      "overshoot": 1.2955861477265835
+    },
+    {
+      "step": 187,
+      "family": "embedding",
+      "overshoot": 1.308005323620951
+    },
+    {
+      "step": 188,
+      "family": "embedding",
+      "overshoot": 1.298910116249789
+    },
+    {
+      "step": 189,
+      "family": "embedding",
+      "overshoot": 1.3114735468241276
+    },
+    {
+      "step": 190,
+      "family": "embedding",
+      "overshoot": 1.3191737132869812
+    },
+    {
+      "step": 191,
+      "family": "embedding",
+      "overshoot": 1.2965870538330975
+    },
+    {
+      "step": 192,
+      "family": "embedding",
+      "overshoot": 1.3098114934744398
+    },
+    {
+      "step": 193,
+      "family": "embedding",
+      "overshoot": 1.3301612972280283
+    },
+    {
+      "step": 194,
+      "family": "embedding",
+      "overshoot": 1.3030729344138237
+    },
+    {
+      "step": 195,
+      "family": "embedding",
+      "overshoot": 1.2985996235687376
+    },
+    {
+      "step": 196,
+      "family": "embedding",
+      "overshoot": 1.311265930292413
+    },
+    {
+      "step": 197,
+      "family": "embedding",
+      "overshoot": 1.3222436690441672
+    },
+    {
+      "step": 198,
+      "family": "embedding",
+      "overshoot": 1.3193096916509073
+    },
+    {
+      "step": 199,
+      "family": "embedding",
+      "overshoot": 1.3352834215551939
+    },
+    {
+      "step": 200,
+      "family": "embedding",
+      "overshoot": 1.3232821852501637
+    },
+    {
+      "step": 201,
+      "family": "embedding",
+      "overshoot": 1.310683528359049
+    },
+    {
+      "step": 202,
+      "family": "embedding",
+      "overshoot": 1.2985064292752602
+    },
+    {
+      "step": 203,
+      "family": "embedding",
+      "overshoot": 1.3083808143166122
+    },
+    {
+      "step": 204,
+      "family": "embedding",
+      "overshoot": 1.3146929422392954
+    },
+    {
+      "step": 205,
+      "family": "embedding",
+      "overshoot": 1.31956468476917
+    },
+    {
+      "step": 206,
+      "family": "embedding",
+      "overshoot": 1.3254555226497753
+    },
+    {
+      "step": 207,
+      "family": "embedding",
+      "overshoot": 1.3198406051532408
+    },
+    {
+      "step": 208,
+      "family": "embedding",
+      "overshoot": 1.3178123982332293
+    },
+    {
+      "step": 209,
+      "family": "embedding",
+      "overshoot": 1.3120469409998359
+    },
+    {
+      "step": 210,
+      "family": "embedding",
+      "overshoot": 1.3200779638095277
+    },
+    {
+      "step": 211,
+      "family": "embedding",
+      "overshoot": 1.3234610876148627
+    },
+    {
+      "step": 212,
+      "family": "embedding",
+      "overshoot": 1.318708543904479
+    },
+    {
+      "step": 213,
+      "family": "embedding",
+      "overshoot": 1.3200951081950898
+    },
+    {
+      "step": 214,
+      "family": "embedding",
+      "overshoot": 1.320371622361132
+    },
+    {
+      "step": 215,
+      "family": "embedding",
+      "overshoot": 1.3253881635240312
+    },
+    {
+      "step": 216,
+      "family": "embedding",
+      "overshoot": 1.323981786191614
+    },
+    {
+      "step": 217,
+      "family": "embedding",
+      "overshoot": 1.3164661275582317
+    },
+    {
+      "step": 218,
+      "family": "embedding",
+      "overshoot": 1.3174846982364807
+    },
+    {
+      "step": 219,
+      "family": "embedding",
+      "overshoot": 1.3206831159775483
+    },
+    {
+      "step": 220,
+      "family": "embedding",
+      "overshoot": 1.3203252545080884
+    },
+    {
+      "step": 221,
+      "family": "embedding",
+      "overshoot": 1.3273075220167168
+    },
+    {
+      "step": 222,
+      "family": "embedding",
+      "overshoot": 1.3344687340496713
+    },
+    {
+      "step": 223,
+      "family": "embedding",
+      "overshoot": 1.3118453898001152
+    },
+    {
+      "step": 224,
+      "family": "embedding",
+      "overshoot": 1.3121002313844077
+    },
+    {
+      "step": 225,
+      "family": "embedding",
+      "overshoot": 1.3216847912103051
+    },
+    {
+      "step": 226,
+      "family": "embedding",
+      "overshoot": 1.333341176451559
+    },
+    {
+      "step": 227,
+      "family": "embedding",
+      "overshoot": 1.3233202749914095
+    },
+    {
+      "step": 228,
+      "family": "embedding",
+      "overshoot": 1.306384410963679
+    },
+    {
+      "step": 229,
+      "family": "embedding",
+      "overshoot": 1.3182709849400132
+    },
+    {
+      "step": 230,
+      "family": "embedding",
+      "overshoot": 1.3291794688299083
+    },
+    {
+      "step": 231,
+      "family": "embedding",
+      "overshoot": 1.3041503288809133
+    },
+    {
+      "step": 232,
+      "family": "embedding",
+      "overshoot": 1.3095027720147983
+    },
+    {
+      "step": 233,
+      "family": "embedding",
+      "overshoot": 1.3261153200432203
+    },
+    {
+      "step": 234,
+      "family": "embedding",
+      "overshoot": 1.323906805447751
+    },
+    {
+      "step": 235,
+      "family": "embedding",
+      "overshoot": 1.3171160422876318
+    },
+    {
+      "step": 236,
+      "family": "embedding",
+      "overshoot": 1.3109605494206378
+    },
+    {
+      "step": 237,
+      "family": "embedding",
+      "overshoot": 1.3099810917348107
+    },
+    {
+      "step": 238,
+      "family": "embedding",
+      "overshoot": 1.3205114818831256
+    },
+    {
+      "step": 239,
+      "family": "embedding",
+      "overshoot": 1.3344829930180313
+    },
+    {
+      "step": 240,
+      "family": "embedding",
+      "overshoot": 1.3302490746927849
+    },
+    {
+      "step": 241,
+      "family": "embedding",
+      "overshoot": 1.2886662203077124
+    },
+    {
+      "step": 242,
+      "family": "embedding",
+      "overshoot": 1.3057267957686245
+    },
+    {
+      "step": 243,
+      "family": "embedding",
+      "overshoot": 1.3093339978606113
+    },
+    {
+      "step": 244,
+      "family": "embedding",
+      "overshoot": 1.3176524569237242
+    },
+    {
+      "step": 245,
+      "family": "embedding",
+      "overshoot": 1.3263895887303652
+    },
+    {
+      "step": 246,
+      "family": "embedding",
+      "overshoot": 1.3192045626843838
+    },
+    {
+      "step": 247,
+      "family": "embedding",
+      "overshoot": 1.330310542597599
+    },
+    {
+      "step": 248,
+      "family": "embedding",
+      "overshoot": 1.3282716405562889
+    },
+    {
+      "step": 249,
+      "family": "embedding",
+      "overshoot": 1.3199476969196458
+    },
+    {
+      "step": 250,
+      "family": "embedding",
+      "overshoot": 1.3075172917425066
+    },
+    {
+      "step": 251,
+      "family": "embedding",
+      "overshoot": 1.3190307670555663
+    },
+    {
+      "step": 252,
+      "family": "embedding",
+      "overshoot": 1.3152410392623568
+    },
+    {
+      "step": 253,
+      "family": "embedding",
+      "overshoot": 1.3152829097520595
+    },
+    {
+      "step": 254,
+      "family": "embedding",
+      "overshoot": 1.3175749899184426
+    },
+    {
+      "step": 255,
+      "family": "embedding",
+      "overshoot": 1.3254197984828942
+    },
+    {
+      "step": 256,
+      "family": "embedding",
+      "overshoot": 1.3316057344101857
+    },
+    {
+      "step": 257,
+      "family": "embedding",
+      "overshoot": 1.3258433750287832
+    },
+    {
+      "step": 258,
+      "family": "embedding",
+      "overshoot": 1.3208729190983832
+    },
+    {
+      "step": 259,
+      "family": "embedding",
+      "overshoot": 1.325575642150601
+    },
+    {
+      "step": 260,
+      "family": "embedding",
+      "overshoot": 1.3193883399274142
+    },
+    {
+      "step": 261,
+      "family": "embedding",
+      "overshoot": 1.312989874514214
+    },
+    {
+      "step": 262,
+      "family": "embedding",
+      "overshoot": 1.3203384549068462
+    },
+    {
+      "step": 263,
+      "family": "embedding",
+      "overshoot": 1.3278706537967293
+    },
+    {
+      "step": 264,
+      "family": "embedding",
+      "overshoot": 1.3326585631458705
+    },
+    {
+      "step": 265,
+      "family": "embedding",
+      "overshoot": 1.3268557190729318
+    },
+    {
+      "step": 266,
+      "family": "embedding",
+      "overshoot": 1.3168826936409543
+    },
+    {
+      "step": 267,
+      "family": "embedding",
+      "overshoot": 1.306436609849327
+    },
+    {
+      "step": 268,
+      "family": "embedding",
+      "overshoot": 1.3145217127391768
+    },
+    {
+      "step": 269,
+      "family": "embedding",
+      "overshoot": 1.3176678265651784
+    },
+    {
+      "step": 270,
+      "family": "embedding",
+      "overshoot": 1.3204377012779211
+    },
+    {
+      "step": 271,
+      "family": "embedding",
+      "overshoot": 1.3212848540993143
+    },
+    {
+      "step": 272,
+      "family": "embedding",
+      "overshoot": 1.328521996173164
+    },
+    {
+      "step": 273,
+      "family": "embedding",
+      "overshoot": 1.3244259584397007
+    },
+    {
+      "step": 274,
+      "family": "embedding",
+      "overshoot": 1.3263372975810248
+    },
+    {
+      "step": 275,
+      "family": "embedding",
+      "overshoot": 1.3352983466711636
+    },
+    {
+      "step": 276,
+      "family": "embedding",
+      "overshoot": 1.330928840333105
+    },
+    {
+      "step": 277,
+      "family": "embedding",
+      "overshoot": 1.3048807100287285
+    },
+    {
+      "step": 278,
+      "family": "embedding",
+      "overshoot": 1.3165639018423432
+    },
+    {
+      "step": 279,
+      "family": "embedding",
+      "overshoot": 1.3297014777497527
+    },
+    {
+      "step": 280,
+      "family": "embedding",
+      "overshoot": 1.3322512403790834
+    },
+    {
+      "step": 281,
+      "family": "embedding",
+      "overshoot": 1.3118650131714793
+    },
+    {
+      "step": 282,
+      "family": "embedding",
+      "overshoot": 1.319329941025593
+    },
+    {
+      "step": 283,
+      "family": "embedding",
+      "overshoot": 1.315394153780514
+    },
+    {
+      "step": 284,
+      "family": "embedding",
+      "overshoot": 1.3186035064858703
+    },
+    {
+      "step": 285,
+      "family": "embedding",
+      "overshoot": 1.3260555588537735
+    },
+    {
+      "step": 286,
+      "family": "embedding",
+      "overshoot": 1.3289374728776857
+    },
+    {
+      "step": 287,
+      "family": "embedding",
+      "overshoot": 1.3256175775883354
+    },
+    {
+      "step": 288,
+      "family": "embedding",
+      "overshoot": 1.3191619361275209
+    },
+    {
+      "step": 289,
+      "family": "embedding",
+      "overshoot": 1.3278482292986031
+    },
+    {
+      "step": 290,
+      "family": "embedding",
+      "overshoot": 1.3288531241612669
+    },
+    {
+      "step": 291,
+      "family": "embedding",
+      "overshoot": 1.3227472545036278
+    },
+    {
+      "step": 292,
+      "family": "embedding",
+      "overshoot": 1.3241160786633677
+    },
+    {
+      "step": 293,
+      "family": "embedding",
+      "overshoot": 1.325362679267264
+    },
+    {
+      "step": 294,
+      "family": "embedding",
+      "overshoot": 1.3261748706639018
+    },
+    {
+      "step": 295,
+      "family": "embedding",
+      "overshoot": 1.3207477366883436
+    },
+    {
+      "step": 296,
+      "family": "embedding",
+      "overshoot": 1.3260272036214305
+    },
+    {
+      "step": 297,
+      "family": "embedding",
+      "overshoot": 1.326977073507622
+    },
+    {
+      "step": 298,
+      "family": "embedding",
+      "overshoot": 1.3252779246271935
+    },
+    {
+      "step": 299,
+      "family": "embedding",
+      "overshoot": 1.3352276314586888
+    },
+    {
+      "step": 300,
+      "family": "embedding",
+      "overshoot": 1.3209824380350348
+    },
+    {
+      "step": 1,
+      "family": "norm",
+      "overshoot": 1.18965205900148
+    },
+    {
+      "step": 2,
+      "family": "norm",
+      "overshoot": 1.2475524254992072
+    },
+    {
+      "step": 3,
+      "family": "norm",
+      "overshoot": 1.2715224887914265
+    },
+    {
+      "step": 4,
+      "family": "norm",
+      "overshoot": 1.2748618558297047
+    },
+    {
+      "step": 5,
+      "family": "norm",
+      "overshoot": 1.3404971033045987
+    },
+    {
+      "step": 6,
+      "family": "norm",
+      "overshoot": 1.3456338186968453
+    },
+    {
+      "step": 7,
+      "family": "norm",
+      "overshoot": 1.3717224536161845
+    },
+    {
+      "step": 8,
+      "family": "norm",
+      "overshoot": 1.363275021437894
+    },
+    {
+      "step": 9,
+      "family": "norm",
+      "overshoot": 1.361235943136917
+    },
+    {
+      "step": 10,
+      "family": "norm",
+      "overshoot": 1.3693736123773526
+    },
+    {
+      "step": 11,
+      "family": "norm",
+      "overshoot": 1.397142286109999
+    },
+    {
+      "step": 12,
+      "family": "norm",
+      "overshoot": 1.3466413889975852
+    },
+    {
+      "step": 13,
+      "family": "norm",
+      "overshoot": 1.4095389217559426
+    },
+    {
+      "step": 14,
+      "family": "norm",
+      "overshoot": 1.416894817038137
+    },
+    {
+      "step": 15,
+      "family": "norm",
+      "overshoot": 1.4501080443661873
+    },
+    {
+      "step": 16,
+      "family": "norm",
+      "overshoot": 1.4306186381150818
+    },
+    {
+      "step": 17,
+      "family": "norm",
+      "overshoot": 1.3944682075704704
+    },
+    {
+      "step": 18,
+      "family": "norm",
+      "overshoot": 1.366860382010705
+    },
+    {
+      "step": 19,
+      "family": "norm",
+      "overshoot": 1.3835610186533083
+    },
+    {
+      "step": 20,
+      "family": "norm",
+      "overshoot": 1.3562555251844879
+    },
+    {
+      "step": 21,
+      "family": "norm",
+      "overshoot": 1.3425567981478166
+    },
+    {
+      "step": 22,
+      "family": "norm",
+      "overshoot": 1.368216347974112
+    },
+    {
+      "step": 23,
+      "family": "norm",
+      "overshoot": 1.3838790493814246
+    },
+    {
+      "step": 24,
+      "family": "norm",
+      "overshoot": 1.4180264500309114
+    },
+    {
+      "step": 25,
+      "family": "norm",
+      "overshoot": 1.3577769324452766
+    },
+    {
+      "step": 26,
+      "family": "norm",
+      "overshoot": 1.3801265419632807
+    },
+    {
+      "step": 27,
+      "family": "norm",
+      "overshoot": 1.4039123879134414
+    },
+    {
+      "step": 28,
+      "family": "norm",
+      "overshoot": 1.4060184305674812
+    },
+    {
+      "step": 29,
+      "family": "norm",
+      "overshoot": 1.3627257172214666
+    },
+    {
+      "step": 30,
+      "family": "norm",
+      "overshoot": 1.451461550875549
+    },
+    {
+      "step": 31,
+      "family": "norm",
+      "overshoot": 1.4070332006447253
+    },
+    {
+      "step": 32,
+      "family": "norm",
+      "overshoot": 1.4726081017771302
+    },
+    {
+      "step": 33,
+      "family": "norm",
+      "overshoot": 1.4390739660607785
+    },
+    {
+      "step": 34,
+      "family": "norm",
+      "overshoot": 1.4299393829980285
+    },
+    {
+      "step": 35,
+      "family": "norm",
+      "overshoot": 1.4447745430790824
+    },
+    {
+      "step": 36,
+      "family": "norm",
+      "overshoot": 1.4057778154299168
+    },
+    {
+      "step": 37,
+      "family": "norm",
+      "overshoot": 1.4474722917473206
+    },
+    {
+      "step": 38,
+      "family": "norm",
+      "overshoot": 1.4636974379754584
+    },
+    {
+      "step": 39,
+      "family": "norm",
+      "overshoot": 1.3815387112122595
+    },
+    {
+      "step": 40,
+      "family": "norm",
+      "overshoot": 1.3725665696232967
+    },
+    {
+      "step": 41,
+      "family": "norm",
+      "overshoot": 1.3626276632122651
+    },
+    {
+      "step": 42,
+      "family": "norm",
+      "overshoot": 1.437236634157316
+    },
+    {
+      "step": 43,
+      "family": "norm",
+      "overshoot": 1.3946466807891535
+    },
+    {
+      "step": 44,
+      "family": "norm",
+      "overshoot": 1.4211797119947254
+    },
+    {
+      "step": 45,
+      "family": "norm",
+      "overshoot": 1.4439882157885
+    },
+    {
+      "step": 46,
+      "family": "norm",
+      "overshoot": 1.4060800204749235
+    },
+    {
+      "step": 47,
+      "family": "norm",
+      "overshoot": 1.475662800180642
+    },
+    {
+      "step": 48,
+      "family": "norm",
+      "overshoot": 1.47102114534643
+    },
+    {
+      "step": 49,
+      "family": "norm",
+      "overshoot": 1.4331748094555932
+    },
+    {
+      "step": 50,
+      "family": "norm",
+      "overshoot": 1.4634717977318
+    },
+    {
+      "step": 51,
+      "family": "norm",
+      "overshoot": 1.4405095390738747
+    },
+    {
+      "step": 52,
+      "family": "norm",
+      "overshoot": 1.536078657263256
+    },
+    {
+      "step": 53,
+      "family": "norm",
+      "overshoot": 1.575023422161812
+    },
+    {
+      "step": 54,
+      "family": "norm",
+      "overshoot": 1.4713336836256237
+    },
+    {
+      "step": 55,
+      "family": "norm",
+      "overshoot": 1.5162189513224935
+    },
+    {
+      "step": 56,
+      "family": "norm",
+      "overshoot": 1.488651383992486
+    },
+    {
+      "step": 57,
+      "family": "norm",
+      "overshoot": 1.4336182043501524
+    },
+    {
+      "step": 58,
+      "family": "norm",
+      "overshoot": 1.449127258536983
+    },
+    {
+      "step": 59,
+      "family": "norm",
+      "overshoot": 1.4583976129757277
+    },
+    {
+      "step": 60,
+      "family": "norm",
+      "overshoot": 1.4504697670720348
+    },
+    {
+      "step": 61,
+      "family": "norm",
+      "overshoot": 1.460154191492332
+    },
+    {
+      "step": 62,
+      "family": "norm",
+      "overshoot": 1.5099467079149278
+    },
+    {
+      "step": 63,
+      "family": "norm",
+      "overshoot": 1.4013129129415718
+    },
+    {
+      "step": 64,
+      "family": "norm",
+      "overshoot": 1.4262312836147786
+    },
+    {
+      "step": 65,
+      "family": "norm",
+      "overshoot": 1.4436732575352211
+    },
+    {
+      "step": 66,
+      "family": "norm",
+      "overshoot": 1.4944465642428302
+    },
+    {
+      "step": 67,
+      "family": "norm",
+      "overshoot": 1.5084647340687807
+    },
+    {
+      "step": 68,
+      "family": "norm",
+      "overshoot": 1.5203414085772637
+    },
+    {
+      "step": 69,
+      "family": "norm",
+      "overshoot": 1.5051437747921923
+    },
+    {
+      "step": 70,
+      "family": "norm",
+      "overshoot": 1.4553281915046015
+    },
+    {
+      "step": 71,
+      "family": "norm",
+      "overshoot": 1.4936956595039017
+    },
+    {
+      "step": 72,
+      "family": "norm",
+      "overshoot": 1.4550866677709944
+    },
+    {
+      "step": 73,
+      "family": "norm",
+      "overshoot": 1.3949682863564374
+    },
+    {
+      "step": 74,
+      "family": "norm",
+      "overshoot": 1.4396367572406457
+    },
+    {
+      "step": 75,
+      "family": "norm",
+      "overshoot": 1.3797476925912713
+    },
+    {
+      "step": 76,
+      "family": "norm",
+      "overshoot": 1.3980113433964434
+    },
+    {
+      "step": 77,
+      "family": "norm",
+      "overshoot": 1.3987007444227888
+    },
+    {
+      "step": 78,
+      "family": "norm",
+      "overshoot": 1.4623994363619919
+    },
+    {
+      "step": 79,
+      "family": "norm",
+      "overshoot": 1.4876308693063156
+    },
+    {
+      "step": 80,
+      "family": "norm",
+      "overshoot": 1.4386966290865582
+    },
+    {
+      "step": 81,
+      "family": "norm",
+      "overshoot": 1.4447819549483636
+    },
+    {
+      "step": 82,
+      "family": "norm",
+      "overshoot": 1.422187519410872
+    },
+    {
+      "step": 83,
+      "family": "norm",
+      "overshoot": 1.4222394072445466
+    },
+    {
+      "step": 84,
+      "family": "norm",
+      "overshoot": 1.4642302735023587
+    },
+    {
+      "step": 85,
+      "family": "norm",
+      "overshoot": 1.4481122702729228
+    },
+    {
+      "step": 86,
+      "family": "norm",
+      "overshoot": 1.4015996173562004
+    },
+    {
+      "step": 87,
+      "family": "norm",
+      "overshoot": 1.419088136719598
+    },
+    {
+      "step": 88,
+      "family": "norm",
+      "overshoot": 1.4405802416037032
+    },
+    {
+      "step": 89,
+      "family": "norm",
+      "overshoot": 1.414059898784721
+    },
+    {
+      "step": 90,
+      "family": "norm",
+      "overshoot": 1.486928375169317
+    },
+    {
+      "step": 91,
+      "family": "norm",
+      "overshoot": 1.3467888138176052
+    },
+    {
+      "step": 92,
+      "family": "norm",
+      "overshoot": 1.397918183706196
+    },
+    {
+      "step": 93,
+      "family": "norm",
+      "overshoot": 1.5000180059754495
+    },
+    {
+      "step": 94,
+      "family": "norm",
+      "overshoot": 1.4329787367621794
+    },
+    {
+      "step": 95,
+      "family": "norm",
+      "overshoot": 1.4164921490587172
+    },
+    {
+      "step": 96,
+      "family": "norm",
+      "overshoot": 1.4494184626281552
+    },
+    {
+      "step": 97,
+      "family": "norm",
+      "overshoot": 1.3898819373859257
+    },
+    {
+      "step": 98,
+      "family": "norm",
+      "overshoot": 1.459884644191974
+    },
+    {
+      "step": 99,
+      "family": "norm",
+      "overshoot": 1.414832506653741
+    },
+    {
+      "step": 100,
+      "family": "norm",
+      "overshoot": 1.4441683984967248
+    },
+    {
+      "step": 101,
+      "family": "norm",
+      "overshoot": 1.3913279598976453
+    },
+    {
+      "step": 102,
+      "family": "norm",
+      "overshoot": 1.4515826060660522
+    },
+    {
+      "step": 103,
+      "family": "norm",
+      "overshoot": 1.5092269938901817
+    },
+    {
+      "step": 104,
+      "family": "norm",
+      "overshoot": 1.4345564329725435
+    },
+    {
+      "step": 105,
+      "family": "norm",
+      "overshoot": 1.448829069779122
+    },
+    {
+      "step": 106,
+      "family": "norm",
+      "overshoot": 1.497779604080737
+    },
+    {
+      "step": 107,
+      "family": "norm",
+      "overshoot": 1.5384300635347705
+    },
+    {
+      "step": 108,
+      "family": "norm",
+      "overshoot": 1.4462629034521277
+    },
+    {
+      "step": 109,
+      "family": "norm",
+      "overshoot": 1.4208310362130976
+    },
+    {
+      "step": 110,
+      "family": "norm",
+      "overshoot": 1.4668930547948764
+    },
+    {
+      "step": 111,
+      "family": "norm",
+      "overshoot": 1.3703033342730606
+    },
+    {
+      "step": 112,
+      "family": "norm",
+      "overshoot": 1.396240955839442
+    },
+    {
+      "step": 113,
+      "family": "norm",
+      "overshoot": 1.4658973843451624
+    },
+    {
+      "step": 114,
+      "family": "norm",
+      "overshoot": 1.4153527618940065
+    },
+    {
+      "step": 115,
+      "family": "norm",
+      "overshoot": 1.405086938618954
+    },
+    {
+      "step": 116,
+      "family": "norm",
+      "overshoot": 1.404484027260385
+    },
+    {
+      "step": 117,
+      "family": "norm",
+      "overshoot": 1.4714464933132916
+    },
+    {
+      "step": 118,
+      "family": "norm",
+      "overshoot": 1.4137571666297613
+    },
+    {
+      "step": 119,
+      "family": "norm",
+      "overshoot": 1.4729154854654942
+    },
+    {
+      "step": 120,
+      "family": "norm",
+      "overshoot": 1.4840889164555637
+    },
+    {
+      "step": 121,
+      "family": "norm",
+      "overshoot": 1.2366912188907446
+    },
+    {
+      "step": 122,
+      "family": "norm",
+      "overshoot": 1.2359968434907436
+    },
+    {
+      "step": 123,
+      "family": "norm",
+      "overshoot": 1.3073593378175565
+    },
+    {
+      "step": 124,
+      "family": "norm",
+      "overshoot": 1.3420182287982518
+    },
+    {
+      "step": 125,
+      "family": "norm",
+      "overshoot": 1.4068994321533121
+    },
+    {
+      "step": 126,
+      "family": "norm",
+      "overshoot": 1.3722511976107385
+    },
+    {
+      "step": 127,
+      "family": "norm",
+      "overshoot": 1.4011544327230472
+    },
+    {
+      "step": 128,
+      "family": "norm",
+      "overshoot": 1.3447628755141576
+    },
+    {
+      "step": 129,
+      "family": "norm",
+      "overshoot": 1.3836018379473567
+    },
+    {
+      "step": 130,
+      "family": "norm",
+      "overshoot": 1.40769653173985
+    },
+    {
+      "step": 131,
+      "family": "norm",
+      "overshoot": 1.4644543772154452
+    },
+    {
+      "step": 132,
+      "family": "norm",
+      "overshoot": 1.3918174919987774
+    },
+    {
+      "step": 133,
+      "family": "norm",
+      "overshoot": 1.3752466173033024
+    },
+    {
+      "step": 134,
+      "family": "norm",
+      "overshoot": 1.4239040269367604
+    },
+    {
+      "step": 135,
+      "family": "norm",
+      "overshoot": 1.3946815321033856
+    },
+    {
+      "step": 136,
+      "family": "norm",
+      "overshoot": 1.4153246158825386
+    },
+    {
+      "step": 137,
+      "family": "norm",
+      "overshoot": 1.417541974164495
+    },
+    {
+      "step": 138,
+      "family": "norm",
+      "overshoot": 1.3853967092919863
+    },
+    {
+      "step": 139,
+      "family": "norm",
+      "overshoot": 1.4130463173161916
+    },
+    {
+      "step": 140,
+      "family": "norm",
+      "overshoot": 1.4673071498510362
+    },
+    {
+      "step": 141,
+      "family": "norm",
+      "overshoot": 1.4507092320885273
+    },
+    {
+      "step": 142,
+      "family": "norm",
+      "overshoot": 1.3919034993269586
+    },
+    {
+      "step": 143,
+      "family": "norm",
+      "overshoot": 1.515849044255316
+    },
+    {
+      "step": 144,
+      "family": "norm",
+      "overshoot": 1.4637331207360749
+    },
+    {
+      "step": 145,
+      "family": "norm",
+      "overshoot": 1.5014296947603314
+    },
+    {
+      "step": 146,
+      "family": "norm",
+      "overshoot": 1.5078521825278295
+    },
+    {
+      "step": 147,
+      "family": "norm",
+      "overshoot": 1.4820693321799097
+    },
+    {
+      "step": 148,
+      "family": "norm",
+      "overshoot": 1.4288882147086008
+    },
+    {
+      "step": 149,
+      "family": "norm",
+      "overshoot": 1.4231019692636833
+    },
+    {
+      "step": 150,
+      "family": "norm",
+      "overshoot": 1.4026076399588778
+    },
+    {
+      "step": 151,
+      "family": "norm",
+      "overshoot": 1.3997412487108671
+    },
+    {
+      "step": 152,
+      "family": "norm",
+      "overshoot": 1.4443097840872896
+    },
+    {
+      "step": 153,
+      "family": "norm",
+      "overshoot": 1.4590750855678067
+    },
+    {
+      "step": 154,
+      "family": "norm",
+      "overshoot": 1.448454209676939
+    },
+    {
+      "step": 155,
+      "family": "norm",
+      "overshoot": 1.4583864079111477
+    },
+    {
+      "step": 156,
+      "family": "norm",
+      "overshoot": 1.46819444369541
+    },
+    {
+      "step": 157,
+      "family": "norm",
+      "overshoot": 1.4743045596127884
+    },
+    {
+      "step": 158,
+      "family": "norm",
+      "overshoot": 1.4707582739067897
+    },
+    {
+      "step": 159,
+      "family": "norm",
+      "overshoot": 1.5301842502255694
+    },
+    {
+      "step": 160,
+      "family": "norm",
+      "overshoot": 1.448419444797911
+    },
+    {
+      "step": 161,
+      "family": "norm",
+      "overshoot": 1.4476209594343523
+    },
+    {
+      "step": 162,
+      "family": "norm",
+      "overshoot": 1.4669489323702194
+    },
+    {
+      "step": 163,
+      "family": "norm",
+      "overshoot": 1.4617152426262277
+    },
+    {
+      "step": 164,
+      "family": "norm",
+      "overshoot": 1.4085824047604734
+    },
+    {
+      "step": 165,
+      "family": "norm",
+      "overshoot": 1.3980093930012492
+    },
+    {
+      "step": 166,
+      "family": "norm",
+      "overshoot": 1.462030378061451
+    },
+    {
+      "step": 167,
+      "family": "norm",
+      "overshoot": 1.4703318359915567
+    },
+    {
+      "step": 168,
+      "family": "norm",
+      "overshoot": 1.4723066409545364
+    },
+    {
+      "step": 169,
+      "family": "norm",
+      "overshoot": 1.500805861203
+    },
+    {
+      "step": 170,
+      "family": "norm",
+      "overshoot": 1.5041905705018042
+    },
+    {
+      "step": 171,
+      "family": "norm",
+      "overshoot": 1.4320163795764893
+    },
+    {
+      "step": 172,
+      "family": "norm",
+      "overshoot": 1.407998379355257
+    },
+    {
+      "step": 173,
+      "family": "norm",
+      "overshoot": 1.4180079447917031
+    },
+    {
+      "step": 174,
+      "family": "norm",
+      "overshoot": 1.3818478646349335
+    },
+    {
+      "step": 175,
+      "family": "norm",
+      "overshoot": 1.3973554420984926
+    },
+    {
+      "step": 176,
+      "family": "norm",
+      "overshoot": 1.4169547537276936
+    },
+    {
+      "step": 177,
+      "family": "norm",
+      "overshoot": 1.4476303342950791
+    },
+    {
+      "step": 178,
+      "family": "norm",
+      "overshoot": 1.4956494124002706
+    },
+    {
+      "step": 179,
+      "family": "norm",
+      "overshoot": 1.4767861975394097
+    },
+    {
+      "step": 180,
+      "family": "norm",
+      "overshoot": 1.4842128044545908
+    },
+    {
+      "step": 181,
+      "family": "norm",
+      "overshoot": 1.412945796124724
+    },
+    {
+      "step": 182,
+      "family": "norm",
+      "overshoot": 1.4852184460715878
+    },
+    {
+      "step": 183,
+      "family": "norm",
+      "overshoot": 1.4537471236988264
+    },
+    {
+      "step": 184,
+      "family": "norm",
+      "overshoot": 1.4220073434608498
+    },
+    {
+      "step": 185,
+      "family": "norm",
+      "overshoot": 1.478267625057976
+    },
+    {
+      "step": 186,
+      "family": "norm",
+      "overshoot": 1.3979091769946161
+    },
+    {
+      "step": 187,
+      "family": "norm",
+      "overshoot": 1.4402441140633928
+    },
+    {
+      "step": 188,
+      "family": "norm",
+      "overshoot": 1.3596344604138024
+    },
+    {
+      "step": 189,
+      "family": "norm",
+      "overshoot": 1.4409528849982705
+    },
+    {
+      "step": 190,
+      "family": "norm",
+      "overshoot": 1.407087132261921
+    },
+    {
+      "step": 191,
+      "family": "norm",
+      "overshoot": 1.3531246221436701
+    },
+    {
+      "step": 192,
+      "family": "norm",
+      "overshoot": 1.3847959270275343
+    },
+    {
+      "step": 193,
+      "family": "norm",
+      "overshoot": 1.3478784726128135
+    },
+    {
+      "step": 194,
+      "family": "norm",
+      "overshoot": 1.4229380245646885
+    },
+    {
+      "step": 195,
+      "family": "norm",
+      "overshoot": 1.4342367233044346
+    },
+    {
+      "step": 196,
+      "family": "norm",
+      "overshoot": 1.4336074532580183
+    },
+    {
+      "step": 197,
+      "family": "norm",
+      "overshoot": 1.4148301284650366
+    },
+    {
+      "step": 198,
+      "family": "norm",
+      "overshoot": 1.495159880430641
+    },
+    {
+      "step": 199,
+      "family": "norm",
+      "overshoot": 1.475237964976158
+    },
+    {
+      "step": 200,
+      "family": "norm",
+      "overshoot": 1.400851201838644
+    },
+    {
+      "step": 201,
+      "family": "norm",
+      "overshoot": 1.4351142954041538
+    },
+    {
+      "step": 202,
+      "family": "norm",
+      "overshoot": 1.4489062854439843
+    },
+    {
+      "step": 203,
+      "family": "norm",
+      "overshoot": 1.389720908555204
+    },
+    {
+      "step": 204,
+      "family": "norm",
+      "overshoot": 1.494826220702973
+    },
+    {
+      "step": 205,
+      "family": "norm",
+      "overshoot": 1.4916542897261678
+    },
+    {
+      "step": 206,
+      "family": "norm",
+      "overshoot": 1.3891121633727364
+    },
+    {
+      "step": 207,
+      "family": "norm",
+      "overshoot": 1.4111933417403215
+    },
+    {
+      "step": 208,
+      "family": "norm",
+      "overshoot": 1.4434515421199676
+    },
+    {
+      "step": 209,
+      "family": "norm",
+      "overshoot": 1.4488992104405036
+    },
+    {
+      "step": 210,
+      "family": "norm",
+      "overshoot": 1.4254063075918508
+    },
+    {
+      "step": 211,
+      "family": "norm",
+      "overshoot": 1.2988222711935502
+    },
+    {
+      "step": 212,
+      "family": "norm",
+      "overshoot": 1.3715346774754789
+    },
+    {
+      "step": 213,
+      "family": "norm",
+      "overshoot": 1.4728984332346085
+    },
+    {
+      "step": 214,
+      "family": "norm",
+      "overshoot": 1.4111095171328019
+    },
+    {
+      "step": 215,
+      "family": "norm",
+      "overshoot": 1.4311197879220334
+    },
+    {
+      "step": 216,
+      "family": "norm",
+      "overshoot": 1.3560737587370992
+    },
+    {
+      "step": 217,
+      "family": "norm",
+      "overshoot": 1.3492637830559162
+    },
+    {
+      "step": 218,
+      "family": "norm",
+      "overshoot": 1.3637352814143073
+    },
+    {
+      "step": 219,
+      "family": "norm",
+      "overshoot": 1.4348754860451058
+    },
+    {
+      "step": 220,
+      "family": "norm",
+      "overshoot": 1.433223974015539
+    },
+    {
+      "step": 221,
+      "family": "norm",
+      "overshoot": 1.473489007420235
+    },
+    {
+      "step": 222,
+      "family": "norm",
+      "overshoot": 1.526142928288348
+    },
+    {
+      "step": 223,
+      "family": "norm",
+      "overshoot": 1.434359194208336
+    },
+    {
+      "step": 224,
+      "family": "norm",
+      "overshoot": 1.3796783987809718
+    },
+    {
+      "step": 225,
+      "family": "norm",
+      "overshoot": 1.3650975469490807
+    },
+    {
+      "step": 226,
+      "family": "norm",
+      "overshoot": 1.4060024276595426
+    },
+    {
+      "step": 227,
+      "family": "norm",
+      "overshoot": 1.3942867794998965
+    },
+    {
+      "step": 228,
+      "family": "norm",
+      "overshoot": 1.40294835293167
+    },
+    {
+      "step": 229,
+      "family": "norm",
+      "overshoot": 1.4199226493022508
+    },
+    {
+      "step": 230,
+      "family": "norm",
+      "overshoot": 1.3876486952325424
+    },
+    {
+      "step": 231,
+      "family": "norm",
+      "overshoot": 1.401839730474163
+    },
+    {
+      "step": 232,
+      "family": "norm",
+      "overshoot": 1.3964422211404393
+    },
+    {
+      "step": 233,
+      "family": "norm",
+      "overshoot": 1.3855458303018944
+    },
+    {
+      "step": 234,
+      "family": "norm",
+      "overshoot": 1.4339994980518969
+    },
+    {
+      "step": 235,
+      "family": "norm",
+      "overshoot": 1.4377370916126566
+    },
+    {
+      "step": 236,
+      "family": "norm",
+      "overshoot": 1.4388992211108944
+    },
+    {
+      "step": 237,
+      "family": "norm",
+      "overshoot": 1.5034009296467716
+    },
+    {
+      "step": 238,
+      "family": "norm",
+      "overshoot": 1.4501855576965077
+    },
+    {
+      "step": 239,
+      "family": "norm",
+      "overshoot": 1.4126055091069953
+    },
+    {
+      "step": 240,
+      "family": "norm",
+      "overshoot": 1.3557203091120835
+    },
+    {
+      "step": 241,
+      "family": "norm",
+      "overshoot": 1.431138421152616
+    },
+    {
+      "step": 242,
+      "family": "norm",
+      "overshoot": 1.399392923113663
+    },
+    {
+      "step": 243,
+      "family": "norm",
+      "overshoot": 1.3920386286339381
+    },
+    {
+      "step": 244,
+      "family": "norm",
+      "overshoot": 1.3612069810587206
+    },
+    {
+      "step": 245,
+      "family": "norm",
+      "overshoot": 1.4009774881974972
+    },
+    {
+      "step": 246,
+      "family": "norm",
+      "overshoot": 1.4128966014620556
+    },
+    {
+      "step": 247,
+      "family": "norm",
+      "overshoot": 1.368974518138286
+    },
+    {
+      "step": 248,
+      "family": "norm",
+      "overshoot": 1.4115702681490592
+    },
+    {
+      "step": 249,
+      "family": "norm",
+      "overshoot": 1.4314115961776523
+    },
+    {
+      "step": 250,
+      "family": "norm",
+      "overshoot": 1.3730601501860729
+    },
+    {
+      "step": 251,
+      "family": "norm",
+      "overshoot": 1.3559379213554184
+    },
+    {
+      "step": 252,
+      "family": "norm",
+      "overshoot": 1.3897595933962257
+    },
+    {
+      "step": 253,
+      "family": "norm",
+      "overshoot": 1.39585151763731
+    },
+    {
+      "step": 254,
+      "family": "norm",
+      "overshoot": 1.4005154896435696
+    },
+    {
+      "step": 255,
+      "family": "norm",
+      "overshoot": 1.4311584004264732
+    },
+    {
+      "step": 256,
+      "family": "norm",
+      "overshoot": 1.3496920711379496
+    },
+    {
+      "step": 257,
+      "family": "norm",
+      "overshoot": 1.4476669714676795
+    },
+    {
+      "step": 258,
+      "family": "norm",
+      "overshoot": 1.4226050163607171
+    },
+    {
+      "step": 259,
+      "family": "norm",
+      "overshoot": 1.4232293028330398
+    },
+    {
+      "step": 260,
+      "family": "norm",
+      "overshoot": 1.4241948641287303
+    },
+    {
+      "step": 261,
+      "family": "norm",
+      "overshoot": 1.3777998759930585
+    },
+    {
+      "step": 262,
+      "family": "norm",
+      "overshoot": 1.4544036940034148
+    },
+    {
+      "step": 263,
+      "family": "norm",
+      "overshoot": 1.436508915223587
+    },
+    {
+      "step": 264,
+      "family": "norm",
+      "overshoot": 1.5054014632706458
+    },
+    {
+      "step": 265,
+      "family": "norm",
+      "overshoot": 1.460824817227296
+    },
+    {
+      "step": 266,
+      "family": "norm",
+      "overshoot": 1.4833166937102886
+    },
+    {
+      "step": 267,
+      "family": "norm",
+      "overshoot": 1.4615453656202455
+    },
+    {
+      "step": 268,
+      "family": "norm",
+      "overshoot": 1.4376750760454204
+    },
+    {
+      "step": 269,
+      "family": "norm",
+      "overshoot": 1.4035808566055838
+    },
+    {
+      "step": 270,
+      "family": "norm",
+      "overshoot": 1.3904915131499243
+    },
+    {
+      "step": 271,
+      "family": "norm",
+      "overshoot": 1.362112279308131
+    },
+    {
+      "step": 272,
+      "family": "norm",
+      "overshoot": 1.3340158143270806
+    },
+    {
+      "step": 273,
+      "family": "norm",
+      "overshoot": 1.3706871352272223
+    },
+    {
+      "step": 274,
+      "family": "norm",
+      "overshoot": 1.3864943321532281
+    },
+    {
+      "step": 275,
+      "family": "norm",
+      "overshoot": 1.4398942122558687
+    },
+    {
+      "step": 276,
+      "family": "norm",
+      "overshoot": 1.38260862462229
+    },
+    {
+      "step": 277,
+      "family": "norm",
+      "overshoot": 1.41849216167087
+    },
+    {
+      "step": 278,
+      "family": "norm",
+      "overshoot": 1.4357752762274425
+    },
+    {
+      "step": 279,
+      "family": "norm",
+      "overshoot": 1.4720746735237864
+    },
+    {
+      "step": 280,
+      "family": "norm",
+      "overshoot": 1.357053472764863
+    },
+    {
+      "step": 281,
+      "family": "norm",
+      "overshoot": 1.41762806210833
+    },
+    {
+      "step": 282,
+      "family": "norm",
+      "overshoot": 1.396969678721494
+    },
+    {
+      "step": 283,
+      "family": "norm",
+      "overshoot": 1.3598019508930208
+    },
+    {
+      "step": 284,
+      "family": "norm",
+      "overshoot": 1.4034803189459426
+    },
+    {
+      "step": 285,
+      "family": "norm",
+      "overshoot": 1.3679863543133481
+    },
+    {
+      "step": 286,
+      "family": "norm",
+      "overshoot": 1.3479153671074344
+    },
+    {
+      "step": 287,
+      "family": "norm",
+      "overshoot": 1.346717977350467
+    },
+    {
+      "step": 288,
+      "family": "norm",
+      "overshoot": 1.423996534518491
+    },
+    {
+      "step": 289,
+      "family": "norm",
+      "overshoot": 1.3588617860113932
+    },
+    {
+      "step": 290,
+      "family": "norm",
+      "overshoot": 1.3414754782679632
+    },
+    {
+      "step": 291,
+      "family": "norm",
+      "overshoot": 1.3259229961942158
+    },
+    {
+      "step": 292,
+      "family": "norm",
+      "overshoot": 1.348774760996489
+    },
+    {
+      "step": 293,
+      "family": "norm",
+      "overshoot": 1.3760767475984779
+    },
+    {
+      "step": 294,
+      "family": "norm",
+      "overshoot": 1.435285445064474
+    },
+    {
+      "step": 295,
+      "family": "norm",
+      "overshoot": 1.2621571117965416
+    },
+    {
+      "step": 296,
+      "family": "norm",
+      "overshoot": 1.3109240653466943
+    },
+    {
+      "step": 297,
+      "family": "norm",
+      "overshoot": 1.3637989871205816
+    },
+    {
+      "step": 298,
+      "family": "norm",
+      "overshoot": 1.2059384102181607
+    },
+    {
+      "step": 299,
+      "family": "norm",
+      "overshoot": 1.2526043977266426
+    },
+    {
+      "step": 300,
+      "family": "norm",
+      "overshoot": 1.284564331567669
+    }
+  ],
+  "order": "order 0",
+  "colors": {
+    "attention": "#2E6E4E",
+    "mlp": "#988453",
+    "embedding": "#B9605B",
+    "norm": "#7495AB"
+  }
+}
