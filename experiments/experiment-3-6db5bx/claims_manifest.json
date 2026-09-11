@@ -1,0 +1,1169 @@
+{
+ "claims": [
+  {
+   "id": "null_floor_mean",
+   "claim": "previous run null control (rne \u2212 torch AdamW) max |mean| is 0.0004",
+   "source": "results/reference/null_control_prev.json",
+   "key": "null_control_rne_minus_torch/max_abs_mean",
+   "value": 0.00041399058490174665
+  },
+  {
+   "id": "null_floor_ci",
+   "claim": "previous run null control max |90% CI bound| is 0.0045",
+   "source": "results/reference/null_control_prev.json",
+   "key": "null_control_rne_minus_torch/max_abs_ci_bound",
+   "value": 0.004533988764161315
+  },
+  {
+   "id": "harness_all_passed",
+   "claim": "all five plain-rounding reruns matched the previous experiment within 0.001",
+   "source": "results/analysis/verdicts.json",
+   "key": "harness/all_passed",
+   "value": true
+  },
+  {
+   "id": "harness_max_diff",
+   "claim": "largest |eval NLL rerun \u2212 previous| over the five harness reruns is 0.0",
+   "source": "results/analysis/verdicts.json",
+   "key": "harness/max_eval_nll_abs_diff",
+   "value": 0.0
+  },
+  {
+   "id": "n_runs",
+   "claim": "37 runs analysed (32 keno + 5 harness reruns)",
+   "source": "results/analysis/verdicts.json",
+   "key": "n_runs",
+   "value": 37
+  },
+  {
+   "id": "q1_diff_mean",
+   "claim": "keno_drop_25 \u2212 rne at lr 2e-4, seed mean, is \u22120.0158",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_how_much_or_which/difference/mean",
+   "value": -0.01575567019032431
+  },
+  {
+   "id": "q1_diff_seed0",
+   "claim": "keno_drop_25 \u2212 rne at lr 2e-4, seed 0, is \u22120.0137",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_how_much_or_which/difference/per_seed/0",
+   "value": -0.013669020905544782
+  },
+  {
+   "id": "q1_diff_seed1",
+   "claim": "keno_drop_25 \u2212 rne at lr 2e-4, seed 1, is \u22120.0178",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_how_much_or_which/difference/per_seed/1",
+   "value": -0.01784231947510384
+  },
+  {
+   "id": "q1_verdict",
+   "claim": "Q1 pre-registered verdict is 'undecided at two seeds'",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_how_much_or_which/verdict",
+   "value": "undecided at two seeds"
+  },
+  {
+   "id": "q1_keno25_len",
+   "claim": "keno_drop_25 cumulative length ratio at lr 2e-4 is 0.309",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_how_much_or_which/delivery_match/keno_drop_25_length_ratio_mean",
+   "value": 0.30896738479261526
+  },
+  {
+   "id": "q1_rne_len",
+   "claim": "rne cumulative length ratio at lr 2e-4 is 0.264",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_how_much_or_which/delivery_match/rne_length_ratio_mean",
+   "value": 0.26412213034369175
+  },
+  {
+   "id": "q1_keno25_proj",
+   "claim": "keno_drop_25 cumulative projection at lr 2e-4 is 0.249",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_how_much_or_which/delivery_match/keno_drop_25_projection_mean",
+   "value": 0.24898053080698476
+  },
+  {
+   "id": "q1_rne_proj",
+   "claim": "rne cumulative projection at lr 2e-4 is 0.137",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_how_much_or_which/delivery_match/rne_projection_mean",
+   "value": 0.1365170780288571
+  },
+  {
+   "id": "q1_keno25_never",
+   "claim": "keno_drop_25 never-moved fraction at lr 2e-4 is 0.074",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_how_much_or_which/delivery_match/keno_drop_25_never_moved_mean",
+   "value": 0.07406317070582935
+  },
+  {
+   "id": "q1_rne_never",
+   "claim": "rne never-moved fraction at lr 2e-4 is 0.616",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_how_much_or_which/delivery_match/rne_never_moved_mean",
+   "value": 0.6160342048970476
+  },
+  {
+   "id": "q1_matched_len_status",
+   "claim": "rne's delivery lies below the measured keno-drop range at lr 2e-4",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_how_much_or_which/matched_delivery/0.0002/by_length_ratio/status",
+   "value": "below measured range"
+  },
+  {
+   "id": "q1_matched_len_extrap",
+   "claim": "extrapolated keno_drop \u2212 rne at rne's length ratio, lr 2e-4, is \u22120.022",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_how_much_or_which/matched_delivery/0.0002/by_length_ratio/keno_drop_minus_rne_at_matched_delivery",
+   "value": -0.022154293321633656
+  },
+  {
+   "id": "q1_matched_proj_extrap",
+   "claim": "extrapolated keno_drop \u2212 rne at rne's projection, lr 2e-4, is \u22120.032",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_how_much_or_which/matched_delivery/0.0002/by_projection/keno_drop_minus_rne_at_matched_delivery",
+   "value": -0.03168271323360328
+  },
+  {
+   "id": "q1_keno25_minus_master",
+   "claim": "keno_drop_25 \u2212 fp32_master at lr 2e-4, seed mean, is \u22120.1168",
+   "source": "results/analysis/paired_differences.json",
+   "key": "0.0002/keno_drop_25-fp32_master/mean",
+   "value": -0.11675270669928695
+  },
+  {
+   "id": "q1_keno25_minus_master_seeds",
+   "claim": "keno_drop_25 \u2212 fp32_master at lr 2e-4 per seed is \u22120.1107 and \u22120.1228",
+   "source": "results/analysis/paired_differences.json",
+   "key": "0.0002/keno_drop_25-fp32_master/per_seed",
+   "value": [
+    -0.11071582278698844,
+    -0.12278959061158545
+   ]
+  },
+  {
+   "id": "q1_rne_minus_master",
+   "claim": "rne \u2212 fp32_master at lr 2e-4, seed mean, is \u22120.1010 (1.1691 \u2212 1.2701)",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/rne/nll_mean",
+   "value": 1.1690797287068357
+  },
+  {
+   "id": "q1_context_1e4",
+   "claim": "keno_drop_25 \u2212 rne at lr 1e-4, seed mean, is \u22120.0469",
+   "source": "results/analysis/verdicts.json",
+   "key": "q1_how_much_or_which/context_lr1e-4/mean",
+   "value": -0.046913765866926194
+  },
+  {
+   "id": "nll_keno_drop_25_2e-4",
+   "claim": "keno_drop_25 held-out NLL at lr 2e-4, seed mean (seeds 0,1), is 1.1533",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_25/nll_mean",
+   "value": 1.1533240585165112
+  },
+  {
+   "id": "len_keno_drop_25_2e-4",
+   "claim": "keno_drop_25 cumulative length ratio at lr 2e-4 is 0.309",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_25/cum_length_ratio",
+   "value": 0.30896738479261526
+  },
+  {
+   "id": "never_keno_drop_25_2e-4",
+   "claim": "keno_drop_25 never-moved fraction at lr 2e-4 is 0.074",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_25/never_moved",
+   "value": 0.07406317070582935
+  },
+  {
+   "id": "nll_keno_drop_50_2e-4",
+   "claim": "keno_drop_50 held-out NLL at lr 2e-4, seed mean (seeds 0,1), is 1.1879",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_50/nll_mean",
+   "value": 1.1878754014398143
+  },
+  {
+   "id": "len_keno_drop_50_2e-4",
+   "claim": "keno_drop_50 cumulative length ratio at lr 2e-4 is 0.557",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_50/cum_length_ratio",
+   "value": 0.556850442653227
+  },
+  {
+   "id": "never_keno_drop_50_2e-4",
+   "claim": "keno_drop_50 never-moved fraction at lr 2e-4 is 0.052",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_50/never_moved",
+   "value": 0.05217326010195085
+  },
+  {
+   "id": "nll_keno_drop_75_2e-4",
+   "claim": "keno_drop_75 held-out NLL at lr 2e-4, seed mean (seeds 0,1), is 1.2214",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_75/nll_mean",
+   "value": 1.2214317492171367
+  },
+  {
+   "id": "len_keno_drop_75_2e-4",
+   "claim": "keno_drop_75 cumulative length ratio at lr 2e-4 is 0.787",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_75/cum_length_ratio",
+   "value": 0.7867598450539491
+  },
+  {
+   "id": "never_keno_drop_75_2e-4",
+   "claim": "keno_drop_75 never-moved fraction at lr 2e-4 is 0.042",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_75/never_moved",
+   "value": 0.04249934698736367
+  },
+  {
+   "id": "nll_keno_drop_range_2e-4",
+   "claim": "keno_drop_range held-out NLL at lr 2e-4, seed mean (seeds 0,1), is 1.1883",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_range/nll_mean",
+   "value": 1.1883464107335233
+  },
+  {
+   "id": "len_keno_drop_range_2e-4",
+   "claim": "keno_drop_range cumulative length ratio at lr 2e-4 is 0.554",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_range/cum_length_ratio",
+   "value": 0.5544243001853498
+  },
+  {
+   "id": "never_keno_drop_range_2e-4",
+   "claim": "keno_drop_range never-moved fraction at lr 2e-4 is 0.053",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_range/never_moved",
+   "value": 0.05256652105317497
+  },
+  {
+   "id": "nll_keno_tab_25_2e-4",
+   "claim": "keno_tab_25 held-out NLL at lr 2e-4, seed mean (seeds 0,1), is 1.2370",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_25/nll_mean",
+   "value": 1.2370262735002766
+  },
+  {
+   "id": "len_keno_tab_25_2e-4",
+   "claim": "keno_tab_25 cumulative length ratio at lr 2e-4 is 0.963",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_25/cum_length_ratio",
+   "value": 0.9631159953160648
+  },
+  {
+   "id": "never_keno_tab_25_2e-4",
+   "claim": "keno_tab_25 never-moved fraction at lr 2e-4 is 0.038",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_25/never_moved",
+   "value": 0.03767203433538063
+  },
+  {
+   "id": "nll_keno_tab_50_2e-4",
+   "claim": "keno_tab_50 held-out NLL at lr 2e-4, seed mean (seeds 0,1), is 1.2497",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_50/nll_mean",
+   "value": 1.2496845234149698
+  },
+  {
+   "id": "len_keno_tab_50_2e-4",
+   "claim": "keno_tab_50 cumulative length ratio at lr 2e-4 is 0.994",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_50/cum_length_ratio",
+   "value": 0.9935750343367694
+  },
+  {
+   "id": "never_keno_tab_50_2e-4",
+   "claim": "keno_tab_50 never-moved fraction at lr 2e-4 is 0.037",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_50/never_moved",
+   "value": 0.03705661601715104
+  },
+  {
+   "id": "nll_keno_tab_75_2e-4",
+   "claim": "keno_tab_75 held-out NLL at lr 2e-4, seed mean (seeds 0,1), is 1.2528",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_75/nll_mean",
+   "value": 1.252757263128074
+  },
+  {
+   "id": "len_keno_tab_75_2e-4",
+   "claim": "keno_tab_75 cumulative length ratio at lr 2e-4 is 0.999",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_75/cum_length_ratio",
+   "value": 0.998537889206645
+  },
+  {
+   "id": "never_keno_tab_75_2e-4",
+   "claim": "keno_tab_75 never-moved fraction at lr 2e-4 is 0.037",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_75/never_moved",
+   "value": 0.03738182136524126
+  },
+  {
+   "id": "nll_keno_tab_range_2e-4",
+   "claim": "keno_tab_range held-out NLL at lr 2e-4, seed mean (seeds 0,1), is 1.2521",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_range/nll_mean",
+   "value": 1.2520676727973692
+  },
+  {
+   "id": "len_keno_tab_range_2e-4",
+   "claim": "keno_tab_range cumulative length ratio at lr 2e-4 is 0.993",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_range/cum_length_ratio",
+   "value": 0.9926984848739369
+  },
+  {
+   "id": "never_keno_tab_range_2e-4",
+   "claim": "keno_tab_range never-moved fraction at lr 2e-4 is 0.038",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_range/never_moved",
+   "value": 0.037785478925890556
+  },
+  {
+   "id": "nll_rne_2e-4",
+   "claim": "rne held-out NLL at lr 2e-4, seed mean (seeds 0,1), is 1.1691",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/rne/nll_mean",
+   "value": 1.1690797287068357
+  },
+  {
+   "id": "len_rne_2e-4",
+   "claim": "rne cumulative length ratio at lr 2e-4 is 0.264",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/rne/cum_length_ratio",
+   "value": 0.26412213034369175
+  },
+  {
+   "id": "never_rne_2e-4",
+   "claim": "rne never-moved fraction at lr 2e-4 is 0.616",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/rne/never_moved",
+   "value": 0.6160342048970476
+  },
+  {
+   "id": "nll_fp32_master_2e-4",
+   "claim": "fp32_master held-out NLL at lr 2e-4, seed mean (seeds 0,1), is 1.2701",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/fp32_master/nll_mean",
+   "value": 1.2700767652157983
+  },
+  {
+   "id": "len_fp32_master_2e-4",
+   "claim": "fp32_master cumulative length ratio at lr 2e-4 is 1.000",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/fp32_master/cum_length_ratio",
+   "value": 1.0002981071981507
+  },
+  {
+   "id": "never_fp32_master_2e-4",
+   "claim": "fp32_master never-moved fraction at lr 2e-4 is 0.036",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/fp32_master/never_moved",
+   "value": 0.03628452744841676
+  },
+  {
+   "id": "nll_kahan_2e-4",
+   "claim": "kahan held-out NLL at lr 2e-4, seed mean (seeds 0,1), is 1.2624",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/kahan/nll_mean",
+   "value": 1.262406565844535
+  },
+  {
+   "id": "len_kahan_2e-4",
+   "claim": "kahan cumulative length ratio at lr 2e-4 is 1.000",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/kahan/cum_length_ratio",
+   "value": 1.0001060797309367
+  },
+  {
+   "id": "never_kahan_2e-4",
+   "claim": "kahan never-moved fraction at lr 2e-4 is 0.036",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/kahan/never_moved",
+   "value": 0.036363607843669016
+  },
+  {
+   "id": "nll_keno_drop_25_2e-4_seed0",
+   "claim": "keno_drop_25 held-out NLL at lr 2e-4, seed 0, is 1.1514",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_25/nll_per_seed/0",
+   "value": 1.1513531255816878
+  },
+  {
+   "id": "nll_keno_drop_25_2e-4_seed1",
+   "claim": "keno_drop_25 held-out NLL at lr 2e-4, seed 1, is 1.1553",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_25/nll_per_seed/1",
+   "value": 1.1552949914513349
+  },
+  {
+   "id": "nll_keno_drop_50_2e-4_seed0",
+   "claim": "keno_drop_50 held-out NLL at lr 2e-4, seed 0, is 1.1807",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_50/nll_per_seed/0",
+   "value": 1.1806765560711723
+  },
+  {
+   "id": "nll_keno_drop_50_2e-4_seed1",
+   "claim": "keno_drop_50 held-out NLL at lr 2e-4, seed 1, is 1.1951",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_50/nll_per_seed/1",
+   "value": 1.1950742468084563
+  },
+  {
+   "id": "nll_keno_tab_25_2e-4_seed0",
+   "claim": "keno_tab_25 held-out NLL at lr 2e-4, seed 0, is 1.2380",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_25/nll_per_seed/0",
+   "value": 1.237997723486472
+  },
+  {
+   "id": "nll_keno_tab_25_2e-4_seed1",
+   "claim": "keno_tab_25 held-out NLL at lr 2e-4, seed 1, is 1.2361",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_25/nll_per_seed/1",
+   "value": 1.2360548235140811
+  },
+  {
+   "id": "nll_keno_drop_25_1e-4",
+   "claim": "keno_drop_25 held-out NLL at lr 1e-4, seed mean (seeds 0,1), is 1.1517",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_drop_25/nll_mean",
+   "value": 1.1517095808643973
+  },
+  {
+   "id": "len_keno_drop_25_1e-4",
+   "claim": "keno_drop_25 cumulative length ratio at lr 1e-4 is 0.298",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_drop_25/cum_length_ratio",
+   "value": 0.2983817509371837
+  },
+  {
+   "id": "never_keno_drop_25_1e-4",
+   "claim": "keno_drop_25 never-moved fraction at lr 1e-4 is 0.137",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_drop_25/never_moved",
+   "value": 0.13699503329769716
+  },
+  {
+   "id": "nll_keno_drop_50_1e-4",
+   "claim": "keno_drop_50 held-out NLL at lr 1e-4, seed mean (seeds 0,1), is 1.1512",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_drop_50/nll_mean",
+   "value": 1.151217277485662
+  },
+  {
+   "id": "len_keno_drop_50_1e-4",
+   "claim": "keno_drop_50 cumulative length ratio at lr 1e-4 is 0.543",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_drop_50/cum_length_ratio",
+   "value": 0.5426829660408914
+  },
+  {
+   "id": "never_keno_drop_50_1e-4",
+   "claim": "keno_drop_50 never-moved fraction at lr 1e-4 is 0.097",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_drop_50/never_moved",
+   "value": 0.09728131971712778
+  },
+  {
+   "id": "nll_keno_drop_75_1e-4",
+   "claim": "keno_drop_75 held-out NLL at lr 1e-4, seed mean (seeds 0,1), is 1.1699",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_drop_75/nll_mean",
+   "value": 1.1699325147157635
+  },
+  {
+   "id": "len_keno_drop_75_1e-4",
+   "claim": "keno_drop_75 cumulative length ratio at lr 1e-4 is 0.776",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_drop_75/cum_length_ratio",
+   "value": 0.7762992169662528
+  },
+  {
+   "id": "never_keno_drop_75_1e-4",
+   "claim": "keno_drop_75 never-moved fraction at lr 1e-4 is 0.080",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_drop_75/never_moved",
+   "value": 0.07976590612104784
+  },
+  {
+   "id": "nll_keno_drop_range_1e-4",
+   "claim": "keno_drop_range held-out NLL at lr 1e-4, seed mean (seeds 0,1), is 1.1544",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_drop_range/nll_mean",
+   "value": 1.1544394984036672
+  },
+  {
+   "id": "len_keno_drop_range_1e-4",
+   "claim": "keno_drop_range cumulative length ratio at lr 1e-4 is 0.540",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_drop_range/cum_length_ratio",
+   "value": 0.5397191471423008
+  },
+  {
+   "id": "never_keno_drop_range_1e-4",
+   "claim": "keno_drop_range never-moved fraction at lr 1e-4 is 0.098",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_drop_range/never_moved",
+   "value": 0.0980572703084551
+  },
+  {
+   "id": "nll_keno_tab_25_1e-4",
+   "claim": "keno_tab_25 held-out NLL at lr 1e-4, seed mean (seeds 0,1), is 1.1686",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_25/nll_mean",
+   "value": 1.1686150588751842
+  },
+  {
+   "id": "len_keno_tab_25_1e-4",
+   "claim": "keno_tab_25 cumulative length ratio at lr 1e-4 is 0.955",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_25/cum_length_ratio",
+   "value": 0.9550894469054274
+  },
+  {
+   "id": "never_keno_tab_25_1e-4",
+   "claim": "keno_tab_25 never-moved fraction at lr 1e-4 is 0.071",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_25/never_moved",
+   "value": 0.07145079305946292
+  },
+  {
+   "id": "nll_keno_tab_50_1e-4",
+   "claim": "keno_tab_50 held-out NLL at lr 1e-4, seed mean (seeds 0,1), is 1.1742",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_50/nll_mean",
+   "value": 1.1741706509528895
+  },
+  {
+   "id": "len_keno_tab_50_1e-4",
+   "claim": "keno_tab_50 cumulative length ratio at lr 1e-4 is 0.992",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_50/cum_length_ratio",
+   "value": 0.9923185514961819
+  },
+  {
+   "id": "never_keno_tab_50_1e-4",
+   "claim": "keno_tab_50 never-moved fraction at lr 1e-4 is 0.070",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_50/never_moved",
+   "value": 0.07007815440192369
+  },
+  {
+   "id": "nll_keno_tab_75_1e-4",
+   "claim": "keno_tab_75 held-out NLL at lr 1e-4, seed mean (seeds 0,1), is 1.1748",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_75/nll_mean",
+   "value": 1.1748119230862066
+  },
+  {
+   "id": "len_keno_tab_75_1e-4",
+   "claim": "keno_tab_75 cumulative length ratio at lr 1e-4 is 0.998",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_75/cum_length_ratio",
+   "value": 0.9983803565598984
+  },
+  {
+   "id": "never_keno_tab_75_1e-4",
+   "claim": "keno_tab_75 never-moved fraction at lr 1e-4 is 0.070",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_75/never_moved",
+   "value": 0.07019240187682255
+  },
+  {
+   "id": "nll_keno_tab_range_1e-4",
+   "claim": "keno_tab_range held-out NLL at lr 1e-4, seed mean (seeds 0,1), is 1.1706",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_range/nll_mean",
+   "value": 1.1705734973649113
+  },
+  {
+   "id": "len_keno_tab_range_1e-4",
+   "claim": "keno_tab_range cumulative length ratio at lr 1e-4 is 0.991",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_range/cum_length_ratio",
+   "value": 0.9914088668639802
+  },
+  {
+   "id": "never_keno_tab_range_1e-4",
+   "claim": "keno_tab_range never-moved fraction at lr 1e-4 is 0.071",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_range/never_moved",
+   "value": 0.0706716457988093
+  },
+  {
+   "id": "nll_rne_1e-4",
+   "claim": "rne held-out NLL at lr 1e-4, seed mean (seeds 0,1), is 1.1986",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/rne/nll_mean",
+   "value": 1.1986233467313234
+  },
+  {
+   "id": "len_rne_1e-4",
+   "claim": "rne cumulative length ratio at lr 1e-4 is 0.185",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/rne/cum_length_ratio",
+   "value": 0.18457321230961454
+  },
+  {
+   "id": "never_rne_1e-4",
+   "claim": "rne never-moved fraction at lr 1e-4 is 0.785",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/rne/never_moved",
+   "value": 0.7851765098211196
+  },
+  {
+   "id": "nll_fp32_master_1e-4",
+   "claim": "fp32_master held-out NLL at lr 1e-4, seed mean (seeds 0,1), is 1.1804",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/fp32_master/nll_mean",
+   "value": 1.1803744748423142
+  },
+  {
+   "id": "len_fp32_master_1e-4",
+   "claim": "fp32_master cumulative length ratio at lr 1e-4 is 1.001",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/fp32_master/cum_length_ratio",
+   "value": 1.0007654998354854
+  },
+  {
+   "id": "never_fp32_master_1e-4",
+   "claim": "fp32_master never-moved fraction at lr 1e-4 is 0.069",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/fp32_master/never_moved",
+   "value": 0.06948003526862964
+  },
+  {
+   "id": "nll_kahan_1e-4",
+   "claim": "kahan held-out NLL at lr 1e-4, seed mean (seeds 0,1), is 1.1807",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/kahan/nll_mean",
+   "value": 1.1806856238430994
+  },
+  {
+   "id": "len_kahan_1e-4",
+   "claim": "kahan cumulative length ratio at lr 1e-4 is 1.000",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/kahan/cum_length_ratio",
+   "value": 1.0001392479501403
+  },
+  {
+   "id": "never_kahan_1e-4",
+   "claim": "kahan never-moved fraction at lr 1e-4 is 0.069",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/kahan/never_moved",
+   "value": 0.06925041033339566
+  },
+  {
+   "id": "nll_keno_drop_25_1e-4_seed0",
+   "claim": "keno_drop_25 held-out NLL at lr 1e-4, seed 0, is 1.1499",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_drop_25/nll_per_seed/0",
+   "value": 1.1499351113602228
+  },
+  {
+   "id": "nll_keno_drop_25_1e-4_seed1",
+   "claim": "keno_drop_25 held-out NLL at lr 1e-4, seed 1, is 1.1535",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_drop_25/nll_per_seed/1",
+   "value": 1.1534840503685717
+  },
+  {
+   "id": "nll_keno_drop_50_1e-4_seed0",
+   "claim": "keno_drop_50 held-out NLL at lr 1e-4, seed 0, is 1.1489",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_drop_50/nll_per_seed/0",
+   "value": 1.1488882978064534
+  },
+  {
+   "id": "nll_keno_drop_50_1e-4_seed1",
+   "claim": "keno_drop_50 held-out NLL at lr 1e-4, seed 1, is 1.1535",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_drop_50/nll_per_seed/1",
+   "value": 1.1535462571648702
+  },
+  {
+   "id": "nll_keno_tab_25_1e-4_seed0",
+   "claim": "keno_tab_25 held-out NLL at lr 1e-4, seed 0, is 1.1693",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_25/nll_per_seed/0",
+   "value": 1.1693470995880546
+  },
+  {
+   "id": "nll_keno_tab_25_1e-4_seed1",
+   "claim": "keno_tab_25 held-out NLL at lr 1e-4, seed 1, is 1.1679",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_25/nll_per_seed/1",
+   "value": 1.1678830181623137
+  },
+  {
+   "id": "nll_fp32_master_5e-5",
+   "claim": "fp32_master held-out NLL at lr 5e-5, seeds 0,1 mean, is 1.1512",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "5e-05/fp32_master/nll_mean",
+   "value": 1.151232318477729
+  },
+  {
+   "id": "nll_rne_5e-5",
+   "claim": "rne held-out NLL at lr 5e-5, seeds 0,1 mean, is 1.2746",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "5e-05/rne/nll_mean",
+   "value": 1.2746003325257855
+  },
+  {
+   "id": "nll_fp32_master_5e-5_allseeds",
+   "claim": "fp32_master at lr 5e-5 over all five previous seeds is 1.1505",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_beats_tuned_exact_delivery/reference_fp32_master_5e-5/seed_mean_all_prev_seeds",
+   "value": 1.1505204325672829
+  },
+  {
+   "id": "q2_tab_minus_master_25_2e-4",
+   "claim": "keno_tab_25 \u2212 fp32_master at lr 2e-4 is -0.0331",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0002/25/tab_minus_master/mean",
+   "value": -0.03305049171552166
+  },
+  {
+   "id": "q2_tab_minus_drop_25_2e-4",
+   "claim": "keno_tab_25 \u2212 keno_drop_25 at lr 2e-4 is 0.0837",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0002/25/tab_minus_drop/mean",
+   "value": 0.08370221498376529
+  },
+  {
+   "id": "q2_reading_25_2e-4",
+   "claim": "Q2 reading for fraction 25 at lr 2e-4",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0002/25/reading",
+   "value": "tab differs from both master and drop by more than 0.01"
+  },
+  {
+   "id": "q2_tab_minus_master_50_2e-4",
+   "claim": "keno_tab_50 \u2212 fp32_master at lr 2e-4 is -0.0204",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0002/50/tab_minus_master/mean",
+   "value": -0.020392241800828326
+  },
+  {
+   "id": "q2_tab_minus_drop_50_2e-4",
+   "claim": "keno_tab_50 \u2212 keno_drop_50 at lr 2e-4 is 0.0618",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0002/50/tab_minus_drop/mean",
+   "value": 0.061809121975155645
+  },
+  {
+   "id": "q2_reading_50_2e-4",
+   "claim": "Q2 reading for fraction 50 at lr 2e-4",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0002/50/reading",
+   "value": "tab differs from both master and drop by more than 0.01"
+  },
+  {
+   "id": "q2_tab_minus_master_75_2e-4",
+   "claim": "keno_tab_75 \u2212 fp32_master at lr 2e-4 is -0.0173",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0002/75/tab_minus_master/mean",
+   "value": -0.01731950208772448
+  },
+  {
+   "id": "q2_tab_minus_drop_75_2e-4",
+   "claim": "keno_tab_75 \u2212 keno_drop_75 at lr 2e-4 is 0.0313",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0002/75/tab_minus_drop/mean",
+   "value": 0.031325513910937075
+  },
+  {
+   "id": "q2_reading_75_2e-4",
+   "claim": "Q2 reading for fraction 75 at lr 2e-4",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0002/75/reading",
+   "value": "tab differs from both master and drop by more than 0.01"
+  },
+  {
+   "id": "q2_tab_minus_master_range_2e-4",
+   "claim": "keno_tab_range \u2212 fp32_master at lr 2e-4 is -0.0180",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0002/range/tab_minus_master/mean",
+   "value": -0.018009092418429073
+  },
+  {
+   "id": "q2_tab_minus_drop_range_2e-4",
+   "claim": "keno_tab_range \u2212 keno_drop_range at lr 2e-4 is 0.0637",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0002/range/tab_minus_drop/mean",
+   "value": 0.06372126206384598
+  },
+  {
+   "id": "q2_reading_range_2e-4",
+   "claim": "Q2 reading for fraction range at lr 2e-4",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0002/range/reading",
+   "value": "tab differs from both master and drop by more than 0.01"
+  },
+  {
+   "id": "q2_tab_minus_master_25_1e-4",
+   "claim": "keno_tab_25 \u2212 fp32_master at lr 1e-4 is -0.0118",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0001/25/tab_minus_master/mean",
+   "value": -0.011759415967130038
+  },
+  {
+   "id": "q2_tab_minus_drop_25_1e-4",
+   "claim": "keno_tab_25 \u2212 keno_drop_25 at lr 1e-4 is 0.0169",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0001/25/tab_minus_drop/mean",
+   "value": 0.0169054780107869
+  },
+  {
+   "id": "q2_reading_25_1e-4",
+   "claim": "Q2 reading for fraction 25 at lr 1e-4",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0001/25/reading",
+   "value": "tab differs from both master and drop by more than 0.01"
+  },
+  {
+   "id": "q2_tab_minus_master_50_1e-4",
+   "claim": "keno_tab_50 \u2212 fp32_master at lr 1e-4 is -0.0062",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0001/50/tab_minus_master/mean",
+   "value": -0.006203823889424531
+  },
+  {
+   "id": "q2_tab_minus_drop_50_1e-4",
+   "claim": "keno_tab_50 \u2212 keno_drop_50 at lr 1e-4 is 0.0230",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0001/50/tab_minus_drop/mean",
+   "value": 0.02295337346722781
+  },
+  {
+   "id": "q2_reading_50_1e-4",
+   "claim": "Q2 reading for fraction 50 at lr 1e-4",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0001/50/reading",
+   "value": "delayed delivery behaves as delivery"
+  },
+  {
+   "id": "q2_tab_minus_master_75_1e-4",
+   "claim": "keno_tab_75 \u2212 fp32_master at lr 1e-4 is -0.0056",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0001/75/tab_minus_master/mean",
+   "value": -0.005562551756107648
+  },
+  {
+   "id": "q2_tab_minus_drop_75_1e-4",
+   "claim": "keno_tab_75 \u2212 keno_drop_75 at lr 1e-4 is 0.0049",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0001/75/tab_minus_drop/mean",
+   "value": 0.004879408370442873
+  },
+  {
+   "id": "q2_reading_75_1e-4",
+   "claim": "Q2 reading for fraction 75 at lr 1e-4",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0001/75/reading",
+   "value": "tab within 0.01 of both master and drop (master and drop themselves within 0.02)"
+  },
+  {
+   "id": "q2_tab_minus_master_range_1e-4",
+   "claim": "keno_tab_range \u2212 fp32_master at lr 1e-4 is -0.0098",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0001/range/tab_minus_master/mean",
+   "value": -0.009800977477402828
+  },
+  {
+   "id": "q2_tab_minus_drop_range_1e-4",
+   "claim": "keno_tab_range \u2212 keno_drop_range at lr 1e-4 is 0.0161",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0001/range/tab_minus_drop/mean",
+   "value": 0.016133998961244234
+  },
+  {
+   "id": "q2_reading_range_1e-4",
+   "claim": "Q2 reading for fraction range at lr 1e-4",
+   "source": "results/analysis/verdicts.json",
+   "key": "q2_banking/per_lr/0.0001/range/reading",
+   "value": "delayed delivery behaves as delivery"
+  },
+  {
+   "id": "proj_keno_tab_25_2e-4",
+   "claim": "keno_tab_25 cumulative projection at lr 2e-4 is 0.955",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_25/cum_projection",
+   "value": 0.9553690135287096
+  },
+  {
+   "id": "proj_keno_tab_25_1e-4",
+   "claim": "keno_tab_25 cumulative projection at lr 1e-4 is 0.949",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_25/cum_projection",
+   "value": 0.9486893280766522
+  },
+  {
+   "id": "proj_keno_tab_50_2e-4",
+   "claim": "keno_tab_50 cumulative projection at lr 2e-4 is 0.991",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_50/cum_projection",
+   "value": 0.9912917322776231
+  },
+  {
+   "id": "proj_keno_tab_50_1e-4",
+   "claim": "keno_tab_50 cumulative projection at lr 1e-4 is 0.990",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_50/cum_projection",
+   "value": 0.9900056824305912
+  },
+  {
+   "id": "proj_keno_tab_75_2e-4",
+   "claim": "keno_tab_75 cumulative projection at lr 2e-4 is 0.998",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_75/cum_projection",
+   "value": 0.9975650122827769
+  },
+  {
+   "id": "proj_keno_tab_75_1e-4",
+   "claim": "keno_tab_75 cumulative projection at lr 1e-4 is 0.997",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_75/cum_projection",
+   "value": 0.9971524098740947
+  },
+  {
+   "id": "proj_keno_tab_range_2e-4",
+   "claim": "keno_tab_range cumulative projection at lr 2e-4 is 0.990",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_tab_range/cum_projection",
+   "value": 0.9901320818152324
+  },
+  {
+   "id": "proj_keno_tab_range_1e-4",
+   "claim": "keno_tab_range cumulative projection at lr 1e-4 is 0.989",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0001/keno_tab_range/cum_projection",
+   "value": 0.9889731822701023
+  },
+  {
+   "id": "q3_flagged",
+   "claim": "no keno writer has seed-mean NLL below the 1.150 bar",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_beats_tuned_exact_delivery/flagged",
+   "value": []
+  },
+  {
+   "id": "q3_bar",
+   "claim": "Q3 bar is 1.150",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_beats_tuned_exact_delivery/bar",
+   "value": 1.15
+  },
+  {
+   "id": "q3_best",
+   "claim": "closest to the bar: keno_drop_50 at lr 1e-4, seed mean 1.1512",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_beats_tuned_exact_delivery/seed_means/keno_drop_50@0.0001/mean",
+   "value": 1.151217277485662
+  },
+  {
+   "id": "q3_best_seed0",
+   "claim": "keno_drop_50 at lr 1e-4 seed 0 is 1.1489 (below the bar on one seed)",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_beats_tuned_exact_delivery/seed_means/keno_drop_50@0.0001/per_seed/0",
+   "value": 1.1488882978064534
+  },
+  {
+   "id": "q3_best_seed1",
+   "claim": "keno_drop_50 at lr 1e-4 seed 1 is 1.1535",
+   "source": "results/analysis/verdicts.json",
+   "key": "q3_beats_tuned_exact_delivery/seed_means/keno_drop_50@0.0001/per_seed/1",
+   "value": 1.1535462571648702
+  },
+  {
+   "id": "paired_keno_drop_25_minus_master_1e-4",
+   "claim": "keno_drop_25 \u2212 fp32_master at lr 1e-4 is -0.0287",
+   "source": "results/analysis/paired_differences.json",
+   "key": "0.0001/keno_drop_25-fp32_master/mean",
+   "value": -0.02866489397791694
+  },
+  {
+   "id": "paired_keno_drop_25_minus_rne_1e-4",
+   "claim": "keno_drop_25 \u2212 rne at lr 1e-4 is -0.0469",
+   "source": "results/analysis/paired_differences.json",
+   "key": "0.0001/keno_drop_25-rne/mean",
+   "value": -0.046913765866926194
+  },
+  {
+   "id": "paired_keno_drop_50_minus_master_1e-4",
+   "claim": "keno_drop_50 \u2212 fp32_master at lr 1e-4 is -0.0292",
+   "source": "results/analysis/paired_differences.json",
+   "key": "0.0001/keno_drop_50-fp32_master/mean",
+   "value": -0.029157197356652342
+  },
+  {
+   "id": "paired_keno_drop_50_minus_rne_1e-4",
+   "claim": "keno_drop_50 \u2212 rne at lr 1e-4 is -0.0474",
+   "source": "results/analysis/paired_differences.json",
+   "key": "0.0001/keno_drop_50-rne/mean",
+   "value": -0.0474060692456616
+  },
+  {
+   "id": "paired_keno_drop_range_minus_master_1e-4",
+   "claim": "keno_drop_range \u2212 fp32_master at lr 1e-4 is -0.0259",
+   "source": "results/analysis/paired_differences.json",
+   "key": "0.0001/keno_drop_range-fp32_master/mean",
+   "value": -0.02593497643864706
+  },
+  {
+   "id": "paired_keno_drop_range_minus_rne_1e-4",
+   "claim": "keno_drop_range \u2212 rne at lr 1e-4 is -0.0442",
+   "source": "results/analysis/paired_differences.json",
+   "key": "0.0001/keno_drop_range-rne/mean",
+   "value": -0.04418384832765632
+  },
+  {
+   "id": "paired_keno_drop_75_minus_master_1e-4",
+   "claim": "keno_drop_75 \u2212 fp32_master at lr 1e-4 is -0.0104",
+   "source": "results/analysis/paired_differences.json",
+   "key": "0.0001/keno_drop_75-fp32_master/mean",
+   "value": -0.01044196012655052
+  },
+  {
+   "id": "paired_keno_drop_75_minus_rne_1e-4",
+   "claim": "keno_drop_75 \u2212 rne at lr 1e-4 is -0.0287",
+   "source": "results/analysis/paired_differences.json",
+   "key": "0.0001/keno_drop_75-rne/mean",
+   "value": -0.028690832015559775
+  },
+  {
+   "id": "paired_keno_drop_50_minus_rne_2e-4",
+   "claim": "keno_drop_50 \u2212 rne at lr 2e-4 is 0.0188",
+   "source": "results/analysis/paired_differences.json",
+   "key": "0.0002/keno_drop_50-rne/mean",
+   "value": 0.018795672732978663
+  },
+  {
+   "id": "paired_keno_drop_75_minus_rne_2e-4",
+   "claim": "keno_drop_75 \u2212 rne at lr 2e-4 is 0.0524",
+   "source": "results/analysis/paired_differences.json",
+   "key": "0.0002/keno_drop_75-rne/mean",
+   "value": 0.05235202051030108
+  },
+  {
+   "id": "paired_keno_drop_range_minus_rne_2e-4",
+   "claim": "keno_drop_range \u2212 rne at lr 2e-4 is 0.0193",
+   "source": "results/analysis/paired_differences.json",
+   "key": "0.0002/keno_drop_range-rne/mean",
+   "value": 0.019266682026687576
+  },
+  {
+   "id": "paired_kahan_ref_2e-4",
+   "claim": "keno_drop_25 \u2212 kahan at lr 2e-4 is \u22120.109",
+   "source": "results/analysis/paired_differences.json",
+   "key": "0.0002/keno_drop_25-kahan/mean",
+   "value": -0.1090825073280236
+  },
+  {
+   "id": "family_never_rne_attention_2e-4",
+   "claim": "rne never-moved in attention at lr 2e-4 is 0.673",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/rne/families/attention/never_moved",
+   "value": 0.6730321436752508
+  },
+  {
+   "id": "family_never_keno_drop_25_attention_2e-4",
+   "claim": "keno_drop_25 never-moved in attention at lr 2e-4 is 0.084",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_25/families/attention/never_moved",
+   "value": 0.08356078348042054
+  },
+  {
+   "id": "family_never_rne_mlp_2e-4",
+   "claim": "rne never-moved in mlp at lr 2e-4 is 0.718",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/rne/families/mlp/never_moved",
+   "value": 0.7176592289175026
+  },
+  {
+   "id": "family_never_keno_drop_25_mlp_2e-4",
+   "claim": "keno_drop_25 never-moved in mlp at lr 2e-4 is 0.087",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_25/families/mlp/never_moved",
+   "value": 0.08741488986545139
+  },
+  {
+   "id": "family_never_rne_embedding_2e-4",
+   "claim": "rne never-moved in embedding at lr 2e-4 is 0.276",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/rne/families/embedding/never_moved",
+   "value": 0.27633448000307437
+  },
+  {
+   "id": "family_never_keno_drop_25_embedding_2e-4",
+   "claim": "keno_drop_25 never-moved in embedding at lr 2e-4 is 0.027",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_25/families/embedding/never_moved",
+   "value": 0.027490403917100694
+  },
+  {
+   "id": "family_never_rne_norm_2e-4",
+   "claim": "rne never-moved in norm at lr 2e-4 is 0.974",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/rne/families/norm/never_moved",
+   "value": 0.9736168032786885
+  },
+  {
+   "id": "family_never_keno_drop_25_norm_2e-4",
+   "claim": "keno_drop_25 never-moved in norm at lr 2e-4 is 0.168",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_25/families/norm/never_moved",
+   "value": 0.16837431693989072
+  },
+  {
+   "id": "mask_gap",
+   "claim": "max |realised \u2212 target fraction| over all keno runs is 0.00014",
+   "source": "results/analysis/verdicts.json",
+   "key": "mask_realisation/max_abs_target_gap_over_all_keno_runs",
+   "value": 0.00013942208662803823
+  },
+  {
+   "id": "timing_s_per_step",
+   "claim": "mean seconds per step over all runs is 0.133",
+   "source": "results/analysis/verdicts.json",
+   "key": "timing/s_per_step_mean",
+   "value": 0.13343307199564064
+  },
+  {
+   "id": "timing_clip",
+   "claim": "gradient clipping fired 78 times in total over 37 runs",
+   "source": "results/analysis/verdicts.json",
+   "key": "timing/clip_fired_total",
+   "value": 78
+  },
+  {
+   "id": "eval_tokens",
+   "claim": "held-out probe is 49,277 tokens",
+   "source": "results/analysis/verdicts.json",
+   "key": "timing/eval_tokens/0",
+   "value": 49277
+  },
+  {
+   "id": "untrained_nll",
+   "claim": "untrained NLL is 1.9372 in every shard",
+   "source": "results/analysis/verdicts.json",
+   "key": "timing/untrained_nll_per_shard/seed0_lr2e-4",
+   "value": 1.9371732942909525
+  },
+  {
+   "id": "bytes_keno",
+   "claim": "keno writer extra state is 403,545,024 bytes (3 bytes per coordinate)",
+   "source": "results/analysis/delivery_vs_loss.json",
+   "key": "0.0002/keno_drop_25/extra_state_bytes",
+   "value": 403545024
+  }
+ ]
+}

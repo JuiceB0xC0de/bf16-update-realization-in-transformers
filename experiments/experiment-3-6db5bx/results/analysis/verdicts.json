@@ -1,0 +1,758 @@
+{
+ "n_runs": 37,
+ "seeds": [
+  0,
+  1
+ ],
+ "lrs": [
+  0.0002,
+  0.0001,
+  5e-05
+ ],
+ "q3_bar": 1.15,
+ "harness": {
+  "all_passed": true,
+  "max_eval_nll_abs_diff": 0.0,
+  "per_shard": {
+   "seed0_lr1e-4": {
+    "seed": 0,
+    "tol": 0.001,
+    "checks": [
+     {
+      "condition": "rne",
+      "lr": 0.0001,
+      "reference": "/silico-workspace/inputs/experiments/exp_01m1tgnb6xf98sqwfhm4effknt/runs/seed0/runs/rne_lr0.0001.json",
+      "n_losses_compared": 3000,
+      "losses_max_abs_diff": 0.0,
+      "losses_exact_equal_fraction": 1.0,
+      "tol": 0.001,
+      "eval_nll_reference": 1.1974532017109902,
+      "eval_nll_observed": 1.1974532017109902,
+      "eval_nll_abs_diff": 0.0,
+      "passed": true
+     },
+     {
+      "condition": "rne",
+      "lr": 5e-05,
+      "reference": "/silico-workspace/inputs/experiments/exp_01m1tgnb6xf98sqwfhm4effknt/runs/seed0/runs/rne_lr5e-05.json",
+      "n_losses_compared": 3000,
+      "losses_max_abs_diff": 0.0,
+      "losses_exact_equal_fraction": 1.0,
+      "tol": 0.001,
+      "eval_nll_reference": 1.2741293406301204,
+      "eval_nll_observed": 1.2741293406301204,
+      "eval_nll_abs_diff": 0.0,
+      "passed": true
+     }
+    ],
+    "all_passed": true
+   },
+   "seed0_lr2e-4": {
+    "seed": 0,
+    "tol": 0.001,
+    "checks": [
+     {
+      "condition": "rne",
+      "lr": 0.0002,
+      "reference": "/silico-workspace/inputs/experiments/exp_01m1tgnb6xf98sqwfhm4effknt/runs/seed0/runs/rne_lr0.0002.json",
+      "n_losses_compared": 3000,
+      "losses_max_abs_diff": 0.0,
+      "losses_exact_equal_fraction": 1.0,
+      "tol": 0.001,
+      "eval_nll_reference": 1.1650221464872326,
+      "eval_nll_observed": 1.1650221464872326,
+      "eval_nll_abs_diff": 0.0,
+      "passed": true
+     }
+    ],
+    "all_passed": true
+   },
+   "seed1_lr1e-4": {
+    "seed": 1,
+    "tol": 0.001,
+    "checks": [
+     {
+      "condition": "rne",
+      "lr": 0.0001,
+      "reference": "/silico-workspace/inputs/experiments/exp_01m1tgnb6xf98sqwfhm4effknt/runs/seed1/runs/rne_lr0.0001.json",
+      "n_losses_compared": 3000,
+      "losses_max_abs_diff": 0.0,
+      "losses_exact_equal_fraction": 1.0,
+      "tol": 0.001,
+      "eval_nll_reference": 1.1997934917516566,
+      "eval_nll_observed": 1.1997934917516566,
+      "eval_nll_abs_diff": 0.0,
+      "passed": true
+     }
+    ],
+    "all_passed": true
+   },
+   "seed1_lr2e-4": {
+    "seed": 1,
+    "tol": 0.001,
+    "checks": [
+     {
+      "condition": "rne",
+      "lr": 0.0002,
+      "reference": "/silico-workspace/inputs/experiments/exp_01m1tgnb6xf98sqwfhm4effknt/runs/seed1/runs/rne_lr0.0002.json",
+      "n_losses_compared": 3000,
+      "losses_max_abs_diff": 0.0,
+      "losses_exact_equal_fraction": 1.0,
+      "tol": 0.001,
+      "eval_nll_reference": 1.1731373109264387,
+      "eval_nll_observed": 1.1731373109264387,
+      "eval_nll_abs_diff": 0.0,
+      "passed": true
+     }
+    ],
+    "all_passed": true
+   }
+  }
+ },
+ "q1_how_much_or_which": {
+  "rule": "mean over seeds of NLL(keno_drop_25) - NLL(rne) at lr 2e-4: |d|<=0.01 amount is the knob; d>+0.02 the format's pick matters; d<-0.02 random selection wins; else undecided at two seeds",
+  "difference": {
+   "n": 2,
+   "seeds": [
+    0,
+    1
+   ],
+   "mean": -0.01575567019032431,
+   "per_seed": [
+    -0.013669020905544782,
+    -0.01784231947510384
+   ],
+   "min": -0.01784231947510384,
+   "max": -0.013669020905544782,
+   "same_sign": true
+  },
+  "verdict": "undecided at two seeds",
+  "delivery_match": {
+   "keno_drop_25_length_ratio_mean": 0.30896738479261526,
+   "rne_length_ratio_mean": 0.26412213034369175,
+   "keno_drop_25_projection_mean": 0.24898053080698476,
+   "rne_projection_mean": 0.1365170780288571,
+   "keno_drop_25_never_moved_mean": 0.07406317070582935,
+   "rne_never_moved_mean": 0.6160342048970476
+  },
+  "context_lr1e-4": {
+   "n": 2,
+   "seeds": [
+    0,
+    1
+   ],
+   "mean": -0.046913765866926194,
+   "per_seed": [
+    -0.04751809035076748,
+    -0.046309441383084904
+   ],
+   "min": -0.04751809035076748,
+   "max": -0.046309441383084904,
+   "same_sign": true
+  },
+  "matched_delivery": {
+   "0.0002": {
+    "keno_drop_curve": [
+     {
+      "writer": "keno_drop_25",
+      "cum_length_ratio": 0.30896738479261526,
+      "cum_projection": 0.24898053080698476,
+      "nll_mean": 1.1533240585165112
+     },
+     {
+      "writer": "keno_drop_50",
+      "cum_length_ratio": 0.556850442653227,
+      "cum_projection": 0.498194496938105,
+      "nll_mean": 1.1878754014398143
+     },
+     {
+      "writer": "keno_drop_75",
+      "cum_length_ratio": 0.7867598450539491,
+      "cum_projection": 0.7483672787624089,
+      "nll_mean": 1.2214317492171367
+     },
+     {
+      "writer": "keno_drop_range",
+      "cum_length_ratio": 0.5544243001853498,
+      "cum_projection": 0.49627908107988417,
+      "nll_mean": 1.1883464107335233
+     },
+     {
+      "writer": "kahan (keno_drop at f=1)",
+      "cum_length_ratio": 1.0001060797309367,
+      "cum_projection": 0.9998096012358695,
+      "nll_mean": 1.262406565844535
+     }
+    ],
+    "rne": {
+     "cum_length_ratio": 0.26412213034369175,
+     "cum_projection": 0.1365170780288571,
+     "nll_mean": 1.1690797287068357
+    },
+    "by_length_ratio": {
+     "status": "below measured range",
+     "nearest": "keno_drop_25",
+     "nearest_x": 0.30896738479261526,
+     "nearest_nll": 1.1533240585165112,
+     "extrapolated_nll": 1.146925435385202,
+     "keno_drop_minus_rne_at_matched_delivery": -0.022154293321633656
+    },
+    "by_projection": {
+     "status": "below measured range",
+     "nearest": "keno_drop_25",
+     "nearest_x": 0.24898053080698476,
+     "nearest_nll": 1.1533240585165112,
+     "extrapolated_nll": 1.1373970154732325,
+     "keno_drop_minus_rne_at_matched_delivery": -0.03168271323360328
+    }
+   },
+   "0.0001": {
+    "keno_drop_curve": [
+     {
+      "writer": "keno_drop_25",
+      "cum_length_ratio": 0.2983817509371837,
+      "cum_projection": 0.249436302096321,
+      "nll_mean": 1.1517095808643973
+     },
+     {
+      "writer": "keno_drop_50",
+      "cum_length_ratio": 0.5426829660408914,
+      "cum_projection": 0.49902444671902707,
+      "nll_mean": 1.151217277485662
+     },
+     {
+      "writer": "keno_drop_75",
+      "cum_length_ratio": 0.7762992169662528,
+      "cum_projection": 0.7489596867163923,
+      "nll_mean": 1.1699325147157635
+     },
+     {
+      "writer": "keno_drop_range",
+      "cum_length_ratio": 0.5397191471423008,
+      "cum_projection": 0.49586713598812915,
+      "nll_mean": 1.1544394984036672
+     },
+     {
+      "writer": "kahan (keno_drop at f=1)",
+      "cum_length_ratio": 1.0001392479501403,
+      "cum_projection": 0.9993586011748072,
+      "nll_mean": 1.1806856238430994
+     }
+    ],
+    "rne": {
+     "cum_length_ratio": 0.18457321230961454,
+     "cum_projection": 0.07081093435992933,
+     "nll_mean": 1.1986233467313234
+    },
+    "by_length_ratio": {
+     "status": "below measured range",
+     "nearest": "keno_drop_25",
+     "nearest_x": 0.2983817509371837,
+     "nearest_nll": 1.1517095808643973,
+     "extrapolated_nll": 1.1504222216295525,
+     "keno_drop_minus_rne_at_matched_delivery": -0.04820112510177088
+    },
+    "by_projection": {
+     "status": "below measured range",
+     "nearest": "keno_drop_25",
+     "nearest_x": 0.249436302096321,
+     "nearest_nll": 1.1517095808643973,
+     "extrapolated_nll": 1.149730800382097,
+     "keno_drop_minus_rne_at_matched_delivery": -0.04889254634922646
+    }
+   },
+   "5e-05": {
+    "keno_drop_curve": [
+     {
+      "writer": "kahan (keno_drop at f=1)",
+      "cum_length_ratio": 0.9997456759030512,
+      "cum_projection": 0.9975717534977322,
+      "nll_mean": 1.151937336264235
+     }
+    ],
+    "rne": {
+     "cum_length_ratio": 0.13016618631494464,
+     "cum_projection": 0.03404525224218552,
+     "nll_mean": 1.2746003325257855
+    },
+    "by_length_ratio": {
+     "status": "below measured range",
+     "nearest": "kahan (keno_drop at f=1)",
+     "nearest_x": 0.9997456759030512,
+     "nearest_nll": 1.151937336264235,
+     "extrapolated_nll": null,
+     "keno_drop_minus_rne_at_matched_delivery": null
+    },
+    "by_projection": {
+     "status": "below measured range",
+     "nearest": "kahan (keno_drop at f=1)",
+     "nearest_x": 0.9975717534977322,
+     "nearest_nll": 1.151937336264235,
+     "extrapolated_nll": null,
+     "keno_drop_minus_rne_at_matched_delivery": null
+    }
+   }
+  },
+  "confounds": [
+   "delivery mismatch: keno_drop_25's measured length ratio and projection differ from rne's; see matched_delivery",
+   "write precision: drawn coordinates receive the exact Kahan write, rne quantises every write, so the keno_drop curve runs from undertrained toward kahan (f=1), not toward rne; a keno_drop - rne difference mixes selection, precision and delivery amount and is not attributable to selection alone"
+  ]
+ },
+ "q2_banking": {
+  "rule": "per fraction and lr: |mean(tab - fp32_master)|<=0.01 -> delayed delivery behaves as delivery; |mean(tab - drop)|<=0.01 -> banked requests might as well be discarded",
+  "per_lr": {
+   "0.0002": {
+    "25": {
+     "tab_minus_master": {
+      "n": 2,
+      "seeds": [
+       0,
+       1
+      ],
+      "mean": -0.03305049171552166,
+      "per_seed": [
+       -0.024071224882204145,
+       -0.04202975854883917
+      ],
+      "min": -0.04202975854883917,
+      "max": -0.024071224882204145,
+      "same_sign": true
+     },
+     "tab_minus_drop": {
+      "n": 2,
+      "seeds": [
+       0,
+       1
+      ],
+      "mean": 0.08370221498376529,
+      "per_seed": [
+       0.08664459790478429,
+       0.08075983206274628
+      ],
+      "min": 0.08075983206274628,
+      "max": 0.08664459790478429,
+      "same_sign": true
+     },
+     "behaves_as_delivery": false,
+     "banking_indistinguishable_from_drop": false,
+     "reading": "tab differs from both master and drop by more than 0.01"
+    },
+    "50": {
+     "tab_minus_master": {
+      "n": 2,
+      "seeds": [
+       0,
+       1
+      ],
+      "mean": -0.020392241800828326,
+      "per_seed": [
+       -0.023484397599054407,
+       -0.017300086002602244
+      ],
+      "min": -0.023484397599054407,
+      "max": -0.017300086002602244,
+      "same_sign": true
+     },
+     "tab_minus_drop": {
+      "n": 2,
+      "seeds": [
+       0,
+       1
+      ],
+      "mean": 0.061809121975155645,
+      "per_seed": [
+       0.05790799469844954,
+       0.06571024925186175
+      ],
+      "min": 0.05790799469844954,
+      "max": 0.06571024925186175,
+      "same_sign": true
+     },
+     "behaves_as_delivery": false,
+     "banking_indistinguishable_from_drop": false,
+     "reading": "tab differs from both master and drop by more than 0.01"
+    },
+    "75": {
+     "tab_minus_master": {
+      "n": 2,
+      "seeds": [
+       0,
+       1
+      ],
+      "mean": -0.01731950208772448,
+      "per_seed": [
+       -0.005896801629410975,
+       -0.028742202546037987
+      ],
+      "min": -0.028742202546037987,
+      "max": -0.005896801629410975,
+      "same_sign": true
+     },
+     "tab_minus_drop": {
+      "n": 2,
+      "seeds": [
+       0,
+       1
+      ],
+      "mean": 0.031325513910937075,
+      "per_seed": [
+       0.034787563138269695,
+       0.027863464683604455
+      ],
+      "min": 0.027863464683604455,
+      "max": 0.034787563138269695,
+      "same_sign": true
+     },
+     "behaves_as_delivery": false,
+     "banking_indistinguishable_from_drop": false,
+     "reading": "tab differs from both master and drop by more than 0.01"
+    },
+    "range": {
+     "tab_minus_master": {
+      "n": 2,
+      "seeds": [
+       0,
+       1
+      ],
+      "mean": -0.018009092418429073,
+      "per_seed": [
+       -0.027205865824210695,
+       -0.008812319012647452
+      ],
+      "min": -0.027205865824210695,
+      "max": -0.008812319012647452,
+      "same_sign": true
+     },
+     "tab_minus_drop": {
+      "n": 2,
+      "seeds": [
+       0,
+       1
+      ],
+      "mean": 0.06372126206384598,
+      "per_seed": [
+       0.05420569106544848,
+       0.07323683306224349
+      ],
+      "min": 0.05420569106544848,
+      "max": 0.07323683306224349,
+      "same_sign": true
+     },
+     "behaves_as_delivery": false,
+     "banking_indistinguishable_from_drop": false,
+     "reading": "tab differs from both master and drop by more than 0.01"
+    }
+   },
+   "0.0001": {
+    "25": {
+     "tab_minus_master": {
+      "n": 2,
+      "seeds": [
+       0,
+       1
+      ],
+      "mean": -0.011759415967130038,
+      "per_seed": [
+       -0.010171365240292385,
+       -0.013347466693967691
+      ],
+      "min": -0.013347466693967691,
+      "max": -0.010171365240292385,
+      "same_sign": true
+     },
+     "tab_minus_drop": {
+      "n": 2,
+      "seeds": [
+       0,
+       1
+      ],
+      "mean": 0.0169054780107869,
+      "per_seed": [
+       0.019411988227831856,
+       0.014398967793741946
+      ],
+      "min": 0.014398967793741946,
+      "max": 0.019411988227831856,
+      "same_sign": true
+     },
+     "behaves_as_delivery": false,
+     "banking_indistinguishable_from_drop": false,
+     "reading": "tab differs from both master and drop by more than 0.01"
+    },
+    "50": {
+     "tab_minus_master": {
+      "n": 2,
+      "seeds": [
+       0,
+       1
+      ],
+      "mean": -0.006203823889424531,
+      "per_seed": [
+       -0.002681167899786896,
+       -0.009726479879062166
+      ],
+      "min": -0.009726479879062166,
+      "max": -0.002681167899786896,
+      "same_sign": true
+     },
+     "tab_minus_drop": {
+      "n": 2,
+      "seeds": [
+       0,
+       1
+      ],
+      "mean": 0.02295337346722781,
+      "per_seed": [
+       0.027948999122106688,
+       0.017957747812348934
+      ],
+      "min": 0.017957747812348934,
+      "max": 0.027948999122106688,
+      "same_sign": true
+     },
+     "behaves_as_delivery": true,
+     "banking_indistinguishable_from_drop": false,
+     "reading": "delayed delivery behaves as delivery"
+    },
+    "75": {
+     "tab_minus_master": {
+      "n": 2,
+      "seeds": [
+       0,
+       1
+      ],
+      "mean": -0.005562551756107648,
+      "per_seed": [
+       -0.006942355858006399,
+       -0.004182747654208896
+      ],
+      "min": -0.006942355858006399,
+      "max": -0.004182747654208896,
+      "same_sign": true
+     },
+     "tab_minus_drop": {
+      "n": 2,
+      "seeds": [
+       0,
+       1
+      ],
+      "mean": 0.004879408370442873,
+      "per_seed": [
+       -0.000588554666324681,
+       0.010347371407210426
+      ],
+      "min": -0.000588554666324681,
+      "max": 0.010347371407210426,
+      "same_sign": false
+     },
+     "behaves_as_delivery": true,
+     "banking_indistinguishable_from_drop": true,
+     "reading": "tab within 0.01 of both master and drop (master and drop themselves within 0.02)"
+    },
+    "range": {
+     "tab_minus_master": {
+      "n": 2,
+      "seeds": [
+       0,
+       1
+      ],
+      "mean": -0.009800977477402828,
+      "per_seed": [
+       -0.010320863852309348,
+       -0.009281091102496308
+      ],
+      "min": -0.010320863852309348,
+      "max": -0.009281091102496308,
+      "same_sign": true
+     },
+     "tab_minus_drop": {
+      "n": 2,
+      "seeds": [
+       0,
+       1
+      ],
+      "mean": 0.016133998961244234,
+      "per_seed": [
+       0.016579303869525885,
+       0.015688694052962582
+      ],
+      "min": 0.015688694052962582,
+      "max": 0.016579303869525885,
+      "same_sign": true
+     },
+     "behaves_as_delivery": true,
+     "banking_indistinguishable_from_drop": false,
+     "reading": "delayed delivery behaves as delivery"
+    }
+   }
+  }
+ },
+ "q3_beats_tuned_exact_delivery": {
+  "rule": "flag any writer with seed-mean held-out NLL below 1.15 (fp32_master at lr 5e-5, previous grid)",
+  "bar": 1.15,
+  "flagged": [],
+  "seed_means": {
+   "keno_drop_25@0.0002": {
+    "mean": 1.1533240585165112,
+    "per_seed": {
+     "0": 1.1513531255816878,
+     "1": 1.1552949914513349
+    },
+    "below_bar": false
+   },
+   "keno_drop_50@0.0002": {
+    "mean": 1.1878754014398143,
+    "per_seed": {
+     "0": 1.1806765560711723,
+     "1": 1.1950742468084563
+    },
+    "below_bar": false
+   },
+   "keno_drop_75@0.0002": {
+    "mean": 1.2214317492171367,
+    "per_seed": {
+     "0": 1.2213845836009956,
+     "1": 1.2214789148332779
+    },
+    "below_bar": false
+   },
+   "keno_drop_range@0.0002": {
+    "mean": 1.1883464107335233,
+    "per_seed": {
+     "0": 1.180657391479017,
+     "1": 1.1960354299880294
+    },
+    "below_bar": false
+   },
+   "keno_tab_25@0.0002": {
+    "mean": 1.2370262735002766,
+    "per_seed": {
+     "0": 1.237997723486472,
+     "1": 1.2360548235140811
+    },
+    "below_bar": false
+   },
+   "keno_tab_50@0.0002": {
+    "mean": 1.2496845234149698,
+    "per_seed": {
+     "0": 1.2385845507696218,
+     "1": 1.260784496060318
+    },
+    "below_bar": false
+   },
+   "keno_tab_75@0.0002": {
+    "mean": 1.252757263128074,
+    "per_seed": {
+     "0": 1.2561721467392652,
+     "1": 1.2493423795168823
+    },
+    "below_bar": false
+   },
+   "keno_tab_range@0.0002": {
+    "mean": 1.2520676727973692,
+    "per_seed": {
+     "0": 1.2348630825444655,
+     "1": 1.2692722630502729
+    },
+    "below_bar": false
+   },
+   "keno_drop_25@0.0001": {
+    "mean": 1.1517095808643973,
+    "per_seed": {
+     "0": 1.1499351113602228,
+     "1": 1.1534840503685717
+    },
+    "below_bar": false
+   },
+   "keno_drop_50@0.0001": {
+    "mean": 1.151217277485662,
+    "per_seed": {
+     "0": 1.1488882978064534,
+     "1": 1.1535462571648702
+    },
+    "below_bar": false
+   },
+   "keno_drop_75@0.0001": {
+    "mean": 1.1699325147157635,
+    "per_seed": {
+     "0": 1.1731646636366653,
+     "1": 1.166700365794862
+    },
+    "below_bar": false
+   },
+   "keno_drop_range@0.0001": {
+    "mean": 1.1544394984036672,
+    "per_seed": {
+     "0": 1.1526182971065118,
+     "1": 1.1562606997008225
+    },
+    "below_bar": false
+   },
+   "keno_tab_25@0.0001": {
+    "mean": 1.1686150588751842,
+    "per_seed": {
+     "0": 1.1693470995880546,
+     "1": 1.1678830181623137
+    },
+    "below_bar": false
+   },
+   "keno_tab_50@0.0001": {
+    "mean": 1.1741706509528895,
+    "per_seed": {
+     "0": 1.17683729692856,
+     "1": 1.1715040049772192
+    },
+    "below_bar": false
+   },
+   "keno_tab_75@0.0001": {
+    "mean": 1.1748119230862066,
+    "per_seed": {
+     "0": 1.1725761089703406,
+     "1": 1.1770477372020725
+    },
+    "below_bar": false
+   },
+   "keno_tab_range@0.0001": {
+    "mean": 1.1705734973649113,
+    "per_seed": {
+     "0": 1.1691976009760376,
+     "1": 1.171949393753785
+    },
+    "below_bar": false
+   }
+  },
+  "reference_fp32_master_5e-5": {
+   "seed_mean_all_prev_seeds": 1.1505204325672829,
+   "seed_mean_seeds_0_1": 1.151232318477729,
+   "per_seed": {
+    "0": 1.1495823056170418,
+    "1": 1.1528823313384164,
+    "2": 1.1487985920987835,
+    "3": 1.1495451933257168,
+    "4": 1.151793740456456
+   }
+  },
+  "best_keno": "keno_drop_50@0.0001",
+  "verdict": "no keno writer below 1.15 (best keno_drop_50@0.0001)"
+ },
+ "timing": {
+  "s_per_step_mean": 0.13343307199564064,
+  "s_per_step_max": 0.15347427995999655,
+  "clip_fired_total": 78,
+  "eval_tokens": [
+   49277
+  ],
+  "untrained_nll_per_shard": {
+   "seed0_lr1e-4": 1.9371732942909525,
+   "seed0_lr2e-4": 1.9371732942909525,
+   "seed1_lr1e-4": 1.9371732942909525,
+   "seed1_lr2e-4": 1.9371732942909525
+  }
+ },
+ "mask_realisation": {
+  "max_abs_target_gap_over_all_keno_runs": 0.00013942208662803823,
+  "n_blocks_per_run": [
+   60
+  ]
+ }
+}

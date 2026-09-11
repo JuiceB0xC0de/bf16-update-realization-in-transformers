@@ -1,0 +1,1 @@
+Line chart of cumulative delivery (length ratio) against training step for the keno drop writers at learning rate 2e-4, with plain rounding dotted; the 25, 50 and 75% writers run light to dark on the sequential ramp and the 30-70% writer is dashed.

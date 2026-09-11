@@ -1,0 +1,6 @@
+{
+ "nll_per_token": 1.9371732942909525,
+ "n_predicted_tokens": 49277,
+ "n_examples": 256,
+ "mean_example_nll": 1.9894763613119721
+}

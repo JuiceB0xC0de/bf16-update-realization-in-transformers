@@ -1,0 +1,1 @@
+Dot chart of the paired held-out NLL difference of each keno tab writer from fp32 master weights and from the keno drop writer at the same draw fraction, at two learning rates, with reference lines at 0 and ±0.01.

@@ -1,0 +1,269 @@
+{
+  "lrs": [
+    "0.0002",
+    "0.0001"
+  ],
+  "lr_label": {
+    "0.0002": "2e-4",
+    "0.0001": "1e-4",
+    "5e-05": "5e-5"
+  },
+  "rows": [
+    {
+      "lr": "0.0002",
+      "condition": "keno_drop_25",
+      "label": "drop 25%",
+      "group": "keno_drop",
+      "mean": -0.01575567019032431,
+      "per_seed": [
+        -0.013669020905544782,
+        -0.01784231947510384
+      ],
+      "seeds": [
+        0,
+        1
+      ]
+    },
+    {
+      "lr": "0.0002",
+      "condition": "keno_drop_50",
+      "label": "drop 50%",
+      "group": "keno_drop",
+      "mean": 0.018795672732978663,
+      "per_seed": [
+        0.01565440958393971,
+        0.021936935882017616
+      ],
+      "seeds": [
+        0,
+        1
+      ]
+    },
+    {
+      "lr": "0.0002",
+      "condition": "keno_drop_75",
+      "label": "drop 75%",
+      "group": "keno_drop",
+      "mean": 0.05235202051030108,
+      "per_seed": [
+        0.056362437113762986,
+        0.04834160390683917
+      ],
+      "seeds": [
+        0,
+        1
+      ]
+    },
+    {
+      "lr": "0.0002",
+      "condition": "keno_drop_range",
+      "label": "drop 30-70%",
+      "group": "keno_drop",
+      "mean": 0.019266682026687576,
+      "per_seed": [
+        0.01563524499178448,
+        0.02289811906159067
+      ],
+      "seeds": [
+        0,
+        1
+      ]
+    },
+    {
+      "lr": "0.0002",
+      "condition": "keno_tab_25",
+      "label": "tab 25%",
+      "group": "keno_tab",
+      "mean": 0.06794654479344098,
+      "per_seed": [
+        0.07297557699923951,
+        0.06291751258764244
+      ],
+      "seeds": [
+        0,
+        1
+      ]
+    },
+    {
+      "lr": "0.0002",
+      "condition": "keno_tab_50",
+      "label": "tab 50%",
+      "group": "keno_tab",
+      "mean": 0.08060479470813431,
+      "per_seed": [
+        0.07356240428238925,
+        0.08764718513387937
+      ],
+      "seeds": [
+        0,
+        1
+      ]
+    },
+    {
+      "lr": "0.0002",
+      "condition": "keno_tab_75",
+      "label": "tab 75%",
+      "group": "keno_tab",
+      "mean": 0.08367753442123815,
+      "per_seed": [
+        0.09115000025203268,
+        0.07620506859044363
+      ],
+      "seeds": [
+        0,
+        1
+      ]
+    },
+    {
+      "lr": "0.0002",
+      "condition": "keno_tab_range",
+      "label": "tab 30-70%",
+      "group": "keno_tab",
+      "mean": 0.08298794409053356,
+      "per_seed": [
+        0.06984093605723296,
+        0.09613495212383416
+      ],
+      "seeds": [
+        0,
+        1
+      ]
+    },
+    {
+      "lr": "0.0001",
+      "condition": "keno_drop_25",
+      "label": "drop 25%",
+      "group": "keno_drop",
+      "mean": -0.046913765866926194,
+      "per_seed": [
+        -0.04751809035076748,
+        -0.046309441383084904
+      ],
+      "seeds": [
+        0,
+        1
+      ]
+    },
+    {
+      "lr": "0.0001",
+      "condition": "keno_drop_50",
+      "label": "drop 50%",
+      "group": "keno_drop",
+      "mean": -0.0474060692456616,
+      "per_seed": [
+        -0.04856490390453683,
+        -0.04624723458678637
+      ],
+      "seeds": [
+        0,
+        1
+      ]
+    },
+    {
+      "lr": "0.0001",
+      "condition": "keno_drop_75",
+      "label": "drop 75%",
+      "group": "keno_drop",
+      "mean": -0.028690832015559775,
+      "per_seed": [
+        -0.02428853807432496,
+        -0.03309312595679459
+      ],
+      "seeds": [
+        0,
+        1
+      ]
+    },
+    {
+      "lr": "0.0001",
+      "condition": "keno_drop_range",
+      "label": "drop 30-70%",
+      "group": "keno_drop",
+      "mean": -0.04418384832765632,
+      "per_seed": [
+        -0.044834904604478476,
+        -0.04353279205083416
+      ],
+      "seeds": [
+        0,
+        1
+      ]
+    },
+    {
+      "lr": "0.0001",
+      "condition": "keno_tab_25",
+      "label": "tab 25%",
+      "group": "keno_tab",
+      "mean": -0.030008287856139293,
+      "per_seed": [
+        -0.028106102122935628,
+        -0.03191047358934296
+      ],
+      "seeds": [
+        0,
+        1
+      ]
+    },
+    {
+      "lr": "0.0001",
+      "condition": "keno_tab_50",
+      "label": "tab 50%",
+      "group": "keno_tab",
+      "mean": -0.024452695778433786,
+      "per_seed": [
+        -0.02061590478243014,
+        -0.028289486774437433
+      ],
+      "seeds": [
+        0,
+        1
+      ]
+    },
+    {
+      "lr": "0.0001",
+      "condition": "keno_tab_75",
+      "label": "tab 75%",
+      "group": "keno_tab",
+      "mean": -0.023811423645116903,
+      "per_seed": [
+        -0.024877092740649642,
+        -0.022745754549584163
+      ],
+      "seeds": [
+        0,
+        1
+      ]
+    },
+    {
+      "lr": "0.0001",
+      "condition": "keno_tab_range",
+      "label": "tab 30-70%",
+      "group": "keno_tab",
+      "mean": -0.028049849366412083,
+      "per_seed": [
+        -0.02825560073495259,
+        -0.027844097997871575
+      ],
+      "seeds": [
+        0,
+        1
+      ]
+    }
+  ],
+  "focal": "keno_drop_25",
+  "groups": [
+    {
+      "name": "keno_drop",
+      "label": "keno drop (undelivered request discarded)",
+      "color": "#B9605B",
+      "symbol": "circle"
+    },
+    {
+      "name": "keno_tab",
+      "label": "keno tab (undelivered request banked)",
+      "color": "#31362E",
+      "symbol": "square"
+    }
+  ],
+  "alt": "Dot chart of the paired held-out NLL difference between each keno writer and plain bfloat16 rounding at two learning rates: filled marker is the two-seed mean, open markers are the per-seed values, with reference lines at 0 and \u00b10.02."
+}

@@ -1,0 +1,435 @@
+{
+  "lrs": [
+    "0.0002",
+    "0.0001"
+  ],
+  "lr_label": {
+    "0.0002": "2e-4",
+    "0.0001": "1e-4",
+    "5e-05": "5e-5"
+  },
+  "groups": [
+    {
+      "name": "keno_drop",
+      "label": "keno drop (undelivered request discarded)",
+      "color": "#B9605B",
+      "symbol": "circle",
+      "textpos": "top center"
+    },
+    {
+      "name": "keno_tab",
+      "label": "keno tab (undelivered request banked)",
+      "color": "#31362E",
+      "symbol": "square",
+      "textpos": "bottom center"
+    },
+    {
+      "name": "rne",
+      "label": "plain rounding (previous run)",
+      "color": "#4E728A",
+      "symbol": "diamond",
+      "textpos": "bottom center"
+    },
+    {
+      "name": "fp32_master",
+      "label": "fp32 master (previous run)",
+      "color": "#2E6E4E",
+      "symbol": "diamond",
+      "textpos": "top center"
+    },
+    {
+      "name": "kahan",
+      "label": "kahan (previous run)",
+      "color": "#C4650D",
+      "symbol": "diamond",
+      "textpos": "bottom center"
+    }
+  ],
+  "points": [
+    {
+      "lr": "0.0002",
+      "condition": "keno_drop_25",
+      "group": "keno_drop",
+      "label": "drop 25%",
+      "x": 0.30896738479261526,
+      "y": 1.1533240585165112,
+      "short": "25%",
+      "x_per_seed": [
+        0.30795912292639765,
+        0.30997564665883287
+      ],
+      "y_per_seed": [
+        1.1513531255816878,
+        1.1552949914513349
+      ],
+      "projection": 0.24898053080698476,
+      "never_moved": 0.07406317070582935
+    },
+    {
+      "lr": "0.0002",
+      "condition": "keno_drop_50",
+      "group": "keno_drop",
+      "label": "drop 50%",
+      "x": 0.556850442653227,
+      "y": 1.1878754014398143,
+      "short": "50%",
+      "x_per_seed": [
+        0.5552880153805384,
+        0.5584128699259158
+      ],
+      "y_per_seed": [
+        1.1806765560711723,
+        1.1950742468084563
+      ],
+      "projection": 0.498194496938105,
+      "never_moved": 0.05217326010195085
+    },
+    {
+      "lr": "0.0002",
+      "condition": "keno_drop_75",
+      "group": "keno_drop",
+      "label": "drop 75%",
+      "x": 0.7867598450539491,
+      "y": 1.2214317492171367,
+      "short": "75%",
+      "x_per_seed": [
+        0.7865290751102711,
+        0.7869906149976271
+      ],
+      "y_per_seed": [
+        1.2213845836009956,
+        1.2214789148332779
+      ],
+      "projection": 0.7483672787624089,
+      "never_moved": 0.04249934698736367
+    },
+    {
+      "lr": "0.0002",
+      "condition": "keno_drop_range",
+      "group": "keno_drop",
+      "label": "drop 30-70%",
+      "x": 0.5544243001853498,
+      "y": 1.1883464107335233,
+      "short": "30-70%",
+      "x_per_seed": [
+        0.5341675844532837,
+        0.5746810159174159
+      ],
+      "y_per_seed": [
+        1.180657391479017,
+        1.1960354299880294
+      ],
+      "projection": 0.49627908107988417,
+      "never_moved": 0.05256652105317497
+    },
+    {
+      "lr": "0.0002",
+      "condition": "keno_tab_25",
+      "group": "keno_tab",
+      "label": "tab 25%",
+      "x": 0.9631159953160648,
+      "y": 1.2370262735002766,
+      "short": "25%",
+      "x_per_seed": [
+        0.9638260921164621,
+        0.9624058985156675
+      ],
+      "y_per_seed": [
+        1.237997723486472,
+        1.2360548235140811
+      ],
+      "projection": 0.9553690135287096,
+      "never_moved": 0.03767203433538063
+    },
+    {
+      "lr": "0.0002",
+      "condition": "keno_tab_50",
+      "group": "keno_tab",
+      "label": "tab 50%",
+      "x": 0.9935750343367694,
+      "y": 1.2496845234149698,
+      "short": "50%",
+      "x_per_seed": [
+        0.9934960392189812,
+        0.9936540294545576
+      ],
+      "y_per_seed": [
+        1.2385845507696218,
+        1.260784496060318
+      ],
+      "projection": 0.9912917322776231,
+      "never_moved": 0.03705661601715104
+    },
+    {
+      "lr": "0.0002",
+      "condition": "keno_tab_75",
+      "group": "keno_tab",
+      "label": "tab 75%",
+      "x": 0.998537889206645,
+      "y": 1.252757263128074,
+      "short": "75%",
+      "x_per_seed": [
+        0.9986119868327517,
+        0.9984637915805383
+      ],
+      "y_per_seed": [
+        1.2561721467392652,
+        1.2493423795168823
+      ],
+      "projection": 0.9975650122827769,
+      "never_moved": 0.03738182136524126
+    },
+    {
+      "lr": "0.0002",
+      "condition": "keno_tab_range",
+      "group": "keno_tab",
+      "label": "tab 30-70%",
+      "x": 0.9926984848739369,
+      "y": 1.2520676727973692,
+      "short": "30-70%",
+      "x_per_seed": [
+        0.9915431347657792,
+        0.9938538349820946
+      ],
+      "y_per_seed": [
+        1.2348630825444655,
+        1.2692722630502729
+      ],
+      "projection": 0.9901320818152324,
+      "never_moved": 0.037785478925890556
+    },
+    {
+      "lr": "0.0002",
+      "condition": "rne",
+      "group": "rne",
+      "label": "plain rounding (rne)",
+      "x": 0.26412213034369175,
+      "y": 1.1690797287068357,
+      "short": "plain rounding",
+      "x_per_seed": [],
+      "y_per_seed": [],
+      "projection": 0.1365170780288571,
+      "never_moved": 0.6160342048970476
+    },
+    {
+      "lr": "0.0002",
+      "condition": "fp32_master",
+      "group": "fp32_master",
+      "label": "fp32 master",
+      "x": 1.0002981071981507,
+      "y": 1.2700767652157983,
+      "short": "fp32 master",
+      "x_per_seed": [],
+      "y_per_seed": [],
+      "projection": 1.000011977321154,
+      "never_moved": 0.03628452744841676
+    },
+    {
+      "lr": "0.0002",
+      "condition": "kahan",
+      "group": "kahan",
+      "label": "kahan",
+      "x": 1.0001060797309367,
+      "y": 1.262406565844535,
+      "short": "kahan",
+      "x_per_seed": [],
+      "y_per_seed": [],
+      "projection": 0.9998096012358695,
+      "never_moved": 0.036363607843669016
+    },
+    {
+      "lr": "0.0001",
+      "condition": "keno_drop_25",
+      "group": "keno_drop",
+      "label": "drop 25%",
+      "x": 0.2983817509371837,
+      "y": 1.1517095808643973,
+      "short": "25%",
+      "x_per_seed": [
+        0.2976332388085952,
+        0.29913026306577223
+      ],
+      "y_per_seed": [
+        1.1499351113602228,
+        1.1534840503685717
+      ],
+      "projection": 0.249436302096321,
+      "never_moved": 0.13699503329769716
+    },
+    {
+      "lr": "0.0001",
+      "condition": "keno_drop_50",
+      "group": "keno_drop",
+      "label": "drop 50%",
+      "x": 0.5426829660408914,
+      "y": 1.151217277485662,
+      "short": "50%",
+      "x_per_seed": [
+        0.5419607651917143,
+        0.5434051668900686
+      ],
+      "y_per_seed": [
+        1.1488882978064534,
+        1.1535462571648702
+      ],
+      "projection": 0.49902444671902707,
+      "never_moved": 0.09728131971712778
+    },
+    {
+      "lr": "0.0001",
+      "condition": "keno_drop_75",
+      "group": "keno_drop",
+      "label": "drop 75%",
+      "x": 0.7762992169662528,
+      "y": 1.1699325147157635,
+      "short": "75%",
+      "x_per_seed": [
+        0.7758246029178357,
+        0.77677383101467
+      ],
+      "y_per_seed": [
+        1.1731646636366653,
+        1.166700365794862
+      ],
+      "projection": 0.7489596867163923,
+      "never_moved": 0.07976590612104784
+    },
+    {
+      "lr": "0.0001",
+      "condition": "keno_drop_range",
+      "group": "keno_drop",
+      "label": "drop 30-70%",
+      "x": 0.5397191471423008,
+      "y": 1.1544394984036672,
+      "short": "30-70%",
+      "x_per_seed": [
+        0.5200677501358542,
+        0.5593705441487474
+      ],
+      "y_per_seed": [
+        1.1526182971065118,
+        1.1562606997008225
+      ],
+      "projection": 0.49586713598812915,
+      "never_moved": 0.0980572703084551
+    },
+    {
+      "lr": "0.0001",
+      "condition": "keno_tab_25",
+      "group": "keno_tab",
+      "label": "tab 25%",
+      "x": 0.9550894469054274,
+      "y": 1.1686150588751842,
+      "short": "25%",
+      "x_per_seed": [
+        0.9552896209748105,
+        0.9548892728360444
+      ],
+      "y_per_seed": [
+        1.1693470995880546,
+        1.1678830181623137
+      ],
+      "projection": 0.9486893280766522,
+      "never_moved": 0.07145079305946292
+    },
+    {
+      "lr": "0.0001",
+      "condition": "keno_tab_50",
+      "group": "keno_tab",
+      "label": "tab 50%",
+      "x": 0.9923185514961819,
+      "y": 1.1741706509528895,
+      "short": "50%",
+      "x_per_seed": [
+        0.9924669743522655,
+        0.9921701286400982
+      ],
+      "y_per_seed": [
+        1.17683729692856,
+        1.1715040049772192
+      ],
+      "projection": 0.9900056824305912,
+      "never_moved": 0.07007815440192369
+    },
+    {
+      "lr": "0.0001",
+      "condition": "keno_tab_75",
+      "group": "keno_tab",
+      "label": "tab 75%",
+      "x": 0.9983803565598984,
+      "y": 1.1748119230862066,
+      "short": "75%",
+      "x_per_seed": [
+        0.9984723197167789,
+        0.998288393403018
+      ],
+      "y_per_seed": [
+        1.1725761089703406,
+        1.1770477372020725
+      ],
+      "projection": 0.9971524098740947,
+      "never_moved": 0.07019240187682255
+    },
+    {
+      "lr": "0.0001",
+      "condition": "keno_tab_range",
+      "group": "keno_tab",
+      "label": "tab 30-70%",
+      "x": 0.9914088668639802,
+      "y": 1.1705734973649113,
+      "short": "30-70%",
+      "x_per_seed": [
+        0.9901131986451791,
+        0.9927045350827814
+      ],
+      "y_per_seed": [
+        1.1691976009760376,
+        1.171949393753785
+      ],
+      "projection": 0.9889731822701023,
+      "never_moved": 0.0706716457988093
+    },
+    {
+      "lr": "0.0001",
+      "condition": "rne",
+      "group": "rne",
+      "label": "plain rounding (rne)",
+      "x": 0.18457321230961454,
+      "y": 1.1986233467313234,
+      "short": "plain rounding",
+      "x_per_seed": [],
+      "y_per_seed": [],
+      "projection": 0.07081093435992933,
+      "never_moved": 0.7851765098211196
+    },
+    {
+      "lr": "0.0001",
+      "condition": "fp32_master",
+      "group": "fp32_master",
+      "label": "fp32 master",
+      "x": 1.0007654998354854,
+      "y": 1.1803744748423142,
+      "short": "fp32 master",
+      "x_per_seed": [],
+      "y_per_seed": [],
+      "projection": 1.0000225057066376,
+      "never_moved": 0.06948003526862964
+    },
+    {
+      "lr": "0.0001",
+      "condition": "kahan",
+      "group": "kahan",
+      "label": "kahan",
+      "x": 1.0001392479501403,
+      "y": 1.1806856238430994,
+      "short": "kahan",
+      "x_per_seed": [],
+      "y_per_seed": [],
+      "projection": 0.9993586011748072,
+      "never_moved": 0.06925041033339566
+    }
+  ],
+  "bar": 1.15,
+  "focal": "keno_drop_25",
+  "alt": "Scatter of held-out NLL against cumulative delivery for the eight keno writers and the previous run's plain rounding, kahan and fp32 master points at learning rates 2e-4 and 1e-4, with the 1.150 line."
+}

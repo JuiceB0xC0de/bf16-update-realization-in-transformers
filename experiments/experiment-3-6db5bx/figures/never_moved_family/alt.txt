@@ -1,0 +1,1 @@
+Heatmap of the never-moved coordinate fraction per parameter family at learning rate 2e-4 for plain rounding, the eight keno writers and fp32 master weights (sequential scale from 0 to 1).

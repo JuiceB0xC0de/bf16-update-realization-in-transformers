@@ -1,0 +1,1 @@
+Dot chart of the paired held-out NLL difference between each keno writer and plain bfloat16 rounding at two learning rates: filled marker is the two-seed mean, open markers are the per-seed values, with reference lines at 0 and ±0.02.
